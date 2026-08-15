@@ -13,6 +13,7 @@ import Math.LinAlgebra.MetricTensor
 import Math.LinAlgebra.TernaryClassifier
 import Math.LinAlgebra.BilinearProduct
 import Geometry.LatticeTopology
+import Geometry.DEC3D_YangMills
 import Compound.HadronicConfinement
 import Compound.AlphaReplication
 import Evolution.State
@@ -28,7 +29,7 @@ import Compound.VelocityLensing
 import Reflect.InvariantAuditor
 import Data.Vect
 
--- IMPORT ALL 30 LITERATE MARKDOWN MODULES (Proves they compile and execute)
+-- IMPORT ALL 31 LITERATE MARKDOWN MODULES (Proves they compile and execute)
 import Foundations.Universal_Mapping
 import Foundations.Box_Arithmetic
 import Foundations.Grothendieck_Box_Integers
@@ -48,6 +49,7 @@ import Geometry.Hadronic_Color_Confinement
 import Geometry.Archimedes_Function_and_Quadrea
 import Geometry.Discrete_Exterior_Calculus_and_Gauge
 import Geometry.Maxwell_Field_Equations
+import Geometry.DEC3D_YangMills
 import Evolution.Pre_Geometric_Genesis
 import Evolution.Dark_Matter_Law_Storage
 import Evolution.Non_Hardcoded_Cosmic_State
@@ -233,7 +235,7 @@ prop_structuralAccounting =
   evidence_structural_associativity &&
   evidence_cast_free_lensing
 
-||| Property 20: Test Structural Accounting Associativity Across Scale Transitions
+||| Property 20: Test Structural Accounting Associativity Across Scales:
 prop_structuralAssociativityProof : Bool
 prop_structuralAssociativityProof =
   evidence_epoch37_structural_total &&
@@ -266,7 +268,15 @@ prop_vexelsMaxelsReflectedAlgebra =
   evidence_outer_product_maxel &&
   evidence_domain_permutations
 
-||| Property 24: Literate Module Invariant Aggregator (Validates all 30 literate proofs)
+||| Property 24: Test 3D Discrete Exterior Calculus & Yang-Mills Gauge Theory
+prop_dec3dYangMillsGauge : Bool
+prop_dec3dYangMillsGauge =
+  evidence_coboundary0_gradient &&
+  evidence_exact_d1_d0_closure &&
+  evidence_combinatorial_hodge_dual &&
+  evidence_yang_mills_color_confinement
+
+||| Property 25: Literate Module Invariant Aggregator (Validates all 31 literate proofs)
 prop_literateModuleInvariants : Bool
 prop_literateModuleInvariants =
   unwrapBox (wildNatToBoxInt (toWildNat 37)) == 37 &&
@@ -312,7 +322,8 @@ main = do
   putStrLn $ "  [TEST 21] 2D Maxwell Equations (DEC):            " ++ (if prop_maxwellFieldEquations then "PASSED ✅" else "FAILED ❌")
   putStrLn $ "  [TEST 22] Dynamic 4x4 Grid Expansion:           " ++ (if prop_dynamic4x4GridExpansion then "PASSED ✅" else "FAILED ❌")
   putStrLn $ "  [TEST 23] Vexels, Maxels & Reflected Algebra:    " ++ (if prop_vexelsMaxelsReflectedAlgebra then "PASSED ✅" else "FAILED ❌")
-  putStrLn $ "  [TEST 24] All 30 Literate Wiki Modules Verified:  " ++ (if prop_literateModuleInvariants then "PASSED ✅" else "FAILED ❌")
+  putStrLn $ "  [TEST 24] 3D DEC & Yang-Mills Gauge Theory:      " ++ (if prop_dec3dYangMillsGauge then "PASSED ✅" else "FAILED ❌")
+  putStrLn $ "  [TEST 25] All 31 Literate Wiki Modules Verified:  " ++ (if prop_literateModuleInvariants then "PASSED ✅" else "FAILED ❌")
   putStrLn ""
   putStrLn "All Cosmological Proof Witnesses & Literate Invariants Verified!"
   putStrLn "========================================================"

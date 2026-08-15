@@ -52,6 +52,7 @@ The cornerstone of **Idris2-Universe2** is the strict mathematical isomorphism l
 * [Archimedes' Function & Quadrea](Geometry/Archimedes_Function_and_Quadrea.md) — Discrete Exterior Calculus area computation on the 3D cell complex.
 * [Discrete Exterior Calculus & Gauge Theory](Geometry/Discrete_Exterior_Calculus_and_Gauge.md) — Discrete differential forms ($C_0, C_1, C_2, C_3$), exterior derivatives $d_0, d_1$, and Bianchi identity $d(dA) = 0$.
 * [2D Maxwell Field Equations](Geometry/Maxwell_Field_Equations.md) — Exact discrete electrodynamics running via structural accounting (`sumStructural`).
+* [3D Discrete Exterior Calculus & Yang-Mills Gauge Theory](Geometry/DEC3D_YangMills.md) — 3D Grassmann cochain hierarchy ($C_0, C_1, C_2, C_3$), exact Bianchi $d_2(d_1 A) = 0$, combinatorial Hodge duality, and Dihedron non-Abelian color flux confinement.
 * [Relational Metric Inference](Evolution/Non_Hardcoded_Cosmic_State.md) — Eliminating magic numbers through internal density ratios.
 
 ### 3. Evolutionary Dynamics & Law Encoding
