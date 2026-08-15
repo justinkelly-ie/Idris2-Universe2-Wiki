@@ -25,7 +25,7 @@ import Compound.VelocityLensing
 import Reflect.InvariantAuditor
 import Data.Vect
 
--- IMPORT ALL 27 LITERATE MARKDOWN MODULES (Proves they compile and execute)
+-- IMPORT ALL 28 LITERATE MARKDOWN MODULES (Proves they compile and execute)
 import Foundations.Universal_Mapping
 import Foundations.Box_Arithmetic
 import Foundations.Grothendieck_Box_Integers
@@ -43,6 +43,7 @@ import Geometry.Emergent_Pillars_of_Physics
 import Geometry.Hadronic_Color_Confinement
 import Geometry.Archimedes_Function_and_Quadrea
 import Geometry.Discrete_Exterior_Calculus_and_Gauge
+import Geometry.Maxwell_Field_Equations_Cast_Free
 import Evolution.Pre_Geometric_Genesis
 import Evolution.Dark_Matter_Law_Storage
 import Evolution.Non_Hardcoded_Cosmic_State
@@ -231,7 +232,14 @@ prop_structuralAssociativityProof =
   evidence_multi_epoch_associativity &&
   evidence_count_structural_partition
 
-||| Property 21: Literate Module Invariant Aggregator (Validates all 27 literate proofs)
+||| Property 21: Test 2D Maxwell Field Equations Cast-Free Layout
+prop_maxwellFieldEquationsCastFree : Bool
+prop_maxwellFieldEquationsCastFree =
+  evidence_gauss_charge_structural &&
+  evidence_vacuum_charge_neutrality &&
+  evidence_maxwell_flux_conservation
+
+||| Property 22: Literate Module Invariant Aggregator (Validates all 28 literate proofs)
 prop_literateModuleInvariants : Bool
 prop_literateModuleInvariants =
   unwrapBox (wildNatToBoxInt (toWildNat 37)) == 37 &&
@@ -273,7 +281,8 @@ main = do
   putStrLn $ "  [TEST 18] Quantum Measurement & Superposition:   " ++ (if prop_quantumMeasurementSuperposition then "PASSED ✅" else "FAILED ❌")
   putStrLn $ "  [TEST 19] Cast-Free Structural Accounting:       " ++ (if prop_structuralAccounting then "PASSED ✅" else "FAILED ❌")
   putStrLn $ "  [TEST 20] Structural Associativity Across Scales:" ++ (if prop_structuralAssociativityProof then "PASSED ✅" else "FAILED ❌")
-  putStrLn $ "  [TEST 21] All 27 Literate Wiki Modules Verified:  " ++ (if prop_literateModuleInvariants then "PASSED ✅" else "FAILED ❌")
+  putStrLn $ "  [TEST 21] 2D Maxwell Equations (Cast-Free DEC):  " ++ (if prop_maxwellFieldEquationsCastFree then "PASSED ✅" else "FAILED ❌")
+  putStrLn $ "  [TEST 22] All 28 Literate Wiki Modules Verified:  " ++ (if prop_literateModuleInvariants then "PASSED ✅" else "FAILED ❌")
   putStrLn ""
   putStrLn "All Cosmological Proof Witnesses & Literate Invariants Verified!"
   putStrLn "========================================================"

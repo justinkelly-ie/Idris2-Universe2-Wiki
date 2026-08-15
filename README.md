@@ -5,8 +5,8 @@
 [![Idris2](https://img.shields.io/badge/Idris2-Verified_Wiki-blue.svg)](https://github.com/idris-lang/Idris2)
 [![Epochs](https://img.shields.io/badge/Epochs-1_to_37-green.svg)]()
 [![Ternary](https://img.shields.io/badge/Ternary_States-27_Closed-purple.svg)]()
-[![Modules](https://img.shields.io/badge/Literate_Chapters-27_Verified-brightgreen.svg)]()
-[![Tests](https://img.shields.io/badge/Test_Suite-21_Passed-success.svg)]()
+[![Modules](https://img.shields.io/badge/Literate_Chapters-28_Verified-brightgreen.svg)]()
+[![Tests](https://img.shields.io/badge/Test_Suite-22_Passed-success.svg)]()
 
 ---
 
@@ -55,6 +55,7 @@ The cornerstone of **Idris2-Universe2** is the strict mathematical isomorphism l
 * [Emergent Higher-Order Physics](Library/Wiki/Geometry/Emergent_Higher_Order_Physics.md) — Deriving Electrodynamics, Causal Posets, and Hamiltonian mechanics from $1\times 1 \to 2\times 2 \to 3\times 3\times 3$ grid expansion.
 * [Archimedes' Function & Quadrea](Library/Wiki/Geometry/Archimedes_Function_and_Quadrea.md) — Gram determinants on $2\times 2$ maxels, collinear geodesics ($A=0$), and Quadrea flux.
 * [Discrete Exterior Calculus & Gauge Fields](Library/Wiki/Geometry/Discrete_Exterior_Calculus_and_Gauge.md) — Cell complexes, curvature 2-forms $F = dA$, and $SU(3)$ color confinement.
+* [2D Maxwell Field Equations (Cast-Free)](Library/Wiki/Geometry/Maxwell_Field_Equations_Cast_Free.md) — Exact discrete electrodynamics running 100% cast-free via structural accounting (`sumStructural`).
 * [Relational Metric Inference](Library/Wiki/Evolution/Non_Hardcoded_Cosmic_State.md) — Eliminating magic numbers through internal density ratios.
 
 ### 3. Evolutionary Dynamics & Law Encoding

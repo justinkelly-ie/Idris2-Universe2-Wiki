@@ -50,6 +50,7 @@ The cornerstone of **Idris2-Universe2** is the strict mathematical isomorphism l
 * [Emergent Higher-Order Physics](Geometry/Emergent_Higher_Order_Physics.md) — Deriving Electrodynamics, Causal Posets, and Hamiltonian mechanics from $1\times 1 \to 2\times 2 \to 3\times 3\times 3$ grid expansion.
 * [Archimedes' Function & Quadrea](Geometry/Archimedes_Function_and_Quadrea.md) — Gram determinants on $2\times 2$ maxels, collinear geodesics ($A=0$), and Quadrea flux.
 * [Discrete Exterior Calculus & Gauge Fields](Geometry/Discrete_Exterior_Calculus_and_Gauge.md) — Cell complexes, curvature 2-forms $F = dA$, and $SU(3)$ color confinement.
+* [2D Maxwell Field Equations (Cast-Free)](Geometry/Maxwell_Field_Equations_Cast_Free.md) — Exact discrete electrodynamics running 100% cast-free via structural accounting (`sumStructural`).
 * [Relational Metric Inference](Evolution/Non_Hardcoded_Cosmic_State.md) — Eliminating magic numbers through internal density ratios.
 
 ### 3. Evolutionary Dynamics & Law Encoding
