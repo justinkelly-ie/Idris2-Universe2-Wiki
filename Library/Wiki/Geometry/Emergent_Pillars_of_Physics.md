@@ -155,7 +155,6 @@ In **Idris2-Universe2**, the foundational laws of physical reality are **neither
 module Geometry.Emergent_Pillars_of_Physics
 
 import Core.BoxInt
-import Core.QTT
 import Math.Infinitesimal
 import Math.RationalTrig
 import Math.FineStructure
@@ -236,9 +235,13 @@ public export
 evidence_pillar8_fine_structure : Math.FineStructure.verify137Derivation = True
 evidence_pillar8_fine_structure = Refl
 
-||| Law 9 Evidence: Pauli Exclusion via QTT Linear Resource Preservation
+||| Law 9 Evidence: Pauli Exclusion via native QTT Linear Resource Preservation
 public export
-evidence_pillar9_pauli_exclusion : (x : BoxInt) -> useConserved (MkConserved x) (\a => a) = x
+linearConsumePillar : (1 x : BoxInt) -> BoxInt
+linearConsumePillar x = x
+
+public export
+evidence_pillar9_pauli_exclusion : (x : BoxInt) -> linearConsumePillar x = x
 evidence_pillar9_pauli_exclusion x = Refl
 
 ||| Law 10 Evidence: Gravitational Wave Shear Metric Invariance

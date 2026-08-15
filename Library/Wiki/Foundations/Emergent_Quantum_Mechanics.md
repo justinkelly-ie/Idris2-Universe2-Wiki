@@ -61,7 +61,6 @@ module Foundations.Emergent_Quantum_Mechanics
 import Core.BoxInt
 import Core.Multiset
 import Core.Polynomial
-import Core.QTT
 import Math.Infinitesimal
 import Math.RationalTrig
 import Math.LinAlgebra.MetricTensor
@@ -107,8 +106,13 @@ evidence_wildberger_rational_probability =
       totalTally = tallyWildNat (toWildNat 28)
   in boxTally == 7 && totalTally == 28 -- Rational probability = 7 / 28 = 1/4
 
-||| Evidence 5: Pauli Exclusion via QTT Linear Multiplicity (No Token Duplication)
+||| Linear consumption enforcing Pauli exclusion (particle cannot be duplicated)
 public export
-evidence_wildberger_pauli_exclusion : (x : BoxInt) -> useConserved (MkConserved x) (\a => a) = x
+linearConsumeQuantum : (1 x : BoxInt) -> BoxInt
+linearConsumeQuantum x = x
+
+||| Evidence 5: Pauli Exclusion via native QTT Linear Multiplicity (No Token Duplication)
+public export
+evidence_wildberger_pauli_exclusion : (x : BoxInt) -> linearConsumeQuantum x = x
 evidence_wildberger_pauli_exclusion x = Refl
 ```

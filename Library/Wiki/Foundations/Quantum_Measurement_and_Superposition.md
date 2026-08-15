@@ -63,7 +63,6 @@ module Foundations.Quantum_Measurement_and_Superposition
 import Core.BoxInt
 import Core.Multiset
 import Core.Polynomial
-import Core.QTT
 import Math.Infinitesimal
 import Math.RationalTrig
 import Math.LinAlgebra.TernaryClassifier

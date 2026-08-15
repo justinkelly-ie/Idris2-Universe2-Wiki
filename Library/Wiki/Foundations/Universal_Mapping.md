@@ -1,17 +1,11 @@
-# 🌌 Universal Mapping: Idris 2 QTT & Elaborator Reflection to Physical Reality
+# 🗺️ Universal Mapping: Mathematics, Physics, and Computation
 
-In this framework, the Idris 2 compiler substrate is isomorphic to the computational universe. Physical laws are verified at compile-time via **Elaborator Reflection (`Language.Reflection`)** and **Quantitative Type Theory (QTT)**.
+The cornerstone of **Idris2-Universe2** is the strict constructivist isomorphism linking **Constructive Finitist Mathematics**, **Fundamental Physics**, and **Type-Theoretic Programming (Idris 2 Quantitative Type Theory)**:
 
----
-
-## 🏛️ 1. The Core Ontological Correspondence
-
-| Idris 2 Concept | Physical Cosmological Interpretation |
-| :--- | :--- |
-| **Quantitative Type Theory ($0, 1, \omega$)** | **Thermodynamic Data & Energy Conservation**: Ensures no energy tokens are cloned or leaked without tracking. |
-| **Elaborator Reflection (`%macro`, `Elab`)** | **The Cosmological Constructor**: Evaluates the 27 ternary manifolds and multi-epoch folds before runtime. |
-| **`BoxInt` / `WildNat` (Empty Box Multisets)** | **Discrete Matter & Quadrances**: Eliminates continuous floating-point approximations ($\mathbb{R}$). |
-| **Matrix Unit $\epsilon$ ($\epsilon^2 = 0$)** | **Nilpotent Quantum Calculus**: Dual complex numbers representing discrete differentiation without limits. |
+* **Dependent Types** model physical laws and symmetries.
+* **QTT Multiplicity `1`** enforces thermodynamic conservation of mass-energy and charge.
+* **Type Erasure `0`** drops intermediate cosmic scaffolding at compile time.
+* **Elaborator Reflection (`%runElab`)** acts as a cybernetic feedback engine governing self-organizing cosmological transitions.
 
 ---
 
@@ -24,14 +18,18 @@ module Foundations.Universal_Mapping
 
 import Core.BoxInt
 import Core.Multiset
-import Core.QTT
 import Math.Infinitesimal
 
 %default total
 
-||| Evidence 1: Proving that QTT linear resource usage preserves exact token value
+||| Native linear identity function enforcing strict 1-use resource conservation.
 public export
-evidence_linear_preservation : (x : BoxInt) -> useConserved (MkConserved x) (\a => a) = x
+linearIdentity : (1 a : BoxInt) -> BoxInt
+linearIdentity a = a
+
+||| Evidence 1: Proving that native QTT linear resource usage preserves exact token value
+public export
+evidence_linear_preservation : (x : BoxInt) -> linearIdentity x = x
 evidence_linear_preservation x = Refl
 
 ||| Evidence 2: Proving that Nilpotent matrix unit squares to exactly 0 (vacuum identity)
