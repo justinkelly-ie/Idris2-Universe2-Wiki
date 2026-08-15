@@ -52,6 +52,7 @@ import Geometry.Molecular_Bonding
 import Compound.MolecularBonding
 import Evolution.Pre_Geometric_Genesis
 import Evolution.Dark_Matter_Law_Storage
+import Evolution.Matter_Tokens_and_Law_Impedance
 import Evolution.Non_Hardcoded_Cosmic_State
 import Evolution.Bootstrap_Epoch_1_to_37
 import Evolution.Cycle_137_and_Expansion
@@ -284,7 +285,15 @@ prop_tier5MolecularBonding =
   evidence_ethane_saturation &&
   evidence_alkane_homologous_series
 
-||| Property 26: Literate Module Invariant Aggregator (Validates all 32 literate proofs)
+||| Property 26: Test Visible Matter Numerators vs Dark Matter Law Denominators
+prop_matterTokensLawImpedance : Bool
+prop_matterTokensLawImpedance =
+  evidence_dark_matter_scale_denominator &&
+  evidence_rational_velocity_deceleration &&
+  evidence_arrow_of_time_impedance_step &&
+  evidence_local_vm_global_dm_independence
+
+||| Property 27: Literate Module Invariant Aggregator (Validates all 33 literate proofs)
 prop_literateModuleInvariants : Bool
 prop_literateModuleInvariants =
   unwrapBox (wildNatToBoxInt (toWildNat 37)) == 37 &&
@@ -332,7 +341,8 @@ main = do
   putStrLn $ "  [TEST 23] Vexels, Maxels & Reflected Algebra:    " ++ (if prop_vexelsMaxelsReflectedAlgebra then "PASSED ✅" else "FAILED ❌")
   putStrLn $ "  [TEST 24] 3D DEC & Yang-Mills Gauge Theory:      " ++ (if prop_dec3dYangMillsGauge then "PASSED ✅" else "FAILED ❌")
   putStrLn $ "  [TEST 25] Tier 5 Molecular Bonding (Chemistry):  " ++ (if prop_tier5MolecularBonding then "PASSED ✅" else "FAILED ❌")
-  putStrLn $ "  [TEST 26] All 32 Literate Wiki Modules Verified:  " ++ (if prop_literateModuleInvariants then "PASSED ✅" else "FAILED ❌")
+  putStrLn $ "  [TEST 26] Matter Numerator / Law Denominator:    " ++ (if prop_matterTokensLawImpedance then "PASSED ✅" else "FAILED ❌")
+  putStrLn $ "  [TEST 27] All 33 Literate Wiki Modules Verified:  " ++ (if prop_literateModuleInvariants then "PASSED ✅" else "FAILED ❌")
   putStrLn ""
   putStrLn "All Cosmological Proof Witnesses & Literate Invariants Verified!"
   putStrLn "========================================================"

@@ -5,8 +5,8 @@
 [![Idris2](https://img.shields.io/badge/Idris2-Verified_Wiki-blue.svg)](https://github.com/idris-lang/Idris2)
 [![Epochs](https://img.shields.io/badge/Epochs-1_to_37-green.svg)]()
 [![Ternary](https://img.shields.io/badge/Ternary_States-27_Closed-purple.svg)]()
-[![Modules](https://img.shields.io/badge/Literate_Chapters-32_Verified-brightgreen.svg)]()
-[![Tests](https://img.shields.io/badge/Test_Suite-26_Passed-success.svg)]()
+[![Modules](https://img.shields.io/badge/Literate_Chapters-33_Verified-brightgreen.svg)]()
+[![Tests](https://img.shields.io/badge/Test_Suite-27_Passed-success.svg)]()
 
 ---
 
@@ -64,6 +64,7 @@ The cornerstone of **Idris2-Universe2** is the strict mathematical isomorphism l
 ### 3. Evolutionary Dynamics & Law Encoding
 * [Pre-Geometric Genesis (The vm = 0 Void)](Library/Wiki/Evolution/Pre_Geometric_Genesis.md) — Why Visible Matter is 0 before the 27-state metric tensor emerges.
 * [Dark Matter as the Cosmic Law Ledger](Library/Wiki/Evolution/Dark_Matter_Law_Storage.md) — How the accumulated cyclotomic remainder ledger encodes gravitational drag, the 2nd Law of Thermodynamics, and time's arrow.
+* [Visible Matter Tokens vs. Dark Matter Law Impedance](Library/Wiki/Evolution/Matter_Tokens_and_Law_Impedance.md) — The fundamental duality between local integer numerators (matter tokens) and global structural divisors (law impedance $1 + \text{drag}$).
 * [Cyclotomic Encoding & Decoding Protocol](Library/Wiki/Evolution/Cyclotomic_Encoding_and_Decoding.md) — How state polynomials are divided by $\Phi_{137}(x)$, encoded into remainder tokens, and decoded into kinematic drag and metric shear.
 * [Dynamic Grid Expansion (`expandAndUnfoldGeneric`)](Library/Wiki/Evolution/Dynamic_Grid_Expansion.md) — Generalized non-hardcoded expansion pipeline scaling spatial arrays via chiral ket/bra outer products and structural history accumulation.
 * [Bootstrapping Epoch 1 to 37](Library/Wiki/Evolution/Bootstrap_Epoch_1_to_37.md) — Genesis vacuum, multi-epoch folding, and the 55-state Dark Matter residue at Primorial 210.

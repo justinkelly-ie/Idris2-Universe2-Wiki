@@ -59,6 +59,7 @@ The cornerstone of **Idris2-Universe2** is the strict mathematical isomorphism l
 ### 3. Evolutionary Dynamics & Law Encoding
 * [Pre-Geometric Genesis (The vm = 0 Void)](Evolution/Pre_Geometric_Genesis.md) — Why Visible Matter is 0 before the 27-state metric tensor emerges.
 * [Dark Matter as the Cosmic Law Ledger](Evolution/Dark_Matter_Law_Storage.md) — How the accumulated cyclotomic remainder ledger encodes gravitational drag, the 2nd Law of Thermodynamics, and time's arrow.
+* [Visible Matter Tokens vs. Dark Matter Law Impedance](Evolution/Matter_Tokens_and_Law_Impedance.md) — The fundamental duality between local integer numerators (matter tokens) and global structural divisors (law impedance $1 + \text{drag}$).
 * [Cyclotomic Encoding & Decoding Protocol](Evolution/Cyclotomic_Encoding_and_Decoding.md) — How state polynomials are divided by $\Phi_{137}(x)$, encoded into remainder tokens, and decoded into kinematic drag and metric shear.
 * [Dynamic Grid Expansion (`expandAndUnfoldGeneric`)](Evolution/Dynamic_Grid_Expansion.md) — Generalized non-hardcoded expansion pipeline scaling spatial arrays via chiral ket/bra outer products and structural history accumulation.
 * [Bootstrapping Epoch 1 to 37](Evolution/Bootstrap_Epoch_1_to_37.md) — Genesis vacuum, multi-epoch folding, and the 55-state Dark Matter residue at Primorial 210.
