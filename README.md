@@ -5,8 +5,8 @@
 [![Idris2](https://img.shields.io/badge/Idris2-Verified_Wiki-blue.svg)](https://github.com/idris-lang/Idris2)
 [![Epochs](https://img.shields.io/badge/Epochs-1_to_37-green.svg)]()
 [![Ternary](https://img.shields.io/badge/Ternary_States-27_Closed-purple.svg)]()
-[![Modules](https://img.shields.io/badge/Literate_Chapters-26_Verified-brightgreen.svg)]()
-[![Tests](https://img.shields.io/badge/Test_Suite-20_Passed-success.svg)]()
+[![Modules](https://img.shields.io/badge/Literate_Chapters-27_Verified-brightgreen.svg)]()
+[![Tests](https://img.shields.io/badge/Test_Suite-21_Passed-success.svg)]()
 
 ---
 
@@ -68,8 +68,9 @@ The cornerstone of **Idris2-Universe2** is the strict mathematical isomorphism l
 ### 4. Kinematics & Gauge Dynamics
 * [Causal Posets & Inductive Lensing](Library/Wiki/Kinematics/Causal_Posets_and_Lensing.md) — Velocity routing through $g_{\text{EM}}$ vs $g_{\text{Substrate}}$ and Dark Matter gravitational drag.
 
-### 5. Verification & Tests
-* [Verification Matrix](Library/Wiki/Verification/Verification_Matrix.md) — Formal properties, reflection proofs, and test results.
+### 5. Metatheory & Verification
+* [Verification Matrix](Library/Wiki/Verification/Verification_Matrix.md) — 100% comprehensive property checklist and reflection audit logs.
+* [Structural Associativity Proof](Library/Wiki/Verification/Structural_Associativity_Proof.md) — Formal verification proving `sumStructural` associativity across scale partitions $((A \mathbin{+\!\!+} B) \mathbin{+\!\!+} C \equiv A \mathbin{+\!\!+} (B \mathbin{+\!\!+} C))$.
 
 ---
 

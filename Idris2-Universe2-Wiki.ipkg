@@ -35,4 +35,5 @@ modules = Main,
           Evolution.Alpha_Cluster_Replication,
           Evolution.Cyclotomic_Encoding_and_Decoding,
           Kinematics.Causal_Posets_and_Lensing,
-          Verification.Verification_Matrix
+          Verification.Verification_Matrix,
+          Verification.Structural_Associativity_Proof

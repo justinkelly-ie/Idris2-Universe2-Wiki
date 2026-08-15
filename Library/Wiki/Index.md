@@ -63,5 +63,6 @@ The cornerstone of **Idris2-Universe2** is the strict mathematical isomorphism l
 ### 4. Kinematics & Gauge Dynamics
 * [Causal Posets & Inductive Lensing](Kinematics/Causal_Posets_and_Lensing.md) — Velocity routing through $g_{\text{EM}}$ vs $g_{\text{Substrate}}$ and Dark Matter gravitational drag.
 
-### 5. Verification & Tests
-* [Verification Matrix](Verification/Verification_Matrix.md) — Formal properties, reflection proofs, and test results.
+### 5. Metatheory & Verification
+* [Verification Matrix](Verification/Verification_Matrix.md) — 100% comprehensive property checklist and reflection audit logs.
+* [Structural Associativity Proof](Verification/Structural_Associativity_Proof.md) — Formal verification proving `sumStructural` associativity across scale partitions $((A \mathbin{+\!\!+} B) \mathbin{+\!\!+} C \equiv A \mathbin{+\!\!+} (B \mathbin{+\!\!+} C))$.

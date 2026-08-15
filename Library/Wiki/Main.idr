@@ -25,7 +25,7 @@ import Compound.VelocityLensing
 import Reflect.InvariantAuditor
 import Data.Vect
 
--- IMPORT ALL 26 LITERATE MARKDOWN MODULES (Proves they compile and execute)
+-- IMPORT ALL 27 LITERATE MARKDOWN MODULES (Proves they compile and execute)
 import Foundations.Universal_Mapping
 import Foundations.Box_Arithmetic
 import Foundations.Grothendieck_Box_Integers
@@ -52,6 +52,7 @@ import Evolution.Alpha_Cluster_Replication
 import Evolution.Cyclotomic_Encoding_and_Decoding
 import Kinematics.Causal_Posets_and_Lensing
 import Verification.Verification_Matrix
+import Verification.Structural_Associativity_Proof
 
 %default total
 
@@ -222,7 +223,15 @@ prop_structuralAccounting =
   evidence_structural_associativity &&
   evidence_cast_free_lensing
 
-||| Property 20: Literate Module Invariant Aggregator (Validates all 26 literate proofs)
+||| Property 20: Test Structural Accounting Associativity Across Scale Transitions
+prop_structuralAssociativityProof : Bool
+prop_structuralAssociativityProof =
+  evidence_epoch37_structural_total &&
+  evidence_associative_scale_grouping &&
+  evidence_multi_epoch_associativity &&
+  evidence_count_structural_partition
+
+||| Property 21: Literate Module Invariant Aggregator (Validates all 27 literate proofs)
 prop_literateModuleInvariants : Bool
 prop_literateModuleInvariants =
   unwrapBox (wildNatToBoxInt (toWildNat 37)) == 37 &&
@@ -263,7 +272,8 @@ main = do
   putStrLn $ "  [TEST 17] Wildberger's Finitist Quantum Mechanics:" ++ (if prop_wildbergerQuantumMechanics then "PASSED ✅" else "FAILED ❌")
   putStrLn $ "  [TEST 18] Quantum Measurement & Superposition:   " ++ (if prop_quantumMeasurementSuperposition then "PASSED ✅" else "FAILED ❌")
   putStrLn $ "  [TEST 19] Cast-Free Structural Accounting:       " ++ (if prop_structuralAccounting then "PASSED ✅" else "FAILED ❌")
-  putStrLn $ "  [TEST 20] All 26 Literate Wiki Modules Verified:  " ++ (if prop_literateModuleInvariants then "PASSED ✅" else "FAILED ❌")
+  putStrLn $ "  [TEST 20] Structural Associativity Across Scales:" ++ (if prop_structuralAssociativityProof then "PASSED ✅" else "FAILED ❌")
+  putStrLn $ "  [TEST 21] All 27 Literate Wiki Modules Verified:  " ++ (if prop_literateModuleInvariants then "PASSED ✅" else "FAILED ❌")
   putStrLn ""
   putStrLn "All Cosmological Proof Witnesses & Literate Invariants Verified!"
   putStrLn "========================================================"
