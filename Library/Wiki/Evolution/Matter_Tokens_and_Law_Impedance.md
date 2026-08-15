@@ -6,7 +6,7 @@ A fundamental insight of the **Idris2-Universe2** architecture is the profound o
 * **Dark Matter (`dm`)** represents **Global Structural Denominators / Laws** ($D = 1 + \text{sumStructural dm}$). It is not a localized particulate substance, but the accumulated cyclotomic historical error ledger that acts as an **algebraic impedance divisor**, governing time dilation, gravitational drag, and the irreversible Arrow of Time.
 
 Every physical observable in the universe (velocities, probabilities, redshifts, forces) is formed by the **rational quotient** of a Visible Matter numerator over a Dark Matter law denominator:
-$$\text{Physical Observable } \mathcal{O} = \frac{\text{Visible Matter State } (N)}{\text{Dark Matter Impedance } (D)} \equiv [N, D]$$
+$$\text{Physical Observable } \mathcal{O} = \frac{\text{Visible Matter State } (N)}{\text{Dark Matter Impedance } (D)} \equiv \text{SingFraction}(N, [D])$$
 
 ---
 
@@ -23,14 +23,14 @@ $$\text{Physical Observable } \mathcal{O} = \frac{\text{Visible Matter State } (
    └────────────────────────────────────────────────────────┘
                               ÷
    ┌────────────────────────────────────────────────────────┐
-   │  DARK MATTER (Law Denominator D)                       │
-   │  - Type: Vect dmSize BoxInt (e.g. 55 -> 56 states)     │
+   │  DARK MATTER (Law Denominator [D])                     │
+   │  - Type: Singleton Denominator (MkSingleton D)         │
    │  - Nature: Global non-local impedance divisor          │
    │  - Dynamics: Append-only cyclotomic history ledger     │
    └────────────────────────────────────────────────────────┘
                               ▼
    ┌────────────────────────────────────────────────────────┐
-   │  RATIONAL OBSERVABLE: Q = N / (1 + sumStructural dm)   │
+   │  RATIONAL OBSERVABLE: SingFraction = N / [1 + Drag]    │
    └────────────────────────────────────────────────────────┘
 ```
 
@@ -43,6 +43,8 @@ module Evolution.Matter_Tokens_and_Law_Impedance
 
 import Core.BoxInt
 import Core.VexelMaxel
+import Core.SingFraction
+import Core.OnSeq
 import Evolution.State
 import Evolution.Bootstrap
 import Evolution.StructuralAccounting
@@ -53,6 +55,15 @@ import Math.LinAlgebra.MetricTensor
 import Data.Vect
 
 %default total
+
+||| Forms an exact SingFraction observable from a UniverseState and active matter tokens.
+public export
+toCosmicFraction : {vm, de, dm : Nat} -> UniverseState vm de dm -> BoxInt -> SingFraction
+toCosmicFraction cosmos activeTokens =
+  let drag = sumStructural (dmLog cosmos)
+      scaleFactor = intToBoxInt 1 + drag
+      dNat = integerToNat (unwrapBox scaleFactor)
+  in mkSingFraction activeTokens dNat
 
 ||| Evidence 1: Visible Matter is a discrete, local integer sum (27 units for standard Ground State).
 public export
@@ -101,4 +112,21 @@ evidence_local_vm_global_dm_independence =
       sum2 = sumStructural vm2
       d = intToBoxInt 1 + sumStructural (dmLog standardEpoch37)
   in sum1 == sum2 && unwrapBox d == 56
+
+||| Evidence 6: Cosmic Observable SingFraction Construction:
+||| An active matter token count of 112 at Epoch 37 directly forms the SingFraction 112 / [56].
+public export
+evidence_cosmic_sing_fraction_construction : Bool
+evidence_cosmic_sing_fraction_construction =
+  let frac = toCosmicFraction standardEpoch37 (intToBoxInt 112)
+  in unwrapBox (num frac) == 112 && den frac == MkSingleton 56
+
+||| Evidence 7: Rational Observable Equivalence:
+||| The cosmic fraction 112 / [56] is algebraically equivalent to the simplified fraction 2 / [1].
+public export
+evidence_cosmic_fraction_simplification : Bool
+evidence_cosmic_fraction_simplification =
+  let frac = toCosmicFraction standardEpoch37 (intToBoxInt 112)
+      twoOverOne = mkSingFraction (intToBoxInt 2) 1
+  in frac == twoOverOne
 ```

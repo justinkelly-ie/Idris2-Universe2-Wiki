@@ -293,7 +293,9 @@ prop_matterTokensLawImpedance =
   evidence_dark_matter_scale_denominator &&
   evidence_rational_velocity_deceleration &&
   evidence_arrow_of_time_impedance_step &&
-  evidence_local_vm_global_dm_independence
+  evidence_local_vm_global_dm_independence &&
+  evidence_cosmic_sing_fraction_construction &&
+  evidence_cosmic_fraction_simplification
 
 ||| Property 27: Test Singleton Fractional Multisets & OnSeq Algebra
 prop_singletonFractionsAndOnSeq : Bool
