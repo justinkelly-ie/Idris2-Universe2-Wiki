@@ -259,10 +259,12 @@ prop_dynamic4x4GridExpansion =
 ||| Property 23: Test Vexels, Maxels & Reflected Linear Algebra
 prop_vexelsMaxelsReflectedAlgebra : Bool
 prop_vexelsMaxelsReflectedAlgebra =
+  evidence_boxint_pixel_isomorphism &&
   evidence_singleton_pixel_mul &&
   evidence_singleton_pixel_mismatch &&
   evidence_row_vexel_extraction &&
-  evidence_outer_product_maxel
+  evidence_outer_product_maxel &&
+  evidence_domain_permutations
 
 ||| Property 24: Literate Module Invariant Aggregator (Validates all 30 literate proofs)
 prop_literateModuleInvariants : Bool
