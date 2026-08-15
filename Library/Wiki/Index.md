@@ -37,9 +37,10 @@ The cornerstone of **Idris2-Universe2** is the strict mathematical isomorphism l
 * [Nested Polynomial Multisets](Foundations/Nested_Polynomial_Multisets.md) — Polynomials as multisets of nested terms, Goh Factorization, and exact cyclotomic long division.
 * [Nilpotent Infinitesimal Calculus](Foundations/Nilpotent_Infinitesimals.md) — Matrix representations of $\epsilon$ ($\epsilon^2 = 0$) and discrete Taylor calculus.
 * [Emergent Quantum Mechanics](Foundations/Emergent_Quantum_Mechanics.md) — Wildberger's finitist quantum framework: dual numbers, rational spreads, symplectic commutators, and rational Born tally ratios.
-* [Quantum Measurement & Superposition](Foundations/Quantum_Measurement_and_Superposition.md) — Resolving the double-slit experiment, destructive phase cancellation, observer-free collapse, and toroidal entanglement.
-* [Structural Accounting & Pure Tokens](Foundations/Structural_Accounting_and_Pure_Tokens.md) — Eliminating unverified runtime `cast` operations through pure inductive BoxInt vector unrolling and associative grouping.
-* [Contradictions with Standard Physics](Foundations/Contradictions_With_Standard_Physics.md) — Comparative analysis against $\Lambda\text{CDM}$, General Relativity, and Continuum QFT.
+* [Quantum Measurement & Superposition](Foundations/Quantum_Measurement_and_Superposition.md) — Double-slit resolution, observer-free cyclotomic collapse, and toroidal entanglement.
+* [Structural Accounting & Token Geometry](Foundations/Structural_Accounting_and_Pure_Tokens.md) — Eliminating compiler integer coercions via pure inductive vector unrolling (`sumStructural`).
+* [Vexels, Maxels & Reflected Linear Algebra](Foundations/Vexels_Maxels_and_Reflected_Linear_Algebra.md) — Singletons $[n]$, Pixels $[i, j]$, Vexels (vector multisets), Maxels (matrix multisets), and Elaborator Reflection macros.
+* [Contradictions With Standard Physics](Foundations/Contradictions_With_Standard_Physics.md) — Direct side-by-side refutations of continuous infinities, real numbers, wave collapse mystique, and singularity paradoxes.
 
 ### 2. Spacetime & Geometry
 * [The 27 Ternary Geometries](Geometry/Ternary_Multiverse_27.md) — Permuting $\{-1, 0, 1\}$ into Elliptic, Hyperbolic, and Parabolic metric manifolds.

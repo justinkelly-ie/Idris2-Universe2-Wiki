@@ -5,8 +5,8 @@
 [![Idris2](https://img.shields.io/badge/Idris2-Verified_Wiki-blue.svg)](https://github.com/idris-lang/Idris2)
 [![Epochs](https://img.shields.io/badge/Epochs-1_to_37-green.svg)]()
 [![Ternary](https://img.shields.io/badge/Ternary_States-27_Closed-purple.svg)]()
-[![Modules](https://img.shields.io/badge/Literate_Chapters-29_Verified-brightgreen.svg)]()
-[![Tests](https://img.shields.io/badge/Test_Suite-23_Passed-success.svg)]()
+[![Modules](https://img.shields.io/badge/Literate_Chapters-30_Verified-brightgreen.svg)]()
+[![Tests](https://img.shields.io/badge/Test_Suite-24_Passed-success.svg)]()
 
 ---
 
@@ -35,16 +35,17 @@ The cornerstone of **Idris2-Universe2** is the strict mathematical isomorphism l
 
 ## 🧭 Master Table of Contents
 
-### 1. Foundations & Philosophy
-* [The Universal Mapping](Library/Wiki/Foundations/Universal_Mapping.md) — Correspondence between Idris 2 QTT / Elaborator Reflection and Cosmological Physics.
-* [Box Arithmetic & Inductive Multisets](Library/Wiki/Foundations/Box_Arithmetic.md) — Deriving Natural Numbers from empty boxes ($[\ ] = 0, [[\ ]] = 1, [[\ ] [\ ]] = 2, \dots$) and physical conservation.
-* [Pure Box Integers as Grothendieck Pairs](Library/Wiki/Foundations/Grothendieck_Box_Integers.md) — Signed integers as pairs of positive/negative empty box containers $(P, N)$.
+### 1. Foundational Mathematics & Discrete Calculus
+* [Universal Mapping & Notation](Library/Wiki/Foundations/Universal_Mapping.md) — Grounding modern physics in constructivist discrete math.
+* [Box Arithmetic & Type Theory](Library/Wiki/Foundations/Box_Arithmetic.md) — Multiplicities, erase levels, and Quantitative Type Theory.
+* [Grothendieck Integers via Natural Multisets](Library/Wiki/Foundations/Grothendieck_Box_Integers.md) — Constructing $\mathbb{Z}$ from equivalence classes of positive and negative multisets.
 * [Nested Polynomial Multisets](Library/Wiki/Foundations/Nested_Polynomial_Multisets.md) — Polynomials as multisets of nested terms, Goh Factorization, and exact cyclotomic long division.
 * [Nilpotent Infinitesimal Calculus](Library/Wiki/Foundations/Nilpotent_Infinitesimals.md) — Matrix representations of $\epsilon$ ($\epsilon^2 = 0$) and discrete Taylor calculus.
 * [Emergent Quantum Mechanics](Library/Wiki/Foundations/Emergent_Quantum_Mechanics.md) — Wildberger's finitist quantum framework: dual numbers, rational spreads, symplectic commutators, and rational Born tally ratios.
-* [Quantum Measurement & Superposition](Library/Wiki/Foundations/Quantum_Measurement_and_Superposition.md) — Resolving the double-slit experiment, destructive phase cancellation, observer-free collapse, and toroidal entanglement.
-* [Structural Accounting & Pure Tokens](Library/Wiki/Foundations/Structural_Accounting_and_Pure_Tokens.md) — Eliminating unverified runtime `cast` operations through pure inductive BoxInt vector unrolling and associative grouping.
-* [Contradictions with Standard Physics](Library/Wiki/Foundations/Contradictions_With_Standard_Physics.md) — Comparative analysis against $\Lambda\text{CDM}$, General Relativity, and Continuum QFT.
+* [Quantum Measurement & Superposition](Library/Wiki/Foundations/Quantum_Measurement_and_Superposition.md) — Double-slit resolution, observer-free cyclotomic collapse, and toroidal entanglement.
+* [Structural Accounting & Token Geometry](Library/Wiki/Foundations/Structural_Accounting_and_Pure_Tokens.md) — Eliminating compiler integer coercions via pure inductive vector unrolling (`sumStructural`).
+* [Vexels, Maxels & Reflected Linear Algebra](Library/Wiki/Foundations/Vexels_Maxels_and_Reflected_Linear_Algebra.md) — Singletons $[n]$, Pixels $[i, j]$, Vexels (vector multisets), Maxels (matrix multisets), and Elaborator Reflection macros.
+* [Contradictions With Standard Physics](Library/Wiki/Foundations/Contradictions_With_Standard_Physics.md) — Direct side-by-side refutations of continuous infinities, real numbers, wave collapse mystique, and singularity paradoxes.
 
 ### 2. Spacetime & Geometry
 * [The 27 Ternary Geometries](Library/Wiki/Geometry/Ternary_Multiverse_27.md) — Permuting $\{-1, 0, 1\}$ into Elliptic, Hyperbolic, and Parabolic metric manifolds.

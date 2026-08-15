@@ -4,6 +4,7 @@ import Language.Reflection
 import Core.BoxInt
 import Core.Multiset
 import Core.Polynomial
+import Core.VexelMaxel
 import Math.Infinitesimal
 import Math.RationalTrig
 import Math.FineStructure
@@ -27,7 +28,7 @@ import Compound.VelocityLensing
 import Reflect.InvariantAuditor
 import Data.Vect
 
--- IMPORT ALL 29 LITERATE MARKDOWN MODULES (Proves they compile and execute)
+-- IMPORT ALL 30 LITERATE MARKDOWN MODULES (Proves they compile and execute)
 import Foundations.Universal_Mapping
 import Foundations.Box_Arithmetic
 import Foundations.Grothendieck_Box_Integers
@@ -36,6 +37,7 @@ import Foundations.Nilpotent_Infinitesimals
 import Foundations.Emergent_Quantum_Mechanics
 import Foundations.Quantum_Measurement_and_Superposition
 import Foundations.Structural_Accounting_and_Pure_Tokens
+import Foundations.Vexels_Maxels_and_Reflected_Linear_Algebra
 import Foundations.Contradictions_With_Standard_Physics
 import Geometry.Ternary_Multiverse_27
 import Geometry.Emergent_Higher_Order_Physics
@@ -74,11 +76,15 @@ proofOfTernaryClosure = auditTernaryClosure
 proofOfEpoch38StepUp : (55 == 55) = True
 proofOfEpoch38StepUp = auditEpoch38Collapse
 
+||| Witness 3: Proves via Elaborator Reflection macro that Row Extraction on Maxel Outer Product holds.
+proofOfMaxelRowAudit : Core.VexelMaxel.auditRowExtractionProof = True
+proofOfMaxelRowAudit = Refl
+
 ------------------------------------------------------------------------
 -- 2. RUNTIME CONSERVATION & KINEMATIC PROPERTIES
 ------------------------------------------------------------------------
 
-||| Property 1: Test 27-state ternary multiverse closure.
+||| Property 1: Test 27-state ternary spacetime closure.
 prop_27_TernaryClosure : Bool
 prop_27_TernaryClosure = length generateAll27States == 27
 
@@ -250,7 +256,15 @@ prop_dynamic4x4GridExpansion =
   evidence_active_grid_weight &&
   evidence_total_manifold_weight
 
-||| Property 23: Literate Module Invariant Aggregator (Validates all 29 literate proofs)
+||| Property 23: Test Vexels, Maxels & Reflected Linear Algebra
+prop_vexelsMaxelsReflectedAlgebra : Bool
+prop_vexelsMaxelsReflectedAlgebra =
+  evidence_singleton_pixel_mul &&
+  evidence_singleton_pixel_mismatch &&
+  evidence_row_vexel_extraction &&
+  evidence_outer_product_maxel
+
+||| Property 24: Literate Module Invariant Aggregator (Validates all 30 literate proofs)
 prop_literateModuleInvariants : Bool
 prop_literateModuleInvariants =
   unwrapBox (wildNatToBoxInt (toWildNat 37)) == 37 &&
@@ -270,6 +284,7 @@ main = do
   putStrLn " [COMPILE-TIME MACRO AUDITS]:"
   putStrLn "  - 27-State Multiverse Closure Witness: INJECTED & VALID (Refl) ✅"
   putStrLn "  - Epoch 38 Collapse Transition Witness: INJECTED & VALID (Refl) ✅"
+  putStrLn "  - Maxel Row Extraction Witness: INJECTED & VALID (Refl) ✅"
   putStrLn ""
   putStrLn " [RUNTIME CONSERVATION & KINEMATIC INVARIANTS]:"
   putStrLn $ "  [TEST 1]  27-State Ternary Spacetime Closure:    " ++ (if prop_27_TernaryClosure then "PASSED ✅" else "FAILED ❌")
@@ -294,7 +309,8 @@ main = do
   putStrLn $ "  [TEST 20] Structural Associativity Across Scales:" ++ (if prop_structuralAssociativityProof then "PASSED ✅" else "FAILED ❌")
   putStrLn $ "  [TEST 21] 2D Maxwell Equations (DEC):            " ++ (if prop_maxwellFieldEquations then "PASSED ✅" else "FAILED ❌")
   putStrLn $ "  [TEST 22] Dynamic 4x4 Grid Expansion:           " ++ (if prop_dynamic4x4GridExpansion then "PASSED ✅" else "FAILED ❌")
-  putStrLn $ "  [TEST 23] All 29 Literate Wiki Modules Verified:  " ++ (if prop_literateModuleInvariants then "PASSED ✅" else "FAILED ❌")
+  putStrLn $ "  [TEST 23] Vexels, Maxels & Reflected Algebra:    " ++ (if prop_vexelsMaxelsReflectedAlgebra then "PASSED ✅" else "FAILED ❌")
+  putStrLn $ "  [TEST 24] All 30 Literate Wiki Modules Verified:  " ++ (if prop_literateModuleInvariants then "PASSED ✅" else "FAILED ❌")
   putStrLn ""
   putStrLn "All Cosmological Proof Witnesses & Literate Invariants Verified!"
   putStrLn "========================================================"
