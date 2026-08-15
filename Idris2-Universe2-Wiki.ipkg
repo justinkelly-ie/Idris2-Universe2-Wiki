@@ -35,6 +35,7 @@ modules = Main,
           Evolution.Cycle_137_and_Expansion,
           Evolution.Alpha_Cluster_Replication,
           Evolution.Cyclotomic_Encoding_and_Decoding,
+          Evolution.Dynamic_4x4_Grid_Expansion,
           Kinematics.Causal_Posets_and_Lensing,
           Verification.Verification_Matrix,
           Verification.Structural_Associativity_Proof

@@ -5,8 +5,8 @@
 [![Idris2](https://img.shields.io/badge/Idris2-Verified_Wiki-blue.svg)](https://github.com/idris-lang/Idris2)
 [![Epochs](https://img.shields.io/badge/Epochs-1_to_37-green.svg)]()
 [![Ternary](https://img.shields.io/badge/Ternary_States-27_Closed-purple.svg)]()
-[![Modules](https://img.shields.io/badge/Literate_Chapters-28_Verified-brightgreen.svg)]()
-[![Tests](https://img.shields.io/badge/Test_Suite-22_Passed-success.svg)]()
+[![Modules](https://img.shields.io/badge/Literate_Chapters-29_Verified-brightgreen.svg)]()
+[![Tests](https://img.shields.io/badge/Test_Suite-23_Passed-success.svg)]()
 
 ---
 
@@ -62,6 +62,7 @@ The cornerstone of **Idris2-Universe2** is the strict mathematical isomorphism l
 * [Pre-Geometric Genesis (The vm = 0 Void)](Library/Wiki/Evolution/Pre_Geometric_Genesis.md) — Why Visible Matter is 0 before the 27-state metric tensor emerges.
 * [Dark Matter as the Cosmic Law Ledger](Library/Wiki/Evolution/Dark_Matter_Law_Storage.md) — How the accumulated cyclotomic remainder ledger encodes gravitational drag, the 2nd Law of Thermodynamics, and time's arrow.
 * [Cyclotomic Encoding & Decoding Protocol](Library/Wiki/Evolution/Cyclotomic_Encoding_and_Decoding.md) — How state polynomials are divided by $\Phi_{137}(x)$, encoded into remainder tokens, and decoded into kinematic drag and metric shear.
+* [Dynamic 4x4 Grid Expansion](Library/Wiki/Evolution/Dynamic_4x4_Grid_Expansion.md) — Generalized non-hardcoded `expandAndUnfoldGeneric` transitioning $3\times 3$ into a $4\times 4$ matrix space via chiral tensor outer product.
 * [Bootstrapping Epoch 1 to 37](Library/Wiki/Evolution/Bootstrap_Epoch_1_to_37.md) — Genesis vacuum, multi-epoch folding, and the 55-state Dark Matter residue at Primorial 210.
 * [137-Stage Cycles & Lattice Expansion](Library/Wiki/Evolution/Cycle_137_and_Expansion.md) — Discrete grid expansion ($1\times 1 \to 2\times 2 \to 3\times 3$) and fine-structure cycle limits.
 * [Hierarchical Matter Replication & The Alpha Cluster (Epoch 4)](Library/Wiki/Evolution/Alpha_Cluster_Replication.md) — 4 bonded 27-cell nucleons expanding into a 108-cell composite $^4\text{He}$ core.

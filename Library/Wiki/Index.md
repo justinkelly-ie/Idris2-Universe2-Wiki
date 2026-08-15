@@ -57,6 +57,7 @@ The cornerstone of **Idris2-Universe2** is the strict mathematical isomorphism l
 * [Pre-Geometric Genesis (The vm = 0 Void)](Evolution/Pre_Geometric_Genesis.md) — Why Visible Matter is 0 before the 27-state metric tensor emerges.
 * [Dark Matter as the Cosmic Law Ledger](Evolution/Dark_Matter_Law_Storage.md) — How the accumulated cyclotomic remainder ledger encodes gravitational drag, the 2nd Law of Thermodynamics, and time's arrow.
 * [Cyclotomic Encoding & Decoding Protocol](Evolution/Cyclotomic_Encoding_and_Decoding.md) — How state polynomials are divided by $\Phi_{137}(x)$, encoded into remainder tokens, and decoded into kinematic drag and metric shear.
+* [Dynamic 4x4 Grid Expansion](Evolution/Dynamic_4x4_Grid_Expansion.md) — Generalized non-hardcoded `expandAndUnfoldGeneric` transitioning $3\times 3$ into a $4\times 4$ matrix space via chiral tensor outer product.
 * [Bootstrapping Epoch 1 to 37](Evolution/Bootstrap_Epoch_1_to_37.md) — Genesis vacuum, multi-epoch folding, and the 55-state Dark Matter residue at Primorial 210.
 * [137-Stage Cycles & Lattice Expansion](Evolution/Cycle_137_and_Expansion.md) — Discrete grid expansion ($1\times 1 \to 2\times 2 \to 3\times 3$) and fine-structure cycle limits.
 * [Hierarchical Matter Replication & The Alpha Cluster (Epoch 4)](Evolution/Alpha_Cluster_Replication.md) — 4 bonded 27-cell nucleons expanding into a 108-cell composite $^4\text{He}$ core.

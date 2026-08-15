@@ -7,6 +7,7 @@ import Core.Polynomial
 import Math.Infinitesimal
 import Math.RationalTrig
 import Math.FineStructure
+import Math.IntPolynumber
 import Math.LinAlgebra.MetricTensor
 import Math.LinAlgebra.TernaryClassifier
 import Math.LinAlgebra.BilinearProduct
@@ -19,13 +20,14 @@ import Evolution.Expansion
 import Evolution.Contraction
 import Evolution.Bootstrap
 import Evolution.StructuralAccounting
+import Evolution.GridExpansion
 import Derivation.PureGeometricClassifier
 import Compound.LinearEpsilonRouting
 import Compound.VelocityLensing
 import Reflect.InvariantAuditor
 import Data.Vect
 
--- IMPORT ALL 28 LITERATE MARKDOWN MODULES (Proves they compile and execute)
+-- IMPORT ALL 29 LITERATE MARKDOWN MODULES (Proves they compile and execute)
 import Foundations.Universal_Mapping
 import Foundations.Box_Arithmetic
 import Foundations.Grothendieck_Box_Integers
@@ -51,6 +53,7 @@ import Evolution.Bootstrap_Epoch_1_to_37
 import Evolution.Cycle_137_and_Expansion
 import Evolution.Alpha_Cluster_Replication
 import Evolution.Cyclotomic_Encoding_and_Decoding
+import Evolution.Dynamic_4x4_Grid_Expansion
 import Kinematics.Causal_Posets_and_Lensing
 import Verification.Verification_Matrix
 import Verification.Structural_Associativity_Proof
@@ -239,7 +242,15 @@ prop_maxwellFieldEquations =
   evidence_vacuum_charge_neutrality &&
   evidence_maxwell_flux_conservation
 
-||| Property 22: Literate Module Invariant Aggregator (Validates all 28 literate proofs)
+||| Property 22: Test Dynamic 4x4 Grid Expansion via expandAndUnfoldGeneric
+prop_dynamic4x4GridExpansion : Bool
+prop_dynamic4x4GridExpansion =
+  evidence_outer_product_mass &&
+  evidence_ancestral_history_anchor &&
+  evidence_active_grid_weight &&
+  evidence_total_manifold_weight
+
+||| Property 23: Literate Module Invariant Aggregator (Validates all 29 literate proofs)
 prop_literateModuleInvariants : Bool
 prop_literateModuleInvariants =
   unwrapBox (wildNatToBoxInt (toWildNat 37)) == 37 &&
@@ -282,7 +293,8 @@ main = do
   putStrLn $ "  [TEST 19] Structural Accounting Invariants:      " ++ (if prop_structuralAccounting then "PASSED ✅" else "FAILED ❌")
   putStrLn $ "  [TEST 20] Structural Associativity Across Scales:" ++ (if prop_structuralAssociativityProof then "PASSED ✅" else "FAILED ❌")
   putStrLn $ "  [TEST 21] 2D Maxwell Equations (DEC):            " ++ (if prop_maxwellFieldEquations then "PASSED ✅" else "FAILED ❌")
-  putStrLn $ "  [TEST 22] All 28 Literate Wiki Modules Verified:  " ++ (if prop_literateModuleInvariants then "PASSED ✅" else "FAILED ❌")
+  putStrLn $ "  [TEST 22] Dynamic 4x4 Grid Expansion:           " ++ (if prop_dynamic4x4GridExpansion then "PASSED ✅" else "FAILED ❌")
+  putStrLn $ "  [TEST 23] All 29 Literate Wiki Modules Verified:  " ++ (if prop_literateModuleInvariants then "PASSED ✅" else "FAILED ❌")
   putStrLn ""
   putStrLn "All Cosmological Proof Witnesses & Literate Invariants Verified!"
   putStrLn "========================================================"
