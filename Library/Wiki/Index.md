@@ -41,6 +41,7 @@ The cornerstone of **Idris2-Universe2** is the strict mathematical isomorphism l
 * [Structural Accounting & Token Geometry](Foundations/Structural_Accounting_and_Pure_Tokens.md) — Eliminating compiler integer coercions via pure inductive vector unrolling (`sumStructural`).
 * [Vexels, Maxels & Reflected Linear Algebra](Foundations/Vexels_Maxels_and_Reflected_Linear_Algebra.md) — Singletons $[n]$, Pixels $[i, j]$, Vexels (vector multisets), Maxels (matrix multisets), and Elaborator Reflection macros.
 * [Fractional Multisets & Ongoing Sequences (OnSeq)](Foundations/Singleton_Fractions_and_OnSeq_Algebra.md) — Non-zero Singleton denominators ($[D] \ge 1$), division-by-zero immunity, and Wildberger's constructive on-sequence and clip algebra.
+* [Reflected Fractional Multisets & QTT Sequences](Foundations/Reflected_Fractional_Multisets_and_QTT_Sequences.md) — Elaborator Reflection invariant macros auditing non-zero denominators, cross-multiplication proofs, and QTT linear sequence resource conservation.
 * [Contradictions With Standard Physics](Foundations/Contradictions_With_Standard_Physics.md) — Direct side-by-side refutations of continuous infinities, real numbers, wave collapse mystique, and singularity paradoxes.
 
 ### 2. Spacetime & Geometry

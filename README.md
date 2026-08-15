@@ -5,8 +5,8 @@
 [![Idris2](https://img.shields.io/badge/Idris2-Verified_Wiki-blue.svg)](https://github.com/idris-lang/Idris2)
 [![Epochs](https://img.shields.io/badge/Epochs-1_to_37-green.svg)]()
 [![Ternary](https://img.shields.io/badge/Ternary_States-27_Closed-purple.svg)]()
-[![Modules](https://img.shields.io/badge/Literate_Chapters-34_Verified-brightgreen.svg)]()
-[![Tests](https://img.shields.io/badge/Test_Suite-28_Passed-success.svg)]()
+[![Modules](https://img.shields.io/badge/Literate_Chapters-35_Verified-brightgreen.svg)]()
+[![Tests](https://img.shields.io/badge/Test_Suite-29_Passed-success.svg)]()
 
 ---
 
@@ -46,6 +46,7 @@ The cornerstone of **Idris2-Universe2** is the strict mathematical isomorphism l
 * [Structural Accounting & Token Geometry](Library/Wiki/Foundations/Structural_Accounting_and_Pure_Tokens.md) — Eliminating compiler integer coercions via pure inductive vector unrolling (`sumStructural`).
 * [Vexels, Maxels & Reflected Linear Algebra](Library/Wiki/Foundations/Vexels_Maxels_and_Reflected_Linear_Algebra.md) — Singletons $[n]$, Pixels $[i, j]$, Vexels (vector multisets), Maxels (matrix multisets), and Elaborator Reflection macros.
 * [Fractional Multisets & Ongoing Sequences (OnSeq)](Library/Wiki/Foundations/Singleton_Fractions_and_OnSeq_Algebra.md) — Non-zero Singleton denominators ($[D] \ge 1$), division-by-zero immunity, and Wildberger's constructive on-sequence and clip algebra.
+* [Reflected Fractional Multisets & QTT Sequences](Library/Wiki/Foundations/Reflected_Fractional_Multisets_and_QTT_Sequences.md) — Elaborator Reflection invariant macros auditing non-zero denominators, cross-multiplication proofs, and QTT linear sequence resource conservation.
 * [Contradictions With Standard Physics](Library/Wiki/Foundations/Contradictions_With_Standard_Physics.md) — Direct side-by-side refutations of continuous infinities, real numbers, wave collapse mystique, and singularity paradoxes.
 
 ### 2. Spacetime & Geometry

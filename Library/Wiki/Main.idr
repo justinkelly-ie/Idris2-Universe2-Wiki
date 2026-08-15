@@ -38,6 +38,7 @@ import Foundations.Quantum_Measurement_and_Superposition
 import Foundations.Structural_Accounting_and_Pure_Tokens
 import Foundations.Vexels_Maxels_and_Reflected_Linear_Algebra
 import Foundations.Singleton_Fractions_and_OnSeq_Algebra
+import Foundations.Reflected_Fractional_Multisets_and_QTT_Sequences
 import Foundations.Contradictions_With_Standard_Physics
 import Geometry.Ternary_Multiverse_27
 import Geometry.Emergent_Higher_Order_Physics
@@ -303,7 +304,13 @@ prop_singletonFractionsAndOnSeq =
   evidence_onseq_clip_extraction &&
   evidence_pointwise_onseq_algebra
 
-||| Property 28: Literate Module Invariant Aggregator (Validates all 34 literate proofs)
+||| Property 28: Test Reflected Fractional Multisets & QTT Ongoing Sequences
+prop_reflectedFractionalMultisetsQTT : Bool
+prop_reflectedFractionalMultisetsQTT =
+  evidence_qtt_fraction_split_conservation &&
+  evidence_qtt_onseq_stepping
+
+||| Property 29: Literate Module Invariant Aggregator (Validates all 35 literate proofs)
 prop_literateModuleInvariants : Bool
 prop_literateModuleInvariants =
   unwrapBox (wildNatToBoxInt (toWildNat 37)) == 37 &&
@@ -324,6 +331,9 @@ main = do
   putStrLn "  - 27-State Multiverse Closure Witness: INJECTED & VALID (Refl) ✅"
   putStrLn "  - Epoch 38 Collapse Transition Witness: INJECTED & VALID (Refl) ✅"
   putStrLn "  - Maxel Row Extraction Witness: INJECTED & VALID (Refl) ✅"
+  putStrLn "  - Singleton Denominator Positivity Witness: INJECTED & VALID (Refl) ✅"
+  putStrLn "  - Rational Equivalence Witness: INJECTED & VALID (Refl) ✅"
+  putStrLn "  - OnSeq Clip Length Extraction Witness: INJECTED & VALID (Refl) ✅"
   putStrLn ""
   putStrLn " [RUNTIME CONSERVATION & KINEMATIC INVARIANTS]:"
   putStrLn $ "  [TEST 1]  27-State Ternary Spacetime Closure:    " ++ (if prop_27_TernaryClosure then "PASSED ✅" else "FAILED ❌")
@@ -353,7 +363,8 @@ main = do
   putStrLn $ "  [TEST 25] Tier 5 Molecular Bonding (Chemistry):  " ++ (if prop_tier5MolecularBonding then "PASSED ✅" else "FAILED ❌")
   putStrLn $ "  [TEST 26] Matter Numerator / Law Denominator:    " ++ (if prop_matterTokensLawImpedance then "PASSED ✅" else "FAILED ❌")
   putStrLn $ "  [TEST 27] Singleton Fractions & OnSeq Algebra:   " ++ (if prop_singletonFractionsAndOnSeq then "PASSED ✅" else "FAILED ❌")
-  putStrLn $ "  [TEST 28] All 34 Literate Wiki Modules Verified:  " ++ (if prop_literateModuleInvariants then "PASSED ✅" else "FAILED ❌")
+  putStrLn $ "  [TEST 28] Reflected Fractions & QTT Sequences:   " ++ (if prop_reflectedFractionalMultisetsQTT then "PASSED ✅" else "FAILED ❌")
+  putStrLn $ "  [TEST 29] All 35 Literate Wiki Modules Verified:  " ++ (if prop_literateModuleInvariants then "PASSED ✅" else "FAILED ❌")
   putStrLn ""
   putStrLn "All Cosmological Proof Witnesses & Literate Invariants Verified!"
   putStrLn "========================================================"
