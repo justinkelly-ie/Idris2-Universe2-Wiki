@@ -1,8 +1,8 @@
-# 📐 3D Discrete Exterior Calculus & Yang-Mills Gauge Theory
+# 📐 Grassmann Exterior Calculus & Yang-Mills Gauge Theory
 
 In standard theoretical physics, classical and quantum field theories are constructed on continuous smooth manifolds ($\mathbb{R}^{3,1}$) using differential forms $\Omega^k(M)$ and smooth Lie groups ($SU(2), SU(3)$).
 
-In **Idris2-Universe2**, following **Norman J. Wildberger's Grassmann Geometry** (*Geometric Linear Algebra 4*) and **Dihedron Lie Algebras** (*Famous Math Problems 21c*), 3D electrodynamics and Yang-Mills gauge fields are formulated purely as **discrete multiset cochains on an oriented cell complex**:
+In **Idris2-Universe2**, following **Norman J. Wildberger's Grassmann Geometry** (*Geometric Linear Algebra 4*) and **Dihedron Lie Algebras** (*Famous Math Problems 21c*), electrodynamics and Yang-Mills gauge fields are formulated purely as **discrete multiset cochains on an oriented cell complex**:
 
 * **0-Blade Cochain (`PointCochain`)** — *(Standard: 0-Form / Scalar Potential $\Phi$)*: Valuation of discrete vertex Singletons $[v]$.
 * **1-Blade Cochain (`EdgeCochain`)** — *(Standard: 1-Form / Gauge Connection $A$)*: Valuation of directed 1D edges $[u \to v]$.
@@ -14,7 +14,7 @@ In **Idris2-Universe2**, following **Norman J. Wildberger's Grassmann Geometry**
 ## 🏛️ 1. Theoretical Architecture: The Discrete de Rham Complex
 
 ```
-        THE 3D DISCRETE EXTERIOR DE RHAM & HODGE COMPLEX
+        THE DISCRETE EXTERIOR DE RHAM & HODGE COMPLEX
   C0 (Point / 0-Blade) ─── d0 ───> C1 (Edge / 1-Blade) ─── d1 ───> C2 (Face / 2-Blade) ─── d2 ───> C3 (Voxel / 3-Blade)
        [v]                              [u, v]                           [i, j]                          [x, y, z]
        (Scalar Potential Φ)             (Connection A)                   (Curvature F)                   (Volume Density ρ)
@@ -38,12 +38,12 @@ Because every interior edge in a face loop and every face in a voxel boundary ca
 ## 💻 2. Executable Literate Proofs & Evidence
 
 ```idris
-module Geometry.DEC3D_YangMills
+module Geometry.Grassmann_and_Yang_Mills
 
 import Core.BoxInt
 import Core.Multiset
 import Core.VexelMaxel
-import Geometry.DEC3D
+import Geometry.GrassmannCalculus
 import Data.List
 import Data.Vect
 

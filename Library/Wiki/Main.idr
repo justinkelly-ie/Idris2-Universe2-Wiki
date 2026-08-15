@@ -13,7 +13,7 @@ import Math.LinAlgebra.MetricTensor
 import Math.LinAlgebra.TernaryClassifier
 import Math.LinAlgebra.BilinearProduct
 import Geometry.LatticeTopology
-import Geometry.DEC3D_YangMills
+import Geometry.GrassmannCalculus
 import Compound.HadronicConfinement
 import Compound.AlphaReplication
 import Evolution.State
@@ -49,7 +49,7 @@ import Geometry.Hadronic_Color_Confinement
 import Geometry.Archimedes_Function_and_Quadrea
 import Geometry.Discrete_Exterior_Calculus_and_Gauge
 import Geometry.Maxwell_Field_Equations
-import Geometry.DEC3D_YangMills
+import Geometry.Grassmann_and_Yang_Mills
 import Evolution.Pre_Geometric_Genesis
 import Evolution.Dark_Matter_Law_Storage
 import Evolution.Non_Hardcoded_Cosmic_State
@@ -57,7 +57,7 @@ import Evolution.Bootstrap_Epoch_1_to_37
 import Evolution.Cycle_137_and_Expansion
 import Evolution.Alpha_Cluster_Replication
 import Evolution.Cyclotomic_Encoding_and_Decoding
-import Evolution.Dynamic_4x4_Grid_Expansion
+import Evolution.Dynamic_Grid_Expansion
 import Kinematics.Causal_Posets_and_Lensing
 import Verification.Verification_Matrix
 import Verification.Structural_Associativity_Proof
