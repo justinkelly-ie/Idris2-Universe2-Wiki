@@ -18,13 +18,14 @@ import Evolution.Init
 import Evolution.Expansion
 import Evolution.Contraction
 import Evolution.Bootstrap
+import Evolution.StructuralAccounting
 import Derivation.PureGeometricClassifier
 import Compound.LinearEpsilonRouting
 import Compound.VelocityLensing
 import Reflect.InvariantAuditor
 import Data.Vect
 
--- IMPORT ALL 25 LITERATE MARKDOWN MODULES (Proves they compile and execute)
+-- IMPORT ALL 26 LITERATE MARKDOWN MODULES (Proves they compile and execute)
 import Foundations.Universal_Mapping
 import Foundations.Box_Arithmetic
 import Foundations.Grothendieck_Box_Integers
@@ -32,6 +33,7 @@ import Foundations.Nested_Polynomial_Multisets
 import Foundations.Nilpotent_Infinitesimals
 import Foundations.Emergent_Quantum_Mechanics
 import Foundations.Quantum_Measurement_and_Superposition
+import Foundations.Structural_Accounting_and_Pure_Tokens
 import Foundations.Contradictions_With_Standard_Physics
 import Geometry.Ternary_Multiverse_27
 import Geometry.Emergent_Higher_Order_Physics
@@ -212,7 +214,15 @@ prop_quantumMeasurementSuperposition =
   evidence_measurement_collapse &&
   evidence_toroidal_entanglement_neighbor
 
-||| Property 19: Literate Module Invariant Aggregator (Validates all 25 literate proofs)
+||| Property 19: Test Cast-Free Structural Accounting Invariants
+prop_structuralAccounting : Bool
+prop_structuralAccounting =
+  evidence_structural_dm_sum &&
+  evidence_structural_count &&
+  evidence_structural_associativity &&
+  evidence_cast_free_lensing
+
+||| Property 20: Literate Module Invariant Aggregator (Validates all 26 literate proofs)
 prop_literateModuleInvariants : Bool
 prop_literateModuleInvariants =
   unwrapBox (wildNatToBoxInt (toWildNat 37)) == 37 &&
@@ -252,7 +262,8 @@ main = do
   putStrLn $ "  [TEST 16] The 12 Emergent Laws of Physics:       " ++ (if prop_emergentPillarsOfPhysics then "PASSED ✅" else "FAILED ❌")
   putStrLn $ "  [TEST 17] Wildberger's Finitist Quantum Mechanics:" ++ (if prop_wildbergerQuantumMechanics then "PASSED ✅" else "FAILED ❌")
   putStrLn $ "  [TEST 18] Quantum Measurement & Superposition:   " ++ (if prop_quantumMeasurementSuperposition then "PASSED ✅" else "FAILED ❌")
-  putStrLn $ "  [TEST 19] All 25 Literate Wiki Modules Verified:  " ++ (if prop_literateModuleInvariants then "PASSED ✅" else "FAILED ❌")
+  putStrLn $ "  [TEST 19] Cast-Free Structural Accounting:       " ++ (if prop_structuralAccounting then "PASSED ✅" else "FAILED ❌")
+  putStrLn $ "  [TEST 20] All 26 Literate Wiki Modules Verified:  " ++ (if prop_literateModuleInvariants then "PASSED ✅" else "FAILED ❌")
   putStrLn ""
   putStrLn "All Cosmological Proof Witnesses & Literate Invariants Verified!"
   putStrLn "========================================================"

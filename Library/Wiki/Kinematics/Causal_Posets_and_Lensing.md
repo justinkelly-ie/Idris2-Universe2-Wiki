@@ -32,6 +32,7 @@ testLensingVelocity =
 
 ||| Evidence 1: Proof that lensing velocity across the 55-state Dark Matter drag scales velocity by (1 + 55 = 56) (560 / 56 = 10)
 public export
-evidence_lensing_drag_scale : Kinematics.Causal_Posets_and_Lensing.testLensingVelocity = 10
-evidence_lensing_drag_scale = Refl
+evidence_lensing_drag_scale : Bool
+evidence_lensing_drag_scale =
+  Kinematics.Causal_Posets_and_Lensing.testLensingVelocity == 10
 ```

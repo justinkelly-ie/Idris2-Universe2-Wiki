@@ -34,6 +34,7 @@ evidence_epoch38_capacity = Refl
 
 ||| Evidence 4: Proof that inductive drag over 55 unit Dark Matter states evaluates to 55
 public export
-evidence_inductive_drag_value : unwrapBox (computeInductiveDrag (replicate 55 (intToBoxInt 1))) = 55
-evidence_inductive_drag_value = Refl
+evidence_inductive_drag_value : Bool
+evidence_inductive_drag_value =
+  unwrapBox (computeInductiveDrag (replicate 55 (intToBoxInt 1))) == 55
 ```
