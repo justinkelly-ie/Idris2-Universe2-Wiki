@@ -48,6 +48,8 @@ import Geometry.Archimedes_Function_and_Quadrea
 import Geometry.Discrete_Exterior_Calculus_and_Gauge
 import Geometry.Maxwell_Field_Equations
 import Geometry.Grassmann_and_Yang_Mills
+import Geometry.Molecular_Bonding
+import Compound.MolecularBonding
 import Evolution.Pre_Geometric_Genesis
 import Evolution.Dark_Matter_Law_Storage
 import Evolution.Non_Hardcoded_Cosmic_State
@@ -274,7 +276,15 @@ prop_dec3dYangMillsGauge =
   evidence_combinatorial_hodge_dual &&
   evidence_yang_mills_color_confinement
 
-||| Property 25: Literate Module Invariant Aggregator (Validates all 31 literate proofs)
+||| Property 25: Test Tier 5 Molecular Bonding & Chemical Graph Contractions
+prop_tier5MolecularBonding : Bool
+prop_tier5MolecularBonding =
+  evidence_methane_null_centroid &&
+  evidence_methane_saturation &&
+  evidence_ethane_saturation &&
+  evidence_alkane_homologous_series
+
+||| Property 26: Literate Module Invariant Aggregator (Validates all 32 literate proofs)
 prop_literateModuleInvariants : Bool
 prop_literateModuleInvariants =
   unwrapBox (wildNatToBoxInt (toWildNat 37)) == 37 &&
@@ -321,7 +331,8 @@ main = do
   putStrLn $ "  [TEST 22] Dynamic 4x4 Grid Expansion:           " ++ (if prop_dynamic4x4GridExpansion then "PASSED ✅" else "FAILED ❌")
   putStrLn $ "  [TEST 23] Vexels, Maxels & Reflected Algebra:    " ++ (if prop_vexelsMaxelsReflectedAlgebra then "PASSED ✅" else "FAILED ❌")
   putStrLn $ "  [TEST 24] 3D DEC & Yang-Mills Gauge Theory:      " ++ (if prop_dec3dYangMillsGauge then "PASSED ✅" else "FAILED ❌")
-  putStrLn $ "  [TEST 25] All 31 Literate Wiki Modules Verified:  " ++ (if prop_literateModuleInvariants then "PASSED ✅" else "FAILED ❌")
+  putStrLn $ "  [TEST 25] Tier 5 Molecular Bonding (Chemistry):  " ++ (if prop_tier5MolecularBonding then "PASSED ✅" else "FAILED ❌")
+  putStrLn $ "  [TEST 26] All 32 Literate Wiki Modules Verified:  " ++ (if prop_literateModuleInvariants then "PASSED ✅" else "FAILED ❌")
   putStrLn ""
   putStrLn "All Cosmological Proof Witnesses & Literate Invariants Verified!"
   putStrLn "========================================================"

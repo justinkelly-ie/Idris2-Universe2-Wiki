@@ -5,8 +5,8 @@
 [![Idris2](https://img.shields.io/badge/Idris2-Verified_Wiki-blue.svg)](https://github.com/idris-lang/Idris2)
 [![Epochs](https://img.shields.io/badge/Epochs-1_to_37-green.svg)]()
 [![Ternary](https://img.shields.io/badge/Ternary_States-27_Closed-purple.svg)]()
-[![Modules](https://img.shields.io/badge/Literate_Chapters-31_Verified-brightgreen.svg)]()
-[![Tests](https://img.shields.io/badge/Test_Suite-25_Passed-success.svg)]()
+[![Modules](https://img.shields.io/badge/Literate_Chapters-32_Verified-brightgreen.svg)]()
+[![Tests](https://img.shields.io/badge/Test_Suite-26_Passed-success.svg)]()
 
 ---
 
@@ -58,6 +58,7 @@ The cornerstone of **Idris2-Universe2** is the strict mathematical isomorphism l
 * [Discrete Exterior Calculus & Gauge Fields](Library/Wiki/Geometry/Discrete_Exterior_Calculus_and_Gauge.md) — Cell complexes, curvature 2-forms $F = dA$, and $SU(3)$ color confinement.
 * [2D Maxwell Field Equations](Library/Wiki/Geometry/Maxwell_Field_Equations.md) — Exact discrete electrodynamics running via structural accounting (`sumStructural`).
 * [Grassmann Exterior Calculus & Yang-Mills Gauge Theory](Library/Wiki/Geometry/Grassmann_and_Yang_Mills.md) — Grassmann cochain hierarchy ($C_0, C_1, C_2, C_3$), exact Bianchi $d_2(d_1 A) = 0$, combinatorial Hodge duality, and Dihedron non-Abelian color flux confinement.
+* [Molecular Bonding & Chemical Graph Contraction](Library/Wiki/Geometry/Molecular_Bonding.md) — Tier 5 chemical molecular bonding, covalent Maxel contraction, Water Archimedes quadrea ($A=3$), and alkane saturation series ($C_n H_{2n+2}$).
 * [Relational Metric Inference](Library/Wiki/Evolution/Non_Hardcoded_Cosmic_State.md) — Eliminating magic numbers through internal density ratios.
 
 ### 3. Evolutionary Dynamics & Law Encoding
