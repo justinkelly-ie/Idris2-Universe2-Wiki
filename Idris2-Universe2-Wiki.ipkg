@@ -1,0 +1,35 @@
+package Idris2-Universe2-Wiki
+version = 0.2.0
+executable = universe2-verify
+main = Main
+
+-- Zero external library dependencies: verified purely via base and Idris2-Universe2
+depends = base,
+          Idris2-Universe2
+
+sourcedir = "Library/Wiki"
+
+modules = Main,
+          Foundations.Universal_Mapping,
+          Foundations.Box_Arithmetic,
+          Foundations.Grothendieck_Box_Integers,
+          Foundations.Nested_Polynomial_Multisets,
+          Foundations.Nilpotent_Infinitesimals,
+          Foundations.Contradictions_With_Standard_Physics,
+          Geometry.Ternary_Multiverse_27,
+          Geometry.Emergent_Higher_Order_Physics,
+          Geometry.Lattice_Topology_and_Flux,
+          Geometry.Emergent_Toroidal_Topology,
+          Geometry.Emergent_Pillars_of_Physics,
+          Geometry.Hadronic_Color_Confinement,
+          Geometry.Archimedes_Function_and_Quadrea,
+          Geometry.Discrete_Exterior_Calculus_and_Gauge,
+          Evolution.Pre_Geometric_Genesis,
+          Evolution.Dark_Matter_Law_Storage,
+          Evolution.Non_Hardcoded_Cosmic_State,
+          Evolution.Bootstrap_Epoch_1_to_37,
+          Evolution.Cycle_137_and_Expansion,
+          Evolution.Alpha_Cluster_Replication,
+          Evolution.Cyclotomic_Encoding_and_Decoding,
+          Kinematics.Causal_Posets_and_Lensing,
+          Verification.Verification_Matrix

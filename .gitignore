@@ -1,0 +1,9 @@
+build/
+depends/
+.pack/
+universe2-verify
+*.ttc
+*.ttm
+*.ibc
+*~
+.DS_Store

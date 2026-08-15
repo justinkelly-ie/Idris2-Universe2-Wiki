@@ -1,0 +1,9 @@
+[custom.all.Idris2-Universe2-Wiki]
+type = "local"
+path = "."
+ipkg = "Idris2-Universe2-Wiki.ipkg"
+
+[custom.all.Idris2-Universe2]
+type = "local"
+path = "../Idris2-Universe2"
+ipkg = "Idris2-Universe2.ipkg"
