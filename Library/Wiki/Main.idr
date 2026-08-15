@@ -180,7 +180,7 @@ prop_emergentToroidalTopology =
       lapField  = discreteLaplacian27 testField
   in step3 == MinusOne && unwrapBox (sumField27 lapField) == 0
 
-||| Property 16: Test The 6 Emergent Pillars of Physics Evidence Suite
+||| Property 16: Test The 12 Emergent Laws of Physics Evidence Suite
 prop_emergentPillarsOfPhysics : Bool
 prop_emergentPillarsOfPhysics =
   evidence_pillar1_conservation &&
@@ -188,7 +188,12 @@ prop_emergentPillarsOfPhysics =
   evidence_pillar3_gravitational_drag &&
   evidence_pillar4_bianchi_identity &&
   evidence_pillar5_quantum_nilpotent &&
-  evidence_pillar6_hadronic_singlet
+  evidence_pillar6_hadronic_singlet &&
+  evidence_pillar7_speed_of_light &&
+  Math.FineStructure.verify137Derivation &&
+  evidence_pillar10_grav_wave_shear &&
+  evidence_pillar11_alpha_cluster &&
+  evidence_pillar12_baryon_asymmetry
 
 ||| Property 17: Literate Module Invariant Aggregator (Validates all 23 literate proofs)
 prop_literateModuleInvariants : Bool
@@ -227,7 +232,7 @@ main = do
   putStrLn $ "  [TEST 13] Option B (Epoch 4 Alpha Cluster 108):  " ++ (if prop_alphaClusterReplication then "PASSED ✅" else "FAILED ❌")
   putStrLn $ "  [TEST 14] Cyclotomic Encoding & Drag Decoding:   " ++ (if prop_cyclotomicEncodingDecoding then "PASSED ✅" else "FAILED ❌")
   putStrLn $ "  [TEST 15] Emergent Toroidal Topology (T³):       " ++ (if prop_emergentToroidalTopology then "PASSED ✅" else "FAILED ❌")
-  putStrLn $ "  [TEST 16] The 6 Emergent Pillars of Physics:     " ++ (if prop_emergentPillarsOfPhysics then "PASSED ✅" else "FAILED ❌")
+  putStrLn $ "  [TEST 16] The 12 Emergent Laws of Physics:       " ++ (if prop_emergentPillarsOfPhysics then "PASSED ✅" else "FAILED ❌")
   putStrLn $ "  [TEST 17] All 23 Literate Wiki Modules Verified:  " ++ (if prop_literateModuleInvariants then "PASSED ✅" else "FAILED ❌")
   putStrLn ""
   putStrLn "All Cosmological Proof Witnesses & Literate Invariants Verified!"
