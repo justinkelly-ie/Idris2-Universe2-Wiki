@@ -37,6 +37,7 @@ import Foundations.Emergent_Quantum_Mechanics
 import Foundations.Quantum_Measurement_and_Superposition
 import Foundations.Structural_Accounting_and_Pure_Tokens
 import Foundations.Vexels_Maxels_and_Reflected_Linear_Algebra
+import Foundations.Singleton_Fractions_and_OnSeq_Algebra
 import Foundations.Contradictions_With_Standard_Physics
 import Geometry.Ternary_Multiverse_27
 import Geometry.Emergent_Higher_Order_Physics
@@ -293,7 +294,16 @@ prop_matterTokensLawImpedance =
   evidence_arrow_of_time_impedance_step &&
   evidence_local_vm_global_dm_independence
 
-||| Property 27: Literate Module Invariant Aggregator (Validates all 33 literate proofs)
+||| Property 27: Test Singleton Fractional Multisets & OnSeq Algebra
+prop_singletonFractionsAndOnSeq : Bool
+prop_singletonFractionsAndOnSeq =
+  evidence_div_zero_immunity &&
+  evidence_rational_addition &&
+  evidence_rational_multiplication &&
+  evidence_onseq_clip_extraction &&
+  evidence_pointwise_onseq_algebra
+
+||| Property 28: Literate Module Invariant Aggregator (Validates all 34 literate proofs)
 prop_literateModuleInvariants : Bool
 prop_literateModuleInvariants =
   unwrapBox (wildNatToBoxInt (toWildNat 37)) == 37 &&
@@ -342,7 +352,8 @@ main = do
   putStrLn $ "  [TEST 24] 3D DEC & Yang-Mills Gauge Theory:      " ++ (if prop_dec3dYangMillsGauge then "PASSED ✅" else "FAILED ❌")
   putStrLn $ "  [TEST 25] Tier 5 Molecular Bonding (Chemistry):  " ++ (if prop_tier5MolecularBonding then "PASSED ✅" else "FAILED ❌")
   putStrLn $ "  [TEST 26] Matter Numerator / Law Denominator:    " ++ (if prop_matterTokensLawImpedance then "PASSED ✅" else "FAILED ❌")
-  putStrLn $ "  [TEST 27] All 33 Literate Wiki Modules Verified:  " ++ (if prop_literateModuleInvariants then "PASSED ✅" else "FAILED ❌")
+  putStrLn $ "  [TEST 27] Singleton Fractions & OnSeq Algebra:   " ++ (if prop_singletonFractionsAndOnSeq then "PASSED ✅" else "FAILED ❌")
+  putStrLn $ "  [TEST 28] All 34 Literate Wiki Modules Verified:  " ++ (if prop_literateModuleInvariants then "PASSED ✅" else "FAILED ❌")
   putStrLn ""
   putStrLn "All Cosmological Proof Witnesses & Literate Invariants Verified!"
   putStrLn "========================================================"
