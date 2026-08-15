@@ -5,8 +5,8 @@
 [![Idris2](https://img.shields.io/badge/Idris2-Verified_Wiki-blue.svg)](https://github.com/idris-lang/Idris2)
 [![Epochs](https://img.shields.io/badge/Epochs-1_to_37-green.svg)]()
 [![Ternary](https://img.shields.io/badge/Ternary_States-27_Closed-purple.svg)]()
-[![Modules](https://img.shields.io/badge/Literate_Chapters-23_Verified-brightgreen.svg)]()
-[![Tests](https://img.shields.io/badge/Test_Suite-17_Passed-success.svg)]()
+[![Modules](https://img.shields.io/badge/Literate_Chapters-24_Verified-brightgreen.svg)]()
+[![Tests](https://img.shields.io/badge/Test_Suite-18_Passed-success.svg)]()
 
 ---
 
@@ -41,6 +41,7 @@ The cornerstone of **Idris2-Universe2** is the strict mathematical isomorphism l
 * [Pure Box Integers as Grothendieck Pairs](Library/Wiki/Foundations/Grothendieck_Box_Integers.md) — Signed integers as pairs of positive/negative empty box containers $(P, N)$.
 * [Nested Polynomial Multisets](Library/Wiki/Foundations/Nested_Polynomial_Multisets.md) — Polynomials as multisets of nested terms, Goh Factorization, and exact cyclotomic long division.
 * [Nilpotent Infinitesimal Calculus](Library/Wiki/Foundations/Nilpotent_Infinitesimals.md) — Matrix representations of $\epsilon$ ($\epsilon^2 = 0$) and discrete Taylor calculus.
+* [Emergent Quantum Mechanics](Library/Wiki/Foundations/Emergent_Quantum_Mechanics.md) — Wildberger's finitist quantum framework: dual numbers, rational spreads, symplectic commutators, and rational Born tally ratios.
 * [Contradictions with Standard Physics](Library/Wiki/Foundations/Contradictions_With_Standard_Physics.md) — Comparative analysis against $\Lambda\text{CDM}$, General Relativity, and Continuum QFT.
 
 ### 2. Spacetime & Geometry

@@ -24,12 +24,13 @@ import Compound.VelocityLensing
 import Reflect.InvariantAuditor
 import Data.Vect
 
--- IMPORT ALL 23 LITERATE MARKDOWN MODULES (Proves they compile and execute)
+-- IMPORT ALL 24 LITERATE MARKDOWN MODULES (Proves they compile and execute)
 import Foundations.Universal_Mapping
 import Foundations.Box_Arithmetic
 import Foundations.Grothendieck_Box_Integers
 import Foundations.Nested_Polynomial_Multisets
 import Foundations.Nilpotent_Infinitesimals
+import Foundations.Emergent_Quantum_Mechanics
 import Foundations.Contradictions_With_Standard_Physics
 import Geometry.Ternary_Multiverse_27
 import Geometry.Emergent_Higher_Order_Physics
@@ -195,7 +196,14 @@ prop_emergentPillarsOfPhysics =
   evidence_pillar11_alpha_cluster &&
   evidence_pillar12_baryon_asymmetry
 
-||| Property 17: Literate Module Invariant Aggregator (Validates all 23 literate proofs)
+||| Property 17: Test Wildberger's Finitist Quantum Mechanics Invariants
+prop_wildbergerQuantumMechanics : Bool
+prop_wildbergerQuantumMechanics =
+  evidence_wildberger_nilpotent_derivative &&
+  evidence_wildberger_rational_quadrance &&
+  evidence_wildberger_rational_probability
+
+||| Property 18: Literate Module Invariant Aggregator (Validates all 24 literate proofs)
 prop_literateModuleInvariants : Bool
 prop_literateModuleInvariants =
   unwrapBox (wildNatToBoxInt (toWildNat 37)) == 37 &&
@@ -233,7 +241,8 @@ main = do
   putStrLn $ "  [TEST 14] Cyclotomic Encoding & Drag Decoding:   " ++ (if prop_cyclotomicEncodingDecoding then "PASSED ✅" else "FAILED ❌")
   putStrLn $ "  [TEST 15] Emergent Toroidal Topology (T³):       " ++ (if prop_emergentToroidalTopology then "PASSED ✅" else "FAILED ❌")
   putStrLn $ "  [TEST 16] The 12 Emergent Laws of Physics:       " ++ (if prop_emergentPillarsOfPhysics then "PASSED ✅" else "FAILED ❌")
-  putStrLn $ "  [TEST 17] All 23 Literate Wiki Modules Verified:  " ++ (if prop_literateModuleInvariants then "PASSED ✅" else "FAILED ❌")
+  putStrLn $ "  [TEST 17] Wildberger's Finitist Quantum Mechanics:" ++ (if prop_wildbergerQuantumMechanics then "PASSED ✅" else "FAILED ❌")
+  putStrLn $ "  [TEST 18] All 24 Literate Wiki Modules Verified:  " ++ (if prop_literateModuleInvariants then "PASSED ✅" else "FAILED ❌")
   putStrLn ""
   putStrLn "All Cosmological Proof Witnesses & Literate Invariants Verified!"
   putStrLn "========================================================"

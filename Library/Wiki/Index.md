@@ -36,6 +36,7 @@ The cornerstone of **Idris2-Universe2** is the strict mathematical isomorphism l
 * [Pure Box Integers as Grothendieck Pairs](Foundations/Grothendieck_Box_Integers.md) — Signed integers as pairs of positive/negative empty box containers $(P, N)$.
 * [Nested Polynomial Multisets](Foundations/Nested_Polynomial_Multisets.md) — Polynomials as multisets of nested terms, Goh Factorization, and exact cyclotomic long division.
 * [Nilpotent Infinitesimal Calculus](Foundations/Nilpotent_Infinitesimals.md) — Matrix representations of $\epsilon$ ($\epsilon^2 = 0$) and discrete Taylor calculus.
+* [Emergent Quantum Mechanics](Foundations/Emergent_Quantum_Mechanics.md) — Wildberger's finitist quantum framework: dual numbers, rational spreads, symplectic commutators, and rational Born tally ratios.
 * [Contradictions with Standard Physics](Foundations/Contradictions_With_Standard_Physics.md) — Comparative analysis against $\Lambda\text{CDM}$, General Relativity, and Continuum QFT.
 
 ### 2. Spacetime & Geometry
