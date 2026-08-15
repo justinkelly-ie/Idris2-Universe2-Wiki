@@ -48,9 +48,9 @@ The cornerstone of **Idris2-Universe2** is the strict mathematical isomorphism l
 * [The 12 Emergent Laws of Physics](Geometry/Emergent_Pillars_of_Physics.md) — Deriving Conservation, Time's Arrow, Gravitational Inertia, Maxwell DEC, Quantum Infinitesimals, QCD Color Confinement, Speed of Light Locality, Fine Structure 137, Pauli Exclusion, Gravitational Waves, Nuclear Binding, and Baryon Asymmetry.
 * [Intra-Epoch Hadronic Confinement (Epoch 3)](Geometry/Hadronic_Color_Confinement.md) — Triadic Chromogeometric color charge partitioning (Red, Green, Blue) and color-neutral nucleon singlets.
 * [Emergent Higher-Order Physics](Geometry/Emergent_Higher_Order_Physics.md) — Deriving Electrodynamics, Causal Posets, and Hamiltonian mechanics from $1\times 1 \to 2\times 2 \to 3\times 3\times 3$ grid expansion.
-* [Archimedes' Function & Quadrea](Geometry/Archimedes_Function_and_Quadrea.md) — Gram determinants on $2\times 2$ maxels, collinear geodesics ($A=0$), and Quadrea flux.
-* [Discrete Exterior Calculus & Gauge Fields](Geometry/Discrete_Exterior_Calculus_and_Gauge.md) — Cell complexes, curvature 2-forms $F = dA$, and $SU(3)$ color confinement.
-* [2D Maxwell Field Equations (Cast-Free)](Geometry/Maxwell_Field_Equations_Cast_Free.md) — Exact discrete electrodynamics running 100% cast-free via structural accounting (`sumStructural`).
+* [Archimedes' Function & Quadrea](Geometry/Archimedes_Function_and_Quadrea.md) — Discrete Exterior Calculus area computation on the 3D cell complex.
+* [Discrete Exterior Calculus & Gauge Theory](Geometry/Discrete_Exterior_Calculus_and_Gauge.md) — Discrete differential forms ($C_0, C_1, C_2, C_3$), exterior derivatives $d_0, d_1$, and Bianchi identity $d(dA) = 0$.
+* [2D Maxwell Field Equations](Geometry/Maxwell_Field_Equations.md) — Exact discrete electrodynamics running via structural accounting (`sumStructural`).
 * [Relational Metric Inference](Evolution/Non_Hardcoded_Cosmic_State.md) — Eliminating magic numbers through internal density ratios.
 
 ### 3. Evolutionary Dynamics & Law Encoding

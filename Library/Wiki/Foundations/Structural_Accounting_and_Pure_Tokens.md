@@ -1,27 +1,24 @@
-# 🧱 Structural Accounting & Cast-Free Token Geometry
+# 🧱 Structural Accounting & Token Geometry
 
 In **Idris2-Universe2**, numbers are **not abstract machine scalars** magically converted across types with `cast`. In Norman J. Wildberger's *Box Arithmetic* and strict Quantitative Type Theory (QTT), a number is a **physical collection of resource tokens inside an inductive data container**.
 
 ---
 
-## 🏛️ 1. The Ultrafinitist Critique of `cast`
+## 🏛️ 1. The Ultrafinitist Foundation of Structural Accounting
 
-### The Vulnerability of Primitive Casts
-When a program calls `cast (sum dmLog)`:
-1. The compiler drops down to its unverified machine-level integer registers (e.g. 64-bit hardware registers).
-2. To an ultrafinitist, this breaks the chain of logical conservation: hardware overflow, bit shifts, or un-tracked pointer coercions can compromise physical conservation without triggering a type error.
-3. In a true computational cosmology, the metric tracker must **count and accumulate its memory configurations structurally**, token by token.
+### Concrete Resource Accounting
+In a true computational cosmology, the metric tracker must **count and accumulate its memory configurations structurally**, token by token. Hardware overflow, arbitrary bit shifts, or un-tracked pointer coercions cannot occur when all state counts remain bound to inductive vector structures.
 
 ---
 
 ## 🔬 2. Pure Structural Accounting (`sumStructural`)
 
-Instead of performing runtime numerical casts, the universe accumulates data along inductive vectors using **Structural Accounting**:
+Instead of performing unchecked numerical shortcuts, the universe accumulates data along inductive vectors using **Structural Accounting**:
 
 $$\text{sumStructural}([\ ]) = [\ 0 \ ]$$
 $$\text{sumStructural}(x :: xs) = x + \text{sumStructural}(xs)$$
 
-Every historical remainder in the Dark Matter ledger ($dm = 55$) exerts gravitational drag not because of an arbitrary casting macro, but because the algorithm **physically unrolls the linear memory layout and pairs each historical token against the metric boundaries**.
+Every historical remainder in the Dark Matter ledger ($dm = 55$) exerts gravitational drag because the algorithm **physically unrolls the linear memory layout and pairs each historical token against the metric boundaries**.
 
 ---
 
@@ -41,7 +38,7 @@ import Data.Vect
 
 %default total
 
-||| Evidence 1: Proof that structural summation operates cast-free over 55 Dark Matter tokens
+||| Evidence 1: Proof that structural summation operates over 55 Dark Matter tokens
 public export
 evidence_structural_dm_sum : Bool
 evidence_structural_dm_sum =
@@ -67,7 +64,7 @@ evidence_structural_associativity =
       c = intToBoxInt 55  -- Dark Matter
   in verifyAssociativeTransition a b c
 
-||| Evidence 4: Proof that cast-free velocity lensing produces exact integer rational deceleration:
+||| Evidence 4: Proof that structural velocity lensing produces exact integer rational deceleration:
 ||| 560 / (1 + 55) = 10
 public export
 evidence_cast_free_lensing : Bool

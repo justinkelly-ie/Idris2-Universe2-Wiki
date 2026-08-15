@@ -1,9 +1,9 @@
-# ⚡ 2D Maxwell Field Equations (Cast-Free Structural Layout)
+# ⚡ 2D Maxwell Field Equations (Discrete Exterior Calculus)
 
 In standard physics, Maxwell's equations are written with continuous partial differential operators:
 $$dF = 0 \quad (\text{Homogeneous: Gauss-Faraday / Bianchi}), \qquad \star d \star F = J \quad (\text{Inhomogeneous: Gauss-Ampère})$$
 
-In **Idris2-Universe2**, using **Discrete Exterior Calculus (DEC)** and our pure **Structural Accounting layout (`sumStructural`)**, the 2D Maxwell equations run **100% cast-free** on discrete cell complexes without floating-point approximations, real numbers ($\mathbb{R}$), or unverified compiler casting operations.
+In **Idris2-Universe2**, using **Discrete Exterior Calculus (DEC)** and **Structural Accounting (`sumStructural`)**, the 2D Maxwell equations run on discrete cell complexes without floating-point approximations or continuous real numbers ($\mathbb{R}$).
 
 ---
 
@@ -54,7 +54,7 @@ In **Idris2-Universe2**, using **Discrete Exterior Calculus (DEC)** and our pure
 ## 💻 2. Executable Literate Proofs & Evidence
 
 ```idris
-module Geometry.Maxwell_Field_Equations_Cast_Free
+module Geometry.Maxwell_Field_Equations
 
 import Core.BoxInt
 import Evolution.StructuralAccounting
@@ -104,7 +104,7 @@ evidence_maxwell_bianchi_identity : (phi : Potential0Form2D) -> Bool
 evidence_maxwell_bianchi_identity phi =
   d1Curvature (d0Gradient phi) == intToBoxInt 0
 
-||| Evidence 2: Proof of Gauss's Law charge extraction without runtime casts:
+||| Evidence 2: Proof of Gauss's Law charge extraction:
 ||| Flux [10, 20, -5, -15] => Q = 10 + 20 - (-5) - (-15) = 50
 public export
 evidence_gauss_charge_structural : Bool
