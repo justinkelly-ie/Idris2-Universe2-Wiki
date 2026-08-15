@@ -2,7 +2,7 @@
 
 To transition the **Idris2-Universe2** architecture forward from the initial macro-canvas into expanded higher-order matrix spaces, the engine uses the generalized **`expandAndUnfoldGeneric`** transformation pipeline.
 
-To adhere strictly to un-hardcoded, resource-conserving constraints, this function contains **no hardcoded dimension constants** in its type parameters or logic. Instead, it reads the dimensions of incoming spatial arrays directly from dependent type indices, uses **Structural Accounting (`sumStructural`)** to measure background history mass, and uses a generic **Tensor Product Outer Product** to expand grid rows and columns dynamically.
+To adhere strictly to un-hardcoded, resource-conserving constraints, this function contains **no hardcoded dimension constants** in its type parameters or logic. Instead, it reads the dimensions of incoming spatial arrays directly from dependent type indices, uses **Structural Accounting (`sumStructural`)** to measure background history mass, and uses a generic **Tensor Product Outer Product** to expand grid rows and columns dynamically into a pure **`Maxel`**.
 
 ---
 
@@ -19,8 +19,8 @@ To adhere strictly to un-hardcoded, resource-conserving constraints, this functi
    a      └─────────────────────────────────────────────────┘
    lKet (N x 1 column)
 
-   Ancestral Anchor: AddM (N, N) (historyMass) ZeroM
-   Active Manifold:  AddM (1, 1) (gridWeight)  ancestralAnchor
+   Ancestral Anchor: (Pixel N N => historyMass)
+   Active Manifold:  (Pixel 1 1 => gridWeight)
 ```
 
 ### A. The 4 Stages of Generalized Inflation
@@ -30,8 +30,8 @@ To adhere strictly to un-hardcoded, resource-conserving constraints, this functi
    Walks the Dark Matter vector array structurally via `sumStructural dmLog` (yielding mass 56 for Epoch 38).
 3. **Chiral Outer Product Summation**:
    Multiplies the incoming chiral ket and bra vectors to calculate the aggregate matrix mass ($M = \sum_i \sum_j k_i b_j$).
-4. **Macro Tensor Unfold**:
-   Anchors historical mass at the outer boundary `(nextScale, nextScale)` while embedding active field tokens at `(1, 1)`.
+4. **Macro Maxel Unfold**:
+   Anchors historical mass at the outer boundary `(nextScale, nextScale)` while embedding active field tokens at `(1, 1)` in a unified `Maxel`.
 
 ---
 
@@ -41,10 +41,10 @@ To adhere strictly to un-hardcoded, resource-conserving constraints, this functi
 module Evolution.Dynamic_Grid_Expansion
 
 import Core.BoxInt
-import Math.IntPolynumber
+import Core.VexelMaxel
 import Evolution.State
 import Evolution.StructuralAccounting
-import Evolution.GridExpansion
+import Evolution.Expansion
 import Data.Vect
 
 %default total
@@ -77,19 +77,19 @@ public export
 evidence_ancestral_history_anchor : Bool
 evidence_ancestral_history_anchor =
   let manifold = expandAndUnfoldGeneric macroState3x3 ketVector4 braVector4
-  in unwrapBox (lookupWeight (4, 4) manifold) == 56
+  in unwrapBox (lookupPixel (MkPixel 4 4) manifold) == 56
 
 ||| Evidence 3: Verification that the active grid weight (6) is anchored at (1, 1).
 public export
 evidence_active_grid_weight : Bool
 evidence_active_grid_weight =
   let manifold = expandAndUnfoldGeneric macroState3x3 ketVector4 braVector4
-  in unwrapBox (lookupWeight (1, 1) manifold) == 6
+  in unwrapBox (lookupPixel (MkPixel 1 1) manifold) == 6
 
 ||| Evidence 4: Verification that total manifold weight equals sum of active grid (6) and history (56) = 62.
 public export
 evidence_total_manifold_weight : Bool
 evidence_total_manifold_weight =
   let manifold = expandAndUnfoldGeneric macroState3x3 ketVector4 braVector4
-  in unwrapBox (totalPolynumberWeight manifold) == 62
+  in unwrapBox (totalMaxelWeight manifold) == 62
 ```

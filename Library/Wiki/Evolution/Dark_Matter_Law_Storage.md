@@ -12,6 +12,7 @@ module Evolution.Dark_Matter_Law_Storage
 import Core.BoxInt
 import Evolution.State
 import Evolution.Bootstrap
+import Evolution.StructuralAccounting
 import Compound.VelocityLensing
 import Data.Vect
 
@@ -36,5 +37,5 @@ evidence_epoch38_capacity = Refl
 public export
 evidence_inductive_drag_value : Bool
 evidence_inductive_drag_value =
-  unwrapBox (computeInductiveDrag (replicate 55 (intToBoxInt 1))) == 55
+  unwrapBox (sumStructural (replicate 55 (intToBoxInt 1))) == 55
 ```

@@ -8,7 +8,6 @@ import Core.VexelMaxel
 import Math.Infinitesimal
 import Math.RationalTrig
 import Math.FineStructure
-import Math.IntPolynumber
 import Math.LinAlgebra.MetricTensor
 import Math.LinAlgebra.TernaryClassifier
 import Math.LinAlgebra.BilinearProduct
@@ -22,7 +21,6 @@ import Evolution.Expansion
 import Evolution.Contraction
 import Evolution.Bootstrap
 import Evolution.StructuralAccounting
-import Evolution.GridExpansion
 import Derivation.PureGeometricClassifier
 import Compound.LinearEpsilonRouting
 import Compound.VelocityLensing

@@ -62,6 +62,6 @@ evidence_137_first_principles = Refl
 ||| Evidence 3: Proof that expanding the vacuum grid adds 9 (3*3) spatial cells (155 -> 164)
 public export
 evidence_expansion_step_capacity :
-  totalStateCapacity (expandAndUnfoldGeneric (genesisVacuumAtScale 3 7) 3) = 164
+  totalStateCapacity (stepGridExpansion (genesisVacuumAtScale 3 7) 3) = 164
 evidence_expansion_step_capacity = Refl
 ```
