@@ -61,13 +61,21 @@ import Geometry.Discrete_Poynting_Theorem
 import Geometry.Rational_Snell_and_Triple_Spread
 import Geometry.Constructive_Dirac_Spinor
 import Geometry.Discrete_Holographic_Area_Law
+import Geometry.Plasma_Recombination_and_Decoupling
+import Geometry.Stellar_Nucleosynthesis_and_Phosphorus
 import Geometry.Molecular_Bonding
+import Geometry.Hydrogen_Bonding_and_Aqueous_Percolation
+import Geometry.Watson_Crick_Complementarity_and_Polyphosphates
 import Geometry.Wilson_Polyhedra_and_NonAbelian_Color_Flux
 import Geometry.The_Four_Fundamental_Geometries_and_Cosmic_Synthesis
 import Geometry.Tier6_Macromolecules_and_Chiral_Stereochemistry
 import Math.WilsonPolyhedra
 import Math.FourGeometries
+import Compound.PlasmaRecombination
+import Compound.StellarNucleosynthesis
 import Compound.MolecularBonding
+import Compound.HydrogenBonding
+import Compound.WatsonCrickBasePairing
 import Compound.MacromolecularChirality
 import Evolution.Pre_Geometric_Genesis
 import Evolution.Dark_Matter_Law_Storage
@@ -219,6 +227,27 @@ proofOfChiralEnantiomerInversion = auditChiralEnantiomerInversion
 ||| Witness 31: Proves via Elaborator Reflection macro that Homochiral Peptide Chain Invariant holds.
 proofOfHomochiralPeptideChain : Reflect.InvariantAuditor.auditHomochiralPeptideChainProofExport = True
 proofOfHomochiralPeptideChain = auditHomochiralPeptideChain
+
+||| Witness 32: Proves via Elaborator Reflection macro that Plasma Recombination & Decoupling holds.
+proofOfPlasmaRecombinationDecoupling : Reflect.InvariantAuditor.auditPlasmaRecombinationDecouplingProofExport = True
+proofOfPlasmaRecombinationDecoupling = auditPlasmaRecombinationDecoupling
+
+||| Witness 33: Proves via Elaborator Reflection macro that Triple-Alpha Carbon & Phosphorus Synthesis holds.
+proofOfTripleAlphaCarbonPhosphorusSynthesis : Reflect.InvariantAuditor.auditTripleAlphaCarbonPhosphorusSynthesisProofExport = True
+proofOfTripleAlphaCarbonPhosphorusSynthesis = auditTripleAlphaCarbonPhosphorusSynthesis
+
+||| Witness 34: Proves via Elaborator Reflection macro that Hydrogen Bond Network & Water Quadrea holds.
+proofOfHydrogenBondNetworkQuadrea : Reflect.InvariantAuditor.auditHydrogenBondNetworkQuadreaProofExport = True
+proofOfHydrogenBondNetworkQuadrea = auditHydrogenBondNetworkQuadrea
+
+||| Witness 35: Proves via Elaborator Reflection macro that Watson-Crick Complementary Hydrogen Bond Ratios hold.
+proofOfWatsonCrickHydrogenBondRatio : Reflect.InvariantAuditor.auditWatsonCrickHydrogenBondRatioProofExport = True
+proofOfWatsonCrickHydrogenBondRatio = auditWatsonCrickHydrogenBondRatio
+
+||| Witness 36: Proves via Elaborator Reflection macro that Pyrophosphate (ATP) Thermodynamic Coupling holds.
+proofOfPyrophosphateThermodynamicCoupling : Reflect.InvariantAuditor.auditPyrophosphateThermodynamicCouplingProofExport = True
+proofOfPyrophosphateThermodynamicCoupling = auditPyrophosphateThermodynamicCoupling
+
 
 
 
@@ -512,7 +541,12 @@ prop_literateModuleInvariants =
   auditFourGeometriesCosmicSynthesisProofExport &&
   auditPeptideCondensationConservationProofExport &&
   auditChiralEnantiomerInversionProofExport &&
-  auditHomochiralPeptideChainProofExport
+  auditHomochiralPeptideChainProofExport &&
+  auditPlasmaRecombinationDecouplingProofExport &&
+  auditTripleAlphaCarbonPhosphorusSynthesisProofExport &&
+  auditHydrogenBondNetworkQuadreaProofExport &&
+  auditWatsonCrickHydrogenBondRatioProofExport &&
+  auditPyrophosphateThermodynamicCouplingProofExport
 
 ||| Property 30: Test Quantum State Transitions & Wilson Loop Plaquettes
 prop_quantumTransitionsWilsonLoops : Bool
@@ -548,6 +582,27 @@ prop_tier6MacromoleculesChirality =
   verifyPeptideCondensationConservation &&
   verifyChiralEnantiomerInversion &&
   verifyHomochiralPeptideChain
+
+||| Property 35: Test Plasma Recombination & Photon Decoupling
+prop_plasmaRecombinationDecoupling : Bool
+prop_plasmaRecombinationDecoupling =
+  verifyPlasmaRecombinationDecoupling
+
+||| Property 36: Test Stellar Nucleosynthesis & Phosphorus Synthesis
+prop_stellarNucleosynthesisPhosphorus : Bool
+prop_stellarNucleosynthesisPhosphorus =
+  verifyTripleAlphaCarbonPhosphorusSynthesis
+
+||| Property 37: Test Hydrogen Bonding & Aqueous Percolation
+prop_hydrogenBondingAqueousPercolation : Bool
+prop_hydrogenBondingAqueousPercolation =
+  verifyHydrogenBondNetworkQuadrea
+
+||| Property 38: Test Watson-Crick Base Pairing & Polyphosphate Coupling
+prop_watsonCrickPolyphosphates : Bool
+prop_watsonCrickPolyphosphates =
+  verifyWatsonCrickHydrogenBondRatio &&
+  verifyPyrophosphateThermodynamicCoupling
 
 ||| Main test runner
 main : IO ()
@@ -592,6 +647,11 @@ main = do
   putStrLn "  - Peptide Condensation Conservation Witness: INJECTED & VALID (Refl) ✅"
   putStrLn "  - 3D Chiral Enantiomer Inversion Witness: INJECTED & VALID (Refl) ✅"
   putStrLn "  - Homochiral Peptide Chain Invariant Witness: INJECTED & VALID (Refl) ✅"
+  putStrLn "  - Plasma Recombination & Decoupling Witness: INJECTED & VALID (Refl) ✅"
+  putStrLn "  - Triple-Alpha Carbon & Phosphorus Synthesis Witness: INJECTED & VALID (Refl) ✅"
+  putStrLn "  - Hydrogen Bond Network & Water Quadrea Witness: INJECTED & VALID (Refl) ✅"
+  putStrLn "  - Watson-Crick Complementary Hydrogen Bond Ratio Witness: INJECTED & VALID (Refl) ✅"
+  putStrLn "  - Pyrophosphate (ATP) Thermodynamic Coupling Witness: INJECTED & VALID (Refl) ✅"
   putStrLn ""
   putStrLn " [RUNTIME CONSERVATION & KINEMATIC INVARIANTS]:"
   putStrLn $ "  [TEST 1]  27-State Ternary Spacetime Closure:    " ++ (if prop_27_TernaryClosure then "PASSED ✅" else "FAILED ❌")
@@ -642,7 +702,11 @@ main = do
   putStrLn $ "  [TEST 46] 3D Wilson Polyhedra & SU(3) Flux:      " ++ (if prop_wilsonPolyhedraColorFlux then "PASSED ✅" else "FAILED ❌")
   putStrLn $ "  [TEST 47] The 4 Fundamental Geometries:         " ++ (if prop_fourGeometriesSynthesis then "PASSED ✅" else "FAILED ❌")
   putStrLn $ "  [TEST 48] Tier 6 Macromolecules & Chirality:    " ++ (if prop_tier6MacromoleculesChirality then "PASSED ✅" else "FAILED ❌")
-  putStrLn $ "  [TEST 49] All Literate Wiki Modules Verified:   " ++ (if prop_literateModuleInvariants then "PASSED ✅" else "FAILED ❌")
+  putStrLn $ "  [TEST 49] Plasma Recombination & Decoupling:    " ++ (if prop_plasmaRecombinationDecoupling then "PASSED ✅" else "FAILED ❌")
+  putStrLn $ "  [TEST 50] Stellar Nucleosynthesis & Phosphorus:  " ++ (if prop_stellarNucleosynthesisPhosphorus then "PASSED ✅" else "FAILED ❌")
+  putStrLn $ "  [TEST 51] Hydrogen Bonding & Aqueous Network:    " ++ (if prop_hydrogenBondingAqueousPercolation then "PASSED ✅" else "FAILED ❌")
+  putStrLn $ "  [TEST 52] Watson-Crick Base Pairing & ATP:       " ++ (if prop_watsonCrickPolyphosphates then "PASSED ✅" else "FAILED ❌")
+  putStrLn $ "  [TEST 53] All Literate Wiki Modules Verified:   " ++ (if prop_literateModuleInvariants then "PASSED ✅" else "FAILED ❌")
   putStrLn ""
   putStrLn "All Cosmological Proof Witnesses & Literate Invariants Verified!"
   putStrLn "========================================================"
