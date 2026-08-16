@@ -79,6 +79,8 @@ modules = Main,
           Kinematics.Causal_Posets_and_Lensing,
           Kinematics.Discrete_Noether_Symplectic,
           Kinematics.Symplectic_Leapfrog_Integrator,
+          Kinematics.Toroidal_Astrodynamics_and_NBody_Symplectic_Simulation,
+          Kinematics.Emergent_Galactic_Rotation_and_Dark_Matter_Drag,
           Verification.Verification_Matrix,
           Verification.Structural_Associativity_Proof,
           Verification.Cosmological_Inferences_and_Deductions

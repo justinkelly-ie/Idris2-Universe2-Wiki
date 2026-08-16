@@ -98,6 +98,8 @@ import Math.ConstructiveBaryogenesis
 import Math.RenormalizationInformationFlow
 import Math.RGDecimator
 import Math.GaugeSpinorCoupling
+import Math.ToroidalAstrodynamics
+import Math.GalacticRotationCurve
 import Compound.PlasmaRecombination
 import Compound.StellarNucleosynthesis
 import Compound.MolecularBonding
@@ -120,6 +122,8 @@ import Evolution.Renormalization_Group_and_Scale_Invariance
 import Kinematics.Causal_Posets_and_Lensing
 import Kinematics.Discrete_Noether_Symplectic
 import Kinematics.Symplectic_Leapfrog_Integrator
+import Kinematics.Toroidal_Astrodynamics_and_NBody_Symplectic_Simulation
+import Kinematics.Emergent_Galactic_Rotation_and_Dark_Matter_Drag
 import Verification.Verification_Matrix
 import Verification.Structural_Associativity_Proof
 import Verification.Cosmological_Inferences_and_Deductions
@@ -456,6 +460,27 @@ proofOfGaugeCoupledCurrentPositivity = auditGaugeCoupledCurrentPositivity
 ||| Witness 81: Proves via Elaborator Reflection macro that Traceless Metric Shear Spinor Interaction holds.
 proofOfMetricShearSpinorInteraction : Reflect.InvariantAuditor.auditMetricShearSpinorInteractionProofExport = True
 proofOfMetricShearSpinorInteraction = auditMetricShearSpinorInteraction
+
+||| Witness 82: Proves via Elaborator Reflection macro that Toroidal Minimum Image Periodic Distance holds.
+proofOfToroidalPeriodicity : Reflect.InvariantAuditor.auditToroidalPeriodicityProofExport = True
+proofOfToroidalPeriodicity = auditToroidalPeriodicity
+
+||| Witness 83: Proves via Elaborator Reflection macro that Toroidal Pairwise Momentum Conservation holds.
+proofOfToroidalMomentumConservation : Reflect.InvariantAuditor.auditToroidalMomentumConservationProofExport = True
+proofOfToroidalMomentumConservation = auditToroidalMomentumConservation
+
+||| Witness 84: Proves via Elaborator Reflection macro that Relativistic Perihelion Precession Shift holds.
+proofOfRelativisticPrecession : Reflect.InvariantAuditor.auditRelativisticPrecessionProofExport = True
+proofOfRelativisticPrecession = auditRelativisticPrecession
+
+||| Witness 85: Proves via Elaborator Reflection macro that Emergent Galactic Rotation Velocity Flatness holds.
+proofOfGalacticRotationFlatness : Reflect.InvariantAuditor.auditGalacticRotationFlatnessProofExport = True
+proofOfGalacticRotationFlatness = auditGalacticRotationFlatness
+
+||| Witness 86: Proves via Elaborator Reflection macro that Baryonic Tully-Fisher Mass-Velocity Proportionality holds.
+proofOfTullyFisherRelation : Reflect.InvariantAuditor.auditTullyFisherRelationProofExport = True
+proofOfTullyFisherRelation = auditTullyFisherRelation
+
 
 
 
@@ -798,7 +823,13 @@ prop_literateModuleInvariants =
   auditLinearCycleConservationProofExport &&
   auditGaugeCovariantDerivativeProofExport &&
   auditGaugeCoupledCurrentPositivityProofExport &&
-  auditMetricShearSpinorInteractionProofExport
+  auditMetricShearSpinorInteractionProofExport &&
+  auditToroidalPeriodicityProofExport &&
+  auditToroidalMomentumConservationProofExport &&
+  auditRelativisticPrecessionProofExport &&
+  auditGalacticRotationFlatnessProofExport &&
+  auditTullyFisherRelationProofExport
+
 
 
 
@@ -972,6 +1003,20 @@ prop_gaugeSpinorMetricCoupling =
   auditGaugeCoupledCurrentPositivityProof &&
   auditMetricShearSpinorInteractionProof
 
+||| Property 55: Test 3D Toroidal Astrodynamics & Symplectic Orbits
+prop_toroidalAstrodynamics : Bool
+prop_toroidalAstrodynamics =
+  auditToroidalPeriodicityProof &&
+  auditToroidalMomentumConservationProof &&
+  auditRelativisticPrecessionProof
+
+||| Property 56: Test Emergent Galactic Rotation Curves & Tully-Fisher Relation
+prop_emergentGalacticRotation : Bool
+prop_emergentGalacticRotation =
+  auditGalacticRotationFlatnessProof &&
+  auditTullyFisherRelationProof
+
+
 
 
 
@@ -1074,8 +1119,14 @@ main = do
   putStrLn "  - Gauge-Covariant Derivative Covariance Witness: INJECTED & VALID (Refl) ✅"
   putStrLn "  - Gauge-Coupled Dirac Current Positivity Witness: INJECTED & VALID (Refl) ✅"
   putStrLn "  - Traceless Metric Shear Spinor Interaction Witness: INJECTED & VALID (Refl) ✅"
+  putStrLn "  - Toroidal Minimum Image Periodic Distance Witness: INJECTED & VALID (Refl) ✅"
+  putStrLn "  - Toroidal Pairwise Momentum Conservation Witness: INJECTED & VALID (Refl) ✅"
+  putStrLn "  - Relativistic Perihelion Precession Shift Witness: INJECTED & VALID (Refl) ✅"
+  putStrLn "  - Emergent Galactic Rotation Velocity Flatness Witness: INJECTED & VALID (Refl) ✅"
+  putStrLn "  - Baryonic Tully-Fisher Mass-Velocity Proportionality Witness: INJECTED & VALID (Refl) ✅"
   putStrLn ""
   putStrLn " [RUNTIME CONSERVATION & KINEMATIC INVARIANTS]:"
+
 
 
 
@@ -1153,8 +1204,11 @@ main = do
   putStrLn $ "  [TEST 66] Categorical RG Decimator Invariant:   " ++ (if prop_categoricalRGDecimator then "PASSED ✅" else "FAILED ❌")
   putStrLn $ "  [TEST 67] End-to-End Linear QTT Pipeline:       " ++ (if prop_endToEndLinearPipeline then "PASSED ✅" else "FAILED ❌")
   putStrLn $ "  [TEST 68] Gauge-Spinor & Metric Shear Coupling: " ++ (if prop_gaugeSpinorMetricCoupling then "PASSED ✅" else "FAILED ❌")
-  putStrLn $ "  [TEST 69] All Literate Wiki Modules Verified:   " ++ (if prop_literateModuleInvariants then "PASSED ✅" else "FAILED ❌")
+  putStrLn $ "  [TEST 69] 3D Toroidal Astrodynamics & Precession:" ++ (if prop_toroidalAstrodynamics then "PASSED ✅" else "FAILED ❌")
+  putStrLn $ "  [TEST 70] Emergent Galactic Rotation Flatness:  " ++ (if prop_emergentGalacticRotation then "PASSED ✅" else "FAILED ❌")
+  putStrLn $ "  [TEST 71] All Literate Wiki Modules Verified:   " ++ (if prop_literateModuleInvariants then "PASSED ✅" else "FAILED ❌")
   putStrLn ""
+
 
 
 

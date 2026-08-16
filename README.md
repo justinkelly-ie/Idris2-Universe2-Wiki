@@ -112,6 +112,8 @@ The cornerstone of **Idris2-Universe2** is the strict mathematical isomorphism l
 * [Causal Posets & Inductive Lensing](Library/Wiki/Kinematics/Causal_Posets_and_Lensing.md) — Velocity routing through $g_{\text{EM}}$ vs $g_{\text{Substrate}}$ and Dark Matter gravitational drag.
 * [Discrete Noether's Theorem & Symplectic Invariants](Library/Wiki/Kinematics/Discrete_Noether_Symplectic.md) — Conserved Noether momentum charges ($Q = p^T \delta q$) and symplectic area preservation ($dq \wedge dp$) on discrete lattices.
 * [Discrete Symplectic Leapfrog Integrator](Library/Wiki/Kinematics/Symplectic_Leapfrog_Integrator.md) — Split kick-drift-kick Hamiltonian phase space flow and discrete energy conservation.
+* [3D Toroidal Astrodynamics & N-Body Symplectic Simulation](Library/Wiki/Kinematics/Toroidal_Astrodynamics_and_NBody_Symplectic_Simulation.md) — Periodic minimum image metric, softened discrete gravity with cyclotomic drag divisor, and relativistic perihelion precession.
+* [Emergent Galactic Rotation Curves & Dark Matter Law Ledger](Library/Wiki/Kinematics/Emergent_Galactic_Rotation_and_Dark_Matter_Drag.md) — Constructive proof of asymptotic velocity plateaus $v(r) \to v_{\text{flat}}$ and Baryonic Tully-Fisher scaling without particle halos.
 
 ### 5. Metatheory & Verification
 * [Verification Matrix](Library/Wiki/Verification/Verification_Matrix.md) — 100% comprehensive property checklist and reflection audit logs.
