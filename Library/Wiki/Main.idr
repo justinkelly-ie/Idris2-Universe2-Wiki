@@ -62,6 +62,8 @@ import Geometry.Rational_Snell_and_Triple_Spread
 import Geometry.Constructive_Dirac_Spinor
 import Geometry.Discrete_Holographic_Area_Law
 import Geometry.Molecular_Bonding
+import Geometry.Wilson_Polyhedra_and_NonAbelian_Color_Flux
+import Math.WilsonPolyhedra
 import Compound.MolecularBonding
 import Evolution.Pre_Geometric_Genesis
 import Evolution.Dark_Matter_Law_Storage
@@ -181,6 +183,19 @@ proofOfBornStateSum = auditDiscreteBornTransitionTally
 ||| Witness 23: Proves via Elaborator Reflection macro that Linear QTT State Transitions conserve resources.
 proofOfLinearQTTConservation : Reflect.InvariantAuditor.auditLinearQTTConservationProofExport = True
 proofOfLinearQTTConservation = auditLinearQTTConservation
+
+||| Witness 24: Proves via Elaborator Reflection macro that 3D Wilson Polyhedron Multiplicative Bianchi Closure holds.
+proofOfWilsonPolyhedronBianchiClosure : Reflect.InvariantAuditor.auditWilsonPolyhedronBianchiClosureProofExport = True
+proofOfWilsonPolyhedronBianchiClosure = auditWilsonPolyhedronBianchiClosure
+
+||| Witness 25: Proves via Elaborator Reflection macro that Chromogeometric SU(3) Color Gauge Invariance holds.
+proofOfChromogeometricColorGaugeInvariance : Reflect.InvariantAuditor.auditChromogeometricColorGaugeInvarianceProofExport = True
+proofOfChromogeometricColorGaugeInvariance = auditChromogeometricColorGaugeInvariance
+
+||| Witness 26: Proves via Elaborator Reflection macro that Hadron Singlet state is invariant under closed 3D Polyhedral holonomy.
+proofOfHadronSingletPolyhedralInvariance : Reflect.InvariantAuditor.auditHadronSingletPolyhedralInvarianceProofExport = True
+proofOfHadronSingletPolyhedralInvariance = auditHadronSingletPolyhedralInvariance
+
 
 
 
@@ -463,7 +478,10 @@ prop_literateModuleInvariants =
   auditUnitaryProbabilityConservationProofExport &&
   auditWilsonLoopGaugeInvarianceProofExport &&
   auditDiscreteBornTransitionTallyProofExport &&
-  auditLinearQTTConservationProofExport
+  auditLinearQTTConservationProofExport &&
+  auditWilsonPolyhedronBianchiClosureProofExport &&
+  auditChromogeometricColorGaugeInvarianceProofExport &&
+  auditHadronSingletPolyhedralInvarianceProofExport
 
 ||| Property 30: Test Quantum State Transitions & Wilson Loop Plaquettes
 prop_quantumTransitionsWilsonLoops : Bool
@@ -479,6 +497,13 @@ prop_linearQTTStateTransitions =
   auditLinearQTTConservationProof &&
   auditLinearContractionConservationProof &&
   auditLinearExpansionConservationProof
+
+||| Property 32: Test 3D Wilson Polyhedra & Chromogeometric Color Flux
+prop_wilsonPolyhedraColorFlux : Bool
+prop_wilsonPolyhedraColorFlux =
+  verifyWilsonPolyhedronBianchiClosure &&
+  verifyChromogeometricColorGaugeInvariance &&
+  verifyHadronSingletPolyhedralInvariance
 
 ||| Main test runner
 main : IO ()
@@ -515,6 +540,9 @@ main = do
   putStrLn "  - Wilson Loop Gauge Invariance Witness: INJECTED & VALID (Refl) ✅"
   putStrLn "  - Discrete Born Probability Tally Witness: INJECTED & VALID (Refl) ✅"
   putStrLn "  - Linear QTT State Transition Conservation Witness: INJECTED & VALID (Refl) ✅"
+  putStrLn "  - 3D Wilson Polyhedron Multiplicative Bianchi Witness: INJECTED & VALID (Refl) ✅"
+  putStrLn "  - Chromogeometric SU(3) Color Gauge Invariance Witness: INJECTED & VALID (Refl) ✅"
+  putStrLn "  - Hadron Singlet Polyhedral Invariance Witness: INJECTED & VALID (Refl) ✅"
   putStrLn ""
   putStrLn " [RUNTIME CONSERVATION & KINEMATIC INVARIANTS]:"
   putStrLn $ "  [TEST 1]  27-State Ternary Spacetime Closure:    " ++ (if prop_27_TernaryClosure then "PASSED ✅" else "FAILED ❌")
@@ -562,7 +590,8 @@ main = do
   putStrLn $ "  [TEST 43] Master Cosmological Inferences:      " ++ (if evidence_master_cosmological_inferences then "PASSED ✅" else "FAILED ❌")
   putStrLn $ "  [TEST 44] Quantum Transitions & Wilson Loops:   " ++ (if prop_quantumTransitionsWilsonLoops then "PASSED ✅" else "FAILED ❌")
   putStrLn $ "  [TEST 45] Linear QTT State Conservation:        " ++ (if prop_linearQTTStateTransitions then "PASSED ✅" else "FAILED ❌")
-  putStrLn $ "  [TEST 46] All Literate Wiki Modules Verified:   " ++ (if prop_literateModuleInvariants then "PASSED ✅" else "FAILED ❌")
+  putStrLn $ "  [TEST 46] 3D Wilson Polyhedra & SU(3) Flux:      " ++ (if prop_wilsonPolyhedraColorFlux then "PASSED ✅" else "FAILED ❌")
+  putStrLn $ "  [TEST 47] All Literate Wiki Modules Verified:   " ++ (if prop_literateModuleInvariants then "PASSED ✅" else "FAILED ❌")
   putStrLn ""
   putStrLn "All Cosmological Proof Witnesses & Literate Invariants Verified!"
   putStrLn "========================================================"
