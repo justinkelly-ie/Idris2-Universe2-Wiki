@@ -129,3 +129,19 @@ evidence_cosmic_fraction_simplification =
       twoOverOne = mkSingFraction (intToBoxInt 2) 1
   in frac == twoOverOne
 ```
+
+---
+
+## 🔗 Related Chapters & Cross-References
+
+* **Cosmological Evolution & Dark Matter**:
+  * [Dark Matter as the Cosmic Law Ledger](Dark_Matter_Law_Storage.md) — How the accumulated remainder ledger creates gravitational law impedance.
+  * [Cyclotomic Encoding & Decoding Protocol](Cyclotomic_Encoding_and_Decoding.md) — Dividing cosmic state polynomials by $\Phi_{137}(x)$.
+  * [Bootstrapping Epoch 1 to 37](Bootstrap_Epoch_1_to_37.md) — The 210-capacity Primorial state evolution budget.
+* **Constructive Foundations & Fractional Algebra**:
+  * [Singleton Fractions & Ongoing Sequences](../Foundations/Singleton_Fractions_and_OnSeq_Algebra.md) — Non-zero Singleton denominators and constructive fractions.
+  * [Reflected Fractional Multisets & QTT Sequences](../Foundations/Reflected_Fractional_Multisets_and_QTT_Sequences.md) — Invariant audits on fractional state transitions.
+  * [Structural Accounting & Token Geometry](../Foundations/Structural_Accounting_and_Pure_Tokens.md) — Cast-free summation loops preserving exact integer tokens.
+* **Kinematics & Optics**:
+  * [Causal Posets & Inductive Lensing](../Kinematics/Causal_Posets_and_Lensing.md) — Relational velocity scaling via impedance ratios.
+

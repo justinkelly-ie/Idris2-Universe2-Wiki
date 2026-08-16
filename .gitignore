@@ -7,3 +7,4 @@ universe2-verify
 *.ibc
 *~
 .DS_Store
+.obsidian/

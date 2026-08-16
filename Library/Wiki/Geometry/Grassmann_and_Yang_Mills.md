@@ -116,3 +116,17 @@ evidence_jacobi_identity : Bool
 evidence_jacobi_identity =
   auditJacobiIdentityProof
 ```
+
+---
+
+## 🔗 Related Chapters & Cross-References
+
+* **Exterior Calculus & Gauge Symmetries**:
+  * [2D Maxwell Field Equations](Maxwell_Field_Equations.md) — 2D discrete curl, divergence, and exact Maxwell dynamics.
+  * [Discrete Exterior Calculus & Gauge Theory](Discrete_Exterior_Calculus_and_Gauge.md) — Discrete 1-form connections and curvature 2-forms on cell complexes.
+  * [The Discrete Poynting Theorem](Discrete_Poynting_Theorem.md) — Exact energy flux conservation and Poynting vector balance.
+* **Algebraic & Physical Structures**:
+  * [Vexels, Maxels, Boxels & Reflected Linear Algebra](../Foundations/Vexels_Maxels_and_Reflected_Linear_Algebra.md) — Formulation of $C_0, C_1, C_2, C_3$ cochains as multiset tensors.
+  * [Hadronic Color Confinement](Hadronic_Color_Confinement.md) — Triadic Chromogeometry and non-Abelian $SU(3)$ color confinement.
+  * [The Constructive Dirac Spinor Equation](Constructive_Dirac_Spinor.md) — Fermionic Dirac spinors in Clifford multivector geometric algebra.
+

@@ -34,7 +34,7 @@ Following **Norman J. Wildberger's Finitist Mathematics**, quantum dynamics oper
   When flux is injected at two source cells $\vec{r}_A$ and $\vec{r}_B$, it propagates across the 6-face neighborhood graph via the **Discrete Laplacian**:
   $$\Delta V(\vec{r}) = \sum_{\vec{n} \in \text{Neighbors}} (V(\vec{n}) - V(\vec{r}))$$
 * **Constructive vs Destructive Interference**:
-  Because cell values are signed Grothendieck integers $(P, N)$, overlapping fluxes add constructively ($+1 + +1 = +2$) or cancel destructively ($+1 + -1 = 0$), forming interference fringes through pure integer arithmetic.
+  Because cell values are signed Pixel difference integers $[P, N]$, overlapping fluxes add constructively ($+1 + +1 = +2$) or cancel destructively ($+1 + -1 = 0$), forming interference fringes through pure integer arithmetic.
 
 ---
 
@@ -83,7 +83,7 @@ evidence_superposition_sum =
       superposition = zipWith (+) stateA stateB
   in unwrapBox (sumField27 superposition) == 7
 
-||| Evidence 2: Destructive Quantum Interference via Signed Grothendieck Cancellation (+5 + -5 = 0)
+||| Evidence 2: Destructive Quantum Interference via Signed Pixel Cancellation (+5 + -5 = 0)
 public export
 evidence_destructive_interference : Bool
 evidence_destructive_interference =
@@ -109,3 +109,17 @@ evidence_toroidal_entanglement_neighbor =
       c1Shift = shiftTernaryBackward (coordX c1)
   in c1Shift == PlusOne -- Moving backward from -1 wraps directly to +1 on T³
 ```
+
+---
+
+## 🔗 Related Chapters & Cross-References
+
+* **Foundations & Quantum Framework**:
+  * [Emergent Quantum Mechanics](Emergent_Quantum_Mechanics.md) — Wildberger's finitist quantum framework and rational probability tallies.
+  * [Nilpotent Infinitesimal Calculus](Nilpotent_Infinitesimals.md) — Dual numbers and exact quantum phase dynamics.
+  * [Contradictions With Standard Physics](Contradictions_With_Standard_Physics.md) — Direct refutations of non-constructive wave function collapse.
+* **Topological & Spacetime Mechanics**:
+  * [Emergence of the 3-Torus Topology](../Geometry/Emergent_Toroidal_Topology.md) — Toroidal non-local coordinate wrapping and entanglement.
+  * [3D Lattice Topology & Conserved Flux](../Geometry/Lattice_Topology_and_Flux.md) — Exact discrete flux conservation on $T^3$.
+  * [Cyclotomic Encoding & Decoding Protocol](../Evolution/Cyclotomic_Encoding_and_Decoding.md) — Deterministic cyclotomic quotient remainder routing.
+

@@ -84,3 +84,16 @@ evidence_qtt_onseq_stepping =
        Just v  => v == 5 && start nextSeq == 6
        Nothing => False
 ```
+
+---
+
+## 🔗 Related Chapters & Cross-References
+
+* **Constructive Foundations**:
+  * [The Universal Mapping](Universal_Mapping.md) — QTT multiplicity 1 resource conservation and elaborator reflection.
+  * [Fractional Multisets & Ongoing Sequences (OnSeq)](Singleton_Fractions_and_OnSeq_Algebra.md) — Non-zero Singleton denominators and constructive sequence algebra.
+  * [Vexels, Maxels, Boxels & Reflected Linear Algebra](Vexels_Maxels_and_Reflected_Linear_Algebra.md) — Elaborator reflection macros and tensor representations.
+* **Cosmic Evolution & Physical Laws**:
+  * [The 12 Emergent Laws of Physics](../Geometry/Emergent_Pillars_of_Physics.md) — First law conservation and compile-time thermodynamic proofs.
+  * [Visible Matter Tokens vs. Dark Matter Law Impedance](../Evolution/Matter_Tokens_and_Law_Impedance.md) — Fractional impedance ratios in cosmic expansion.
+  * [Verification Matrix](../Verification/Verification_Matrix.md) — Comprehensive property verification and reflection audit records.

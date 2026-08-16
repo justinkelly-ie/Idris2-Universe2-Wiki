@@ -143,7 +143,7 @@ In **Idris2-Universe2**, the foundational laws of physical reality are **neither
 ---
 
 ### 12. Baryon Asymmetry & Matter-Antimatter Imbalance
-* **Constructive Origin**: Asymmetric Ground State Seed in the Grothendieck Pair $(P > N)$ and Causal Substrate Arrow ($g_{22} = 0$).
+* **Constructive Origin**: Asymmetric Ground State Seed in the Pixel Difference Pair $(P > N)$ and Causal Substrate Arrow ($g_{22} = 0$).
 * **Mechanism**: Genesis initializes with positive vacuum pressure ($P > 0, N = 0$). Because the substrate causal arrow prevents negative temporal retro-causality, antimatter ($N$) cannot symmetrically cancel primordial matter ($P$).
 * **Physical Law**: The observed cosmic matter-antimatter asymmetry of the universe.
 
@@ -285,4 +285,25 @@ All 12 Fundamental Pillars of Physics are now certified statically by the Idris 
 | **10**| **Gravitational Waves & Shear** | `%macro auditGravitationalWaveShear` | `Refl` ✅ |
 | **11**| **Nuclear Core Saturation** | `%macro auditAlphaClusterSaturation` | `Refl` ✅ |
 | **12**| **Baryon Matter/Antimatter Asymmetry**| `%macro auditBaryonAsymmetryArrow` | `Refl` ✅ |
+
+---
+
+## 🔗 Related Chapters & Cross-References
+
+* **Mathematical Pillars**:
+  * [The Universal Mapping](../Foundations/Universal_Mapping.md) — Exact correspondence between constructivist math, QTT, and physics.
+  * [Box Arithmetic & Inductive Multisets](../Foundations/Box_Arithmetic.md) — Constructive foundation of matter without continuous infinity.
+  * [Nilpotent Infinitesimal Calculus](../Foundations/Nilpotent_Infinitesimals.md) — Nilpotent matrix calculus and discrete phase space.
+  * [Vexels, Maxels, Boxels & Reflected Linear Algebra](../Foundations/Vexels_Maxels_and_Reflected_Linear_Algebra.md) — Multiset tensor hierarchy and reflection macros.
+* **Spacetime & Field Theories**:
+  * [The 27 Ternary Geometries](Ternary_Multiverse_27.md) — Ternary metric generation and chromatic regimes.
+  * [3D Lattice Topology & Conserved Flux](Lattice_Topology_and_Flux.md) — Discrete Laplacian flux conservation on $T^3$.
+  * [Grassmann Exterior Calculus & Yang-Mills Gauge Theory](Grassmann_and_Yang_Mills.md) — Cochains, coboundaries, Hodge duality, and Bianchi closure.
+  * [Intra-Epoch Hadronic Confinement (Epoch 3)](Hadronic_Color_Confinement.md) — Triadic Chromogeometric color charge partitioning.
+  * [Hierarchical Matter Replication & The Alpha Cluster (Epoch 4)](../Evolution/Alpha_Cluster_Replication.md) — 108-voxel $^4\text{He}$ atomic core replication.
+* **Evolution & Verification**:
+  * [Dark Matter as the Cosmic Law Ledger](../Evolution/Dark_Matter_Law_Storage.md) — Historical cyclotomic remainder storage and 2nd Law.
+  * [Causal Posets & Inductive Lensing](../Kinematics/Causal_Posets_and_Lensing.md) — Asymmetric substrate causal routing and gravitational drag.
+  * [Verification Matrix](../Verification/Verification_Matrix.md) — Complete audit verification matrix and reflection proof witnesses.
+
 

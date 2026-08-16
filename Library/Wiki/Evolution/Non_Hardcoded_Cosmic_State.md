@@ -30,3 +30,17 @@ evidence_vacuum_metric_inference :
   in (unwrapBox (g11 metric) = 27, unwrapBox (g12 metric) = 0)
 evidence_vacuum_metric_inference = (Refl, Refl)
 ```
+
+---
+
+## 🔗 Related Chapters & Cross-References
+
+* **Cosmic Evolution & Genesis**:
+  * [Pre-Geometric Genesis (The vm = 0 Void)](Pre_Geometric_Genesis.md) — Pre-geometric initial vacuum state ($vm = 0$).
+  * [Dynamic Grid Expansion (`expandAndUnfoldGeneric`)](Dynamic_Grid_Expansion.md) — Dynamic tensor dimension scaling without hardcoded limits.
+  * [Bootstrapping Epoch 1 to 37](Bootstrap_Epoch_1_to_37.md) — Master evolutionary timeline from Genesis to Ground State Epoch 37.
+* **Tensors & Spacetime Foundations**:
+  * [The 27 Ternary Geometries](../Geometry/Ternary_Multiverse_27.md) — Relational classification of the 27 metric structures.
+  * [Vexels, Maxels, Boxels & Reflected Linear Algebra](../Foundations/Vexels_Maxels_and_Reflected_Linear_Algebra.md) — Structural container hierarchy.
+  * [Matter Tokens vs. Dark Matter Law Impedance](Matter_Tokens_and_Law_Impedance.md) — Duality of local matter tokens and state capacities.
+

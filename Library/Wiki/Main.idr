@@ -31,7 +31,7 @@ import Data.Vect
 -- IMPORT ALL 31 LITERATE MARKDOWN MODULES (Proves they compile and execute)
 import Foundations.Universal_Mapping
 import Foundations.Box_Arithmetic
-import Foundations.Grothendieck_Box_Integers
+import Foundations.Pixel_Box_Integers
 import Foundations.Nested_Polynomial_Multisets
 import Foundations.Nilpotent_Infinitesimals
 import Foundations.Emergent_Quantum_Mechanics
@@ -40,7 +40,9 @@ import Foundations.Structural_Accounting_and_Pure_Tokens
 import Foundations.Vexels_Maxels_and_Reflected_Linear_Algebra
 import Foundations.Singleton_Fractions_and_OnSeq_Algebra
 import Foundations.Reflected_Fractional_Multisets_and_QTT_Sequences
+import Foundations.Hehner_Scale_Conversion_and_Information_Geometry
 import Foundations.Contradictions_With_Standard_Physics
+import Foundations.Clifford_Multivector_Algebra
 import Geometry.Ternary_Multiverse_27
 import Geometry.Emergent_Higher_Order_Physics
 import Geometry.Lattice_Topology_and_Flux
@@ -51,20 +53,32 @@ import Geometry.Archimedes_Function_and_Quadrea
 import Geometry.Discrete_Exterior_Calculus_and_Gauge
 import Geometry.Maxwell_Field_Equations
 import Geometry.Grassmann_and_Yang_Mills
+import Geometry.Geometric_Information_Duality_and_Cosmic_Intelligence
+import Geometry.Yang_Mills_Curvature_and_Plaquette_Cross_Entropy
+import Geometry.Discrete_Poynting_Theorem
+import Geometry.Rational_Snell_and_Triple_Spread
+import Geometry.Constructive_Dirac_Spinor
+import Geometry.Discrete_Holographic_Area_Law
 import Geometry.Molecular_Bonding
 import Compound.MolecularBonding
 import Evolution.Pre_Geometric_Genesis
 import Evolution.Dark_Matter_Law_Storage
 import Evolution.Matter_Tokens_and_Law_Impedance
+import Evolution.Landauer_Principle_and_Linear_Token_Relocation
 import Evolution.Non_Hardcoded_Cosmic_State
 import Evolution.Bootstrap_Epoch_1_to_37
 import Evolution.Cycle_137_and_Expansion
 import Evolution.Alpha_Cluster_Replication
 import Evolution.Cyclotomic_Encoding_and_Decoding
 import Evolution.Dynamic_Grid_Expansion
+import Evolution.Renormalization_Group_and_Scale_Invariance
 import Kinematics.Causal_Posets_and_Lensing
+import Kinematics.Discrete_Noether_Symplectic
+import Kinematics.Symplectic_Leapfrog_Integrator
 import Verification.Verification_Matrix
 import Verification.Structural_Associativity_Proof
+import Verification.Cosmological_Inferences_and_Deductions
+
 
 %default total
 
@@ -85,6 +99,77 @@ proofOfEpoch38StepUp = auditEpoch38Collapse
 ||| Witness 3: Proves via Elaborator Reflection macro that Row Extraction on Maxel Outer Product holds.
 proofOfMaxelRowAudit : Core.VexelMaxel.auditRowExtractionProof = True
 proofOfMaxelRowAudit = Refl
+
+||| Witness 4: Proves via Elaborator Reflection macro that Clifford Geometric Product v^2 = Q(v).
+proofOfCliffordGeometricProduct : Reflect.InvariantAuditor.auditCliffordGeometricProductMacroProof = True
+proofOfCliffordGeometricProduct = auditCliffordGeometricProduct
+
+||| Witness 5: Proves via Elaborator Reflection macro that discrete Symplectic Leapfrog preserves state.
+proofOfSymplecticLeapfrog : Reflect.InvariantAuditor.auditSymplecticStepMacroProof = True
+proofOfSymplecticLeapfrog = auditSymplecticEnergyConservation
+
+||| Witness 6: Proves via Elaborator Reflection macro that discrete Noether Momentum is conserved.
+proofOfDiscreteNoetherConservation : Reflect.InvariantAuditor.auditDiscreteNoetherConservationProof = True
+proofOfDiscreteNoetherConservation = auditDiscreteNoetherConservation
+
+||| Witness 7: Proves via Elaborator Reflection macro that Hehner Scale Conversion and Cosmic Chance Normalization hold.
+proofOfHehnerScaleConversion : Reflect.InvariantAuditor.auditHehnerScaleConversionMacroProof = True
+proofOfHehnerScaleConversion = auditHehnerScaleConversion
+
+||| Witness 8: Proves via Elaborator Reflection macro that Multiset Information Distance obeys metric axioms.
+proofOfMultisetInformationDistance : Reflect.InvariantAuditor.auditMultisetInformationDistanceMacroProof = True
+proofOfMultisetInformationDistance = auditMultisetInformationDistance
+
+||| Witness 9: Proves via Elaborator Reflection macro that the Multiset Born Rule and Hehner Triad hold.
+proofOfMultisetHehnerTriad : Reflect.InvariantAuditor.auditMultisetHehnerTriadMacroProof = True
+proofOfMultisetHehnerTriad = auditMultisetHehnerTriad
+
+||| Witness 10: Proves via Elaborator Reflection macro that Multiset Cross-Entropy properties hold.
+proofOfMultisetCrossEntropy : Reflect.InvariantAuditor.auditMultisetCrossEntropyMacroProof = True
+proofOfMultisetCrossEntropy = auditMultisetCrossEntropy
+
+||| Witness 11: Proves via Elaborator Reflection macro that Multiset Compactness Ratio (Jaccard Overlap) holds.
+proofOfMultisetCompactness : Reflect.InvariantAuditor.auditMultisetCompactnessMacroProof = True
+proofOfMultisetCompactness = auditMultisetCompactness
+
+||| Witness 12: Proves via Elaborator Reflection macro that Hyperbolic Geodesic Duality holds.
+proofOfHyperbolicBitDuality : Reflect.InvariantAuditor.auditHyperbolicBitDualityMacroProof = True
+proofOfHyperbolicBitDuality = auditHyperbolicBitDuality
+
+||| Witness 13: Proves via Elaborator Reflection macro that Clifford Compactness Duality holds.
+proofOfCliffordCompactnessDuality : Reflect.InvariantAuditor.auditCliffordCompactnessDualityMacroProof = True
+proofOfCliffordCompactnessDuality = auditCliffordCompactnessDuality
+
+||| Witness 14: Proves via Elaborator Reflection macro that Chromogeometric Cosmic Budget partition holds.
+proofOfChromogeometricBudget : Reflect.InvariantAuditor.auditChromogeometricBudgetMacroProof = True
+proofOfChromogeometricBudget = auditChromogeometricBudget
+
+||| Witness 15: Proves via Elaborator Reflection macro that Holographic Boundary Area Duality holds.
+proofOfHolographicBoundaryDuality : Reflect.InvariantAuditor.auditHolographicBoundaryDualityMacroProof = True
+proofOfHolographicBoundaryDuality = auditHolographicBoundaryDuality
+
+||| Witness 16: Proves via Elaborator Reflection macro that Yang-Mills Plaquette Cross-Entropy holds.
+proofOfYangMillsPlaquetteCrossEntropy : Reflect.InvariantAuditor.auditYangMillsPlaquetteCrossEntropyMacroProof = True
+proofOfYangMillsPlaquetteCrossEntropy = auditYangMillsPlaquetteCrossEntropy
+
+||| Witness 17: Proves via Elaborator Reflection macro that Constructivist Landauer Token Relocation holds.
+proofOfLandauerTokenConservation : Reflect.InvariantAuditor.auditLandauerTokenConservationMacroProof = True
+proofOfLandauerTokenConservation = auditLandauerTokenConservation
+
+||| Witness 18: Proves via Elaborator Reflection macro that Multi-Scale Renormalization Group Invariance holds.
+proofOfRenormalizationInvariance : Reflect.InvariantAuditor.auditRenormalizationInvarianceMacroProof = True
+proofOfRenormalizationInvariance = auditRenormalizationInvariance
+
+||| Witness 19: Proves via Elaborator Reflection macro that all 7 Core Cosmological Inferences hold simultaneously.
+proofOfMasterCosmologicalInferences : Reflect.InvariantAuditor.auditCosmologicalInferencesMacroProof = True
+proofOfMasterCosmologicalInferences = auditCosmologicalInferences
+
+
+
+
+
+
+
 
 ------------------------------------------------------------------------
 -- 2. RUNTIME CONSERVATION & KINEMATIC PROPERTIES
@@ -279,7 +364,7 @@ prop_vexelsMaxelsReflectedAlgebra =
   evidence_outer_product_boxel &&
   evidence_slice_boxel_z &&
   evidence_canonicalize_boxel &&
-  auditPermutationMaxelActionProof &&
+  auditPermutationMaxelProof &&
   evidence_wedge_nilpotency &&
   evidence_hyperboxel_temporal_slice &&
   evidence_domain_permutations
@@ -338,15 +423,15 @@ prop_literateModuleInvariants =
   unwrapBox (g22 gSubstrate) == 0 &&
   length (dmLog standardEpoch37) == 55 &&
   computeVMSize 0 == 0 &&
-  auditCliffordGeometricProductProof &&
-  auditSymplecticStepProof &&
-  auditHookLengthProof &&
+  auditCliffordGeometricProductMacroProof &&
+  auditSymplecticStepMacroProof &&
+  auditHookLengthFormulaMacroProof &&
   auditDiscretePoyntingConservationProof &&
-  auditTripleSpreadLawProof &&
-  auditRationalSnellLawProof &&
-  auditNoetherConservationProof &&
-  auditDiracCurrentConservationProof &&
-  auditHolographicScalingProof &&
+  auditTripleSpreadLawMacroProof &&
+  auditRationalSnellRefractionProof &&
+  auditDiscreteNoetherConservationProof &&
+  auditDiracCurrentConservationMacroProof &&
+  auditHolographicBoundaryScalingProof &&
   auditGravitationalLensingDragProof &&
   auditMaxwellBianchiClosureProof &&
   auditSpeedOfLightLocalityProof &&
@@ -356,6 +441,7 @@ prop_literateModuleInvariants =
   auditBaryonAsymmetryArrowProof &&
   auditAlkaneHomologousSaturationProof &&
   auditWaterArchimedesQuadreaProof
+
 
 ||| Main test runner
 main : IO ()
@@ -369,9 +455,25 @@ main = do
   putStrLn "  - 27-State Multiverse Closure Witness: INJECTED & VALID (Refl) ✅"
   putStrLn "  - Epoch 38 Collapse Transition Witness: INJECTED & VALID (Refl) ✅"
   putStrLn "  - Maxel Row Extraction Witness: INJECTED & VALID (Refl) ✅"
+  putStrLn "  - Clifford Geometric Product Witness: INJECTED & VALID (Refl) ✅"
+  putStrLn "  - Symplectic Phase Invariance Witness: INJECTED & VALID (Refl) ✅"
+  putStrLn "  - Discrete Noether Conservation Witness: INJECTED & VALID (Refl) ✅"
   putStrLn "  - Singleton Denominator Positivity Witness: INJECTED & VALID (Refl) ✅"
   putStrLn "  - Rational Equivalence Witness: INJECTED & VALID (Refl) ✅"
   putStrLn "  - OnSeq Clip Length Extraction Witness: INJECTED & VALID (Refl) ✅"
+  putStrLn "  - Hehner Scale Conversion Witness: INJECTED & VALID (Refl) ✅"
+  putStrLn "  - Multiset Information Distance Witness: INJECTED & VALID (Refl) ✅"
+  putStrLn "  - Multiset Born Rule & Hehner Triad Witness: INJECTED & VALID (Refl) ✅"
+  putStrLn "  - Multiset Cross-Entropy Witness: INJECTED & VALID (Refl) ✅"
+  putStrLn "  - Multiset Compactness Intelligence Witness: INJECTED & VALID (Refl) ✅"
+  putStrLn "  - Hyperbolic Bit Duality Witness: INJECTED & VALID (Refl) ✅"
+  putStrLn "  - Clifford Compactness Duality Witness: INJECTED & VALID (Refl) ✅"
+  putStrLn "  - Chromogeometric Cosmic Budget Witness: INJECTED & VALID (Refl) ✅"
+  putStrLn "  - Holographic Boundary Duality Witness: INJECTED & VALID (Refl) ✅"
+  putStrLn "  - Yang-Mills Plaquette Cross-Entropy Witness: INJECTED & VALID (Refl) ✅"
+  putStrLn "  - Constructivist Landauer Token Relocation Witness: INJECTED & VALID (Refl) ✅"
+  putStrLn "  - Multi-Scale Renormalization Group Witness: INJECTED & VALID (Refl) ✅"
+  putStrLn "  - Master Cosmological Inferences Witness: INJECTED & VALID (Refl) ✅"
   putStrLn ""
   putStrLn " [RUNTIME CONSERVATION & KINEMATIC INVARIANTS]:"
   putStrLn $ "  [TEST 1]  27-State Ternary Spacetime Closure:    " ++ (if prop_27_TernaryClosure then "PASSED ✅" else "FAILED ❌")
@@ -402,7 +504,29 @@ main = do
   putStrLn $ "  [TEST 26] Matter Numerator / Law Denominator:    " ++ (if prop_matterTokensLawImpedance then "PASSED ✅" else "FAILED ❌")
   putStrLn $ "  [TEST 27] Singleton Fractions & OnSeq Algebra:   " ++ (if prop_singletonFractionsAndOnSeq then "PASSED ✅" else "FAILED ❌")
   putStrLn $ "  [TEST 28] Reflected Fractions & QTT Sequences:   " ++ (if prop_reflectedFractionalMultisetsQTT then "PASSED ✅" else "FAILED ❌")
-  putStrLn $ "  [TEST 29] All 35 Literate Wiki Modules Verified:  " ++ (if prop_literateModuleInvariants then "PASSED ✅" else "FAILED ❌")
+  putStrLn $ "  [TEST 29] Multiset Clifford Geometric Algebra:   " ++ (if evidence_clifford_geometric_product_quadrance then "PASSED ✅" else "FAILED ❌")
+  putStrLn $ "  [TEST 30] Symplectic Leapfrog Invariants:        " ++ (if evidence_symplectic_step_evolution then "PASSED ✅" else "FAILED ❌")
+  putStrLn $ "  [TEST 31] Hehner Scale Conversion & Norm:        " ++ (if evidence_cosmic_chance_normalization then "PASSED ✅" else "FAILED ❌")
+  putStrLn $ "  [TEST 32] Multiset Information Distance Metric: " ++ (if evidence_multiset_information_distance_axioms then "PASSED ✅" else "FAILED ❌")
+  putStrLn $ "  [TEST 33] Multiset Born Rule & Hehner Triad:    " ++ (if evidence_multiset_born_rule_triad then "PASSED ✅" else "FAILED ❌")
+  putStrLn $ "  [TEST 34] Multiset Cross-Entropy Properties:    " ++ (if evidence_multiset_cross_entropy then "PASSED ✅" else "FAILED ❌")
+  putStrLn $ "  [TEST 35] Multiset Compactness / Intelligence:  " ++ (if evidence_multiset_compactness_ratio then "PASSED ✅" else "FAILED ❌")
+  putStrLn $ "  [TEST 36] Hyperbolic Geodesic Bit Duality:      " ++ (if evidence_hyperbolic_bit_duality then "PASSED ✅" else "FAILED ❌")
+  putStrLn $ "  [TEST 37] Clifford Compactness Duality:         " ++ (if evidence_clifford_compactness_duality then "PASSED ✅" else "FAILED ❌")
+  putStrLn $ "  [TEST 38] Chromogeometric Cosmic Budget 210:     " ++ (if evidence_chromogeometric_cosmic_budget then "PASSED ✅" else "FAILED ❌")
+  putStrLn $ "  [TEST 39] Holographic Boundary Duality (54 M):  " ++ (if evidence_holographic_boundary_duality then "PASSED ✅" else "FAILED ❌")
+  putStrLn $ "  [TEST 40] Yang-Mills Plaquette Cross-Entropy:   " ++ (if evidence_yang_mills_plaquette_proof then "PASSED ✅" else "FAILED ❌")
+  putStrLn $ "  [TEST 41] Constructivist Landauer Relocation:   " ++ (if evidence_landauer_token_conservation then "PASSED ✅" else "FAILED ❌")
+  putStrLn $ "  [TEST 42] Multi-Scale RG Invariance (100%):     " ++ (if evidence_renormalization_invariance then "PASSED ✅" else "FAILED ❌")
+  putStrLn $ "  [TEST 43] Master Cosmological Inferences:      " ++ (if evidence_master_cosmological_inferences then "PASSED ✅" else "FAILED ❌")
+  putStrLn $ "  [TEST 44] All Literate Wiki Modules Verified:   " ++ (if prop_literateModuleInvariants then "PASSED ✅" else "FAILED ❌")
   putStrLn ""
   putStrLn "All Cosmological Proof Witnesses & Literate Invariants Verified!"
   putStrLn "========================================================"
+
+
+
+
+
+
+

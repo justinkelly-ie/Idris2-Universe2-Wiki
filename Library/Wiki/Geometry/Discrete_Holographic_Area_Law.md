@@ -53,3 +53,17 @@ evidence_holographic_boundary_scaling : Bool
 evidence_holographic_boundary_scaling =
   holographicBoundaryFaceCount 3 == 54 && bulkVolumeVoxelCount 3 == 27
 ```
+
+---
+
+## 🔗 Related Chapters & Cross-References
+
+* **Topology & Area Laws**:
+  * [3D Lattice Topology & Conserved Flux](Lattice_Topology_and_Flux.md) — 6-face neighbors and boundaryless compact 3-torus $T^3$.
+  * [Emergence of the 3-Torus Topology](Emergent_Toroidal_Topology.md) — Elimination of boundary edge leakage in closed manifolds.
+  * [The Discrete Poynting Theorem](Discrete_Poynting_Theorem.md) — Energy flux integration over discrete bounding face multisets.
+* **Cosmological Evolution & State Capacity**:
+  * [Dynamic Grid Expansion (`expandAndUnfoldGeneric`)](../Evolution/Dynamic_Grid_Expansion.md) — Surface vs bulk scaling during cosmic lattice expansion.
+  * [Visible Matter Tokens vs. Dark Matter Law Impedance](../Evolution/Matter_Tokens_and_Law_Impedance.md) — Bulk matter tokens vs boundary law constraints.
+  * [The 12 Emergent Laws of Physics](Emergent_Pillars_of_Physics.md) — Law 1 (Conservation) and discrete boundary theorems.
+

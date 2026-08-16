@@ -57,3 +57,17 @@ evidence_epoch4_cosmic_capacity : Bool
 evidence_epoch4_cosmic_capacity = 
   totalStateCapacity alphaCosmicStateEpoch4 == 242
 ```
+
+---
+
+## 🔗 Related Chapters & Cross-References
+
+* **Hierarchical Nuclear & Molecular Structures**:
+  * [Intra-Epoch Hadronic Confinement (Epoch 3)](../Geometry/Hadronic_Color_Confinement.md) — Triadic color confinement of the individual 27-cell nucleon singlets.
+  * [Molecular Bonding & Chemical Graph Contraction](../Geometry/Molecular_Bonding.md) — Tier 5 chemical molecular bonding and multi-atom networks.
+  * [The Constructive Dirac Spinor Equation](../Geometry/Constructive_Dirac_Spinor.md) — Spinor equations governing fermionic nucleon clusters.
+* **Cosmological Evolution & State Capacity**:
+  * [Bootstrapping Epoch 1 to 37](Bootstrap_Epoch_1_to_37.md) — Master evolutionary sequence from Epoch 1 through Epoch 37.
+  * [Dynamic Grid Expansion (`expandAndUnfoldGeneric`)](Dynamic_Grid_Expansion.md) — Tensor grid inflation scaling from 27 to 108 cells.
+  * [The 12 Emergent Laws of Physics](../Geometry/Emergent_Pillars_of_Physics.md) — Law 11 (Nuclear Core Saturation) compile-time reflection proofs.
+

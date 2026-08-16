@@ -50,3 +50,16 @@ public export
 evidence_gram_maxel_quadrea : unwrapBox (quadreaMaxel (intToBoxInt 9) (intToBoxInt 16) (intToBoxInt 25)) = 576
 evidence_gram_maxel_quadrea = Refl
 ```
+
+---
+
+## 🔗 Related Chapters & Cross-References
+
+* **Rational Trigonometry & Discrete Calculus**:
+  * [Rational Snell's Law & The Triple Spread Law](Rational_Snell_and_Triple_Spread.md) — Rational trigonometric relations, spreads, and cross laws.
+  * [Vexels, Maxels, Boxels & Reflected Linear Algebra](../Foundations/Vexels_Maxels_and_Reflected_Linear_Algebra.md) — Gram determinants over Maxel basis structures.
+  * [Nested Polynomial Multisets](../Foundations/Nested_Polynomial_Multisets.md) — Spread polynomials $S_n(s)$ and algebraic factorizations.
+* **Geometric & Chemical Models**:
+  * [Molecular Bonding & Chemical Graph Contraction](Molecular_Bonding.md) — Water molecule Archimedes quadrea ($A = 3$) and covalent Maxel geometry.
+  * [Discrete Exterior Calculus & Gauge Theory](Discrete_Exterior_Calculus_and_Gauge.md) — Exact area and face 2-forms on cell complexes.
+

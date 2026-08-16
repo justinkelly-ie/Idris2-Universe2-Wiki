@@ -68,3 +68,17 @@ public export
 evidence_toroidal_determinant : unwrapBox (detMetric Math.LinAlgebra.MetricTensor.gToroidal) = -1
 evidence_toroidal_determinant = Refl
 ```
+
+---
+
+## 🔗 Related Chapters & Cross-References
+
+* **Spacetime Topology & Geometry**:
+  * [3D Lattice Topology & Conserved Flux](Lattice_Topology_and_Flux.md) — 6-face neighborhood graph and Laplacian flux conservation on $T^3$.
+  * [The 27 Ternary Geometries](Ternary_Multiverse_27.md) — Permuting $\{-1, 0, 1\}$ into symmetric and asymmetric metric classes.
+  * [Discrete Holographic Area Law](Discrete_Holographic_Area_Law.md) — Boundaryless topological state capacity on the discrete torus.
+* **Quantum & Dynamics**:
+  * [Quantum Measurement & Superposition](../Foundations/Quantum_Measurement_and_Superposition.md) — Non-local coordinate wrapping across periodic boundaries.
+  * [Grassmann Exterior Calculus & Yang-Mills Gauge Theory](Grassmann_and_Yang_Mills.md) — Exact Bianchi identity $d(dA) = 0$ on compact manifolds.
+  * [Causal Posets & Inductive Lensing](../Kinematics/Causal_Posets_and_Lensing.md) — Geodesic wrapping and velocity routing.
+

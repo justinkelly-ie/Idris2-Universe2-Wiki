@@ -57,3 +57,17 @@ evidence_three_chromatic_sectors :
    classifyTernaryMetric PlusOne PlusOne PlusOne = SigParabolic)
 evidence_three_chromatic_sectors = (Refl, Refl, Refl)
 ```
+
+---
+
+## 🔗 Related Chapters & Cross-References
+
+* **Discrete Calculus & Gauge Fields**:
+  * [Grassmann Exterior Calculus & Yang-Mills Gauge Theory](Grassmann_and_Yang_Mills.md) — Exact cochain coboundaries $d_0, d_1, d_2$, Hodge dual $\star$, and Bianchi identity $d_2(d_1 A) = 0$.
+  * [2D Maxwell Field Equations](Maxwell_Field_Equations.md) — Discrete electrodynamics and exact curl/divergence flux conservation.
+  * [The Discrete Poynting Theorem](Discrete_Poynting_Theorem.md) — Discrete electromagnetic energy flux on 3D cell boundaries.
+* **Topological & Spacetime Context**:
+  * [3D Lattice Topology & Conserved Flux](Lattice_Topology_and_Flux.md) — Cell complex structure and discrete Laplacian operators.
+  * [The 27 Ternary Geometries](Ternary_Multiverse_27.md) — Metric classifications across Elliptic, Hyperbolic, and Parabolic sectors.
+  * [Intra-Epoch Hadronic Confinement (Epoch 3)](Hadronic_Color_Confinement.md) — Non-Abelian color flux loops on cell complexes.
+

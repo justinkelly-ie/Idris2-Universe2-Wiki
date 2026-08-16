@@ -55,3 +55,17 @@ public export
 evidence_boxint_conversion : unwrapBox (wildNatToBoxInt (toWildNat 37)) = 37
 evidence_boxint_conversion = Refl
 ```
+
+---
+
+## 🔗 Related Chapters & Cross-References
+
+* **Mathematical Foundations**:
+  * [The Universal Mapping](Universal_Mapping.md) — Correspondence between Idris 2 QTT / Elaborator Reflection and Cosmological Physics.
+  * [Pure Box Integers as Pixel Difference Pairs](Pixel_Box_Integers.md) — Extending empty box multisets to signed integers via Pixel difference pairs.
+  * [Nested Polynomial Multisets](Nested_Polynomial_Multisets.md) — Polynomial arithmetic and cyclotomic division as multisets of boxes.
+  * [Singleton Fractions & Ongoing Sequences](Singleton_Fractions_and_OnSeq_Algebra.md) — Non-zero Singleton denominators and constructive fractional arithmetic.
+* **Cosmological Applications**:
+  * [Pre-Geometric Genesis (The vm = 0 Void)](../Evolution/Pre_Geometric_Genesis.md) — Physical matter emergence from the empty box multiset void.
+  * [Matter Tokens vs. Dark Matter Law Impedance](../Evolution/Matter_Tokens_and_Law_Impedance.md) — Duality of integer matter tallies and structural drag.
+  * [Structural Associativity Proof](../Verification/Structural_Associativity_Proof.md) — Formal associativity proof for inductive vector unrolling.

@@ -59,3 +59,17 @@ evidence_dirac_clifford_invariance : Bool
 evidence_dirac_clifford_invariance =
   auditCliffordGeometricProductProof
 ```
+
+---
+
+## 🔗 Related Chapters & Cross-References
+
+* **Algebraic & Quantum Foundations**:
+  * [Emergent Quantum Mechanics](../Foundations/Emergent_Quantum_Mechanics.md) — Finitist quantum mechanics without infinite-dimensional Hilbert spaces.
+  * [Nilpotent Infinitesimal Calculus](../Foundations/Nilpotent_Infinitesimals.md) — Nilpotent matrices $\epsilon^2 = 0$ and discrete phase space.
+  * [Vexels, Maxels, Boxels & Reflected Linear Algebra](../Foundations/Vexels_Maxels_and_Reflected_Linear_Algebra.md) — Multiset basis representations and Clifford multivectors.
+* **Particle Physics & Gauge Fields**:
+  * [Grassmann Exterior Calculus & Yang-Mills Gauge Theory](Grassmann_and_Yang_Mills.md) — Exterior differential forms and gauge field couplings.
+  * [Hadronic Color Confinement](Hadronic_Color_Confinement.md) — Fermionic quark singlet balance in hadrons.
+  * [The 12 Emergent Laws of Physics](Emergent_Pillars_of_Physics.md) — Law 9 (Pauli Exclusion) and spinor continuity proofs.
+

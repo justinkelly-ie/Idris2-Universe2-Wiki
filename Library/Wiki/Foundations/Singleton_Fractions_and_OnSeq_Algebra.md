@@ -71,7 +71,8 @@ evidence_rational_multiplication =
       f2 = mkSingFraction (intToBoxInt 3) 4
       res = mulSingFraction f1 f2
       half = mkSingFraction (intToBoxInt 1) 2
-  in res == half
+  in rationalEquiv res half
+
 
 ||| Evidence 4: OnSeq Finite Clip Extraction.
 ||| An ongoing sequence starting at Epoch 10 yields an exact 4-element clip [10, 11, 12, 13].
@@ -110,3 +111,17 @@ evidence_stern_brocot_tree_path : Bool
 evidence_stern_brocot_tree_path =
   auditSternBrocotProof
 ```
+
+---
+
+## 🔗 Related Chapters & Cross-References
+
+* **Constructive Foundations**:
+  * [Box Arithmetic & Inductive Multisets](Box_Arithmetic.md) — Foundations of Singleton $[D]$ non-zero container tallies.
+  * [Reflected Fractional Multisets & QTT Sequences](Reflected_Fractional_Multisets_and_QTT_Sequences.md) — Elaborator Reflection macros auditing non-zero denominators and cross-multiplication proofs.
+  * [Nested Polynomial Multisets](Nested_Polynomial_Multisets.md) — Polynomial multisets and rational fraction representations.
+* **Physical Applications**:
+  * [Emergent Quantum Mechanics](Emergent_Quantum_Mechanics.md) — Rational probability amplitude fractions without continuous wave equations.
+  * [Rational Snell's Law & The Triple Spread Law](../Geometry/Rational_Snell_and_Triple_Spread.md) — Exact rational trigonometric spread ratios.
+  * [Contradictions With Standard Physics](Contradictions_With_Standard_Physics.md) — Replacing non-constructive Dedekind reals with constructive Singleton fractions and OnSeqs.
+

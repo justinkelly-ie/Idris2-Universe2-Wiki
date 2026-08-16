@@ -21,7 +21,7 @@ In **Idris2-Universe2**, following **Norman J. Wildberger's Finitist Mathematics
 
 ### A. The Dual Number Quantum State ($\Psi = x + p\epsilon$)
 Wildberger's algebraic infinitesimal unit $\epsilon = \begin{pmatrix} 0 & 1 \\ 0 & 0 \end{pmatrix}$ satisfies $\epsilon^2 = 0$.
-A quantum state is a discrete pair of Grothendieck integers:
+A quantum state is a discrete pair of signed Pixel difference integers:
 $$\Psi = x + p\epsilon$$
 Where $x$ is the discrete **coordinate position** and $p$ is the **conjugate momentum flux**. Evaluating any observable polynomial $f(\Psi)$ yields the **exact first derivative without limits**:
 $$f(x + p\epsilon) = f(x) + p \cdot f'(x)\epsilon$$
@@ -116,3 +116,18 @@ public export
 evidence_wildberger_pauli_exclusion : (x : BoxInt) -> linearConsumeQuantum x = x
 evidence_wildberger_pauli_exclusion x = Refl
 ```
+
+---
+
+## 🔗 Related Chapters & Cross-References
+
+* **Quantum & Finitist Foundations**:
+  * [Nilpotent Infinitesimal Calculus](Nilpotent_Infinitesimals.md) — Dual numbers ($\epsilon^2 = 0$) and discrete derivatives.
+  * [Hehner's Scale Conversion & Constructive Information Geometry](Hehner_Scale_Conversion_and_Information_Geometry.md) — Unifying Bits, States, and Chance without continuous logarithms or real numbers.
+  * [Quantum Measurement & Superposition](Quantum_Measurement_and_Superposition.md) — Observer-free cyclotomic collapse and double-slit resolution.
+  * [Contradictions With Standard Physics](Contradictions_With_Standard_Physics.md) — Constructive finitist resolution of the wave function collapse paradox.
+* **Algebraic & Geometric Spacetime**:
+  * [The Constructive Dirac Spinor Equation](../Geometry/Constructive_Dirac_Spinor.md) — Dirac spinors and Clifford multivector geometric algebra.
+  * [Discrete Noether's Theorem & Symplectic Invariants](../Kinematics/Discrete_Noether_Symplectic.md) — Symplectic bracket preservation and exact phase space conservation.
+  * [Hadronic Color Confinement](../Geometry/Hadronic_Color_Confinement.md) — Triadic color charge balance and color-neutral nucleon singlets.
+

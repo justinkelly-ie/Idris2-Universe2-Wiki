@@ -76,3 +76,17 @@ evidence_flux_step_energy_preservation =
       steppedField = stepFluxPropagation (intToBoxInt 1) initialField
   in unwrapBox (sumField27 steppedField) == 100
 ```
+
+---
+
+## 🔗 Related Chapters & Cross-References
+
+* **Topological & Spacetime Foundations**:
+  * [The 27 Ternary Geometries](Ternary_Multiverse_27.md) — Metric permutation generating the 27 discrete coordinate sites.
+  * [Emergence of the 3-Torus Topology](Emergent_Toroidal_Topology.md) — How the periodic boundary 3-torus $T^3$ emerges from zero boundary leakage.
+  * [Grassmann Exterior Calculus & Yang-Mills Gauge Theory](Grassmann_and_Yang_Mills.md) — Cochain coboundaries and discrete Stokes theorems on cell complexes.
+* **Conservation Laws & Field Equations**:
+  * [2D Maxwell Field Equations](Maxwell_Field_Equations.md) — Discrete electrodynamics and exact curl/divergence flux conservation.
+  * [The Discrete Poynting Theorem](Discrete_Poynting_Theorem.md) — Energy flux balance across toroidal lattice faces.
+  * [Quantum Measurement & Superposition](../Foundations/Quantum_Measurement_and_Superposition.md) — Non-local coordinate wrapping on $T^3$.
+

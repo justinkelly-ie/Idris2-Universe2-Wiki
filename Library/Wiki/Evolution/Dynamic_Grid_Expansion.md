@@ -93,3 +93,18 @@ evidence_total_manifold_weight =
   let manifold = expandAndUnfoldGeneric macroState3x3 ketVector4 braVector4
   in unwrapBox (totalMaxelWeight manifold) == 62
 ```
+
+---
+
+## 🔗 Related Chapters & Cross-References
+
+* **Grid Expansion & Cosmological Scaling**:
+  * [Pre-Geometric Genesis (The vm = 0 Void)](Pre_Geometric_Genesis.md) — Initial zero-scale vacuum seed ($0 \to 1 \to 8 \to 27$).
+  * [137-Stage Cycles & Lattice Expansion](Cycle_137_and_Expansion.md) — 137-stage cycles governing dimensional expansion boundaries.
+  * [Bootstrapping Epoch 1 to 37](Bootstrap_Epoch_1_to_37.md) — Multi-epoch scaling from Genesis to Epoch 37 ground state.
+  * [Non-Hardcoded Cosmic State & Relational Inference](Non_Hardcoded_Cosmic_State.md) — Elimination of hardcoded spatial dimension constants.
+* **Tensors & Discrete Geometry**:
+  * [Vexels, Maxels, Boxels & Reflected Linear Algebra](../Foundations/Vexels_Maxels_and_Reflected_Linear_Algebra.md) — Outer product tensor algebra and Maxel basis structures.
+  * [Discrete Holographic Area Law](../Geometry/Discrete_Holographic_Area_Law.md) — Surface vs bulk state capacity under grid expansion.
+  * [Emergent Higher-Order Physics](../Geometry/Emergent_Higher_Order_Physics.md) — Emergence of physical laws from $1\times 1 \to 2\times 2 \to 3\times 3\times 3$ grids.
+

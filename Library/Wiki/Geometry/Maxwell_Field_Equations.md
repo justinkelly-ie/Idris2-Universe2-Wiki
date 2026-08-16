@@ -131,3 +131,17 @@ evidence_maxwell_flux_conservation =
       totalFlux = sumStructural (cell1Flux ++ cell2Flux)
   in unwrapBox totalFlux == 0
 ```
+
+---
+
+## 🔗 Related Chapters & Cross-References
+
+* **Discrete Exterior Calculus & Gauge**:
+  * [Grassmann Exterior Calculus & Yang-Mills Gauge Theory](Grassmann_and_Yang_Mills.md) — 3D extension with 0-, 1-, 2-, 3-forms, Hodge duals, and non-Abelian Yang-Mills.
+  * [The Discrete Poynting Theorem](Discrete_Poynting_Theorem.md) — Exact electromagnetic energy flux conservation $\partial_t u + \nabla \cdot S = 0$.
+  * [Discrete Exterior Calculus & Gauge Theory](Discrete_Exterior_Calculus_and_Gauge.md) — Discrete curvature 2-forms $F = dA$ on cell complexes.
+* **Conservation & Computational Infrastructure**:
+  * [Structural Accounting & Token Geometry](../Foundations/Structural_Accounting_and_Pure_Tokens.md) — Cast-free summation loops preserving exact integer Maxwell fluxes.
+  * [3D Lattice Topology & Conserved Flux](Lattice_Topology_and_Flux.md) — 6-face Laplacian flux conservation on $T^3$.
+  * [The 12 Emergent Laws of Physics](Emergent_Pillars_of_Physics.md) — Law 4 (Maxwell Bianchi closure) compile-time reflection proofs.
+

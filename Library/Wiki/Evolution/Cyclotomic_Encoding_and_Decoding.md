@@ -77,3 +77,19 @@ evidence_drag_decoder =
       vOut = lensVelocityAcrossScale cosmos gBlue vIn
   in unwrapBox (lookupSingleton (MkSingleton 1) vOut) == 10 -- 560 / (1 + 55) = 10
 ```
+
+---
+
+## 🔗 Related Chapters & Cross-References
+
+* **Algebraic & Cyclotomic Foundations**:
+  * [Nested Polynomial Multisets](../Foundations/Nested_Polynomial_Multisets.md) — Polynomial arithmetic, Goh factorization, and cyclotomic long division.
+  * [Vexels, Maxels, Boxels & Reflected Linear Algebra](../Foundations/Vexels_Maxels_and_Reflected_Linear_Algebra.md) — Isomorphism between state grids and polynomial multisets.
+* **Cosmological Evolution & History**:
+  * [Dark Matter as the Cosmic Law Ledger](Dark_Matter_Law_Storage.md) — Accumulation of remainder tokens as physical Dark Matter.
+  * [Visible Matter Tokens vs. Dark Matter Law Impedance](Matter_Tokens_and_Law_Impedance.md) — State compression into fractional impedance.
+  * [137-Stage Cycles & Lattice Expansion](Cycle_137_and_Expansion.md) — The 137-stage cyclotomic contraction cycle.
+  * [Bootstrapping Epoch 1 to 37](Bootstrap_Epoch_1_to_37.md) — Master pipeline stepping from Genesis to Epoch 37.
+* **Kinematics & Lensing**:
+  * [Causal Posets & Inductive Lensing](../Kinematics/Causal_Posets_and_Lensing.md) — Decoding remainder tokens into inductive velocity deceleration.
+

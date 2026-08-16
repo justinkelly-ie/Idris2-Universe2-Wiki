@@ -120,3 +120,17 @@ evidence_molecule_3d_structure =
       carbonW = lookupVoxel (MkVoxel 1 1 1) atoms
   in name == "CH4" && carbonW == intToBoxInt 6 && unwrapBox (totalBoxelWeight atoms) == 10
 ```
+
+---
+
+## 🔗 Related Chapters & Cross-References
+
+* **Hierarchical Chemical & Nuclear Structures**:
+  * [Hierarchical Matter Replication & The Alpha Cluster (Epoch 4)](../Evolution/Alpha_Cluster_Replication.md) — 4-nucleon tetrahedral clustering into 108-voxel $^4\text{He}$ core.
+  * [Intra-Epoch Hadronic Confinement (Epoch 3)](Hadronic_Color_Confinement.md) — Triadic color charge balance and color-neutral nucleon singlets.
+  * [Archimedes' Function & Quadrea](Archimedes_Function_and_Quadrea.md) — Water molecule bond quadrea ($A = 3$) and rational trigonometric geometry.
+* **Tensors & Discrete Calculus**:
+  * [Vexels, Maxels, Boxels & Reflected Linear Algebra](../Foundations/Vexels_Maxels_and_Reflected_Linear_Algebra.md) — Voxel $[x,y,z]$ spatial structures and Boxel multiset volumes.
+  * [Box Arithmetic & Inductive Multisets](../Foundations/Box_Arithmetic.md) — Inductive empty box containers and atomic weight tallies.
+  * [The 12 Emergent Laws of Physics](Emergent_Pillars_of_Physics.md) — Law 11 (Nuclear Core Saturation) and molecular scaling.
+

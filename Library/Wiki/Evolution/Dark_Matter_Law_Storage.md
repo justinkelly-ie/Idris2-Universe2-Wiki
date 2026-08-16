@@ -39,3 +39,18 @@ evidence_inductive_drag_value : Bool
 evidence_inductive_drag_value =
   unwrapBox (sumStructural (replicate 55 (intToBoxInt 1))) == 55
 ```
+
+---
+
+## 🔗 Related Chapters & Cross-References
+
+* **Cosmic Evolution & Cyclotomic Ledgers**:
+  * [Cyclotomic Encoding & Decoding Protocol](Cyclotomic_Encoding_and_Decoding.md) — Exact state polynomial division by $\Phi_{137}(x)$ generating Dark Matter remainders.
+  * [Visible Matter Tokens vs. Dark Matter Law Impedance](Matter_Tokens_and_Law_Impedance.md) — Duality between local matter tokens and law impedance.
+  * [Bootstrapping Epoch 1 to 37](Bootstrap_Epoch_1_to_37.md) — Evolution from Genesis through Epoch 37 (210 Primorial budget).
+  * [137-Stage Cycles & Lattice Expansion](Cycle_137_and_Expansion.md) — 137-stage folding cycles and historical record generation.
+* **Kinematics & Foundations**:
+  * [Causal Posets & Inductive Lensing](../Kinematics/Causal_Posets_and_Lensing.md) — Dark Matter gravitational drag and velocity deceleration $\vec{v}_{\text{out}} = \frac{g \cdot \vec{v}}{1 + \sum \text{dmLog}}$.
+  * [Structural Accounting & Token Geometry](../Foundations/Structural_Accounting_and_Pure_Tokens.md) — Cast-free summation loops over Dark Matter ledgers (`sumStructural`).
+  * [Nested Polynomial Multisets](../Foundations/Nested_Polynomial_Multisets.md) — Monomial Goh factorization and cyclotomic long division.
+

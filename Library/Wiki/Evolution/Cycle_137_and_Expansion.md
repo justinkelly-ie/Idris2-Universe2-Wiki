@@ -65,3 +65,17 @@ evidence_expansion_step_capacity :
   totalStateCapacity (stepGridExpansion (genesisVacuumAtScale 3 7) 3) = 164
 evidence_expansion_step_capacity = Refl
 ```
+
+---
+
+## 🔗 Related Chapters & Cross-References
+
+* **Fine Structure & Expansion Dynamics**:
+  * [Dynamic Grid Expansion (`expandAndUnfoldGeneric`)](Dynamic_Grid_Expansion.md) — Dynamic tensor dimension scaling without hardcoded limits.
+  * [Bootstrapping Epoch 1 to 37](Bootstrap_Epoch_1_to_37.md) — Cosmological epoch folding reaching Primorial 210 budget.
+  * [Cyclotomic Encoding & Decoding Protocol](Cyclotomic_Encoding_and_Decoding.md) — Cyclotomic division by $\Phi_{137}(x)$.
+  * [Dark Matter as the Cosmic Law Ledger](Dark_Matter_Law_Storage.md) — Accumulation of remainder states from 137-stage cycles.
+* **Physical Realizations & Constants**:
+  * [The 12 Emergent Laws of Physics](../Geometry/Emergent_Pillars_of_Physics.md) — Law 8 (Fine Structure 137 & Primorial Budget).
+  * [Nested Polynomial Multisets](../Foundations/Nested_Polynomial_Multisets.md) — 137th cyclotomic polynomial algebra.
+

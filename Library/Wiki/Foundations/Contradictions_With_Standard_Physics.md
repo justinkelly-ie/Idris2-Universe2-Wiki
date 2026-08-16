@@ -49,3 +49,17 @@ public export
 evidence_primorial_budget : totalStateCapacity {vm=27} {de=128} {dm=55} Evolution.Bootstrap.standardEpoch37 = 210
 evidence_primorial_budget = Refl
 ```
+
+---
+
+## 🔗 Related Chapters & Cross-References
+
+* **Mathematical Foundations**:
+  * [Box Arithmetic & Inductive Multisets](Box_Arithmetic.md) — Elimination of continuous infinities via empty box hierarchies.
+  * [Singleton Fractions & Ongoing Sequences](Singleton_Fractions_and_OnSeq_Algebra.md) — Safe arithmetic with non-zero Singleton denominators.
+  * [Emergent Quantum Mechanics](Emergent_Quantum_Mechanics.md) — Elimination of continuous Hilbert space and wave collapse mysteries.
+* **Physical Pillars & Evolution**:
+  * [The 12 Emergent Laws of Physics](../Geometry/Emergent_Pillars_of_Physics.md) — Constructive derivations of conservation, light speed locality, and time's arrow.
+  * [Dark Matter as the Cosmic Law Ledger](../Evolution/Dark_Matter_Law_Storage.md) — Historical cyclotomic error accumulation replacing hypothetical particles.
+  * [Causal Posets & Inductive Lensing](../Kinematics/Causal_Posets_and_Lensing.md) — Velocity lensing across scale jumps without infinite gravitational singularities.
+

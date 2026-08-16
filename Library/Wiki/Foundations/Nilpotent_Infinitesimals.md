@@ -45,3 +45,16 @@ evidence_autodiff_exactness : Bool
 evidence_autodiff_exactness =
   auditAutoDiffProof
 ```
+
+---
+
+## 🔗 Related Chapters & Cross-References
+
+* **Mathematical Foundations**:
+  * [The Universal Mapping](Universal_Mapping.md) — Isomorphism between nilpotent vacuum and discrete physics.
+  * [Emergent Quantum Mechanics](Emergent_Quantum_Mechanics.md) — Dual complex numbers and rational quantum probability tallies.
+  * [Vexels, Maxels, Boxels & Reflected Linear Algebra](Vexels_Maxels_and_Reflected_Linear_Algebra.md) — Maxel basis representation of the $\epsilon = [1, 2]$ matrix unit.
+* **Kinematics & Spacetime Dynamics**:
+  * [Causal Posets & Inductive Lensing](../Kinematics/Causal_Posets_and_Lensing.md) — Nilpotent velocity routing through symmetric $g_{\text{EM}}$ and asymmetric $g_{\text{Substrate}}$ metrics.
+  * [Discrete Noether's Theorem & Symplectic Invariants](../Kinematics/Discrete_Noether_Symplectic.md) — Symplectic phase space flow and momentum conservation.
+

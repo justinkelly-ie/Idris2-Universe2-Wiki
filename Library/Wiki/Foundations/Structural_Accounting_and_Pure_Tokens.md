@@ -76,3 +76,17 @@ evidence_cast_free_lensing =
       vOut = lensVelocityAcrossScale cosmos gBlue vIn
   in unwrapBox (lookupSingleton (MkSingleton 1) vOut) == 10
 ```
+
+---
+
+## 🔗 Related Chapters & Cross-References
+
+* **Mathematical Foundations**:
+  * [Box Arithmetic & Inductive Multisets](Box_Arithmetic.md) — Inductive empty box containers without compiler primitive coercions.
+  * [Pure Box Integers as Pixel Difference Pairs](Pixel_Box_Integers.md) — Signed integers as pairs of pure multisets (Pixels).
+  * [Structural Associativity Proof](../Verification/Structural_Associativity_Proof.md) — Formal inductive proof verifying $(A \mathbin{+\!\!+} B) \mathbin{+\!\!+} C \equiv A \mathbin{+\!\!+} (B \mathbin{+\!\!+} C)$.
+* **Cosmological Evolution & Dynamics**:
+  * [Visible Matter Tokens vs. Dark Matter Law Impedance](../Evolution/Matter_Tokens_and_Law_Impedance.md) — Duality between numerator tokens and global structural divisors.
+  * [Causal Posets & Inductive Lensing](../Kinematics/Causal_Posets_and_Lensing.md) — Dark Matter structural drag and velocity deceleration.
+  * [2D Maxwell Field Equations](../Geometry/Maxwell_Field_Equations.md) — Exact discrete electrodynamics running via `sumStructural`.
+

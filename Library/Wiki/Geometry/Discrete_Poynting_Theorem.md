@@ -35,18 +35,11 @@ import Data.Vect
 
 %default total
 
-||| Evaluates discrete Poynting energy flux across the 6 faces bounding a 3D Voxel.
-public export
-evaluateDiscretePoyntingConservation : Vect 6 BoxInt -> BoxInt -> Bool
-evaluateDiscretePoyntingConservation faceFluxes deltaU =
-  let totalBoundaryFlux = sum (toList faceFluxes)
-      netBalance = totalBoundaryFlux + deltaU
-  in unwrapBox netBalance == 0
-
 ||| Evidence 1: Proof that a localized EM field packet conserves total energy (Boundary Flux + Delta U == 0)
 public export
 evidence_discrete_poynting_conservation : Bool
 evidence_discrete_poynting_conservation =
+
   let outgoingFluxes = [ intToBoxInt 15   -- +X face
                        , intToBoxInt (-5) -- -X face
                        , intToBoxInt 20   -- +Y face
@@ -59,3 +52,17 @@ evidence_discrete_poynting_conservation =
       deltaU = intToBoxInt (-30)
   in evaluateDiscretePoyntingConservation outgoingFluxes deltaU
 ```
+
+---
+
+## 🔗 Related Chapters & Cross-References
+
+* **Electrodynamics & Discrete Calculus**:
+  * [2D Maxwell Field Equations](Maxwell_Field_Equations.md) — 2D discrete curl and divergence conservation laws.
+  * [Grassmann Exterior Calculus & Yang-Mills Gauge Theory](Grassmann_and_Yang_Mills.md) — 3D Hodge duality $\star$ and energy density 3-forms.
+  * [Discrete Holographic Area Law](Discrete_Holographic_Area_Law.md) — Topological state capacity bounded by 2D boundary face Maxel count.
+* **Topological & Kinetic Conservation**:
+  * [3D Lattice Topology & Conserved Flux](Lattice_Topology_and_Flux.md) — 6-face neighborhood flux conservation.
+  * [Discrete Noether's Theorem & Symplectic Invariants](../Kinematics/Discrete_Noether_Symplectic.md) — Exact discrete Hamiltonian energy conservation.
+  * [The 12 Emergent Laws of Physics](Emergent_Pillars_of_Physics.md) — Law 1 (Energy & Charge Conservation) compile-time proofs.
+

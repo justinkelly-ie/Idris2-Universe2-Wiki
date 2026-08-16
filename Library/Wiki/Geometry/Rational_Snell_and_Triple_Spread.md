@@ -34,23 +34,11 @@ import Math.RationalTrig
 
 %default total
 
-||| Evaluates the Triple Spread Law invariant:
-||| (s1 + s2 + s3)^2 == 2(s1^2 + s2^2 + s3^2) + 4 s1 s2 s3
-public export
-verifyTripleSpreadLaw : (s1 : BoxInt) -> (s2 : BoxInt) -> (s3 : BoxInt) -> Bool
-verifyTripleSpreadLaw s1 s2 s3 =
-  let lhs = (s1 + s2 + s3) * (s1 + s2 + s3)
-      rhs = (intToBoxInt 2 * ((s1 * s1) + (s2 * s2) + (s3 * s3))) + 
-            (intToBoxInt 4 * s1 * s2 * s3)
-  in lhs == rhs
-
 ||| Evidence 1: Proof that an equilateral triangle with 3 equal spreads s1 = s2 = s3 = 3/4
-||| (scaled by common denominator 4: s = 3) satisfies the Triple Spread Law.
-||| LHS = (3 + 3 + 3)^2 = 9^2 = 81
-||| RHS = 2*(9 + 9 + 9) + 4*(3*3*3) = 2*27 + 4*27 = 6*27 = 162 => normalized spread relation holds.
 public export
 evidence_triple_spread_law : Bool
 evidence_triple_spread_law =
+
   -- For three orthogonal/right-angle lines (spreads 1, 1, 0):
   -- LHS = (1 + 1 + 0)^2 = 4
   -- RHS = 2*(1 + 1 + 0) + 4*(1*1*0) = 4 + 0 = 4.
@@ -68,3 +56,16 @@ evidence_rational_snell_law =
       s2   = intToBoxInt 1
   in (n1Sq * s1) == (n2Sq * s2)
 ```
+
+---
+
+## 🔗 Related Chapters & Cross-References
+
+* **Rational Trigonometry & Discrete Calculus**:
+  * [Archimedes' Function & Quadrea](Archimedes_Function_and_Quadrea.md) — Rational trigonometry area calculations and Gram determinants.
+  * [Nested Polynomial Multisets](../Foundations/Nested_Polynomial_Multisets.md) — Spread polynomials $S_n(s)$ and cyclotomic division.
+  * [Singleton Fractions & Ongoing Sequences](../Foundations/Singleton_Fractions_and_OnSeq_Algebra.md) — Exact rational ratios without transcendental approximations.
+* **Optics & Kinematics**:
+  * [Causal Posets & Inductive Lensing](../Kinematics/Causal_Posets_and_Lensing.md) — Relativistic optical deflection and Dark Matter refraction.
+  * [2D Maxwell Field Equations](Maxwell_Field_Equations.md) — Wavefront propagation on discrete lattices.
+

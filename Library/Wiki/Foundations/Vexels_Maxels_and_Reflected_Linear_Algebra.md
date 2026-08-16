@@ -4,7 +4,7 @@ In standard linear algebra, vectors, matrices, and tensors are defined as abstra
 
 In **Idris2-Universe2**, following **Norman J. Wildberger's Box Arithmetic** (*Math Foundations 171 & 172*), linear algebra and higher natural structures are constructed purely from **discrete multiset data structures**:
 * **Singleton $[n]$**: A 1-list from $\mathbb{N}$, representing a 1D coordinate basis token $e_n$, an energy level, or a nucleotide base.
-* **Pixel $[i, j]$**: A 2-list from $\mathbb{N} \times \mathbb{N}$, representing a 2D coordinate cell $e_{ij}$, a Grothendieck signed pair $[P, N]$, a dual number component, or a chemical bond.
+* **Pixel $[i, j]$**: A 2-list from $\mathbb{N} \times \mathbb{N}$, representing a 2D coordinate cell $e_{ij}$, a signed difference pair $[P, N]$, a dual number component, or a chemical bond.
 * **Voxel $[x, y, z]$**: A 3-list from $\mathbb{N} \times \mathbb{N} \times \mathbb{N}$, representing a 3D coordinate cell, a 3-quark baryon color singlet, or a 3-nucleotide biological codon triplet.
 * **Vexel**: An unordered multiset of Singletons ($\sum c_k [k]$), replacing abstract vectors (used for wavefunctions, momentum, and 1-form fields).
 * **Maxel**: An unordered multiset of Pixels ($\sum a_{ij} [i, j]$), replacing abstract matrices (used for metric tensors, 2-form curvatures, dual numbers, and molecular connectivity graphs).
@@ -23,7 +23,7 @@ Using **Elaborator Reflection & Type-Checked Witnesses**, these structures are s
   ├──────────────┼──────────────────┼──────────────────┼────────────────────────┤
   │ 0D Basis     │ Leaf / Empty Box │ Vacuum State     │ Zero State             │
   │ 1D Basis     │ Singleton [n]    │ Color Charge     │ Nucleotide (A,C,G,T)   │
-  │ 2D Pair      │ Pixel [i, j]     │ Grothendieck Z   │ Chemical Bond / Valence│
+  │ 2D Pair      │ Pixel [i, j]     │ Pixel Z [P, N]   │ Chemical Bond / Valence│
   │ 3D Triplet   │ Voxel [x, y, z]  │ Baryon Singlet   │ Codon Triplet (AUG)    │
   │ 1D Multiset  │ Vexel (MSet Sing)│ Wavefunction / v │ Electron Shell / 1-Form│
   │ 2D Multiset  │ Maxel (MSet Pix) │ Metric Tensor g  │ Molecular Graph/2-Form │
@@ -46,7 +46,7 @@ import Data.List
 
 %default total
 
-||| Evidence 1: Proof that Grothendieck signed pair (pos, neg) as a Pixel [55, 27] evaluates to BoxInt 28
+||| Evidence 1: Proof that signed difference pair (pos, neg) as a Pixel [55, 27] evaluates to BoxInt 28
 public export
 evidence_boxint_pixel_isomorphism : Bool
 evidence_boxint_pixel_isomorphism =
@@ -153,3 +153,18 @@ public export
 evidence_reflection_macro_audit : Core.VexelMaxel.auditRowExtractionProof = True
 evidence_reflection_macro_audit = Refl
 ```
+
+---
+
+## 🔗 Related Chapters & Cross-References
+
+* **Mathematical Foundations**:
+  * [The Universal Mapping](Universal_Mapping.md) — Correspondence between reflection macros and cybernetic feedback.
+  * [Box Arithmetic & Inductive Multisets](Box_Arithmetic.md) — The multiset container substrate underlying Singletons and Pixels.
+  * [Nested Polynomial Multisets](Nested_Polynomial_Multisets.md) — Isomorphism between 1D Vexels and polynumber multisets.
+  * [Reflected Fractional Multisets & QTT Sequences](Reflected_Fractional_Multisets_and_QTT_Sequences.md) — Compile-time reflection macros auditing fraction invariants.
+* **Geometry & Gauge Theory**:
+  * [The 27 Ternary Geometries](../Geometry/Ternary_Multiverse_27.md) — Permuting ternary bits into symmetric and asymmetric Maxel metrics.
+  * [Grassmann Exterior Calculus & Yang-Mills Gauge Theory](../Geometry/Grassmann_and_Yang_Mills.md) — Cochains ($C_0, C_1, C_2, C_3$) formulated as Vexels, Maxels, and Boxels.
+  * [Dynamic Grid Expansion (`expandAndUnfoldGeneric`)](../Evolution/Dynamic_Grid_Expansion.md) — Outer product tensor inflation over multiset grids.
+

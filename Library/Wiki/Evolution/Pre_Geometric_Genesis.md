@@ -42,3 +42,17 @@ public export
 evidence_dimensional_ladder : (computeVMSize 0 = 0, computeVMSize 1 = 1, computeVMSize 2 = 8, computeVMSize 3 = 27)
 evidence_dimensional_ladder = (Refl, Refl, Refl, Refl)
 ```
+
+---
+
+## 🔗 Related Chapters & Cross-References
+
+* **Cosmic Genesis & Evolution**:
+  * [Non-Hardcoded Cosmic State & Relational Inference](Non_Hardcoded_Cosmic_State.md) — Dynamic state capacity scaling without hardcoded constants.
+  * [Bootstrapping Epoch 1 to 37](Bootstrap_Epoch_1_to_37.md) — Master evolutionary timeline from Genesis to Ground State Epoch 37.
+  * [Dynamic Grid Expansion (`expandAndUnfoldGeneric`)](Dynamic_Grid_Expansion.md) — Outer product grid scaling across the dimensional ladder ($0 \to 1 \to 8 \to 27$).
+* **Foundations & Physical Emergence**:
+  * [Box Arithmetic & Inductive Multisets](../Foundations/Box_Arithmetic.md) — Emergence of physical matter from empty box containers.
+  * [The Universal Mapping](../Foundations/Universal_Mapping.md) — Correspondence between type theory void and pre-geometric physics.
+  * [The 12 Emergent Laws of Physics](../Geometry/Emergent_Pillars_of_Physics.md) — Law 12 (Baryon Asymmetry Positive Ground State Seed).
+

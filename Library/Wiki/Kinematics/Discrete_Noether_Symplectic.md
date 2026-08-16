@@ -33,18 +33,11 @@ import Compound.LinearEpsilonRouting
 
 %default total
 
-||| Evaluates the discrete Noether charge Q = p^T * delta_q for a phase state.
-public export
-evaluateNoetherCharge : PhaseState -> Vexel -> BoxInt
-evaluateNoetherCharge (MkPhaseState _ p) deltaQ =
-  let p1 = lookupSingleton (MkSingleton 1) p
-      dq1 = lookupSingleton (MkSingleton 1) deltaQ
-  in p1 * dq1
-
 ||| Evidence 1: Proof that a free particle (gradV = 0) strictly conserves discrete Noether momentum.
 public export
 evidence_discrete_noether_conservation : Bool
 evidence_discrete_noether_conservation =
+
   let zeroGrad = (\_ => MkVexel [])
       q0 = MkVexel [(MkSingleton 1, intToBoxInt 5)]
       p0 = MkVexel [(MkSingleton 1, intToBoxInt 12)]
@@ -64,3 +57,17 @@ evidence_symplectic_j_squared_invariance : Bool
 evidence_symplectic_j_squared_invariance =
   auditSymplecticInvarianceProof
 ```
+
+---
+
+## 🔗 Related Chapters & Cross-References
+
+* **Symplectic Dynamics & Kinematics**:
+  * [Causal Posets & Inductive Lensing](Causal_Posets_and_Lensing.md) — Asymmetric substrate routing and velocity lensing.
+  * [The Discrete Poynting Theorem](../Geometry/Discrete_Poynting_Theorem.md) — Exact discrete energy-momentum flow conservation.
+  * [Emergent Higher-Order Physics](../Geometry/Emergent_Higher_Order_Physics.md) — Hamiltonian mechanics and phase space flows on discrete lattices.
+* **Algebraic & Quantum Foundations**:
+  * [Emergent Quantum Mechanics](../Foundations/Emergent_Quantum_Mechanics.md) — Symplectic Poisson brackets and commutators.
+  * [Nilpotent Infinitesimal Calculus](../Foundations/Nilpotent_Infinitesimals.md) — Dual numbers and symplectic phase matrices.
+  * [The 12 Emergent Laws of Physics](../Geometry/Emergent_Pillars_of_Physics.md) — Law 1 (Conservation of Energy/Charge) and Law 5 (Quantum Phase Invariants).
+

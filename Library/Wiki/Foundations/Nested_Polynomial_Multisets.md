@@ -127,3 +127,16 @@ evidence_spread_polynumbers =
   in map unwrapBox (coeffs s2) == [0, 4, -4] &&
      map unwrapBox (coeffs s3) == [0, 9, -24, 16]
 ```
+
+---
+
+## 🔗 Related Chapters & Cross-References
+
+* **Mathematical Foundations**:
+  * [Box Arithmetic & Inductive Multisets](Box_Arithmetic.md) — Foundation of nested containers and box arithmetic.
+  * [Vexels, Maxels, Boxels & Reflected Linear Algebra](Vexels_Maxels_and_Reflected_Linear_Algebra.md) — Polynomial-to-Vexel isomorphisms and multiset algebra.
+  * [Singleton Fractions & Ongoing Sequences](Singleton_Fractions_and_OnSeq_Algebra.md) — Fractional rational functions and sequence algebra.
+* **Cosmological Evolution & Physics**:
+  * [Cyclotomic Encoding & Decoding Protocol](../Evolution/Cyclotomic_Encoding_and_Decoding.md) — Cyclotomic polynomial division by $\Phi_{137}(x)$ for cosmic state compression.
+  * [Dark Matter as the Cosmic Law Ledger](../Evolution/Dark_Matter_Law_Storage.md) — Polynomial remainder accumulation as Dark Matter drag ledger.
+  * [Rational Snell's Law & The Triple Spread Law](../Geometry/Rational_Snell_and_Triple_Spread.md) — Spread polynomials $S_n(s)$ applied to rational optics.

@@ -44,3 +44,17 @@ public export
 evidence_gSubstrate_hyperbolic : classifyTernaryMetric PlusOne PlusOne ZeroBit = SigHyperbolic
 evidence_gSubstrate_hyperbolic = Refl
 ```
+
+---
+
+## 🔗 Related Chapters & Cross-References
+
+* **Mathematical & Geometric Foundations**:
+  * [Vexels, Maxels, Boxels & Reflected Linear Algebra](../Foundations/Vexels_Maxels_and_Reflected_Linear_Algebra.md) — Maxel metric structures and determinant classifications.
+  * [Pure Box Integers as Pixel Difference Pairs](../Foundations/Pixel_Box_Integers.md) — Discrete integer signed coordinates for the ternary ring $\mathbb{Z}_3$.
+  * [3D Lattice Topology & Conserved Flux](Lattice_Topology_and_Flux.md) — Embedding the 27 ternary states into the 3-torus $T^3$.
+* **Cosmic Evolution & Kinematics**:
+  * [The 12 Emergent Laws of Physics](Emergent_Pillars_of_Physics.md) — Emergence of metric geometry and speed of light locality.
+  * [Causal Posets & Inductive Lensing](../Kinematics/Causal_Posets_and_Lensing.md) — Velocity routing across symmetric $g_{\text{EM}}$ vs asymmetric $g_{\text{Substrate}}$.
+  * [Pre-Geometric Genesis (The vm = 0 Void)](../Evolution/Pre_Geometric_Genesis.md) — Emergence of the 27 visible matter states from the vacuum.
+

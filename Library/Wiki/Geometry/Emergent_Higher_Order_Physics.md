@@ -38,3 +38,17 @@ evidence_em_routing_symmetric :
   in (unwrapBox (lookupSingleton (MkSingleton 1) vOut) = 1, unwrapBox (lookupSingleton (MkSingleton 2) vOut) = -2)
 evidence_em_routing_symmetric = (Refl, Refl)
 ```
+
+---
+
+## 🔗 Related Chapters & Cross-References
+
+* **Discrete Scale & Grid Hierarchy**:
+  * [Dynamic Grid Expansion (`expandAndUnfoldGeneric`)](../Evolution/Dynamic_Grid_Expansion.md) — Scaling spatial arrays via outer products ($1\times 1 \to 2\times 2 \to 3\times 3\times 3$).
+  * [137-Stage Cycles & Lattice Expansion](../Evolution/Cycle_137_and_Expansion.md) — 137-stage cycles and fine structure limits.
+  * [Pre-Geometric Genesis (The vm = 0 Void)](../Evolution/Pre_Geometric_Genesis.md) — Initial $1\times 1$ scalar genesis vacuum.
+* **Physics & Gauge Dynamics**:
+  * [The 27 Ternary Geometries](Ternary_Multiverse_27.md) — The 27 fundamental $2\times 2$ metric kernels.
+  * [Causal Posets & Inductive Lensing](../Kinematics/Causal_Posets_and_Lensing.md) — Kinematic velocity routing across symmetric and asymmetric Maxels.
+  * [Grassmann Exterior Calculus & Yang-Mills Gauge Theory](Grassmann_and_Yang_Mills.md) — Gauge field mechanics on $3\times 3\times 3$ cell complexes.
+

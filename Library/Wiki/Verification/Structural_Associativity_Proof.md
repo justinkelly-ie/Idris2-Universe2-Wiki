@@ -96,3 +96,18 @@ evidence_count_structural_partition =
       countTotal = countStructural (vm ++ de ++ dm)
   in unwrapBox countTotal == 210
 ```
+
+---
+
+## 🔗 Related Chapters & Cross-References
+
+* **Mathematical Foundations & Structural Accounting**:
+  * [Structural Accounting & Token Geometry](../Foundations/Structural_Accounting_and_Pure_Tokens.md) — Inductive vector unrolling loops replacing compiler casts.
+  * [Box Arithmetic & Inductive Multisets](../Foundations/Box_Arithmetic.md) — Empty box multisets and exact resource conservation.
+  * [Pure Box Integers as Pixel Difference Pairs](../Foundations/Pixel_Box_Integers.md) — Pure integer difference pairs and algebraic completion.
+* **Cosmological Evolution & Conservation**:
+  * [Visible Matter Tokens vs. Dark Matter Law Impedance](../Evolution/Matter_Tokens_and_Law_Impedance.md) — Partitioning total cosmic state capacity into VM, DE, and DM.
+  * [Bootstrapping Epoch 1 to 37](../Evolution/Bootstrap_Epoch_1_to_37.md) — Multi-epoch inductive summation across the 210 Primorial budget.
+  * [The 12 Emergent Laws of Physics](../Geometry/Emergent_Pillars_of_Physics.md) — Law 1 (Energy/Charge Conservation) compile-time reflection witnesses.
+  * [Verification Matrix](Verification_Matrix.md) — Global verification and theorem checklist.
+

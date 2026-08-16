@@ -58,3 +58,17 @@ evidence_epoch3_cosmic_capacity : Bool
 evidence_epoch3_cosmic_capacity = 
   totalStateCapacity hadronCosmicStateEpoch3 == 158
 ```
+
+---
+
+## 🔗 Related Chapters & Cross-References
+
+* **Particle & Nuclear Structures**:
+  * [Hierarchical Matter Replication & The Alpha Cluster (Epoch 4)](../Evolution/Alpha_Cluster_Replication.md) — 4-nucleon tetrahedral clustering into 108-voxel $^4\text{He}$ core.
+  * [Molecular Bonding & Chemical Graph Contraction](Molecular_Bonding.md) — Tier 5 chemical molecular bonding and covalent Maxels.
+  * [The Constructive Dirac Spinor Equation](Constructive_Dirac_Spinor.md) — Fermionic Dirac spinors in Clifford geometric algebra.
+* **Geometry & Gauge Theory**:
+  * [The 27 Ternary Geometries](Ternary_Multiverse_27.md) — Permuting ternary bits into chromatic spatial slices.
+  * [Grassmann Exterior Calculus & Yang-Mills Gauge Theory](Grassmann_and_Yang_Mills.md) — Non-Abelian $SU(3)$ color flux confinement on cell complexes.
+  * [The 12 Emergent Laws of Physics](Emergent_Pillars_of_Physics.md) — Law 6 (QCD Color Confinement) derivations.
+
