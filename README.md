@@ -93,6 +93,7 @@ The cornerstone of **Idris2-Universe2** is the strict mathematical isomorphism l
 * [Cross-Law Gauge-Spinor & Metric Shear Coupling](Library/Wiki/Geometry/Cross_Law_Gauge_Spinor_and_Metric_Coupling.md) — Gauge-covariant derivative $D_\mu \psi$, positive Dirac current $j^0 \ge 0$, and traceless metric shear coupling $E_{\text{int}}$.
 * [Shannon-Huffman Optimality & Kolmogorov Program Complexity](Library/Wiki/Geometry/Shannon_Huffman_Optimality_and_Kolmogorov_Complexity.md) — Kraft-McMillan prefix inequality, Stern-Brocot path depth bound, and minimal cyclotomic program length.
 * [Discrete Helmholtz Free Energy Minimization at Primorial 210](Library/Wiki/Geometry/Discrete_Helmholtz_Free_Energy_Minimization.md) — Multi-sector thermodynamic state function $F = U - TS$ reaching global minimum at the $27 + 128 + 55 = 210$ ground state.
+* [Fast Balanced Multiset Trees & Logarithmic Scaling](Library/Wiki/Geometry/Fast_Balanced_Multiset_Trees_and_Logarithmic_Scaling.md) — $O(\log N)$ binary search trees for multiset token lookup, insertion, and multiplicity sum preservation.
 * [Tier 6 Macromolecules & Chiral Stereochemistry](Library/Wiki/Geometry/Tier6_Macromolecules_and_Chiral_Stereochemistry.md) — Biological macromolecules, amino acid stereocenters, peptide condensation graph contraction, and substrate-grounded homochirality.
 * [Relational Metric Inference](Library/Wiki/Evolution/Non_Hardcoded_Cosmic_State.md) — Eliminating magic numbers through internal density ratios.
 
