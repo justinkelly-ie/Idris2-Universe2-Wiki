@@ -266,6 +266,15 @@ proofOfGeodesicLeastActionOptimality = auditGeodesicLeastActionOptimality
 proofOfDiscreteMomentumConservation : Reflect.InvariantAuditor.auditDiscreteMomentumConservationProofExport = True
 proofOfDiscreteMomentumConservation = auditDiscreteMomentumConservation
 
+||| Witness 41: Proves via Elaborator Reflection macro that Parabolic Null Momentum is Zero.
+proofOfParabolicNullMomentumZero : Reflect.InvariantAuditor.auditParabolicNullMomentumZeroProofExport = True
+proofOfParabolicNullMomentumZero = auditParabolicNullMomentumZero
+
+||| Witness 42: Proves via Elaborator Reflection macro that Sector-Specific Action Signatures hold.
+proofOfSectorSpecificActionSignatures : Reflect.InvariantAuditor.auditSectorSpecificActionSignaturesProofExport = True
+proofOfSectorSpecificActionSignatures = auditSectorSpecificActionSignatures
+
+
 
 
 
@@ -570,7 +579,9 @@ prop_literateModuleInvariants =
   auditDiscreteEulerLagrangeEquivalenceProofExport &&
   auditSubstrateActionAsymmetryProofExport &&
   auditGeodesicLeastActionOptimalityProofExport &&
-  auditDiscreteMomentumConservationProofExport
+  auditDiscreteMomentumConservationProofExport &&
+  auditParabolicNullMomentumZeroProofExport &&
+  auditSectorSpecificActionSignaturesProofExport
 
 ||| Property 30: Test Quantum State Transitions & Wilson Loop Plaquettes
 prop_quantumTransitionsWilsonLoops : Bool
@@ -634,7 +645,9 @@ prop_discretePrincipleOfLeastAction =
   verifyDiscreteEulerLagrangeEquivalence &&
   verifySubstrateActionAsymmetry &&
   verifyGeodesicLeastActionOptimality &&
-  verifyDiscreteMomentumConservation
+  verifyDiscreteMomentumConservation &&
+  verifyParabolicNullMomentumZero &&
+  verifySectorSpecificActionSignatures
 
 ||| Main test runner
 main : IO ()
@@ -688,6 +701,8 @@ main = do
   putStrLn "  - Substrate Action Asymmetry Witness: INJECTED & VALID (Refl) ✅"
   putStrLn "  - Geodesic Least Action Optimality Witness: INJECTED & VALID (Refl) ✅"
   putStrLn "  - Discrete Noether Momentum Conservation Witness: INJECTED & VALID (Refl) ✅"
+  putStrLn "  - Parabolic Null Momentum Zero Witness: INJECTED & VALID (Refl) ✅"
+  putStrLn "  - Sector-Specific Action Signatures Witness: INJECTED & VALID (Refl) ✅"
   putStrLn ""
   putStrLn " [RUNTIME CONSERVATION & KINEMATIC INVARIANTS]:"
   putStrLn $ "  [TEST 1]  27-State Ternary Spacetime Closure:    " ++ (if prop_27_TernaryClosure then "PASSED ✅" else "FAILED ❌")

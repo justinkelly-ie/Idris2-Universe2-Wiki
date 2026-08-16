@@ -58,6 +58,19 @@ $$P(\gamma) = \frac{q^{S[\gamma]}}{Z(q)}, \quad Z(q) = \sum_{\gamma} q^{S[\gamma
 where $q \in \mathbb{Q} \cap (0, 1)$ is the rational temperature parameter ($q \approx e^{-\beta}$).
 The least-action geodesic trajectory from Law 1 maximizes the thermal weight $q^{S_{\text{min}}}$, directly generating **Law 2: The Discrete Boltzmann Distribution & Thermal Partition Function**.
 
+### G. Sector-Specific Action Signatures Across the 4 Geometries
+For a unit displacement $\Delta x = (1, 1)$, the discrete kinetic quadrance $Q_g(\Delta x)$ exhibits 4 distinct physical signatures:
+1. **Elliptic Sector ($\det g = +1$, 27 VM)**: $Q_{\text{Ell}} = 1^2 + 1^2 = 2 > 0$ (Positive-definite bound-state confinement).
+2. **Hyperbolic Sector ($\det g = -1$, 128 DE)**: $Q_{\text{Hyp}} = 1^2 - 1^2 = 0$ (Stationary lightcone phase and $\mathrm{SU}(3)$ color flux).
+3. **Parabolic Sector ($\det g = 0$, 55 DM)**: $Q_{\text{Par}} = 1^2 + 0 = 1$ (One-way dissipation drain). Along the degenerate null vector $(0, 1)$, momentum evaluates to $p_{\text{null}} = (0, 0)$, allowing frictionless cyclotomic remainder drainage into Dark Matter without back-reaction.
+4. **Substrate Sector ($g_{22} = 0, g_{12} = 1$, 210 Master)**: $Q_{\text{Sub}} = 1^2 + 2(1)(1) + 0 = 3$ (Asymmetric causal driver).
+
+### H. The Geometric Transmission Line of Time and the Tri-Geometric Partition Function
+The 4 geometries form an integrated **cosmic transmission line**:
+$$\text{Elliptic (Order)} \xrightarrow[\text{Phase Mixing}]{\text{Hyperbolic}} \text{Parabolic (Dissipation Sink)} \xrightarrow[\text{Causal Arrow}]{\text{Substrate}} \text{Dark Matter Law Ledger}$$
+Consequently, the Cosmic Partition Function in Epoch 37 factorizes across the Primorial 210 budget decomposition:
+$$Z_{\text{Cosmic}}(q) = \underbrace{Z_{\text{Elliptic}}^{27}(q)}_{\text{Bound States}} \times \underbrace{Z_{\text{Hyperbolic}}^{128}(q)}_{\text{Gauge Modes}} \times \underbrace{Z_{\text{Parabolic}}^{55}(q)}_{\text{Memory Ledger}}$$
+
 ---
 
 ## 💻 2. Executable Literate Code & Verification
@@ -94,5 +107,18 @@ public export
 verifyDiscreteMomentumConservation : Bool
 verifyDiscreteMomentumConservation =
   auditDiscreteMomentumConservationProof
+
+||| Verifies that Parabolic null momentum evaluates to zero (frictionless drain).
+public export
+verifyParabolicNullMomentumZero : Bool
+verifyParabolicNullMomentumZero =
+  auditParabolicNullMomentumZeroProof
+
+||| Verifies that the 4 Geometries produce distinct kinetic action quadrances.
+public export
+verifySectorSpecificActionSignatures : Bool
+verifySectorSpecificActionSignatures =
+  auditSectorSpecificActionSignaturesProof
 ```
+
 
