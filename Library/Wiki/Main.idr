@@ -68,9 +68,11 @@ import Geometry.Hydrogen_Bonding_and_Aqueous_Percolation
 import Geometry.Watson_Crick_Complementarity_and_Polyphosphates
 import Geometry.Wilson_Polyhedra_and_NonAbelian_Color_Flux
 import Geometry.The_Four_Fundamental_Geometries_and_Cosmic_Synthesis
+import Geometry.Discrete_Principle_of_Least_Action
 import Geometry.Tier6_Macromolecules_and_Chiral_Stereochemistry
 import Math.WilsonPolyhedra
 import Math.FourGeometries
+import Math.DiscreteActionPrinciple
 import Compound.PlasmaRecombination
 import Compound.StellarNucleosynthesis
 import Compound.MolecularBonding
@@ -247,6 +249,19 @@ proofOfWatsonCrickHydrogenBondRatio = auditWatsonCrickHydrogenBondRatio
 ||| Witness 36: Proves via Elaborator Reflection macro that Pyrophosphate (ATP) Thermodynamic Coupling holds.
 proofOfPyrophosphateThermodynamicCoupling : Reflect.InvariantAuditor.auditPyrophosphateThermodynamicCouplingProofExport = True
 proofOfPyrophosphateThermodynamicCoupling = auditPyrophosphateThermodynamicCoupling
+
+||| Witness 37: Proves via Elaborator Reflection macro that Discrete Euler-Lagrange Equivalence holds.
+proofOfDiscreteEulerLagrangeEquivalence : Reflect.InvariantAuditor.auditDiscreteEulerLagrangeEquivalenceProofExport = True
+proofOfDiscreteEulerLagrangeEquivalence = auditDiscreteEulerLagrangeEquivalence
+
+||| Witness 38: Proves via Elaborator Reflection macro that Substrate Action Asymmetry holds.
+proofOfSubstrateActionAsymmetry : Reflect.InvariantAuditor.auditSubstrateActionAsymmetryProofExport = True
+proofOfSubstrateActionAsymmetry = auditSubstrateActionAsymmetry
+
+||| Witness 39: Proves via Elaborator Reflection macro that Geodesic Least Action Optimality holds.
+proofOfGeodesicLeastActionOptimality : Reflect.InvariantAuditor.auditGeodesicLeastActionOptimalityProofExport = True
+proofOfGeodesicLeastActionOptimality = auditGeodesicLeastActionOptimality
+
 
 
 
@@ -546,7 +561,10 @@ prop_literateModuleInvariants =
   auditTripleAlphaCarbonPhosphorusSynthesisProofExport &&
   auditHydrogenBondNetworkQuadreaProofExport &&
   auditWatsonCrickHydrogenBondRatioProofExport &&
-  auditPyrophosphateThermodynamicCouplingProofExport
+  auditPyrophosphateThermodynamicCouplingProofExport &&
+  auditDiscreteEulerLagrangeEquivalenceProofExport &&
+  auditSubstrateActionAsymmetryProofExport &&
+  auditGeodesicLeastActionOptimalityProofExport
 
 ||| Property 30: Test Quantum State Transitions & Wilson Loop Plaquettes
 prop_quantumTransitionsWilsonLoops : Bool
@@ -604,6 +622,13 @@ prop_watsonCrickPolyphosphates =
   verifyWatsonCrickHydrogenBondRatio &&
   verifyPyrophosphateThermodynamicCoupling
 
+||| Property 39: Test The Discrete Principle of Least Action & Euler-Lagrange Dynamics
+prop_discretePrincipleOfLeastAction : Bool
+prop_discretePrincipleOfLeastAction =
+  verifyDiscreteEulerLagrangeEquivalence &&
+  verifySubstrateActionAsymmetry &&
+  verifyGeodesicLeastActionOptimality
+
 ||| Main test runner
 main : IO ()
 main = do
@@ -652,6 +677,9 @@ main = do
   putStrLn "  - Hydrogen Bond Network & Water Quadrea Witness: INJECTED & VALID (Refl) ✅"
   putStrLn "  - Watson-Crick Complementary Hydrogen Bond Ratio Witness: INJECTED & VALID (Refl) ✅"
   putStrLn "  - Pyrophosphate (ATP) Thermodynamic Coupling Witness: INJECTED & VALID (Refl) ✅"
+  putStrLn "  - Discrete Euler-Lagrange Equivalence Witness: INJECTED & VALID (Refl) ✅"
+  putStrLn "  - Substrate Action Asymmetry Witness: INJECTED & VALID (Refl) ✅"
+  putStrLn "  - Geodesic Least Action Optimality Witness: INJECTED & VALID (Refl) ✅"
   putStrLn ""
   putStrLn " [RUNTIME CONSERVATION & KINEMATIC INVARIANTS]:"
   putStrLn $ "  [TEST 1]  27-State Ternary Spacetime Closure:    " ++ (if prop_27_TernaryClosure then "PASSED ✅" else "FAILED ❌")
@@ -706,7 +734,8 @@ main = do
   putStrLn $ "  [TEST 50] Stellar Nucleosynthesis & Phosphorus:  " ++ (if prop_stellarNucleosynthesisPhosphorus then "PASSED ✅" else "FAILED ❌")
   putStrLn $ "  [TEST 51] Hydrogen Bonding & Aqueous Network:    " ++ (if prop_hydrogenBondingAqueousPercolation then "PASSED ✅" else "FAILED ❌")
   putStrLn $ "  [TEST 52] Watson-Crick Base Pairing & ATP:       " ++ (if prop_watsonCrickPolyphosphates then "PASSED ✅" else "FAILED ❌")
-  putStrLn $ "  [TEST 53] All Literate Wiki Modules Verified:   " ++ (if prop_literateModuleInvariants then "PASSED ✅" else "FAILED ❌")
+  putStrLn $ "  [TEST 53] Discrete Action & Euler-Lagrange:      " ++ (if prop_discretePrincipleOfLeastAction then "PASSED ✅" else "FAILED ❌")
+  putStrLn $ "  [TEST 54] All Literate Wiki Modules Verified:   " ++ (if prop_literateModuleInvariants then "PASSED ✅" else "FAILED ❌")
   putStrLn ""
   putStrLn "All Cosmological Proof Witnesses & Literate Invariants Verified!"
   putStrLn "========================================================"
