@@ -69,10 +69,12 @@ import Geometry.Watson_Crick_Complementarity_and_Polyphosphates
 import Geometry.Wilson_Polyhedra_and_NonAbelian_Color_Flux
 import Geometry.The_Four_Fundamental_Geometries_and_Cosmic_Synthesis
 import Geometry.Discrete_Principle_of_Least_Action
+import Geometry.Discrete_Boltzmann_and_Sector_Partition_Functions
 import Geometry.Tier6_Macromolecules_and_Chiral_Stereochemistry
 import Math.WilsonPolyhedra
 import Math.FourGeometries
 import Math.DiscreteActionPrinciple
+import Math.DiscreteBoltzmannDistribution
 import Compound.PlasmaRecombination
 import Compound.StellarNucleosynthesis
 import Compound.MolecularBonding
@@ -273,6 +275,19 @@ proofOfParabolicNullMomentumZero = auditParabolicNullMomentumZero
 ||| Witness 42: Proves via Elaborator Reflection macro that Sector-Specific Action Signatures hold.
 proofOfSectorSpecificActionSignatures : Reflect.InvariantAuditor.auditSectorSpecificActionSignaturesProofExport = True
 proofOfSectorSpecificActionSignatures = auditSectorSpecificActionSignatures
+
+||| Witness 43: Proves via Elaborator Reflection macro that Discrete Boltzmann Probability Normalization holds.
+proofOfBoltzmannProbabilityNormalization : Reflect.InvariantAuditor.auditBoltzmannProbabilityNormalizationProofExport = True
+proofOfBoltzmannProbabilityNormalization = auditBoltzmannProbabilityNormalization
+
+||| Witness 44: Proves via Elaborator Reflection macro that Cosmic Budget Partition Factorization holds.
+proofOfCosmicBudgetPartitionFactorization : Reflect.InvariantAuditor.auditCosmicBudgetPartitionFactorizationProofExport = True
+proofOfCosmicBudgetPartitionFactorization = auditCosmicBudgetPartitionFactorization
+
+||| Witness 45: Proves via Elaborator Reflection macro that Zero-Temperature Ground State Collapse holds.
+proofOfZeroTemperatureGroundStateCollapse : Reflect.InvariantAuditor.auditZeroTemperatureGroundStateCollapseProofExport = True
+proofOfZeroTemperatureGroundStateCollapse = auditZeroTemperatureGroundStateCollapse
+
 
 
 
@@ -581,7 +596,10 @@ prop_literateModuleInvariants =
   auditGeodesicLeastActionOptimalityProofExport &&
   auditDiscreteMomentumConservationProofExport &&
   auditParabolicNullMomentumZeroProofExport &&
-  auditSectorSpecificActionSignaturesProofExport
+  auditSectorSpecificActionSignaturesProofExport &&
+  auditBoltzmannProbabilityNormalizationProofExport &&
+  auditCosmicBudgetPartitionFactorizationProofExport &&
+  auditZeroTemperatureGroundStateCollapseProofExport
 
 ||| Property 30: Test Quantum State Transitions & Wilson Loop Plaquettes
 prop_quantumTransitionsWilsonLoops : Bool
@@ -649,6 +667,13 @@ prop_discretePrincipleOfLeastAction =
   verifyParabolicNullMomentumZero &&
   verifySectorSpecificActionSignatures
 
+||| Property 40: Test Discrete Boltzmann Distribution & Sector Partition Functions
+prop_discreteBoltzmannSectorPartitions : Bool
+prop_discreteBoltzmannSectorPartitions =
+  verifyBoltzmannProbabilityNormalization &&
+  verifyCosmicBudgetPartitionFactorization &&
+  verifyZeroTemperatureGroundStateCollapse
+
 ||| Main test runner
 main : IO ()
 main = do
@@ -703,6 +728,9 @@ main = do
   putStrLn "  - Discrete Noether Momentum Conservation Witness: INJECTED & VALID (Refl) ✅"
   putStrLn "  - Parabolic Null Momentum Zero Witness: INJECTED & VALID (Refl) ✅"
   putStrLn "  - Sector-Specific Action Signatures Witness: INJECTED & VALID (Refl) ✅"
+  putStrLn "  - Discrete Boltzmann Probability Normalization Witness: INJECTED & VALID (Refl) ✅"
+  putStrLn "  - Cosmic Budget Partition Factorization Witness: INJECTED & VALID (Refl) ✅"
+  putStrLn "  - Zero-Temperature Ground State Collapse Witness: INJECTED & VALID (Refl) ✅"
   putStrLn ""
   putStrLn " [RUNTIME CONSERVATION & KINEMATIC INVARIANTS]:"
   putStrLn $ "  [TEST 1]  27-State Ternary Spacetime Closure:    " ++ (if prop_27_TernaryClosure then "PASSED ✅" else "FAILED ❌")
@@ -758,7 +786,8 @@ main = do
   putStrLn $ "  [TEST 51] Hydrogen Bonding & Aqueous Network:    " ++ (if prop_hydrogenBondingAqueousPercolation then "PASSED ✅" else "FAILED ❌")
   putStrLn $ "  [TEST 52] Watson-Crick Base Pairing & ATP:       " ++ (if prop_watsonCrickPolyphosphates then "PASSED ✅" else "FAILED ❌")
   putStrLn $ "  [TEST 53] Discrete Action & Euler-Lagrange:      " ++ (if prop_discretePrincipleOfLeastAction then "PASSED ✅" else "FAILED ❌")
-  putStrLn $ "  [TEST 54] All Literate Wiki Modules Verified:   " ++ (if prop_literateModuleInvariants then "PASSED ✅" else "FAILED ❌")
+  putStrLn $ "  [TEST 54] Discrete Boltzmann & Sector Partition:" ++ (if prop_discreteBoltzmannSectorPartitions then "PASSED ✅" else "FAILED ❌")
+  putStrLn $ "  [TEST 55] All Literate Wiki Modules Verified:   " ++ (if prop_literateModuleInvariants then "PASSED ✅" else "FAILED ❌")
   putStrLn ""
   putStrLn "All Cosmological Proof Witnesses & Literate Invariants Verified!"
   putStrLn "========================================================"
