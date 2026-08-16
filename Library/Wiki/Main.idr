@@ -64,9 +64,11 @@ import Geometry.Discrete_Holographic_Area_Law
 import Geometry.Molecular_Bonding
 import Geometry.Wilson_Polyhedra_and_NonAbelian_Color_Flux
 import Geometry.The_Four_Fundamental_Geometries_and_Cosmic_Synthesis
+import Geometry.Tier6_Macromolecules_and_Chiral_Stereochemistry
 import Math.WilsonPolyhedra
 import Math.FourGeometries
 import Compound.MolecularBonding
+import Compound.MacromolecularChirality
 import Evolution.Pre_Geometric_Genesis
 import Evolution.Dark_Matter_Law_Storage
 import Evolution.Matter_Tokens_and_Law_Impedance
@@ -205,6 +207,19 @@ proofOfFourGeometriesDeterminants = auditFourGeometriesDeterminants
 ||| Witness 28: Proves via Elaborator Reflection macro that the Cosmic 210 Budget Synthesis across the 4 Geometries holds.
 proofOfFourGeometriesCosmicSynthesis : Reflect.InvariantAuditor.auditFourGeometriesCosmicSynthesisProofExport = True
 proofOfFourGeometriesCosmicSynthesis = auditFourGeometriesCosmicSynthesis
+
+||| Witness 29: Proves via Elaborator Reflection macro that Peptide Condensation Conservation holds.
+proofOfPeptideCondensationConservation : Reflect.InvariantAuditor.auditPeptideCondensationConservationProofExport = True
+proofOfPeptideCondensationConservation = auditPeptideCondensationConservation
+
+||| Witness 30: Proves via Elaborator Reflection macro that 3D Chiral Enantiomer Inversion holds.
+proofOfChiralEnantiomerInversion : Reflect.InvariantAuditor.auditChiralEnantiomerInversionProofExport = True
+proofOfChiralEnantiomerInversion = auditChiralEnantiomerInversion
+
+||| Witness 31: Proves via Elaborator Reflection macro that Homochiral Peptide Chain Invariant holds.
+proofOfHomochiralPeptideChain : Reflect.InvariantAuditor.auditHomochiralPeptideChainProofExport = True
+proofOfHomochiralPeptideChain = auditHomochiralPeptideChain
+
 
 
 
@@ -494,7 +509,10 @@ prop_literateModuleInvariants =
   auditChromogeometricColorGaugeInvarianceProofExport &&
   auditHadronSingletPolyhedralInvarianceProofExport &&
   auditFourGeometriesDeterminantsProofExport &&
-  auditFourGeometriesCosmicSynthesisProofExport
+  auditFourGeometriesCosmicSynthesisProofExport &&
+  auditPeptideCondensationConservationProofExport &&
+  auditChiralEnantiomerInversionProofExport &&
+  auditHomochiralPeptideChainProofExport
 
 ||| Property 30: Test Quantum State Transitions & Wilson Loop Plaquettes
 prop_quantumTransitionsWilsonLoops : Bool
@@ -523,6 +541,13 @@ prop_fourGeometriesSynthesis : Bool
 prop_fourGeometriesSynthesis =
   verifyFourGeometriesDeterminants &&
   verifyFourGeometriesCosmicSynthesis
+
+||| Property 34: Test Tier 6 Macromolecules & Chiral Stereochemistry
+prop_tier6MacromoleculesChirality : Bool
+prop_tier6MacromoleculesChirality =
+  verifyPeptideCondensationConservation &&
+  verifyChiralEnantiomerInversion &&
+  verifyHomochiralPeptideChain
 
 ||| Main test runner
 main : IO ()
@@ -564,6 +589,9 @@ main = do
   putStrLn "  - Hadron Singlet Polyhedral Invariance Witness: INJECTED & VALID (Refl) ✅"
   putStrLn "  - 4 Geometries Determinant Classification Witness: INJECTED & VALID (Refl) ✅"
   putStrLn "  - Cosmic 210 Budget Synthesis Witness: INJECTED & VALID (Refl) ✅"
+  putStrLn "  - Peptide Condensation Conservation Witness: INJECTED & VALID (Refl) ✅"
+  putStrLn "  - 3D Chiral Enantiomer Inversion Witness: INJECTED & VALID (Refl) ✅"
+  putStrLn "  - Homochiral Peptide Chain Invariant Witness: INJECTED & VALID (Refl) ✅"
   putStrLn ""
   putStrLn " [RUNTIME CONSERVATION & KINEMATIC INVARIANTS]:"
   putStrLn $ "  [TEST 1]  27-State Ternary Spacetime Closure:    " ++ (if prop_27_TernaryClosure then "PASSED ✅" else "FAILED ❌")
@@ -613,7 +641,8 @@ main = do
   putStrLn $ "  [TEST 45] Linear QTT State Conservation:        " ++ (if prop_linearQTTStateTransitions then "PASSED ✅" else "FAILED ❌")
   putStrLn $ "  [TEST 46] 3D Wilson Polyhedra & SU(3) Flux:      " ++ (if prop_wilsonPolyhedraColorFlux then "PASSED ✅" else "FAILED ❌")
   putStrLn $ "  [TEST 47] The 4 Fundamental Geometries:         " ++ (if prop_fourGeometriesSynthesis then "PASSED ✅" else "FAILED ❌")
-  putStrLn $ "  [TEST 48] All Literate Wiki Modules Verified:   " ++ (if prop_literateModuleInvariants then "PASSED ✅" else "FAILED ❌")
+  putStrLn $ "  [TEST 48] Tier 6 Macromolecules & Chirality:    " ++ (if prop_tier6MacromoleculesChirality then "PASSED ✅" else "FAILED ❌")
+  putStrLn $ "  [TEST 49] All Literate Wiki Modules Verified:   " ++ (if prop_literateModuleInvariants then "PASSED ✅" else "FAILED ❌")
   putStrLn ""
   putStrLn "All Cosmological Proof Witnesses & Literate Invariants Verified!"
   putStrLn "========================================================"
