@@ -87,6 +87,7 @@ import Geometry.Discrete_Holographic_Bound_and_Bekenstein_Hawking_Entropy
 import Geometry.Fractional_Quantum_Hall_and_Anyonic_Statistics
 import Geometry.Discrete_Jarzynski_Equality_and_Non_Equilibrium_Work_Relations
 import Geometry.Discrete_Wheeler_DeWitt_and_Cosmic_Wavefunction
+import Geometry.Discrete_Chiral_Anomaly_and_Atiyah_Singer_Index_Theorem
 import Geometry.Tier6_Macromolecules_and_Chiral_Stereochemistry
 import Core.MultisetTree
 import Derivation.PureGeometricClassifier
@@ -116,6 +117,7 @@ import Math.DiscreteHolographicBound
 import Math.FractionalQuantumHall
 import Math.DiscreteJarzynskiEquality
 import Math.DiscreteWheelerDeWitt
+import Math.DiscreteChiralAnomaly
 import Compound.PlasmaRecombination
 import Compound.StellarNucleosynthesis
 import Compound.MolecularBonding
@@ -581,6 +583,19 @@ proofOfZeroWheelerDeWittConstraint = auditZeroWheelerDeWittConstraint
 proofOfRelationalCosmicEnergyConservation : Reflect.InvariantAuditor.auditRelationalCosmicEnergyConservationProofExport = True
 proofOfRelationalCosmicEnergyConservation = auditRelationalCosmicEnergyConservation
 
+||| Witness 108: Proves via Elaborator Reflection macro that Discrete Dirac Chiral Zero-Mode Index holds.
+proofOfChiralZeroModeIndex : Reflect.InvariantAuditor.auditChiralZeroModeIndexProofExport = True
+proofOfChiralZeroModeIndex = auditChiralZeroModeIndex
+
+||| Witness 109: Proves via Elaborator Reflection macro that Discrete Second Chern Instanton Charge Quantization holds.
+proofOfDiscreteSecondChernInstanton : Reflect.InvariantAuditor.auditDiscreteSecondChernInstantonProofExport = True
+proofOfDiscreteSecondChernInstanton = auditDiscreteSecondChernInstanton
+
+||| Witness 110: Proves via Elaborator Reflection macro that Discrete Atiyah-Singer Index Theorem Equivalence holds.
+proofOfAtiyahSingerIndexTheorem : Reflect.InvariantAuditor.auditAtiyahSingerIndexTheoremProofExport = True
+proofOfAtiyahSingerIndexTheorem = auditAtiyahSingerIndexTheorem
+
+
 
 
 
@@ -955,7 +970,11 @@ prop_literateModuleInvariants =
   auditFluctuationDissipationProofExport &&
   auditDeWittSupermetricProofExport &&
   auditZeroWheelerDeWittConstraintProofExport &&
-  auditRelationalCosmicEnergyConservationProofExport
+  auditRelationalCosmicEnergyConservationProofExport &&
+  auditChiralZeroModeIndexProofExport &&
+  auditDiscreteSecondChernInstantonProofExport &&
+  auditAtiyahSingerIndexTheoremProofExport
+
 
 
 
@@ -1198,6 +1217,14 @@ prop_discreteWheelerDeWitt =
   auditZeroWheelerDeWittConstraintProof &&
   auditRelationalCosmicEnergyConservationProof
 
+||| Property 64: Test Law 17: Discrete Chiral Anomaly & Atiyah-Singer Index Theorem
+prop_discreteChiralAnomaly : Bool
+prop_discreteChiralAnomaly =
+  auditChiralZeroModeIndexProof &&
+  auditDiscreteSecondChernInstantonProof &&
+  auditAtiyahSingerIndexTheoremProof
+
+
 
 
 
@@ -1333,8 +1360,12 @@ main = do
   putStrLn "  - Scaled DeWitt Supermetric Invariance Witness: INJECTED & VALID (Refl) ✅"
   putStrLn "  - Zero Super-Hamiltonian Vanishing Constraint Witness: INJECTED & VALID (Refl) ✅"
   putStrLn "  - Relational Cosmic Energy Conservation Witness: INJECTED & VALID (Refl) ✅"
+  putStrLn "  - Discrete Dirac Chiral Zero-Mode Index Witness: INJECTED & VALID (Refl) ✅"
+  putStrLn "  - Discrete Second Chern Instanton Charge Quantization Witness: INJECTED & VALID (Refl) ✅"
+  putStrLn "  - Discrete Atiyah-Singer Index Theorem Equivalence Witness: INJECTED & VALID (Refl) ✅"
   putStrLn ""
   putStrLn " [RUNTIME CONSERVATION & KINEMATIC INVARIANTS]:"
+
 
 
 
@@ -1428,8 +1459,10 @@ main = do
   putStrLn $ "  [TEST 75] Law 14: Fractional Quantum Hall:      " ++ (if prop_fractionalQuantumHall then "PASSED ✅" else "FAILED ❌")
   putStrLn $ "  [TEST 76] Law 15: Discrete Jarzynski Equality:  " ++ (if prop_discreteJarzynskiEquality then "PASSED ✅" else "FAILED ❌")
   putStrLn $ "  [TEST 77] Law 16: Discrete Wheeler-DeWitt:      " ++ (if prop_discreteWheelerDeWitt then "PASSED ✅" else "FAILED ❌")
-  putStrLn $ "  [TEST 78] All Literate Wiki Modules Verified:   " ++ (if prop_literateModuleInvariants then "PASSED ✅" else "FAILED ❌")
+  putStrLn $ "  [TEST 78] Law 17: Discrete Chiral Anomaly:      " ++ (if prop_discreteChiralAnomaly then "PASSED ✅" else "FAILED ❌")
+  putStrLn $ "  [TEST 79] All Literate Wiki Modules Verified:   " ++ (if prop_literateModuleInvariants then "PASSED ✅" else "FAILED ❌")
   putStrLn ""
+
 
 
 

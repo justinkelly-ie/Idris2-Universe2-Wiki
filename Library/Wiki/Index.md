@@ -93,6 +93,7 @@ The cornerstone of **Idris2-Universe2** is the strict mathematical isomorphism l
 * [Law 14: Fractional Quantum Hall Fluid & Anyonic Braiding](Geometry/Fractional_Quantum_Hall_and_Anyonic_Statistics.md) — Laughlin filling factor $\nu = p/q$, fractional charge $e^* = (p/q)e$, and anyonic exchange phase $\theta = \pi/q$.
 * [Law 15: Discrete Jarzynski Equality & Non-Equilibrium Work](Geometry/Discrete_Jarzynski_Equality_and_Non_Equilibrium_Work_Relations.md) — Non-equilibrium dissipated work $\langle W_{\text{diss}} \rangle \ge 0$, Jarzynski identity $\langle e^{-\beta(W - \Delta F)} \rangle = 1$, and fluctuation-dissipation relation.
 * [Law 16: Discrete Wheeler-DeWitt Constraint & Cosmic Wavefunction](Geometry/Discrete_Wheeler_DeWitt_and_Cosmic_Wavefunction.md) — Discrete DeWitt supermetric $G_{abcd}$, super-Hamiltonian constraint $\hat{\mathcal{H}}_{\text{total}} = 0$, and relational energy conservation.
+* [Law 17: Discrete Chiral Anomaly & Atiyah-Singer Index](Geometry/Discrete_Chiral_Anomaly_and_Atiyah_Singer_Index_Theorem.md) — Dirac zero-mode index $N_L - N_R$, topological instantons $Q_{\text{top}} = C_2$, and Atiyah-Singer index equivalence.
 * [Tier 6 Macromolecules & Chiral Stereochemistry](Geometry/Tier6_Macromolecules_and_Chiral_Stereochemistry.md) — Biological macromolecules, amino acid stereocenters, peptide condensation graph contraction, and substrate-grounded homochirality.
 * [Relational Metric Inference](Evolution/Non_Hardcoded_Cosmic_State.md) — Eliminating magic numbers through internal density ratios.
 
