@@ -44,6 +44,7 @@ The cornerstone of **Idris2-Universe2** is the strict mathematical isomorphism l
 * [Reflected Fractional Multisets & QTT Sequences](Foundations/Reflected_Fractional_Multisets_and_QTT_Sequences.md) — Elaborator Reflection invariant macros auditing non-zero denominators, cross-multiplication proofs, and QTT linear sequence resource conservation.
 * [Hehner's Scale Conversion & Constructive Information Geometry](Foundations/Hehner_Scale_Conversion_and_Information_Geometry.md) — Unifying Bits ($b$), States ($s = 2^b$), and Chance ($c = 1/s$) without continuous logarithms or real numbers.
 * [Multiset-Based Clifford Geometric Algebra](Foundations/Clifford_Multivector_Algebra.md) — Multivectors, geometric product $uv = \langle u, v \rangle + u \wedge v$, rotors, and conserved Dirac spinor currents.
+* [Quantum State Transitions & Wilson Plaquettes](Foundations/Quantum_State_Transitions_and_Wilson_Loops.md) — Constructive state Vexels, discrete unitary S-matrices, Born probability conservation, and gauge-invariant Wilson loop plaquettes.
 * [Contradictions With Standard Physics](Foundations/Contradictions_With_Standard_Physics.md) — Direct side-by-side refutations of continuous infinities, real numbers, wave collapse mystique, and singularity paradoxes.
 
 ### 2. Spacetime & Geometry

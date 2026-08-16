@@ -43,6 +43,8 @@ import Foundations.Reflected_Fractional_Multisets_and_QTT_Sequences
 import Foundations.Hehner_Scale_Conversion_and_Information_Geometry
 import Foundations.Contradictions_With_Standard_Physics
 import Foundations.Clifford_Multivector_Algebra
+import Foundations.Quantum_State_Transitions_and_Wilson_Loops
+import Math.QuantumTransition
 import Geometry.Ternary_Multiverse_27
 import Geometry.Emergent_Higher_Order_Physics
 import Geometry.Lattice_Topology_and_Flux
@@ -163,6 +165,18 @@ proofOfRenormalizationInvariance = auditRenormalizationInvariance
 ||| Witness 19: Proves via Elaborator Reflection macro that all 7 Core Cosmological Inferences hold simultaneously.
 proofOfMasterCosmologicalInferences : Reflect.InvariantAuditor.auditCosmologicalInferencesMacroProof = True
 proofOfMasterCosmologicalInferences = auditCosmologicalInferences
+
+||| Witness 20: Proves via Elaborator Reflection macro that Unitary Probability Conservation holds.
+proofOfUnitaryProbabilityConservation : Reflect.InvariantAuditor.auditUnitaryProbabilityConservationProofExport = True
+proofOfUnitaryProbabilityConservation = auditUnitaryProbabilityConservation
+
+||| Witness 21: Proves via Elaborator Reflection macro that Wilson Loop Gauge Invariance holds.
+proofOfWilsonLoopGaugeInvariance : Reflect.InvariantAuditor.auditWilsonLoopGaugeInvarianceProofExport = True
+proofOfWilsonLoopGaugeInvariance = auditWilsonLoopGaugeInvariance
+
+||| Witness 22: Proves via Elaborator Reflection macro that Discrete Born Probability Tallies sum to 1/1.
+proofOfBornStateSum : Reflect.InvariantAuditor.auditDiscreteBornTransitionTallyProofExport = True
+proofOfBornStateSum = auditDiscreteBornTransitionTally
 
 
 
@@ -415,7 +429,7 @@ prop_reflectedFractionalMultisetsQTT =
   evidence_qtt_fraction_split_conservation &&
   evidence_qtt_onseq_stepping
 
-||| Property 29: Literate Module Invariant Aggregator (Validates all 55 literate proofs)
+||| Property 29: Literate Module Invariant Aggregator (Validates all 58 literate proofs)
 prop_literateModuleInvariants : Bool
 prop_literateModuleInvariants =
   unwrapBox (wildNatToBoxInt (toWildNat 37)) == 37 &&
@@ -440,8 +454,17 @@ prop_literateModuleInvariants =
   auditAlphaClusterSaturationProof &&
   auditBaryonAsymmetryArrowProof &&
   auditAlkaneHomologousSaturationProof &&
-  auditWaterArchimedesQuadreaProof
+  auditWaterArchimedesQuadreaProof &&
+  auditUnitaryProbabilityConservationProofExport &&
+  auditWilsonLoopGaugeInvarianceProofExport &&
+  auditDiscreteBornTransitionTallyProofExport
 
+||| Property 30: Test Quantum State Transitions & Wilson Loop Plaquettes
+prop_quantumTransitionsWilsonLoops : Bool
+prop_quantumTransitionsWilsonLoops =
+  verifyHadamardBornConservation &&
+  verifyWilsonLoopGaugeInvariance &&
+  verifyBornStateSum
 
 ||| Main test runner
 main : IO ()
@@ -474,6 +497,9 @@ main = do
   putStrLn "  - Constructivist Landauer Token Relocation Witness: INJECTED & VALID (Refl) ✅"
   putStrLn "  - Multi-Scale Renormalization Group Witness: INJECTED & VALID (Refl) ✅"
   putStrLn "  - Master Cosmological Inferences Witness: INJECTED & VALID (Refl) ✅"
+  putStrLn "  - Unitary Probability Conservation Witness: INJECTED & VALID (Refl) ✅"
+  putStrLn "  - Wilson Loop Gauge Invariance Witness: INJECTED & VALID (Refl) ✅"
+  putStrLn "  - Discrete Born Probability Tally Witness: INJECTED & VALID (Refl) ✅"
   putStrLn ""
   putStrLn " [RUNTIME CONSERVATION & KINEMATIC INVARIANTS]:"
   putStrLn $ "  [TEST 1]  27-State Ternary Spacetime Closure:    " ++ (if prop_27_TernaryClosure then "PASSED ✅" else "FAILED ❌")
@@ -519,7 +545,8 @@ main = do
   putStrLn $ "  [TEST 41] Constructivist Landauer Relocation:   " ++ (if evidence_landauer_token_conservation then "PASSED ✅" else "FAILED ❌")
   putStrLn $ "  [TEST 42] Multi-Scale RG Invariance (100%):     " ++ (if evidence_renormalization_invariance then "PASSED ✅" else "FAILED ❌")
   putStrLn $ "  [TEST 43] Master Cosmological Inferences:      " ++ (if evidence_master_cosmological_inferences then "PASSED ✅" else "FAILED ❌")
-  putStrLn $ "  [TEST 44] All Literate Wiki Modules Verified:   " ++ (if prop_literateModuleInvariants then "PASSED ✅" else "FAILED ❌")
+  putStrLn $ "  [TEST 44] Quantum Transitions & Wilson Loops:   " ++ (if prop_quantumTransitionsWilsonLoops then "PASSED ✅" else "FAILED ❌")
+  putStrLn $ "  [TEST 45] All Literate Wiki Modules Verified:   " ++ (if prop_literateModuleInvariants then "PASSED ✅" else "FAILED ❌")
   putStrLn ""
   putStrLn "All Cosmological Proof Witnesses & Literate Invariants Verified!"
   putStrLn "========================================================"
