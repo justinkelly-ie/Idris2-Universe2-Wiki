@@ -63,7 +63,9 @@ import Geometry.Constructive_Dirac_Spinor
 import Geometry.Discrete_Holographic_Area_Law
 import Geometry.Molecular_Bonding
 import Geometry.Wilson_Polyhedra_and_NonAbelian_Color_Flux
+import Geometry.The_Four_Fundamental_Geometries_and_Cosmic_Synthesis
 import Math.WilsonPolyhedra
+import Math.FourGeometries
 import Compound.MolecularBonding
 import Evolution.Pre_Geometric_Genesis
 import Evolution.Dark_Matter_Law_Storage
@@ -195,6 +197,15 @@ proofOfChromogeometricColorGaugeInvariance = auditChromogeometricColorGaugeInvar
 ||| Witness 26: Proves via Elaborator Reflection macro that Hadron Singlet state is invariant under closed 3D Polyhedral holonomy.
 proofOfHadronSingletPolyhedralInvariance : Reflect.InvariantAuditor.auditHadronSingletPolyhedralInvarianceProofExport = True
 proofOfHadronSingletPolyhedralInvariance = auditHadronSingletPolyhedralInvariance
+
+||| Witness 27: Proves via Elaborator Reflection macro that the Determinant Classification of the 4 Geometries holds.
+proofOfFourGeometriesDeterminants : Reflect.InvariantAuditor.auditFourGeometriesDeterminantsProofExport = True
+proofOfFourGeometriesDeterminants = auditFourGeometriesDeterminants
+
+||| Witness 28: Proves via Elaborator Reflection macro that the Cosmic 210 Budget Synthesis across the 4 Geometries holds.
+proofOfFourGeometriesCosmicSynthesis : Reflect.InvariantAuditor.auditFourGeometriesCosmicSynthesisProofExport = True
+proofOfFourGeometriesCosmicSynthesis = auditFourGeometriesCosmicSynthesis
+
 
 
 
@@ -481,7 +492,9 @@ prop_literateModuleInvariants =
   auditLinearQTTConservationProofExport &&
   auditWilsonPolyhedronBianchiClosureProofExport &&
   auditChromogeometricColorGaugeInvarianceProofExport &&
-  auditHadronSingletPolyhedralInvarianceProofExport
+  auditHadronSingletPolyhedralInvarianceProofExport &&
+  auditFourGeometriesDeterminantsProofExport &&
+  auditFourGeometriesCosmicSynthesisProofExport
 
 ||| Property 30: Test Quantum State Transitions & Wilson Loop Plaquettes
 prop_quantumTransitionsWilsonLoops : Bool
@@ -504,6 +517,12 @@ prop_wilsonPolyhedraColorFlux =
   verifyWilsonPolyhedronBianchiClosure &&
   verifyChromogeometricColorGaugeInvariance &&
   verifyHadronSingletPolyhedralInvariance
+
+||| Property 33: Test The Four Fundamental Geometries & Cosmic Synthesis
+prop_fourGeometriesSynthesis : Bool
+prop_fourGeometriesSynthesis =
+  verifyFourGeometriesDeterminants &&
+  verifyFourGeometriesCosmicSynthesis
 
 ||| Main test runner
 main : IO ()
@@ -543,6 +562,8 @@ main = do
   putStrLn "  - 3D Wilson Polyhedron Multiplicative Bianchi Witness: INJECTED & VALID (Refl) ✅"
   putStrLn "  - Chromogeometric SU(3) Color Gauge Invariance Witness: INJECTED & VALID (Refl) ✅"
   putStrLn "  - Hadron Singlet Polyhedral Invariance Witness: INJECTED & VALID (Refl) ✅"
+  putStrLn "  - 4 Geometries Determinant Classification Witness: INJECTED & VALID (Refl) ✅"
+  putStrLn "  - Cosmic 210 Budget Synthesis Witness: INJECTED & VALID (Refl) ✅"
   putStrLn ""
   putStrLn " [RUNTIME CONSERVATION & KINEMATIC INVARIANTS]:"
   putStrLn $ "  [TEST 1]  27-State Ternary Spacetime Closure:    " ++ (if prop_27_TernaryClosure then "PASSED ✅" else "FAILED ❌")
@@ -591,7 +612,8 @@ main = do
   putStrLn $ "  [TEST 44] Quantum Transitions & Wilson Loops:   " ++ (if prop_quantumTransitionsWilsonLoops then "PASSED ✅" else "FAILED ❌")
   putStrLn $ "  [TEST 45] Linear QTT State Conservation:        " ++ (if prop_linearQTTStateTransitions then "PASSED ✅" else "FAILED ❌")
   putStrLn $ "  [TEST 46] 3D Wilson Polyhedra & SU(3) Flux:      " ++ (if prop_wilsonPolyhedraColorFlux then "PASSED ✅" else "FAILED ❌")
-  putStrLn $ "  [TEST 47] All Literate Wiki Modules Verified:   " ++ (if prop_literateModuleInvariants then "PASSED ✅" else "FAILED ❌")
+  putStrLn $ "  [TEST 47] The 4 Fundamental Geometries:         " ++ (if prop_fourGeometriesSynthesis then "PASSED ✅" else "FAILED ❌")
+  putStrLn $ "  [TEST 48] All Literate Wiki Modules Verified:   " ++ (if prop_literateModuleInvariants then "PASSED ✅" else "FAILED ❌")
   putStrLn ""
   putStrLn "All Cosmological Proof Witnesses & Literate Invariants Verified!"
   putStrLn "========================================================"

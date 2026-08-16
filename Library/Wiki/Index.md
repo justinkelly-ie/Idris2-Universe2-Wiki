@@ -66,6 +66,7 @@ The cornerstone of **Idris2-Universe2** is the strict mathematical isomorphism l
 * [The Discrete Holographic Area Law](Geometry/Discrete_Holographic_Area_Law.md) — Topological state capacity scaling bounded by 2D boundary face Maxel count ($\text{Rank}(B) \le |\partial B|$).
 * [Molecular Bonding & Chemical Graph Contraction](Geometry/Molecular_Bonding.md) — Tier 5 chemical molecular bonding, covalent Maxel contraction, Water Archimedes quadrea ($A=3$), and alkane saturation series ($C_n H_{2n+2}$).
 * [3D Wilson Polyhedra & Non-Abelian Color Flux Coupling](Geometry/Wilson_Polyhedra_and_NonAbelian_Color_Flux.md) — 6-face toroidal cubic holonomies, non-Abelian $\mathrm{SU}(3)$ Chromogeometric color rotations, and discrete Bianchi closure.
+* [The Four Fundamental Geometries & Cosmic Synthesis](Geometry/The_Four_Fundamental_Geometries_and_Cosmic_Synthesis.md) — Elliptic (Confinement), Hyperbolic (Phase), Parabolic (Dissipation), and Substrate (Causality) spanning the 210 budget.
 * [Relational Metric Inference](Evolution/Non_Hardcoded_Cosmic_State.md) — Eliminating magic numbers through internal density ratios.
 
 ### 3. Evolutionary Dynamics & Law Encoding
