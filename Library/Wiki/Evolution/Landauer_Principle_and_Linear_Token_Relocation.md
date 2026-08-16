@@ -45,6 +45,12 @@ evidence_landauer_token_conservation : Bool
 evidence_landauer_token_conservation =
   auditLandauerTokenConservationProof
 
+||| Evidence 2: Proof of Linear QTT vector splitting and recombining conservation
+public export
+evidence_linear_qtt_conservation : Bool
+evidence_linear_qtt_conservation =
+  auditLinearQTTConservationProofExport
+
 ------------------------------------------------------------------------
 -- ELABORATOR REFLECTION MACRO WITNESS
 ------------------------------------------------------------------------
@@ -53,6 +59,11 @@ evidence_landauer_token_conservation =
 public export
 proof_landauer_token_refl : Reflect.InvariantAuditor.auditLandauerTokenConservationMacroProof = True
 proof_landauer_token_refl = auditLandauerTokenConservation
+
+||| Compile-time Reflection Witness proving Linear QTT State Transition Conservation
+public export
+proof_linear_qtt_refl : Reflect.InvariantAuditor.auditLinearQTTConservationProofExport = True
+proof_linear_qtt_refl = auditLinearQTTConservation
 ```
 
 ---
