@@ -44,6 +44,20 @@ Under the **Substrate metric** ($g_{22} = 0, g_{12} = 1$), time-reversal symmetr
 $$S[(0,0) \to (1,2)] = 5 \quad \neq \quad 3 = S[(1,2) \to (0,0)]$$
 yielding an irreversible action deficit $\Delta S = 2$, embedding the **Cosmological Arrow of Time** directly into the Action Principle.
 
+### D. Discrete Noether's Theorem & Exact Momentum Conservation
+Along flat, translationally invariant spatial axes ($\nabla V = 0$), the discrete Euler-Lagrange equation implies exact conservation of the canonical momentum token:
+$$p_k = g \cdot (x_{k+1} - x_k) = p_{k-1} = \text{constant}$$
+Momentum conservation is an exact algebraic identity of discrete extremal paths, verified by `auditDiscreteMomentumConservationProof`.
+
+### E. Resolution of Loschmidt's Paradox
+Standard physics assumes microscopic laws are time-symmetric ($t \mapsto -t \implies L \mapsto L$), making macroscopic irreversibility paradoxical. In our constructivist model, because the underlying vacuum manifold is governed by the asymmetric Substrate metric ($g_{22} = 0, g_{12} = 1$), time-reversal symmetry is broken **at the fundamental action level**, rendering entropy growth and the 2nd Law of Thermodynamics natural geometric consequences.
+
+### F. The Path Integral Bridge to Law 2 (Statistical Ensembles)
+In the constructivist path formulation, transitioning from single-particle trajectories to thermal multiset ensembles across the 210 cosmic budget weights each trajectory $\gamma$ by its discrete Action $S[\gamma]$:
+$$P(\gamma) = \frac{q^{S[\gamma]}}{Z(q)}, \quad Z(q) = \sum_{\gamma} q^{S[\gamma]}$$
+where $q \in \mathbb{Q} \cap (0, 1)$ is the rational temperature parameter ($q \approx e^{-\beta}$).
+The least-action geodesic trajectory from Law 1 maximizes the thermal weight $q^{S_{\text{min}}}$, directly generating **Law 2: The Discrete Boltzmann Distribution & Thermal Partition Function**.
+
 ---
 
 ## 💻 2. Executable Literate Code & Verification
@@ -74,4 +88,11 @@ public export
 verifyGeodesicLeastActionOptimality : Bool
 verifyGeodesicLeastActionOptimality =
   auditGeodesicLeastActionOptimalityProof
+
+||| Verifies that discrete canonical momentum is strictly conserved along geodesics.
+public export
+verifyDiscreteMomentumConservation : Bool
+verifyDiscreteMomentumConservation =
+  auditDiscreteMomentumConservationProof
 ```
+

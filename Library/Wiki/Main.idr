@@ -262,6 +262,11 @@ proofOfSubstrateActionAsymmetry = auditSubstrateActionAsymmetry
 proofOfGeodesicLeastActionOptimality : Reflect.InvariantAuditor.auditGeodesicLeastActionOptimalityProofExport = True
 proofOfGeodesicLeastActionOptimality = auditGeodesicLeastActionOptimality
 
+||| Witness 40: Proves via Elaborator Reflection macro that Discrete Noether Momentum Conservation holds.
+proofOfDiscreteMomentumConservation : Reflect.InvariantAuditor.auditDiscreteMomentumConservationProofExport = True
+proofOfDiscreteMomentumConservation = auditDiscreteMomentumConservation
+
+
 
 
 
@@ -564,7 +569,8 @@ prop_literateModuleInvariants =
   auditPyrophosphateThermodynamicCouplingProofExport &&
   auditDiscreteEulerLagrangeEquivalenceProofExport &&
   auditSubstrateActionAsymmetryProofExport &&
-  auditGeodesicLeastActionOptimalityProofExport
+  auditGeodesicLeastActionOptimalityProofExport &&
+  auditDiscreteMomentumConservationProofExport
 
 ||| Property 30: Test Quantum State Transitions & Wilson Loop Plaquettes
 prop_quantumTransitionsWilsonLoops : Bool
@@ -627,7 +633,8 @@ prop_discretePrincipleOfLeastAction : Bool
 prop_discretePrincipleOfLeastAction =
   verifyDiscreteEulerLagrangeEquivalence &&
   verifySubstrateActionAsymmetry &&
-  verifyGeodesicLeastActionOptimality
+  verifyGeodesicLeastActionOptimality &&
+  verifyDiscreteMomentumConservation
 
 ||| Main test runner
 main : IO ()
@@ -680,6 +687,7 @@ main = do
   putStrLn "  - Discrete Euler-Lagrange Equivalence Witness: INJECTED & VALID (Refl) ✅"
   putStrLn "  - Substrate Action Asymmetry Witness: INJECTED & VALID (Refl) ✅"
   putStrLn "  - Geodesic Least Action Optimality Witness: INJECTED & VALID (Refl) ✅"
+  putStrLn "  - Discrete Noether Momentum Conservation Witness: INJECTED & VALID (Refl) ✅"
   putStrLn ""
   putStrLn " [RUNTIME CONSERVATION & KINEMATIC INVARIANTS]:"
   putStrLn $ "  [TEST 1]  27-State Ternary Spacetime Closure:    " ++ (if prop_27_TernaryClosure then "PASSED ✅" else "FAILED ❌")
