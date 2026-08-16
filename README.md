@@ -91,6 +91,8 @@ The cornerstone of **Idris2-Universe2** is the strict mathematical isomorphism l
 * [Multi-Scale Renormalization & Information Geometry](Library/Wiki/Geometry/Multi_Scale_Renormalization_and_Information_Geometry.md) — Discrete Callan-Symanzik $\beta$-flow, finite Fisher information metric $I_F(P, Q) \ge 0$, and scale-invariant topological RG fixed points ($\mathcal{R}(C_1) \equiv C_1$).
 * [Categorical RG Decimator & Scale Invariants](Library/Wiki/Geometry/Categorical_RG_Decimator_and_Scale_Invariants.md) — Categorical block-decimation interface and multi-block First Chern Number preservation.
 * [Cross-Law Gauge-Spinor & Metric Shear Coupling](Library/Wiki/Geometry/Cross_Law_Gauge_Spinor_and_Metric_Coupling.md) — Gauge-covariant derivative $D_\mu \psi$, positive Dirac current $j^0 \ge 0$, and traceless metric shear coupling $E_{\text{int}}$.
+* [Shannon-Huffman Optimality & Kolmogorov Program Complexity](Library/Wiki/Geometry/Shannon_Huffman_Optimality_and_Kolmogorov_Complexity.md) — Kraft-McMillan prefix inequality, Stern-Brocot path depth bound, and minimal cyclotomic program length.
+* [Discrete Helmholtz Free Energy Minimization at Primorial 210](Library/Wiki/Geometry/Discrete_Helmholtz_Free_Energy_Minimization.md) — Multi-sector thermodynamic state function $F = U - TS$ reaching global minimum at the $27 + 128 + 55 = 210$ ground state.
 * [Tier 6 Macromolecules & Chiral Stereochemistry](Library/Wiki/Geometry/Tier6_Macromolecules_and_Chiral_Stereochemistry.md) — Biological macromolecules, amino acid stereocenters, peptide condensation graph contraction, and substrate-grounded homochirality.
 * [Relational Metric Inference](Library/Wiki/Evolution/Non_Hardcoded_Cosmic_State.md) — Eliminating magic numbers through internal density ratios.
 

@@ -80,6 +80,8 @@ import Geometry.Gravitational_Wave_Dynamics_and_Metric_Shear
 import Geometry.Multi_Scale_Renormalization_and_Information_Geometry
 import Geometry.Categorical_RG_Decimator_and_Scale_Invariants
 import Geometry.Cross_Law_Gauge_Spinor_and_Metric_Coupling
+import Geometry.Shannon_Huffman_Optimality_and_Kolmogorov_Complexity
+import Geometry.Discrete_Helmholtz_Free_Energy_Minimization
 import Geometry.Tier6_Macromolecules_and_Chiral_Stereochemistry
 import Math.WilsonPolyhedra
 import Math.FourGeometries
@@ -100,6 +102,8 @@ import Math.RGDecimator
 import Math.GaugeSpinorCoupling
 import Math.ToroidalAstrodynamics
 import Math.GalacticRotationCurve
+import Math.ShannonHuffmanOptimality
+import Math.HelmholtzFreeEnergy
 import Compound.PlasmaRecombination
 import Compound.StellarNucleosynthesis
 import Compound.MolecularBonding
@@ -481,6 +485,27 @@ proofOfGalacticRotationFlatness = auditGalacticRotationFlatness
 proofOfTullyFisherRelation : Reflect.InvariantAuditor.auditTullyFisherRelationProofExport = True
 proofOfTullyFisherRelation = auditTullyFisherRelation
 
+||| Witness 87: Proves via Elaborator Reflection macro that Kraft-McMillan Multiset Prefix-Free Inequality holds.
+proofOfKraftMcMillanInequality : Reflect.InvariantAuditor.auditKraftMcMillanInequalityProofExport = True
+proofOfKraftMcMillanInequality = auditKraftMcMillanInequality
+
+||| Witness 88: Proves via Elaborator Reflection macro that Stern-Brocot Rational Prefix Tree Optimality holds.
+proofOfSternBrocotPrefixOptimality : Reflect.InvariantAuditor.auditSternBrocotPrefixOptimalityProofExport = True
+proofOfSternBrocotPrefixOptimality = auditSternBrocotPrefixOptimality
+
+||| Witness 89: Proves via Elaborator Reflection macro that Cyclotomic Kolmogorov Program Minimality holds.
+proofOfCyclotomicKolmogorovMinimality : Reflect.InvariantAuditor.auditCyclotomicKolmogorovMinimalityProofExport = True
+proofOfCyclotomicKolmogorovMinimality = auditCyclotomicKolmogorovMinimality
+
+||| Witness 90: Proves via Elaborator Reflection macro that Discrete Helmholtz Free Energy Primorial 210 Minimization holds.
+proofOfDiscreteHelmholtzMinimization : Reflect.InvariantAuditor.auditDiscreteHelmholtzMinimizationProofExport = True
+proofOfDiscreteHelmholtzMinimization = auditDiscreteHelmholtzMinimization
+
+||| Witness 91: Proves via Elaborator Reflection macro that Substrate Metric Free Energy Stationarity holds.
+proofOfSubstrateStationaryArrow : Reflect.InvariantAuditor.auditSubstrateStationaryArrowProofExport = True
+proofOfSubstrateStationaryArrow = auditSubstrateStationaryArrow
+
+
 
 
 
@@ -828,7 +853,13 @@ prop_literateModuleInvariants =
   auditToroidalMomentumConservationProofExport &&
   auditRelativisticPrecessionProofExport &&
   auditGalacticRotationFlatnessProofExport &&
-  auditTullyFisherRelationProofExport
+  auditTullyFisherRelationProofExport &&
+  auditKraftMcMillanInequalityProofExport &&
+  auditSternBrocotPrefixOptimalityProofExport &&
+  auditCyclotomicKolmogorovMinimalityProofExport &&
+  auditDiscreteHelmholtzMinimizationProofExport &&
+  auditSubstrateStationaryArrowProofExport
+
 
 
 
@@ -1016,6 +1047,20 @@ prop_emergentGalacticRotation =
   auditGalacticRotationFlatnessProof &&
   auditTullyFisherRelationProof
 
+||| Property 57: Test Shannon-Huffman Prefix Optimality & Kolmogorov Complexity
+prop_shannonHuffmanOptimality : Bool
+prop_shannonHuffmanOptimality =
+  auditKraftMcMillanInequalityProof &&
+  auditSternBrocotPrefixOptimalityProof &&
+  auditCyclotomicKolmogorovMinimalityProof
+
+||| Property 58: Test Discrete Helmholtz Free Energy Minimization at Primorial 210
+prop_discreteHelmholtzMinimization : Bool
+prop_discreteHelmholtzMinimization =
+  auditDiscreteHelmholtzMinimizationProof &&
+  auditSubstrateStationaryArrowProof
+
+
 
 
 
@@ -1124,8 +1169,14 @@ main = do
   putStrLn "  - Relativistic Perihelion Precession Shift Witness: INJECTED & VALID (Refl) ✅"
   putStrLn "  - Emergent Galactic Rotation Velocity Flatness Witness: INJECTED & VALID (Refl) ✅"
   putStrLn "  - Baryonic Tully-Fisher Mass-Velocity Proportionality Witness: INJECTED & VALID (Refl) ✅"
+  putStrLn "  - Kraft-McMillan Multiset Prefix-Free Inequality Witness: INJECTED & VALID (Refl) ✅"
+  putStrLn "  - Stern-Brocot Rational Prefix Tree Optimality Witness: INJECTED & VALID (Refl) ✅"
+  putStrLn "  - Cyclotomic Kolmogorov Program Minimality Witness: INJECTED & VALID (Refl) ✅"
+  putStrLn "  - Discrete Helmholtz Free Energy Primorial 210 Minimization Witness: INJECTED & VALID (Refl) ✅"
+  putStrLn "  - Substrate Metric Free Energy Stationarity Witness: INJECTED & VALID (Refl) ✅"
   putStrLn ""
   putStrLn " [RUNTIME CONSERVATION & KINEMATIC INVARIANTS]:"
+
 
 
 
@@ -1206,8 +1257,11 @@ main = do
   putStrLn $ "  [TEST 68] Gauge-Spinor & Metric Shear Coupling: " ++ (if prop_gaugeSpinorMetricCoupling then "PASSED ✅" else "FAILED ❌")
   putStrLn $ "  [TEST 69] 3D Toroidal Astrodynamics & Precession:" ++ (if prop_toroidalAstrodynamics then "PASSED ✅" else "FAILED ❌")
   putStrLn $ "  [TEST 70] Emergent Galactic Rotation Flatness:  " ++ (if prop_emergentGalacticRotation then "PASSED ✅" else "FAILED ❌")
-  putStrLn $ "  [TEST 71] All Literate Wiki Modules Verified:   " ++ (if prop_literateModuleInvariants then "PASSED ✅" else "FAILED ❌")
+  putStrLn $ "  [TEST 71] Shannon-Huffman Prefix Optimality:    " ++ (if prop_shannonHuffmanOptimality then "PASSED ✅" else "FAILED ❌")
+  putStrLn $ "  [TEST 72] Discrete Helmholtz Free Energy (210): " ++ (if prop_discreteHelmholtzMinimization then "PASSED ✅" else "FAILED ❌")
+  putStrLn $ "  [TEST 73] All Literate Wiki Modules Verified:   " ++ (if prop_literateModuleInvariants then "PASSED ✅" else "FAILED ❌")
   putStrLn ""
+
 
 
 
