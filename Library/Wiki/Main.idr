@@ -85,6 +85,7 @@ import Geometry.Discrete_Helmholtz_Free_Energy_Minimization
 import Geometry.Fast_Balanced_Multiset_Trees_and_Logarithmic_Scaling
 import Geometry.Discrete_Holographic_Bound_and_Bekenstein_Hawking_Entropy
 import Geometry.Fractional_Quantum_Hall_and_Anyonic_Statistics
+import Geometry.Discrete_Jarzynski_Equality_and_Non_Equilibrium_Work_Relations
 import Geometry.Tier6_Macromolecules_and_Chiral_Stereochemistry
 import Core.MultisetTree
 import Derivation.PureGeometricClassifier
@@ -112,6 +113,7 @@ import Math.ShannonHuffmanOptimality
 import Math.HelmholtzFreeEnergy
 import Math.DiscreteHolographicBound
 import Math.FractionalQuantumHall
+import Math.DiscreteJarzynskiEquality
 import Compound.PlasmaRecombination
 import Compound.StellarNucleosynthesis
 import Compound.MolecularBonding
@@ -553,6 +555,19 @@ proofOfAnyonicBraidingPhase = auditAnyonicBraidingPhase
 proofOfFractionalHallConductance : Reflect.InvariantAuditor.auditFractionalHallConductanceProofExport = True
 proofOfFractionalHallConductance = auditFractionalHallConductance
 
+||| Witness 102: Proves via Elaborator Reflection macro that Discrete Second Law Dissipated Work Non-Negativity holds.
+proofOfDiscreteSecondLaw : Reflect.InvariantAuditor.auditDiscreteSecondLawProofExport = True
+proofOfDiscreteSecondLaw = auditDiscreteSecondLaw
+
+||| Witness 103: Proves via Elaborator Reflection macro that Discrete Jarzynski Exponential Normalization Identity holds.
+proofOfDiscreteJarzynskiEquality : Reflect.InvariantAuditor.auditDiscreteJarzynskiEqualityProofExport = True
+proofOfDiscreteJarzynskiEquality = auditDiscreteJarzynskiEquality
+
+||| Witness 104: Proves via Elaborator Reflection macro that Fluctuation-Dissipation Trajectory Variance Relation holds.
+proofOfFluctuationDissipation : Reflect.InvariantAuditor.auditFluctuationDissipationProofExport = True
+proofOfFluctuationDissipation = auditFluctuationDissipation
+
+
 
 
 
@@ -919,7 +934,11 @@ prop_literateModuleInvariants =
   auditCosmicBudgetHolographicClosureProofExport &&
   auditFractionalChargeQuantizationProofExport &&
   auditAnyonicBraidingPhaseProofExport &&
-  auditFractionalHallConductanceProofExport
+  auditFractionalHallConductanceProofExport &&
+  auditDiscreteSecondLawProofExport &&
+  auditDiscreteJarzynskiEqualityProofExport &&
+  auditFluctuationDissipationProofExport
+
 
 
 
@@ -1146,6 +1165,14 @@ prop_fractionalQuantumHall =
   auditAnyonicBraidingPhaseProof &&
   auditFractionalHallConductanceProof
 
+||| Property 62: Test Law 15: Discrete Jarzynski Equality & Non-Equilibrium Work Relations
+prop_discreteJarzynskiEquality : Bool
+prop_discreteJarzynskiEquality =
+  auditDiscreteSecondLawProof &&
+  auditDiscreteJarzynskiEqualityProof &&
+  auditFluctuationDissipationProof
+
+
 
 
 
@@ -1273,8 +1300,12 @@ main = do
   putStrLn "  - Fractional Quasiparticle Charge Quantization Witness: INJECTED & VALID (Refl) ✅"
   putStrLn "  - Anyonic Topological Braiding Phase Witness: INJECTED & VALID (Refl) ✅"
   putStrLn "  - Fractional Quantized Hall Conductance Witness: INJECTED & VALID (Refl) ✅"
+  putStrLn "  - Discrete Second Law Dissipated Work Non-Negativity Witness: INJECTED & VALID (Refl) ✅"
+  putStrLn "  - Discrete Jarzynski Exponential Normalization Witness: INJECTED & VALID (Refl) ✅"
+  putStrLn "  - Fluctuation-Dissipation Trajectory Variance Witness: INJECTED & VALID (Refl) ✅"
   putStrLn ""
   putStrLn " [RUNTIME CONSERVATION & KINEMATIC INVARIANTS]:"
+
 
 
 
@@ -1364,8 +1395,10 @@ main = do
   putStrLn $ "  [TEST 73] Fast MultisetTree & Modernization:    " ++ (if prop_multisetTreeAndModernizations then "PASSED ✅" else "FAILED ❌")
   putStrLn $ "  [TEST 74] Law 13: Discrete Holographic Bound:   " ++ (if prop_discreteHolographicBound then "PASSED ✅" else "FAILED ❌")
   putStrLn $ "  [TEST 75] Law 14: Fractional Quantum Hall:      " ++ (if prop_fractionalQuantumHall then "PASSED ✅" else "FAILED ❌")
-  putStrLn $ "  [TEST 76] All Literate Wiki Modules Verified:   " ++ (if prop_literateModuleInvariants then "PASSED ✅" else "FAILED ❌")
+  putStrLn $ "  [TEST 76] Law 15: Discrete Jarzynski Equality:  " ++ (if prop_discreteJarzynskiEquality then "PASSED ✅" else "FAILED ❌")
+  putStrLn $ "  [TEST 77] All Literate Wiki Modules Verified:   " ++ (if prop_literateModuleInvariants then "PASSED ✅" else "FAILED ❌")
   putStrLn ""
+
 
 
 
