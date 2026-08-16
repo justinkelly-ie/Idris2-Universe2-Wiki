@@ -25,14 +25,19 @@ public export
 testLensingVelocity : Integer
 testLensingVelocity =
   let state = MkUniverseState {vmSize=0} {deSize=0} {dmSize=1} [] [] [intToBoxInt 55]
-      vIn = MkVelocity (MkInfinitesimal (intToBoxInt 0) (intToBoxInt 560) (intToBoxInt 0))
-                       (MkInfinitesimal (intToBoxInt 0) (intToBoxInt 0)   (intToBoxInt 0))
+      vIn = velocityVexel (intToBoxInt 560) (intToBoxInt 0)
       vOut = lensVelocityAcrossScale state Math.LinAlgebra.MetricTensor.gBlue vIn
-  in unwrapBox (m12 (vAlpha vOut))
+  in unwrapBox (lookupSingleton (MkSingleton 1) vOut)
 
 ||| Evidence 1: Proof that lensing velocity across the 55-state Dark Matter drag scales velocity by (1 + 55 = 56) (560 / 56 = 10)
 public export
 evidence_lensing_drag_scale : Bool
 evidence_lensing_drag_scale =
   Kinematics.Causal_Posets_and_Lensing.testLensingVelocity == 10
+
+||| Evidence 2: Proof that Symplectic Phase Space matrix Maxel satisfies J^2 = -I
+public export
+evidence_symplectic_phase_invariance : Bool
+evidence_symplectic_phase_invariance =
+  auditSymplecticInvarianceProof
 ```

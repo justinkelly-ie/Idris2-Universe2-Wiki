@@ -33,9 +33,8 @@ evidence_toroidal_determinant = Refl
 ||| Evidence 3: Proof that routing velocity through symmetric gEM preserves magnitude
 public export
 evidence_em_routing_symmetric :
-  let vIn = MkVelocity (MkInfinitesimal (intToBoxInt 0) (intToBoxInt 1) (intToBoxInt 0))
-                       (MkInfinitesimal (intToBoxInt 0) (intToBoxInt 2) (intToBoxInt 0))
+  let vIn = velocityVexel (intToBoxInt 1) (intToBoxInt 2)
       vOut = linearEpsilonRouting gEM vIn
-  in (unwrapBox (m12 (vAlpha vOut)) = 1, unwrapBox (m12 (vBeta vOut)) = -2)
+  in (unwrapBox (lookupSingleton (MkSingleton 1) vOut) = 1, unwrapBox (lookupSingleton (MkSingleton 2) vOut) = -2)
 evidence_em_routing_symmetric = (Refl, Refl)
 ```

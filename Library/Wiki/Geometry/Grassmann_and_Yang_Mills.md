@@ -54,7 +54,7 @@ import Data.Vect
 public export
 evidence_coboundary0_gradient : Bool
 evidence_coboundary0_gradient =
-  let phi = MkPointCochain [(MkSingleton 1, intToBoxInt 10), (MkSingleton 2, intToBoxInt 25)]
+  let phi = MkVexel [(MkSingleton 1, intToBoxInt 10), (MkSingleton 2, intToBoxInt 25)]
       edges = [(MkSingleton 1, MkSingleton 2)]
       conn = grassmannCoboundary0 edges phi
       diffVal = lookupEdge (MkSingleton 1, MkSingleton 2) conn
@@ -64,11 +64,11 @@ evidence_coboundary0_gradient =
 public export
 evidence_exact_d1_d0_closure : Bool
 evidence_exact_d1_d0_closure =
-  let phi = MkPointCochain [ (MkSingleton 1, intToBoxInt 10)
-                           , (MkSingleton 2, intToBoxInt 25)
-                           , (MkSingleton 3, intToBoxInt 40)
-                           , (MkSingleton 4, intToBoxInt 15)
-                           ]
+  let phi = MkVexel [ (MkSingleton 1, intToBoxInt 10)
+                    , (MkSingleton 2, intToBoxInt 25)
+                    , (MkSingleton 3, intToBoxInt 40)
+                    , (MkSingleton 4, intToBoxInt 15)
+                    ]
       edges = [ (MkSingleton 1, MkSingleton 2)
               , (MkSingleton 2, MkSingleton 3)
               , (MkSingleton 3, MkSingleton 4)
@@ -84,17 +84,20 @@ evidence_exact_d1_d0_closure =
       fVal = lookupFace (MkPixel 1 1) curv
   in unwrapBox fVal == 0
 
-||| Evidence 3: Proof of Combinatorial Hodge Duality between 1-Blade Edges and 2-Blade Faces
+||| Evidence 3: Proof of 3D Spatial Combinatorial Hodge Duality Involution: star(star(m)) == m
 public export
 evidence_combinatorial_hodge_dual : Bool
 evidence_combinatorial_hodge_dual =
-  let conn = MkEdgeCochain [((MkSingleton 1, MkSingleton 2), intToBoxInt 77)]
-      dualFace = combinatorialDual1To2 conn
-      recoveredConn = combinatorialDual2To1 dualFace
-  in lookupFace (MkPixel 1 2) dualFace == intToBoxInt 77 &&
-     lookupEdge (MkSingleton 1, MkSingleton 2) recoveredConn == intToBoxInt 77
+  auditHodgeStarInvolutionProof
 
-||| Evidence 4: Proof that Non-Abelian Yang-Mills Color Curvature satisfies Voxel Color Confinement
+||| Evidence 4: Proof of Non-Abelian SU(3) Dihedral Color Commutator: [Red, Green] = +Blue
+public export
+evidence_su3_color_commutator : Bool
+evidence_su3_color_commutator =
+  let (sOut, w) = su3ColorBracket (MkSingleton 1) (MkSingleton 2)
+  in sOut == MkSingleton 3 && unwrapBox w == 1
+
+||| Evidence 5: Proof that Non-Abelian Yang-Mills Color Curvature satisfies Voxel Color Confinement
 public export
 evidence_yang_mills_color_confinement : Bool
 evidence_yang_mills_color_confinement =
@@ -106,4 +109,10 @@ evidence_yang_mills_color_confinement =
                    , intToBoxInt (-30) -- -Blue
                    ]
   in verifyColorNeutralVoxelFlux faceFluxes
+
+||| Evidence 6: Proof of Jacobi Identity on Multiset Lie Algebra generators
+public export
+evidence_jacobi_identity : Bool
+evidence_jacobi_identity =
+  auditJacobiIdentityProof
 ```

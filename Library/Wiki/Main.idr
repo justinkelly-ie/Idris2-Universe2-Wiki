@@ -3,6 +3,7 @@ module Main
 import Language.Reflection
 import Core.BoxInt
 import Core.Multiset
+import Core.Polynumber
 import Core.Polynomial
 import Core.VexelMaxel
 import Math.Infinitesimal
@@ -99,7 +100,7 @@ prop_nilpotentEpsilonSquared =
   let e1 = epsilon
       e2 = epsilon
       result = mulEpsilon e1 e2
-  in unwrapBox result == 0
+  in case result of MkMaxel [] => True; _ => False
 
 ||| Property 3: Test Genesis Vacuum baseline at Epoch 1 (dim=3, depth=7).
 prop_genesisVacuum : Bool
@@ -124,13 +125,15 @@ prop_epoch38_StepUp =
 prop_substrateCausalArrow : Bool
 prop_substrateCausalArrow = auditSubstrateCausalArrow gSubstrate
 
-||| Property 7: Test DualComplex multiplication on discrete lattice.
+||| Property 7: Test Dual Number Maxel multiplication & Discrete Automatic Differentiation.
 prop_dualComplexMultiplication : Bool
 prop_dualComplexMultiplication =
-  let d1 = MkDual (intToBoxInt 3) (intToBoxInt 1) -- 3 + 1ε
-      d2 = MkDual (intToBoxInt 2) (intToBoxInt 0) -- 2 + 0ε
-      prod = d1 * d2                            -- (3+1ε)*2 = 6 + 2ε
-  in realPart prod == intToBoxInt 6 && epsPart prod == intToBoxInt 2
+  let d1 = dualNumber (intToBoxInt 3) (intToBoxInt 1) -- 3 + 1ε
+      d2 = dualNumber (intToBoxInt 2) (intToBoxInt 0) -- 2 + 0ε
+      prod = mulDual d1 d2                            -- (3+1ε)*2 = 6 + 2ε
+  in dualReal prod == intToBoxInt 6 &&
+     dualEps prod == intToBoxInt 2 &&
+     auditAutoDiffProof
 
 ||| Property 8: Test Derivation of Nat strictly from Multiset Empty Boxes:
 ||| [] = 0, [[]] = 1, [[] []] = 2, [[] [] []] = 3, up to Epoch 37.
@@ -148,13 +151,18 @@ prop_archimedesQuadrea =
   unwrapBox (quadrea (intToBoxInt 9) (intToBoxInt 16) (intToBoxInt 25)) == 576 &&
   isCollinearQuadrance (intToBoxInt 1) (intToBoxInt 1) (intToBoxInt 4)
 
-||| Property 10: Test Nested Polynomial Multiset Division (x^2 - 1) / (x - 1) = (x + 1, 0)
+||| Property 10: Test Nested Polynumber Multiset Division & Spread Polynumbers
 prop_polyDivision : Bool
 prop_polyDivision =
-  let dividend = MkBoxPolynomial [intToBoxInt (-1), intToBoxInt 0, intToBoxInt 1]
-      divisor  = MkBoxPolynomial [intToBoxInt (-1), intToBoxInt 1]
-      (q, r)   = divModPoly dividend divisor
-  in map unwrapBox (coeffs q) == [1, 1] && map unwrapBox (coeffs r) == []
+  let dividend = MkPolynumber [intToBoxInt (-1), intToBoxInt 0, intToBoxInt 1]
+      divisor  = MkPolynumber [intToBoxInt (-1), intToBoxInt 1]
+      (q, r)   = divModPolynumber dividend divisor
+      s2       = spreadPolynumber 2
+      vex      = polynumberToVexel (MkPolynumber [intToBoxInt 3, intToBoxInt 4])
+  in map unwrapBox (coeffs q) == [1, 1] &&
+     map unwrapBox (coeffs r) == [] &&
+     map unwrapBox (coeffs s2) == [0, 4, -4] &&
+     lookupSingleton (MkSingleton 1) vex == intToBoxInt 4
 
 ||| Property 11: Test 3D Spatial Lattice Topology & Flux Conservation
 prop_latticeFluxConservation : Bool
@@ -187,10 +195,9 @@ prop_cyclotomicEncodingDecoding =
       cosmos = MkUniverseState (replicate 27 (intToBoxInt 0))
                                (replicate 128 (intToBoxInt 0))
                                (replicate 55 (intToBoxInt 1))
-      vIn = MkVelocity (MkInfinitesimal (intToBoxInt 0) (intToBoxInt 560) (intToBoxInt 0))
-                       (MkInfinitesimal (intToBoxInt 0) (intToBoxInt 0)   (intToBoxInt 0))
+      vIn = velocityVexel (intToBoxInt 560) (intToBoxInt 0)
       vOut = lensVelocityAcrossScale cosmos gBlue vIn
-  in totalStateCapacity s4 == 159 && unwrapBox (m12 (vAlpha vOut)) == 10
+  in totalStateCapacity s4 == 159 && unwrapBox (lookupSingleton (MkSingleton 1) vOut) == 10
 
 ||| Property 15: Test Emergent Toroidal Topology Invariants (Cyclic Closure + Zero Leakage)
 prop_emergentToroidalTopology : Bool
@@ -261,7 +268,7 @@ prop_dynamic4x4GridExpansion =
   evidence_active_grid_weight &&
   evidence_total_manifold_weight
 
-||| Property 23: Test Vexels, Maxels & Reflected Linear Algebra
+||| Property 23: Test Vexels, Maxels, Boxels & Reflected Linear Algebra
 prop_vexelsMaxelsReflectedAlgebra : Bool
 prop_vexelsMaxelsReflectedAlgebra =
   evidence_boxint_pixel_isomorphism &&
@@ -269,6 +276,12 @@ prop_vexelsMaxelsReflectedAlgebra =
   evidence_singleton_pixel_mismatch &&
   evidence_row_vexel_extraction &&
   evidence_outer_product_maxel &&
+  evidence_outer_product_boxel &&
+  evidence_slice_boxel_z &&
+  evidence_canonicalize_boxel &&
+  auditPermutationMaxelActionProof &&
+  evidence_wedge_nilpotency &&
+  evidence_hyperboxel_temporal_slice &&
   evidence_domain_permutations
 
 ||| Property 24: Test 3D Discrete Exterior Calculus & Yang-Mills Gauge Theory
@@ -277,7 +290,9 @@ prop_dec3dYangMillsGauge =
   evidence_coboundary0_gradient &&
   evidence_exact_d1_d0_closure &&
   evidence_combinatorial_hodge_dual &&
-  evidence_yang_mills_color_confinement
+  evidence_su3_color_commutator &&
+  evidence_yang_mills_color_confinement &&
+  evidence_jacobi_identity
 
 ||| Property 25: Test Tier 5 Molecular Bonding & Chemical Graph Contractions
 prop_tier5MolecularBonding : Bool
@@ -285,7 +300,8 @@ prop_tier5MolecularBonding =
   evidence_methane_null_centroid &&
   evidence_methane_saturation &&
   evidence_ethane_saturation &&
-  evidence_alkane_homologous_series
+  evidence_alkane_homologous_series &&
+  methaneTetrahedralSpreadProof
 
 ||| Property 26: Test Visible Matter Numerators vs Dark Matter Law Denominators
 prop_matterTokensLawImpedance : Bool
@@ -304,7 +320,9 @@ prop_singletonFractionsAndOnSeq =
   evidence_rational_addition &&
   evidence_rational_multiplication &&
   evidence_onseq_clip_extraction &&
-  evidence_pointwise_onseq_algebra
+  evidence_pointwise_onseq_algebra &&
+  evidence_continued_fraction_convergence &&
+  evidence_stern_brocot_tree_path
 
 ||| Property 28: Test Reflected Fractional Multisets & QTT Ongoing Sequences
 prop_reflectedFractionalMultisetsQTT : Bool
@@ -312,14 +330,32 @@ prop_reflectedFractionalMultisetsQTT =
   evidence_qtt_fraction_split_conservation &&
   evidence_qtt_onseq_stepping
 
-||| Property 29: Literate Module Invariant Aggregator (Validates all 35 literate proofs)
+||| Property 29: Literate Module Invariant Aggregator (Validates all 55 literate proofs)
 prop_literateModuleInvariants : Bool
 prop_literateModuleInvariants =
   unwrapBox (wildNatToBoxInt (toWildNat 37)) == 37 &&
   unwrapBox (detMetric Math.LinAlgebra.MetricTensor.gToroidal) == -1 &&
   unwrapBox (g22 gSubstrate) == 0 &&
   length (dmLog standardEpoch37) == 55 &&
-  computeVMSize 0 == 0
+  computeVMSize 0 == 0 &&
+  auditCliffordGeometricProductProof &&
+  auditSymplecticStepProof &&
+  auditHookLengthProof &&
+  auditDiscretePoyntingConservationProof &&
+  auditTripleSpreadLawProof &&
+  auditRationalSnellLawProof &&
+  auditNoetherConservationProof &&
+  auditDiracCurrentConservationProof &&
+  auditHolographicScalingProof &&
+  auditGravitationalLensingDragProof &&
+  auditMaxwellBianchiClosureProof &&
+  auditSpeedOfLightLocalityProof &&
+  auditPauliExclusionUniquenessProof &&
+  auditGravitationalWaveShearProof &&
+  auditAlphaClusterSaturationProof &&
+  auditBaryonAsymmetryArrowProof &&
+  auditAlkaneHomologousSaturationProof &&
+  auditWaterArchimedesQuadreaProof
 
 ||| Main test runner
 main : IO ()

@@ -32,8 +32,8 @@ public export
 evidence_linear_preservation : (x : BoxInt) -> linearIdentity x = x
 evidence_linear_preservation x = Refl
 
-||| Evidence 2: Proving that Nilpotent matrix unit squares to exactly 0 (vacuum identity)
+||| Evidence 2: Proving that Nilpotent matrix unit squares to exactly the empty Maxel (vacuum identity)
 public export
-evidence_nilpotent_vacuum : unwrapBox (mulEpsilon Math.Infinitesimal.epsilon Math.Infinitesimal.epsilon) = 0
+evidence_nilpotent_vacuum : mulEpsilon Math.Infinitesimal.epsilon Math.Infinitesimal.epsilon = MkMaxel []
 evidence_nilpotent_vacuum = Refl
 ```

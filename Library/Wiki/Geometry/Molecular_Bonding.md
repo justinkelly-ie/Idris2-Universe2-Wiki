@@ -105,4 +105,18 @@ evidence_alkane_homologous_series =
   verifyAlkaneSaturation 3 && -- Propane  (C3H8)
   verifyAlkaneSaturation 4 && -- Butane   (C4H10)
   verifyAlkaneSaturation 8    -- Octane   (C8H18)
+
+||| Evidence 6: Exact 3D Methane (CH4) bond angle spread s = 8/9 (theta ~ 109.47 degrees)
+public export
+evidence_methane_tetrahedral_spread : Bool
+evidence_methane_tetrahedral_spread =
+  methaneTetrahedralSpreadProof
+
+||| Evidence 7: 3D Molecule Boxel and Maxel bond representation validity
+public export
+evidence_molecule_3d_structure : Bool
+evidence_molecule_3d_structure =
+  let (MkMolecule3D name atoms bonds) = methaneMolecule3D
+      carbonW = lookupVoxel (MkVoxel 1 1 1) atoms
+  in name == "CH4" && carbonW == intToBoxInt 6 && unwrapBox (totalBoxelWeight atoms) == 10
 ```

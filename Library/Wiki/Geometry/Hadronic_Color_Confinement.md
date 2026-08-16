@@ -46,7 +46,13 @@ evidence_hadron_color_neutral : Bool
 evidence_hadron_color_neutral = 
   isColorNeutral seedHadronEpoch3
 
-||| Evidence 3: Proof that Epoch 3 cosmic state capacity is 158 (27 VM + 128 DE + 3 DM)
+||| Evidence 3: Proof of Boxel Z-slice color neutrality (Red = Green = Blue Maxel slices)
+public export
+evidence_hadron_boxel_color_neutral : Bool
+evidence_hadron_boxel_color_neutral =
+  isHadronBoxelColorNeutral seedHadronBoxel
+
+||| Evidence 4: Proof that Epoch 3 cosmic state capacity is 158 (27 VM + 128 DE + 3 DM)
 public export
 evidence_epoch3_cosmic_capacity : Bool
 evidence_epoch3_cosmic_capacity = 

@@ -25,6 +25,7 @@ Matter replicates hierarchically:
 module Evolution.Alpha_Cluster_Replication
 
 import Core.BoxInt
+import Core.VexelMaxel
 import Compound.HadronicConfinement
 import Compound.AlphaReplication
 import Evolution.State
@@ -44,7 +45,13 @@ evidence_alpha_nuclear_stability : Bool
 evidence_alpha_nuclear_stability = 
   isAlphaStable seedAlphaClusterEpoch4
 
-||| Evidence 3: Proof that Epoch 4 cosmic state capacity is exactly 242 (108 VM + 128 DE + 6 DM)
+||| Evidence 3: Proof that the unified 3D Alpha Core Boxel carries exactly 108 units of nuclear valence flux
+public export
+evidence_alpha_core_boxel_weight : Bool
+evidence_alpha_core_boxel_weight =
+  unwrapBox (totalBoxelWeight alphaCoreBoxel) == 108
+
+||| Evidence 4: Proof that Epoch 4 cosmic state capacity is exactly 242 (108 VM + 128 DE + 6 DM)
 public export
 evidence_epoch4_cosmic_capacity : Bool
 evidence_epoch4_cosmic_capacity = 

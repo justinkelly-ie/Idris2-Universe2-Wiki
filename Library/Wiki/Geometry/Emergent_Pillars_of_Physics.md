@@ -197,10 +197,9 @@ evidence_pillar3_gravitational_drag =
   let cosmos = MkUniverseState (replicate 27 (intToBoxInt 0))
                                (replicate 128 (intToBoxInt 0))
                                (replicate 55 (intToBoxInt 1))
-      vIn = MkVelocity (MkInfinitesimal (intToBoxInt 0) (intToBoxInt 560) (intToBoxInt 0))
-                       (MkInfinitesimal (intToBoxInt 0) (intToBoxInt 0)   (intToBoxInt 0))
+      vIn = velocityVexel (intToBoxInt 560) (intToBoxInt 0)
       vOut = lensVelocityAcrossScale cosmos gBlue vIn
-  in unwrapBox (m12 (vAlpha vOut)) == 10 -- 560 / (1 + 55) = 10
+  in unwrapBox (lookupSingleton (MkSingleton 1) vOut) == 10 -- 560 / (1 + 55) = 10
 
 ||| Law 4 Evidence: DEC Bianchi Identity (d² = 0)
 public export
@@ -215,7 +214,7 @@ evidence_pillar5_quantum_nilpotent : Bool
 evidence_pillar5_quantum_nilpotent =
   let epsSq = mulEpsilon epsilon epsilon
       detTor = unwrapBox (detMetric Math.LinAlgebra.MetricTensor.gToroidal)
-  in unwrapBox epsSq == 0 && detTor == -1
+  in (case epsSq of MkMaxel [] => True; _ => False) && detTor == -1
 
 ||| Law 6 Evidence: QCD Color Confinement & Hadronic Singlet Neutrality
 public export
@@ -265,3 +264,25 @@ evidence_pillar12_baryon_asymmetry =
   let cosmos1 = genesisVacuumAtScale 3 7
   in totalStateCapacity cosmos1 == 155 && computeVMSize 3 == 27
 ```
+
+---
+
+## 🔮 3. The 100% Elaborator Reflection Law Coverage Matrix
+
+All 12 Fundamental Pillars of Physics are now certified statically by the Idris 2 compiler via dedicated `%macro`s in [`Reflect.InvariantAuditor`](file:///var/home/justin/Projects/Idris2-Universe2/src/Reflect/InvariantAuditor.idr):
+
+| # | Emergent Physical Law | Compile-Time Reflection Macro | Propositional Witness |
+| :- | :--- | :--- | :--- |
+| **1** | **Conservation of Energy & Charge** | `%macro auditToroidalBoxelFluxConservation` | `Refl` ✅ |
+| **2** | **Irreversible Arrow of Time & 2nd Law**| `%macro auditSubstrateCausalFlow` | `Refl` ✅ |
+| **3** | **Gravitational Inertia & Drag** | `%macro auditGravitationalLensingDrag` | `Refl` ✅ |
+| **4** | **Maxwell's Field Equations & DEC** | `%macro auditMaxwellBianchiClosure` | `Refl` ✅ |
+| **5** | **Quantum Phase & Infinitesimals** | `%macro auditNilpotentClosure` & `%macro auditSymplecticPhaseInvariance` | `Refl` ✅ |
+| **6** | **QCD Color Confinement** | `%macro auditHadronBoxelNeutrality` | `Refl` ✅ |
+| **7** | **Universal Speed Limit & Locality** | `%macro auditSpeedOfLightLocality` | `Refl` ✅ |
+| **8** | **Fine Structure & Primorial Budget**| `%macro auditFineStructure137` & `%macro auditPrimorialPartition` | `Refl` ✅ |
+| **9** | **Pauli Exclusion & No-Cloning** | `%macro auditPauliExclusionUniqueness` | `Refl` ✅ |
+| **10**| **Gravitational Waves & Shear** | `%macro auditGravitationalWaveShear` | `Refl` ✅ |
+| **11**| **Nuclear Core Saturation** | `%macro auditAlphaClusterSaturation` | `Refl` ✅ |
+| **12**| **Baryon Matter/Antimatter Asymmetry**| `%macro auditBaryonAsymmetryArrow` | `Refl` ✅ |
+

@@ -95,4 +95,18 @@ evidence_pointwise_onseq_algebra =
   in case term10 of
        Just v  => unwrapBox v == 15
        Nothing => False
+
+||| Evidence 6: Exact Continued Fraction Expansion & Rational Reconstruction.
+||| Decomposes 43 / [19] into continued fraction [2; 3, 1, 4] and reconstructs 43 / [19].
+public export
+evidence_continued_fraction_convergence : Bool
+evidence_continued_fraction_convergence =
+  auditContinuedFractionProof
+
+||| Evidence 7: Exact Stern-Brocot Binary Path Encoding & Mediant Reconstruction.
+||| 5 / [3] maps bijectively to path [R, L, R] and reconstructs to 5 / [3].
+public export
+evidence_stern_brocot_tree_path : Bool
+evidence_stern_brocot_tree_path =
+  auditSternBrocotProof
 ```

@@ -1,15 +1,16 @@
-# 🧮 Vexels, Maxels & Reflected Linear Algebra
+# 🧮 Vexels, Maxels, Boxels & Reflected Linear Algebra
 
-In standard linear algebra, vectors and matrices are defined as abstract elements of continuous vector spaces ($\mathbb{R}^n, \mathbb{R}^{m \times n}$) with arbitrary dimension bounds.
+In standard linear algebra, vectors, matrices, and tensors are defined as abstract elements of continuous vector spaces ($\mathbb{R}^n, \mathbb{R}^{m \times n}, \mathbb{R}^{l \times m \times n}$) with arbitrary continuous coordinates.
 
 In **Idris2-Universe2**, following **Norman J. Wildberger's Box Arithmetic** (*Math Foundations 171 & 172*), linear algebra and higher natural structures are constructed purely from **discrete multiset data structures**:
 * **Singleton $[n]$**: A 1-list from $\mathbb{N}$, representing a 1D coordinate basis token $e_n$, an energy level, or a nucleotide base.
 * **Pixel $[i, j]$**: A 2-list from $\mathbb{N} \times \mathbb{N}$, representing a 2D coordinate cell $e_{ij}$, a Grothendieck signed pair $[P, N]$, a dual number component, or a chemical bond.
 * **Voxel $[x, y, z]$**: A 3-list from $\mathbb{N} \times \mathbb{N} \times \mathbb{N}$, representing a 3D coordinate cell, a 3-quark baryon color singlet, or a 3-nucleotide biological codon triplet.
-* **Vexel**: An unordered multiset of Singletons ($\sum c_k [k]$), replacing abstract vectors (used for wavefunctions, electron configurations, and genomic sequences).
-* **Maxel**: An unordered multiset of Pixels ($\sum a_{ij} [i, j]$), replacing abstract matrices (used for metric tensors, molecular connectivity graphs, and mutation matrices).
+* **Vexel**: An unordered multiset of Singletons ($\sum c_k [k]$), replacing abstract vectors (used for wavefunctions, momentum, and 1-form fields).
+* **Maxel**: An unordered multiset of Pixels ($\sum a_{ij} [i, j]$), replacing abstract matrices (used for metric tensors, 2-form curvatures, dual numbers, and molecular connectivity graphs).
+* **Boxel**: An unordered multiset of Voxels ($\sum \rho_{xyz} [x, y, z]$), replacing 3D volume tensors (used for hadronic nucleons, 108-voxel Alpha cores, 3-form volume densities, and 3D toroidal discrete Laplacians).
 
-Using **Elaborator Reflection & Type-Checked Witnesses**, these structures are synthesized, multiplied, and verified directly at compile-time with zero runtime overhead.
+Using **Elaborator Reflection & Type-Checked Witnesses**, these structures are synthesized, multiplied, canonicalized, and verified directly at compile-time with zero runtime overhead.
 
 ---
 
@@ -24,8 +25,9 @@ Using **Elaborator Reflection & Type-Checked Witnesses**, these structures are s
   │ 1D Basis     │ Singleton [n]    │ Color Charge     │ Nucleotide (A,C,G,T)   │
   │ 2D Pair      │ Pixel [i, j]     │ Grothendieck Z   │ Chemical Bond / Valence│
   │ 3D Triplet   │ Voxel [x, y, z]  │ Baryon Singlet   │ Codon Triplet (AUG)    │
-  │ 1D Multiset  │ Vexel (MSet Sing)│ Wavefunction     │ Electron Shell / Gene  │
-  │ 2D Multiset  │ Maxel (MSet Pix) │ Metric Tensor    │ Molecular Graph        │
+  │ 1D Multiset  │ Vexel (MSet Sing)│ Wavefunction / v │ Electron Shell / 1-Form│
+  │ 2D Multiset  │ Maxel (MSet Pix) │ Metric Tensor g  │ Molecular Graph/2-Form │
+  │ 3D Multiset  │ Boxel (MSet Vox) │ Hadron / 4He Core│ 3D Torus Lap / 3-Form  │
   │ Multi-D      │ IntPolynumber    │ Cosmic Manifold  │ Metabolic Network      │
   └──────────────┴──────────────────┴──────────────────┴────────────────────────┘
 ```
@@ -94,7 +96,38 @@ evidence_outer_product_maxel =
       totalW = totalMaxelWeight m
   in unwrapBox totalW == 25
 
-||| Evidence 6: Proof that Physical, Chemical, and Biological domain permutations hold
+||| Evidence 6: Proof that 3D Outer Product Vexel x Maxel generates a 3D Boxel multiset
+public export
+evidence_outer_product_boxel : Bool
+evidence_outer_product_boxel =
+  let v = MkVexel [(MkSingleton 1, intToBoxInt 2)]
+      m = MkMaxel [(MkPixel 2 3, intToBoxInt 5)]
+      b = outerProductVexelMaxel v m
+  in lookupVoxel (MkVoxel 1 2 3) b == intToBoxInt 10 && unwrapBox (totalBoxelWeight b) == 10
+
+||| Evidence 7: Proof that Z-Slice Maxel extraction from a Boxel projects 2D layers correctly
+public export
+evidence_slice_boxel_z : Bool
+evidence_slice_boxel_z =
+  let b = MkBoxel [ (MkVoxel 1 2 0, intToBoxInt 7)
+                  , (MkVoxel 3 4 0, intToBoxInt 8)
+                  , (MkVoxel 1 2 1, intToBoxInt 99)
+                  ]
+      z0 = sliceBoxelZ 0 b
+  in unwrapBox (totalMaxelWeight z0) == 15 && lookupPixel (MkPixel 1 2) z0 == intToBoxInt 7
+
+||| Evidence 8: Proof that Boxel canonicalization merges duplicate voxels and prunes zeroes
+public export
+evidence_canonicalize_boxel : Bool
+evidence_canonicalize_boxel =
+  let b = MkBoxel [ (MkVoxel 1 1 1, intToBoxInt 3)
+                  , (MkVoxel 1 1 1, intToBoxInt 4)
+                  , (MkVoxel 2 2 2, intToBoxInt 0)
+                  ]
+      canon = canonicalizeBoxel b
+  in canon == MkBoxel [(MkVoxel 1 1 1, intToBoxInt 7)]
+
+||| Evidence 9: Proof that Physical, Chemical, and Biological domain permutations hold
 public export
 evidence_domain_permutations : Bool
 evidence_domain_permutations =
@@ -103,7 +136,19 @@ evidence_domain_permutations =
       startCodon = startCodonAUG
   in qMass == 3 && bonds == 2 && startCodon == MkVoxel 0 1 2
 
-||| Evidence 7: Compile-Time Reflection Macro Proof Witness
+||| Evidence 10: Proof of Grassmann Wedge Product Nilpotency: v ^ v == 0
+public export
+evidence_wedge_nilpotency : Bool
+evidence_wedge_nilpotency =
+  auditWedgeNilpotencyProof
+
+||| Evidence 11: Proof of 4D HyperBoxel Temporal Slicing into 3D Spatial Boxels
+public export
+evidence_hyperboxel_temporal_slice : Bool
+evidence_hyperboxel_temporal_slice =
+  auditHyperBoxelSliceProof
+
+||| Evidence 12: Compile-Time Reflection Macro Proof Witness
 public export
 evidence_reflection_macro_audit : Core.VexelMaxel.auditRowExtractionProof = True
 evidence_reflection_macro_audit = Refl

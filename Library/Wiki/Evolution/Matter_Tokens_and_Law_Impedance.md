@@ -83,10 +83,9 @@ evidence_dark_matter_scale_denominator =
 public export
 evidence_rational_velocity_deceleration : Bool
 evidence_rational_velocity_deceleration =
-  let vIn = MkVelocity (MkInfinitesimal (intToBoxInt 0) (intToBoxInt 112) (intToBoxInt 0))
-                       (MkInfinitesimal (intToBoxInt 0) (intToBoxInt 0)   (intToBoxInt 0))
+  let vIn = velocityVexel (intToBoxInt 112) (intToBoxInt 0)
       vOut = lensVelocityAcrossScale standardEpoch37 gSubstrate vIn
-      outAlpha = m12 (vAlpha vOut)
+      outAlpha = lookupSingleton (MkSingleton 1) vOut
   in unwrapBox outAlpha == 2 -- 112 / (1 + 55) = 112 / 56 = 2
 
 ||| Evidence 4: Monotonic Law Impedance Growth (The Arrow of Time):

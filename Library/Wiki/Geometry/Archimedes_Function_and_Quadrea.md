@@ -44,4 +44,9 @@ public export
 evidence_maxel_gram_determinant : 
   unwrapBox (archimedesFromMaxels Math.LinAlgebra.MetricTensor.gBlue (intToBoxInt 1) (intToBoxInt 0) (intToBoxInt 0) (intToBoxInt 1)) = 4
 evidence_maxel_gram_determinant = Refl
+
+||| Evidence 4: Proof that Gram Maxel determinant reproduces exact Archimedes Quadrea (576)
+public export
+evidence_gram_maxel_quadrea : unwrapBox (quadreaMaxel (intToBoxInt 9) (intToBoxInt 16) (intToBoxInt 25)) = 576
+evidence_gram_maxel_quadrea = Refl
 ```

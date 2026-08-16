@@ -77,11 +77,11 @@ evidence_wildberger_nilpotent_derivative : Bool
 evidence_wildberger_nilpotent_derivative =
   let eps = Math.Infinitesimal.epsilon
       epsSq = mulEpsilon eps eps
-      x = MkDual (intToBoxInt 3) (intToBoxInt 1) -- 3 + 1ε
-      xSq = x * x                               -- (3+1ε)² = 9 + 6ε (f(3)=9, f'(3)=6)
-  in unwrapBox epsSq == 0 &&
-     unwrapBox (realPart xSq) == 9 &&
-     unwrapBox (epsPart xSq) == 6
+      x = dualNumber (intToBoxInt 3) (intToBoxInt 1) -- 3 + 1ε
+      xSq = mulDual x x                              -- (3+1ε)² = 9 + 6ε (f(3)=9, f'(3)=6)
+  in (case epsSq of MkMaxel [] => True; _ => False) &&
+     unwrapBox (dualReal xSq) == 9 &&
+     unwrapBox (dualEps xSq) == 6
 
 ||| Evidence 2: Wildberger's Rational Quadrance on the 3-4-5 Triangle (Q1=9, Q2=16, Q3=25)
 public export

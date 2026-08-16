@@ -72,8 +72,7 @@ evidence_cast_free_lensing =
   let cosmos = MkUniverseState (replicate 27 (intToBoxInt 0))
                                (replicate 128 (intToBoxInt 0))
                                (replicate 55 (intToBoxInt 1))
-      vIn = MkVelocity (MkInfinitesimal (intToBoxInt 0) (intToBoxInt 560) (intToBoxInt 0))
-                       (MkInfinitesimal (intToBoxInt 0) (intToBoxInt 0)   (intToBoxInt 0))
+      vIn = velocityVexel (intToBoxInt 560) (intToBoxInt 0)
       vOut = lensVelocityAcrossScale cosmos gBlue vIn
-  in unwrapBox (m12 (vAlpha vOut)) == 10
+  in unwrapBox (lookupSingleton (MkSingleton 1) vOut) == 10
 ```
