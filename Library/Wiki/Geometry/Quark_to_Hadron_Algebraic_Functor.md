@@ -1,6 +1,6 @@
-# 🌌 The Quark-to-Hadron Algebraic Functor & Confinement Homomorphisms
+# 🌌 The Quark-to-Hadron Pure Multiset Functor & Balance Arrays
 
-This chapter formalizes the **Quark-to-Hadron Algebraic Functor**, demonstrating how fractional quark tokens ($(r, g, b)$ color cochains) compose constructively into color-neutral hadronic singlets (protons, neutrons, and mesons) via strict algebraic homomorphisms.
+This chapter formalizes the **Quark-to-Hadron Multiset Functor**, showing how color-charge quark Vexels combine into 27-token Hadron Boxels using **pure multiset arithmetic** and subtraction-free `BalanceArray` identities.
 
 ```idris
 module Geometry.Quark_to_Hadron_Algebraic_Functor
@@ -20,21 +20,20 @@ import Reflect.InvariantAuditor
 
 ---
 
-## 💡 1. The Algebraic Functor Architecture
+## 💡 1. The Pure Multiset Architecture
 
-Following **Algebra-Driven Design (ADD)** (*Sandy Maguire*):
-1. **Quark Carrier Sort**: Each `QuarkToken` carries:
-   - Flavor: $u, d, s, c, b, t \in \text{QuarkFlavor}$.
-   - Fractional Electric Charge: $Q_u = +2/3 e$, $Q_d = -1/3 e$ as exact `UnixelFraction`.
-   - Baryon Fraction: $B = 1/3$ (quarks) or $B = -1/3$ (antiquarks).
-   - SU(3) Color Charge: $\text{Red}, \text{Green}, \text{Blue} \in \text{ColorCharge}$.
-2. **Hadronic Combinator**: The algebraic functor `contractBaryonTriad` maps three quark tokens $(q_R, q_G, q_B)$ into a composite `Hadron`.
-3. **Observation Homomorphisms**:
-   - **Charge Homomorphism**: $\text{charge}(q_1 \otimes q_2 \otimes q_3) \equiv \text{charge}(q_1) + \text{charge}(q_2) + \text{charge}(q_3)$.
-     - Proton $(uud)$: $\frac{2}{3} + \frac{2}{3} - \frac{1}{3} = \frac{3}{3} = +1 e$.
-     - Neutron $(udd)$: $\frac{2}{3} - \frac{1}{3} - \frac{1}{3} = \frac{0}{3} = 0 e$.
-   - **Baryon Number Homomorphism**: $B(q_1 \otimes q_2 \otimes q_3) \equiv \frac{1}{3} + \frac{1}{3} + \frac{1}{3} = 1$.
-   - **Color Singlet Invariance**: Red $+$ Green $+$ Blue $=$ White Singlet ($\text{Tr}(F) = 0$).
+In our constructivist universe, there are no artificial data types separating particles from space. All physical states are **multisets of discrete tokens** (`Vexel`, `Maxel`, `Boxel`, `BalanceArray`):
+
+1. **Quarks as Color Vexels**:
+   - Each color quark is a 1D Vexel carrying 9 mass tokens along its color sector:
+     $$q_R = \text{MkVexel } [(1, 9)], \quad q_G = \text{MkVexel } [(2, 9)], \quad q_B = \text{MkVexel } [(3, 9)]$$
+2. **Hadronization as Multiset Addition $\uplus$**:
+   - The 3 color vexels fuse via the `BalanceArray 4` identity:
+     $$q_R \uplus q_G \uplus q_B \equiv B_{\text{singlet}} \quad (27 \text{ mass tokens})$$
+3. **Maguire ADD Multiset Observations**:
+   - **Mass Token Invariant**: $\text{observeHadronMassTokens}(B) \equiv 27$.
+   - **Color Neutrality**: $\text{sliceZ}(0, B) \equiv \text{sliceZ}(1, B) \equiv \text{sliceZ}(2, B)$.
+   - **Baryon Number Homomorphism**: $B \equiv \frac{\text{totalTokens}}{27} = \frac{27}{27} = 1$.
 
 ---
 
@@ -47,8 +46,8 @@ proofOfQuarkHadronAlgebra =
   auditQuarkHadronAlgebraProof
 ```
 
-### Verified Algebraic Invariants:
-1. **Proton Charge**: $Q(p) = +1 e$ ($3/3$).
-2. **Neutron Charge**: $Q(n) = 0 e$ ($0/3$).
-3. **Pion+ Meson Charge**: $Q(\pi^+) = +1 e$ ($3/3$), $B(\pi^+) = 0$.
-4. **SU(3) Confinement**: All composite hadrons are color singlets.
+### Verified Multiset Invariants:
+1. **Total Hadronic Mass**: Exactly $27$ mass tokens.
+2. **Color Neutrality**: Identical $9$-token weight across all 3 color Maxel slices.
+3. **Baryon Rational Invariant**: $27 / 27 \equiv 1$ on exact `UnixelFraction`.
+4. **Subtraction-Free Balance**: `hadronSingletBalanceArray` is strictly balanced and disjoint.
