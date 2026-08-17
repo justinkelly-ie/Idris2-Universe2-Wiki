@@ -142,6 +142,7 @@ import Math.DiscreteCrooksTheorem
 import Math.DiscreteCasimirPolder
 import Math.DiscreteBohmianPotential
 import Math.DiscreteLandauerBuettiker
+import Compound.QuarkHadronAlgebra
 import Compound.PlasmaRecombination
 import Compound.StellarNucleosynthesis
 import Compound.MolecularBonding
@@ -718,6 +719,11 @@ proofOfDiscreteBohmianPotential = auditDiscreteBohmianPotential
 ||| Witness 135: Proves via Elaborator Reflection macro that Law 28: Discrete Landauer-Büttiker Multi-Terminal Conduction holds.
 proofOfDiscreteLandauerBuettiker : Reflect.InvariantAuditor.auditDiscreteLandauerBuettikerProofExport = True
 proofOfDiscreteLandauerBuettiker = auditDiscreteLandauerBuettiker
+
+||| Witness 136: Proves via Elaborator Reflection macro that Quark-to-Hadron Algebraic Functor holds.
+proofOfQuarkHadronAlgebra : Reflect.InvariantAuditor.auditQuarkHadronAlgebraProofExport = True
+proofOfQuarkHadronAlgebra = auditQuarkHadronAlgebra
+
 
 
 
@@ -1518,6 +1524,7 @@ main = do
   putStrLn "  - Law 26: Discrete Casimir-Polder Dispersion Forces Witness: INJECTED & VALID (Refl) ✅"
   putStrLn "  - Law 27: Discrete Bohmian Quantum Potential Witness: INJECTED & VALID (Refl) ✅"
   putStrLn "  - Law 28: Discrete Landauer-Büttiker Conduction Witness: INJECTED & VALID (Refl) ✅"
+  putStrLn "  - Quark-to-Hadron Algebraic Functor Witness: INJECTED & VALID (Refl) ✅"
   putStrLn ""
   putStrLn " [RUNTIME CONSERVATION & KINEMATIC INVARIANTS]:"
   putStrLn $ "  [TEST 1]  27-State Ternary Spacetime Closure:    " ++ (if prop_27_TernaryClosure then "PASSED ✅" else "FAILED ❌")
@@ -1630,6 +1637,7 @@ main = do
   putStrLn $ "  [TEST 108] Law 26: Discrete Casimir-Polder Dispersion:  " ++ (if auditDiscreteCasimirPolderProof then "PASSED ✅" else "FAILED ❌")
   putStrLn $ "  [TEST 109] Law 27: Discrete Bohmian Quantum Potential:   " ++ (if auditDiscreteBohmianPotentialProof then "PASSED ✅" else "FAILED ❌")
   putStrLn $ "  [TEST 110] Law 28: Discrete Landauer-Büttiker Conduction: " ++ (if auditDiscreteLandauerBuettikerProof then "PASSED ✅" else "FAILED ❌")
+  putStrLn $ "  [TEST 111] Quark-to-Hadron Algebraic Functor:          " ++ (if auditQuarkHadronAlgebraProof then "PASSED ✅" else "FAILED ❌")
   putStrLn ""
   putStrLn "All Cosmological Proof Witnesses & Literate Invariants Verified!"
   putStrLn "========================================================"

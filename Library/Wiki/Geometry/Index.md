@@ -13,6 +13,7 @@ This section derives the 4 fundamental geometries, 17 emergent physical laws, ga
 * [The 12 Emergent Laws of Physics](Emergent_Pillars_of_Physics.md) — Deriving Conservation, Time's Arrow, Gravitational Inertia, Maxwell DEC, Quantum Infinitesimals, QCD Color Confinement, Speed of Light Locality, Fine Structure 137, Pauli Exclusion, Gravitational Waves, Nuclear Binding, and Baryon Asymmetry.
 * [Geometric-Informational Duality & Cosmic Intelligence](Geometric_Information_Duality_and_Cosmic_Intelligence.md) — Unifying Hyperbolic Geodesics, Clifford Collinearity, Chromogeometric Budgets, and the Holographic Principle.
 * [Intra-Epoch Hadronic Confinement (Epoch 3)](Hadronic_Color_Confinement.md) — Triadic Chromogeometric color charge partitioning (Red, Green, Blue) and color-neutral nucleon singlets.
+* [The Quark-to-Hadron Algebraic Functor](Quark_to_Hadron_Algebraic_Functor.md) — Fractional quark tokens ($u, d, s$), SU(3) color singlet contractive functors, and exact rational charge/baryon homomorphisms.
 * [Emergent Higher-Order Physics](Emergent_Higher_Order_Physics.md) — Deriving Electrodynamics, Causal Posets, and Hamiltonian mechanics from $1\times 1 \to 2\times 2 \to 3\times 3\times 3$ grid expansion.
 * [Archimedes' Function & Quadrea](Archimedes_Function_and_Quadrea.md) — Gram determinants on $2\times 2$ maxels, collinear geodesics ($A=0$), and Quadrea flux.
 * [Discrete Exterior Calculus & Gauge Fields](Discrete_Exterior_Calculus_and_Gauge.md) — Cell complexes, curvature 2-forms $F = dA$, and $SU(3)$ color confinement.

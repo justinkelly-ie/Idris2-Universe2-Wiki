@@ -85,6 +85,7 @@ This document provides an **automatically generated, authoritative reference** f
   - [`Compound.MacromolecularChirality`](#mod-compound-macromolecularchirality)
   - [`Compound.MolecularBonding`](#mod-compound-molecularbonding)
   - [`Compound.PlasmaRecombination`](#mod-compound-plasmarecombination)
+  - [`Compound.QuarkHadronAlgebra`](#mod-compound-quarkhadronalgebra)
   - [`Compound.StellarNucleosynthesis`](#mod-compound-stellarnucleosynthesis)
   - [`Compound.SymplecticIntegrator`](#mod-compound-symplecticintegrator)
   - [`Compound.VelocityLensing`](#mod-compound-velocitylensing)
@@ -1295,6 +1296,56 @@ record DecoupledGas where
 
 ```idris
 data ParticleCharge = ProtonPositive | ElectronNegative | NeutralHydrogen
+```
+
+[↑ Back to Top](#table-of-contents)
+
+---
+
+### <a id="mod-compound-quarkhadronalgebra"></a>Module `Compound.QuarkHadronAlgebra`
+
+#### 📦 Records
+
+```idris
+record QuarkToken where
+  constructor MkQuarkToken
+  flavor : QuarkFlavor
+  color  : ColorCharge
+  spin   : SpinProjection
+  isAnti : Bool
+```
+
+#### 🏷️ Algebraic Data Types
+
+```idris
+data QuarkFlavor
+  = UpQuark
+  | DownQuark
+  | StrangeQuark
+  | CharmQuark
+  | BottomQuark
+  | TopQuark
+```
+
+```idris
+data SpinProjection = SpinUp | SpinDown
+```
+
+```idris
+data Hadron
+  = Baryon QuarkToken QuarkToken QuarkToken
+  | Meson QuarkToken QuarkToken
+```
+
+```idris
+data HadronicConfinementError
+  = ColorChargeNotNeutral
+  | PauliExclusionViolation
+
+||| Algebraic Functor: Contracts a Quark Triad (r, g, b) into a Color-Neutral Baryon.
+||| Enforces:
+||| 1. SU(3) Color Neutrality (Red + Green + Blue = White Singlet)
+||| 2. Total Baryon Number B = 1.
 ```
 
 [↑ Back to Top](#table-of-contents)

@@ -48,6 +48,7 @@ Every chapter in this wiki is an **executable Literate Idris 2 module** that pro
 * [The 12 Emergent Laws of Physics](Geometry/Emergent_Pillars_of_Physics.md)
 * [Geometric-Informational Duality & Cosmic Intelligence](Geometry/Geometric_Information_Duality_and_Cosmic_Intelligence.md)
 * [Intra-Epoch Hadronic Confinement (Epoch 3)](Geometry/Hadronic_Color_Confinement.md)
+* [The Quark-to-Hadron Algebraic Functor](Geometry/Quark_to_Hadron_Algebraic_Functor.md)
 * [Emergent Higher-Order Physics](Geometry/Emergent_Higher_Order_Physics.md)
 * [Archimedes' Function & Quadrea](Geometry/Archimedes_Function_and_Quadrea.md)
 * [Discrete Exterior Calculus & Gauge Fields](Geometry/Discrete_Exterior_Calculus_and_Gauge.md)

@@ -3,9 +3,9 @@
 **Literate Documentation, Formal Specifications, and Property Verification Suite for [Idris2-Universe2](https://github.com/justinkelly-ie/Idris2-Universe2).**
 
 [![Idris2](https://img.shields.io/badge/Idris2-Verified_Wiki-blue.svg)](https://github.com/idris-lang/Idris2)
-[![Macro Audits](https://img.shields.io/badge/Elaborator_Macros-60_Verified-brightgreen.svg)]()
-[![Tests](https://img.shields.io/badge/Runtime_Tests-110_Passed-success.svg)]()
-[![Literate Chapters](https://img.shields.io/badge/Literate_Chapters-106_Compiled-purple.svg)]()
+[![Macro Audits](https://img.shields.io/badge/Elaborator_Macros-61_Verified-brightgreen.svg)]()
+[![Tests](https://img.shields.io/badge/Runtime_Tests-111_Passed-success.svg)]()
+[![Literate Chapters](https://img.shields.io/badge/Literate_Chapters-107_Compiled-purple.svg)]()
 
 ---
 
