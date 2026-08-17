@@ -8,7 +8,7 @@ Every chapter in this wiki is an **executable Literate Idris 2 module** that pro
 ## 🗺️ Cross-Disciplinary Mapping & Bibliographic Reference
 
 * **[The Universal Rosetta Stone](Foundations/Universal_Rosetta_Stone.md)** — Comprehensive tripartite isomorphism table mapping Constructive Finite Mathematics, Cosmological Physics, and Idris 2 QTT.
-* **[Physical Laws & Academic Bibliography](Verification/Physical_Laws_Bibliography_and_Sources.md)** — Verified citations, DOIs, and primary historical sources for the 17 emergent physical laws.
+* **[The Emergent Physical Laws & Academic Bibliography](Verification/Physical_Laws_Bibliography_and_Sources.md)** — Verified citations, DOIs, and primary historical sources for the emergent physical laws (Laws 1–18).
 * **[Type Signatures & API Catalog](Verification/Type_Signatures_and_API_Catalog.md)** — Dynamically generated, authoritative reference of all records, algebraic data types, and state transitions.
 
 ---
@@ -91,6 +91,9 @@ Every chapter in this wiki is an **executable Literate Idris 2 module** that pro
 * [Law 17: Discrete Chiral Anomaly & Atiyah-Singer Index](Geometry/Discrete_Chiral_Anomaly_and_Atiyah_Singer_Index_Theorem.md)
 * [Tier 6 Macromolecules & Chiral Stereochemistry](Geometry/Tier6_Macromolecules_and_Chiral_Stereochemistry.md)
 * [Rational Kepler Laws & Toroidal Celestial Mechanics](Geometry/Rational_Kepler_Laws_and_Toroidal_Orbits.md)
+* [Constructive Wasserstein Metric & Optimal Transport](Geometry/Constructive_Wasserstein_and_Optimal_Transport.md)
+* [Discrete Quantum Relative Entropy & Amari Geometry](Geometry/Discrete_Quantum_Relative_Entropy_and_Amari_Geometry.md)
+* [Law 18: Discrete Cosmic Genesis & Relic Freeze-Out](Geometry/Law18_Discrete_Cosmic_Genesis_and_Relic_Freeze_Out.md)
 
 ### [3. Evolutionary Dynamics & Law Encoding](Evolution/Index.md)
 * [Pre-Geometric Genesis (The vm = 0 Void)](Evolution/Pre_Geometric_Genesis.md)

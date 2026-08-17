@@ -3,9 +3,9 @@
 **Literate Documentation, Formal Specifications, and Property Verification Suite for [Idris2-Universe2](https://github.com/justinkelly-ie/Idris2-Universe2).**
 
 [![Idris2](https://img.shields.io/badge/Idris2-Verified_Wiki-blue.svg)](https://github.com/idris-lang/Idris2)
-[![Macro Audits](https://img.shields.io/badge/Elaborator_Macros-46_Verified-brightgreen.svg)]()
-[![Tests](https://img.shields.io/badge/Runtime_Tests-96_Passed-success.svg)]()
-[![Literate Chapters](https://img.shields.io/badge/Literate_Chapters-93_Compiled-purple.svg)]()
+[![Macro Audits](https://img.shields.io/badge/Elaborator_Macros-50_Verified-brightgreen.svg)]()
+[![Tests](https://img.shields.io/badge/Runtime_Tests-100_Passed-success.svg)]()
+[![Literate Chapters](https://img.shields.io/badge/Literate_Chapters-96_Compiled-purple.svg)]()
 
 ---
 
@@ -17,7 +17,7 @@ All physical invariants, conservation theorems, and geometric classifications ar
 
 ### 🗺️ Quick Reference & Catalogs
 * **[The Universal Rosetta Stone](Library/Wiki/Foundations/Universal_Rosetta_Stone.md)** — Comparative mapping across Finite Mathematics, Cosmological Physics, and Idris 2 QTT.
-* **[Physical Laws & Academic Bibliography](Library/Wiki/Verification/Physical_Laws_Bibliography_and_Sources.md)** — Verified citations, DOIs, and primary literature for all 17 emergent physical laws.
+* **[The Emergent Physical Laws & Academic Bibliography](Library/Wiki/Verification/Physical_Laws_Bibliography_and_Sources.md)** — Verified citations, DOIs, and primary literature for all emergent physical laws (Laws 1–18).
 * **[Type Signatures & API Catalog](Library/Wiki/Verification/Type_Signatures_and_API_Catalog.md)** — Dynamically generated, authoritative index of all records, data types, and primary state transitions.
 
 ---
@@ -30,7 +30,7 @@ The documentation is organized into 5 thematic sections:
 Axiomatic box arithmetic, signed integers as difference pairs (Pixels), nilpotent dual numbers, multiset algebras, and quantum measurement foundations.
 
 ### [2. Spacetime & Geometry](Library/Wiki/Geometry/Index.md)
-The 4 fundamental geometries, 17 emergent physical laws, Grassmann cochain exterior calculus, Yang-Mills gauge theories, macromolecular bonding, and non-equilibrium thermodynamics.
+The 4 fundamental geometries, the emergent physical laws (Laws 1–18), Grassmann cochain exterior calculus, Yang-Mills gauge theories, macromolecular bonding, and non-equilibrium thermodynamics.
 
 ### [3. Evolutionary Dynamics & Law Encoding](Library/Wiki/Evolution/Index.md)
 Pre-geometric genesis, dark matter law accumulation, cyclotomic polynomial division, linear QTT state pipelines, and cyclic cosmological expansion.

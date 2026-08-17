@@ -1,6 +1,6 @@
-# 📚 Physical Laws, Foundational Principles & Academic Bibliography
+# 📚 The Emergent Physical Laws, Foundational Principles & Academic Bibliography
 
-This document provides a **verified, factual academic bibliography** of the primary sources underpinning the 17 physical laws and constructive mathematical foundations formalized in `Idris2-Universe2`.
+This document provides a **verified, factual academic bibliography** of the primary sources underpinning the emergent physical laws and constructive mathematical foundations formalized in `Idris2-Universe2`.
 
 Every citation includes authentic historical authors, dates, journal publication details, and official DOI / archival links alongside its constructive discrete translation.
 
@@ -8,7 +8,7 @@ Every citation includes authentic historical authors, dates, journal publication
 
 ## 📑 Table of Contents
 
-- [The 17 Emergent Physical Laws](#the-17-emergent-physical-laws)
+- [The Emergent Physical Laws](#the-emergent-physical-laws)
   - [Law 1: Discrete Noether Momentum Conservation](#law-1-discrete-noether-momentum-conservation)
   - [Law 2: Discrete Boltzmann Distribution & Free Energy](#law-2-discrete-boltzmann-distribution--free-energy)
   - [Law 3: Discrete Casimir Effect & Vacuum Density](#law-3-discrete-casimir-effect--vacuum-density)
@@ -26,15 +26,19 @@ Every citation includes authentic historical authors, dates, journal publication
   - [Law 15: Discrete Jarzynski Equality & Non-Equilibrium Work](#law-15-discrete-jarzynski-equality--non-equilibrium-work)
   - [Law 16: Discrete Wheeler-DeWitt Constraint & Cosmic Wavefunction](#law-16-discrete-wheeler-dewitt-constraint--cosmic-wavefunction)
   - [Law 17: Discrete Chiral Anomaly & Atiyah-Singer Index](#law-17-discrete-chiral-anomaly--atiyah-singer-index)
+  - [Law 18: Discrete Cosmic Genesis & Primordial Relic Freeze-Out](#law-18-discrete-cosmic-genesis--primordial-relic-freeze-out)
 - [Foundational Mathematical & Information Principles](#foundational-mathematical--information-principles)
   - [Box Arithmetic & Constructive Finitism](#box-arithmetic--constructive-finitism)
   - [Rational Trigonometry & Conic Celestial Mechanics](#rational-trigonometry--conic-celestial-mechanics)
   - [Information Theory & Shannon-Huffman Prefix Codes](#information-theory--shannon-huffman-prefix-codes)
   - [Yang-Mills Gauge Theory & Lattice Wilson Loops](#yang-mills-gauge-theory--lattice-wilson-loops)
+  - [Optimal Transport & Wasserstein Distances](#optimal-transport--wasserstein-distances)
+  - [Quantum Relative Entropy & Information Divergence](#quantum-relative-entropy--information-divergence)
+  - [Differential Information Geometry & Amari Dually Flat Manifolds](#differential-information-geometry--amari-dually-flat-manifolds)
 
 ---
 
-## 🌌 The 17 Emergent Physical Laws
+## 🌌 The Emergent Physical Laws
 
 ### Law 1: Discrete Noether Momentum Conservation
 * **Original Historical Publication (German)**:
