@@ -43,6 +43,7 @@ This document provides an **automatically generated, authoritative reference** f
   - [`Math.DiscreteBoltzmannDistribution`](#mod-math-discreteboltzmanndistribution)
   - [`Math.DiscreteCasimirEffect`](#mod-math-discretecasimireffect)
   - [`Math.DiscreteChiralAnomaly`](#mod-math-discretechiralanomaly)
+  - [`Math.DiscreteCosmicGenesis`](#mod-math-discretecosmicgenesis)
   - [`Math.DiscreteDiracSpinor`](#mod-math-discretediracspinor)
   - [`Math.DiscreteHolographicBound`](#mod-math-discreteholographicbound)
   - [`Math.DiscreteJarzynskiEquality`](#mod-math-discretejarzynskiequality)
@@ -599,6 +600,23 @@ record CavityBoundary where
 ---
 
 ### <a id="mod-math-discretechiralanomaly"></a>Module `Math.DiscreteChiralAnomaly`
+
+[↑ Back to Top](#table-of-contents)
+
+---
+
+### <a id="mod-math-discretecosmicgenesis"></a>Module `Math.DiscreteCosmicGenesis`
+
+#### 📦 Records
+
+```idris
+record GenesisState where
+  constructor MkGenesisState
+  vmTokens     : BoxInt
+  deSlots      : Nat
+  dmSlots      : Nat
+  masterBudget : Nat
+```
 
 [↑ Back to Top](#table-of-contents)
 

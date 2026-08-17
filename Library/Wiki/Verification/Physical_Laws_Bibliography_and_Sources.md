@@ -205,6 +205,18 @@ Every citation includes authentic historical authors, dates, journal publication
 
 ---
 
+### Law 18: Discrete Cosmic Genesis & Primordial Relic Freeze-Out
+* **Historical Sources**:
+  - Alpher, Ralph A., Bethe, Hans, & Gamow, George (1948). *"The Origin of Chemical Elements"*. *Physical Review*, 73(7): 803–804. [DOI: 10.1103/PhysRev.73.803](https://doi.org/10.1103/PhysRev.73.803)
+  - Sakharov, Andrei D. (1967). *"Violation of CP Invariance, C Asymmetry, and Baryon Asymmetry of the Universe"*. *JETP Letters*, 5: 24–27.
+  - Kolb, Edward W. & Turner, Michael S. (1990). *The Early Universe*. Frontiers in Physics, Addison-Wesley. ISBN: 978-0201626742.
+  - Landauer, Rolf (1961). *"Irreversibility and Heat Generation in the Computing Process"*. *IBM J. Res. Dev.*, 5(3): 183–191. [DOI: 10.1147/rd.53.0183](https://doi.org/10.1147/rd.53.0183)
+* **Constructive Idris 2 Implementation**:
+  - Module: [`Math.DiscreteCosmicGenesis`](file:///var/home/justin/Projects/Idris2-Universe2/src/Math/DiscreteCosmicGenesis.idr) / [`Geometry.Law18_Discrete_Cosmic_Genesis_and_Relic_Freeze_Out`](file:///var/home/justin/Projects/Idris2-Universe2-Wiki/Library/Wiki/Geometry/Law18_Discrete_Cosmic_Genesis_and_Relic_Freeze_Out.md)
+  - Theorem: Primorial 210 ground state ($VM=0, DE=128, DM=55$), Substrate out-of-equilibrium causal arrow ($g_{22}=0$), complete antimatter exhaustion into photon radiation bath ($N_\gamma$), and unidirectional Landauer dissipation into the Dark Matter ledger.
+
+---
+
 ## 📐 Foundational Mathematical & Information Principles
 
 ### Box Arithmetic & Constructive Finitism

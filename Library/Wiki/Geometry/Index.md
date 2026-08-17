@@ -60,4 +60,6 @@ This section derives the 4 fundamental geometries, 17 emergent physical laws, ga
 * [Rational Kepler Laws & Toroidal Celestial Mechanics](Rational_Kepler_Laws_and_Toroidal_Orbits.md) — Exact orbital eccentricity spread $s_e = Q_c / Q_a$, invariant swept Quadrea $\Delta \mathcal{A} = 4 L_z^2$, and the Quadrance Harmonic Law $T^4 = K \cdot Q_a^3$.
 * [Constructive Wasserstein Metric & Optimal Transport](Constructive_Wasserstein_and_Optimal_Transport.md) — Exact discrete Earth Mover's Distance ($W_1$), cumulative difference metric, and formal metric axiom proofs.
 * [Discrete Quantum Relative Entropy & Amari Geometry](Discrete_Quantum_Relative_Entropy_and_Amari_Geometry.md) — Multiset Umegaki/KL divergence, Klein's inequality, and the Generalized Pythagorean Theorem for dually flat information connections.
+* [Law 18: Discrete Cosmic Genesis & Relic Freeze-Out](Law18_Discrete_Cosmic_Genesis_and_Relic_Freeze_Out.md) — Primorial 210 ground state ($VM=0$), Substrate non-equilibrium drive, complete antimatter exhaustion into photons, and unidirectional Landauer dissipation into the Dark Matter ledger.
+
 
