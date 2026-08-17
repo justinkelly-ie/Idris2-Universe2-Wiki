@@ -7,86 +7,86 @@ This document provides an **automatically generated, authoritative reference** f
 
 ---
 
-## 📑 Table of Contents
+## <a id="table-of-contents"></a>📑 Table of Contents
 
-- [1. Core Foundations & Data Structures](#1-core-foundations--data-structures)
-  - [`Core.BoxInt`](#coreboxint)
-  - [`Core.Multiset`](#coremultiset)
-  - [`Core.MultisetTree`](#coremultisettree)
-  - [`Core.OnSeq`](#coreonseq)
-  - [`Core.Polynomial`](#corepolynomial)
-  - [`Core.Polynumber`](#corepolynumber)
-  - [`Core.UnixelFraction`](#coreunixelfraction)
-  - [`Core.VexelMaxel`](#corevexelmaxel)
-- [2. Spacetime, Geometries & Metrics](#2-spacetime,-geometries--metrics)
-  - [`Derivation.PureGeometricClassifier`](#derivationpuregeometricclassifier)
-  - [`Geometry.GrassmannCalculus`](#geometrygrassmanncalculus)
-  - [`Geometry.InformationGeometry`](#geometryinformationgeometry)
-  - [`Geometry.LatticeTopology`](#geometrylatticetopology)
-  - [`Math.FourGeometries`](#mathfourgeometries)
-  - [`Math.LinAlgebra.BilinearProduct`](#mathlinalgebrabilinearproduct)
-  - [`Math.LinAlgebra.MetricTensor`](#mathlinalgebrametrictensor)
-  - [`Math.LinAlgebra.TernaryClassifier`](#mathlinalgebraternaryclassifier)
-- [3. Cosmological State & Linear Evolution](#3-cosmological-state--linear-evolution)
-  - [`Evolution.Bootstrap`](#evolutionbootstrap)
-  - [`Evolution.Contraction`](#evolutioncontraction)
-  - [`Evolution.Expansion`](#evolutionexpansion)
-  - [`Evolution.Init`](#evolutioninit)
-  - [`Evolution.LinearPipeline`](#evolutionlinearpipeline)
-  - [`Evolution.State`](#evolutionstate)
-  - [`Evolution.StructuralAccounting`](#evolutionstructuralaccounting)
-- [4. Emergent Physical Laws & Gauge Theories](#4-emergent-physical-laws--gauge-theories)
-  - [`Math.AharonovBohmHolonomy`](#mathaharonovbohmholonomy)
-  - [`Math.CliffordAlgebra`](#mathcliffordalgebra)
-  - [`Math.ConstructiveBaryogenesis`](#mathconstructivebaryogenesis)
-  - [`Math.DiscreteActionPrinciple`](#mathdiscreteactionprinciple)
-  - [`Math.DiscreteBoltzmannDistribution`](#mathdiscreteboltzmanndistribution)
-  - [`Math.DiscreteCasimirEffect`](#mathdiscretecasimireffect)
-  - [`Math.DiscreteChiralAnomaly`](#mathdiscretechiralanomaly)
-  - [`Math.DiscreteDiracSpinor`](#mathdiscretediracspinor)
-  - [`Math.DiscreteHolographicBound`](#mathdiscreteholographicbound)
-  - [`Math.DiscreteJarzynskiEquality`](#mathdiscretejarzynskiequality)
-  - [`Math.DiscreteLandauerPrinciple`](#mathdiscretelandauerprinciple)
-  - [`Math.DiscretePoyntingTheorem`](#mathdiscretepoyntingtheorem)
-  - [`Math.DiscreteWheelerDeWitt`](#mathdiscretewheelerdewitt)
-  - [`Math.FineStructure`](#mathfinestructure)
-  - [`Math.FractionalQuantumHall`](#mathfractionalquantumhall)
-  - [`Math.GalacticRotationCurve`](#mathgalacticrotationcurve)
-  - [`Math.GaugeSpinorCoupling`](#mathgaugespinorcoupling)
-  - [`Math.GravitationalWaveDynamics`](#mathgravitationalwavedynamics)
-  - [`Math.HelmholtzFreeEnergy`](#mathhelmholtzfreeenergy)
-  - [`Math.Infinitesimal`](#mathinfinitesimal)
-  - [`Math.PauliExclusion`](#mathpauliexclusion)
-  - [`Math.QuantumTransition`](#mathquantumtransition)
-  - [`Math.RGDecimator`](#mathrgdecimator)
-  - [`Math.RationalTrig`](#mathrationaltrig)
-  - [`Math.RenormalizationInformationFlow`](#mathrenormalizationinformationflow)
-  - [`Math.ShannonHuffmanOptimality`](#mathshannonhuffmanoptimality)
-  - [`Math.SuperconductingFluxQuantization`](#mathsuperconductingfluxquantization)
-  - [`Math.TopologicalChernNumber`](#mathtopologicalchernnumber)
-  - [`Math.ToroidalAstrodynamics`](#mathtoroidalastrodynamics)
-  - [`Math.WilsonPolyhedra`](#mathwilsonpolyhedra)
-- [5. Compound Structures & Chemical Networks](#5-compound-structures--chemical-networks)
-  - [`Compound.AlphaReplication`](#compoundalphareplication)
-  - [`Compound.HadronicConfinement`](#compoundhadronicconfinement)
-  - [`Compound.HydrogenBonding`](#compoundhydrogenbonding)
-  - [`Compound.LinearEpsilonRouting`](#compoundlinearepsilonrouting)
-  - [`Compound.MacromolecularChirality`](#compoundmacromolecularchirality)
-  - [`Compound.MolecularBonding`](#compoundmolecularbonding)
-  - [`Compound.PlasmaRecombination`](#compoundplasmarecombination)
-  - [`Compound.StellarNucleosynthesis`](#compoundstellarnucleosynthesis)
-  - [`Compound.SymplecticIntegrator`](#compoundsymplecticintegrator)
-  - [`Compound.VelocityLensing`](#compoundvelocitylensing)
-  - [`Compound.WatsonCrickBasePairing`](#compoundwatsoncrickbasepairing)
-- [6. Elaborator Reflection & Invariant Macros](#6-elaborator-reflection--invariant-macros)
-  - [`Reflect.InvariantAuditor`](#reflectinvariantauditor)
-  - [`Reflect.PermutationSolver`](#reflectpermutationsolver)
+- [**1. Core Foundations & Data Structures**](#section-1)
+  - [`Core.BoxInt`](#mod-core-boxint)
+  - [`Core.Multiset`](#mod-core-multiset)
+  - [`Core.MultisetTree`](#mod-core-multisettree)
+  - [`Core.OnSeq`](#mod-core-onseq)
+  - [`Core.Polynomial`](#mod-core-polynomial)
+  - [`Core.Polynumber`](#mod-core-polynumber)
+  - [`Core.UnixelFraction`](#mod-core-unixelfraction)
+  - [`Core.VexelMaxel`](#mod-core-vexelmaxel)
+- [**2. Spacetime, Geometries & Metrics**](#section-2)
+  - [`Derivation.PureGeometricClassifier`](#mod-derivation-puregeometricclassifier)
+  - [`Geometry.GrassmannCalculus`](#mod-geometry-grassmanncalculus)
+  - [`Geometry.InformationGeometry`](#mod-geometry-informationgeometry)
+  - [`Geometry.LatticeTopology`](#mod-geometry-latticetopology)
+  - [`Math.FourGeometries`](#mod-math-fourgeometries)
+  - [`Math.LinAlgebra.BilinearProduct`](#mod-math-linalgebra-bilinearproduct)
+  - [`Math.LinAlgebra.MetricTensor`](#mod-math-linalgebra-metrictensor)
+  - [`Math.LinAlgebra.TernaryClassifier`](#mod-math-linalgebra-ternaryclassifier)
+- [**3. Cosmological State & Linear Evolution**](#section-3)
+  - [`Evolution.Bootstrap`](#mod-evolution-bootstrap)
+  - [`Evolution.Contraction`](#mod-evolution-contraction)
+  - [`Evolution.Expansion`](#mod-evolution-expansion)
+  - [`Evolution.Init`](#mod-evolution-init)
+  - [`Evolution.LinearPipeline`](#mod-evolution-linearpipeline)
+  - [`Evolution.State`](#mod-evolution-state)
+  - [`Evolution.StructuralAccounting`](#mod-evolution-structuralaccounting)
+- [**4. Emergent Physical Laws & Gauge Theories**](#section-4)
+  - [`Math.AharonovBohmHolonomy`](#mod-math-aharonovbohmholonomy)
+  - [`Math.CliffordAlgebra`](#mod-math-cliffordalgebra)
+  - [`Math.ConstructiveBaryogenesis`](#mod-math-constructivebaryogenesis)
+  - [`Math.DiscreteActionPrinciple`](#mod-math-discreteactionprinciple)
+  - [`Math.DiscreteBoltzmannDistribution`](#mod-math-discreteboltzmanndistribution)
+  - [`Math.DiscreteCasimirEffect`](#mod-math-discretecasimireffect)
+  - [`Math.DiscreteChiralAnomaly`](#mod-math-discretechiralanomaly)
+  - [`Math.DiscreteDiracSpinor`](#mod-math-discretediracspinor)
+  - [`Math.DiscreteHolographicBound`](#mod-math-discreteholographicbound)
+  - [`Math.DiscreteJarzynskiEquality`](#mod-math-discretejarzynskiequality)
+  - [`Math.DiscreteLandauerPrinciple`](#mod-math-discretelandauerprinciple)
+  - [`Math.DiscretePoyntingTheorem`](#mod-math-discretepoyntingtheorem)
+  - [`Math.DiscreteWheelerDeWitt`](#mod-math-discretewheelerdewitt)
+  - [`Math.FineStructure`](#mod-math-finestructure)
+  - [`Math.FractionalQuantumHall`](#mod-math-fractionalquantumhall)
+  - [`Math.GalacticRotationCurve`](#mod-math-galacticrotationcurve)
+  - [`Math.GaugeSpinorCoupling`](#mod-math-gaugespinorcoupling)
+  - [`Math.GravitationalWaveDynamics`](#mod-math-gravitationalwavedynamics)
+  - [`Math.HelmholtzFreeEnergy`](#mod-math-helmholtzfreeenergy)
+  - [`Math.Infinitesimal`](#mod-math-infinitesimal)
+  - [`Math.PauliExclusion`](#mod-math-pauliexclusion)
+  - [`Math.QuantumTransition`](#mod-math-quantumtransition)
+  - [`Math.RGDecimator`](#mod-math-rgdecimator)
+  - [`Math.RationalTrig`](#mod-math-rationaltrig)
+  - [`Math.RenormalizationInformationFlow`](#mod-math-renormalizationinformationflow)
+  - [`Math.ShannonHuffmanOptimality`](#mod-math-shannonhuffmanoptimality)
+  - [`Math.SuperconductingFluxQuantization`](#mod-math-superconductingfluxquantization)
+  - [`Math.TopologicalChernNumber`](#mod-math-topologicalchernnumber)
+  - [`Math.ToroidalAstrodynamics`](#mod-math-toroidalastrodynamics)
+  - [`Math.WilsonPolyhedra`](#mod-math-wilsonpolyhedra)
+- [**5. Compound Structures & Chemical Networks**](#section-5)
+  - [`Compound.AlphaReplication`](#mod-compound-alphareplication)
+  - [`Compound.HadronicConfinement`](#mod-compound-hadronicconfinement)
+  - [`Compound.HydrogenBonding`](#mod-compound-hydrogenbonding)
+  - [`Compound.LinearEpsilonRouting`](#mod-compound-linearepsilonrouting)
+  - [`Compound.MacromolecularChirality`](#mod-compound-macromolecularchirality)
+  - [`Compound.MolecularBonding`](#mod-compound-molecularbonding)
+  - [`Compound.PlasmaRecombination`](#mod-compound-plasmarecombination)
+  - [`Compound.StellarNucleosynthesis`](#mod-compound-stellarnucleosynthesis)
+  - [`Compound.SymplecticIntegrator`](#mod-compound-symplecticintegrator)
+  - [`Compound.VelocityLensing`](#mod-compound-velocitylensing)
+  - [`Compound.WatsonCrickBasePairing`](#mod-compound-watsoncrickbasepairing)
+- [**6. Elaborator Reflection & Invariant Macros**](#section-6)
+  - [`Reflect.InvariantAuditor`](#mod-reflect-invariantauditor)
+  - [`Reflect.PermutationSolver`](#mod-reflect-permutationsolver)
 
 ---
 
-## 1. Core Foundations & Data Structures
+## <a id="section-1"></a>1. Core Foundations & Data Structures
 
-### Module `Core.BoxInt`
+### <a id="mod-core-boxint"></a>Module `Core.BoxInt`
 
 #### 📦 Records
 
@@ -96,9 +96,11 @@ record BoxInt where
   value : Integer
 ```
 
+[↑ Back to Top](#table-of-contents)
+
 ---
 
-### Module `Core.Multiset`
+### <a id="mod-core-multiset"></a>Module `Core.Multiset`
 
 #### 📦 Records
 
@@ -152,9 +154,11 @@ data WildNat : (0 spec : BoxSpec) -> Type where
 ||| Tallies the physical count of empty box tokens inside a WildNat.
 ```
 
+[↑ Back to Top](#table-of-contents)
+
 ---
 
-### Module `Core.MultisetTree`
+### <a id="mod-core-multisettree"></a>Module `Core.MultisetTree`
 
 #### 🏷️ Algebraic Data Types
 
@@ -164,9 +168,11 @@ data MultisetTree a =
   | Node (MultisetTree a) a Nat (MultisetTree a)
 ```
 
+[↑ Back to Top](#table-of-contents)
+
 ---
 
-### Module `Core.OnSeq`
+### <a id="mod-core-onseq"></a>Module `Core.OnSeq`
 
 #### 📦 Records
 
@@ -186,13 +192,17 @@ record Clip a where
   elements : List a
 ```
 
----
-
-### Module `Core.Polynomial`
+[↑ Back to Top](#table-of-contents)
 
 ---
 
-### Module `Core.Polynumber`
+### <a id="mod-core-polynomial"></a>Module `Core.Polynomial`
+
+[↑ Back to Top](#table-of-contents)
+
+---
+
+### <a id="mod-core-polynumber"></a>Module `Core.Polynumber`
 
 #### 📦 Records
 
@@ -209,9 +219,11 @@ record Polynumber where
   coeffs : List BoxInt -- coeffs[k] is coefficient of x^k
 ```
 
+[↑ Back to Top](#table-of-contents)
+
 ---
 
-### Module `Core.UnixelFraction`
+### <a id="mod-core-unixelfraction"></a>Module `Core.UnixelFraction`
 
 #### 📦 Records
 
@@ -239,9 +251,11 @@ record UnixelFraction where
 data SternBrocotBranch = BranchL | BranchR
 ```
 
+[↑ Back to Top](#table-of-contents)
+
 ---
 
-### Module `Core.VexelMaxel`
+### <a id="mod-core-vexelmaxel"></a>Module `Core.VexelMaxel`
 
 #### 📦 Records
 
@@ -332,23 +346,31 @@ record MagicMaxel (n : Nat) where
 data AminoAcid = Methionine | Alanine | Glycine | Serine | StopCodon | UnknownAcid
 ```
 
----
-
-## 2. Spacetime, Geometries & Metrics
-
-### Module `Derivation.PureGeometricClassifier`
+[↑ Back to Top](#table-of-contents)
 
 ---
 
-### Module `Geometry.GrassmannCalculus`
+## <a id="section-2"></a>2. Spacetime, Geometries & Metrics
+
+### <a id="mod-derivation-puregeometricclassifier"></a>Module `Derivation.PureGeometricClassifier`
+
+[↑ Back to Top](#table-of-contents)
 
 ---
 
-### Module `Geometry.InformationGeometry`
+### <a id="mod-geometry-grassmanncalculus"></a>Module `Geometry.GrassmannCalculus`
+
+[↑ Back to Top](#table-of-contents)
 
 ---
 
-### Module `Geometry.LatticeTopology`
+### <a id="mod-geometry-informationgeometry"></a>Module `Geometry.InformationGeometry`
+
+[↑ Back to Top](#table-of-contents)
+
+---
+
+### <a id="mod-geometry-latticetopology"></a>Module `Geometry.LatticeTopology`
 
 #### 📦 Records
 
@@ -368,9 +390,11 @@ data CardinalDir = DirEast | DirWest | DirNorth | DirSouth | DirUp | DirDown
 ||| Computes the adjacent face neighbor coordinate along a cardinal direction.
 ```
 
+[↑ Back to Top](#table-of-contents)
+
 ---
 
-### Module `Math.FourGeometries`
+### <a id="mod-math-fourgeometries"></a>Module `Math.FourGeometries`
 
 #### 🏷️ Algebraic Data Types
 
@@ -382,9 +406,11 @@ data FundamentalGeometry =
   | SubstrateGeom
 ```
 
+[↑ Back to Top](#table-of-contents)
+
 ---
 
-### Module `Math.LinAlgebra.BilinearProduct`
+### <a id="mod-math-linalgebra-bilinearproduct"></a>Module `Math.LinAlgebra.BilinearProduct`
 
 #### 📦 Records
 
@@ -395,13 +421,17 @@ record InfinitesimalStep2D where
   dy : Maxel
 ```
 
----
-
-### Module `Math.LinAlgebra.MetricTensor`
+[↑ Back to Top](#table-of-contents)
 
 ---
 
-### Module `Math.LinAlgebra.TernaryClassifier`
+### <a id="mod-math-linalgebra-metrictensor"></a>Module `Math.LinAlgebra.MetricTensor`
+
+[↑ Back to Top](#table-of-contents)
+
+---
+
+### <a id="mod-math-linalgebra-ternaryclassifier"></a>Module `Math.LinAlgebra.TernaryClassifier`
 
 #### 🏷️ Algebraic Data Types
 
@@ -416,31 +446,43 @@ data MetricSignature =
   | SigParabolic   -- det(g) == 0 (Degenerate / Spread / Boolean)
 ```
 
----
-
-## 3. Cosmological State & Linear Evolution
-
-### Module `Evolution.Bootstrap`
+[↑ Back to Top](#table-of-contents)
 
 ---
 
-### Module `Evolution.Contraction`
+## <a id="section-3"></a>3. Cosmological State & Linear Evolution
+
+### <a id="mod-evolution-bootstrap"></a>Module `Evolution.Bootstrap`
+
+[↑ Back to Top](#table-of-contents)
 
 ---
 
-### Module `Evolution.Expansion`
+### <a id="mod-evolution-contraction"></a>Module `Evolution.Contraction`
+
+[↑ Back to Top](#table-of-contents)
 
 ---
 
-### Module `Evolution.Init`
+### <a id="mod-evolution-expansion"></a>Module `Evolution.Expansion`
+
+[↑ Back to Top](#table-of-contents)
 
 ---
 
-### Module `Evolution.LinearPipeline`
+### <a id="mod-evolution-init"></a>Module `Evolution.Init`
+
+[↑ Back to Top](#table-of-contents)
 
 ---
 
-### Module `Evolution.State`
+### <a id="mod-evolution-linearpipeline"></a>Module `Evolution.LinearPipeline`
+
+[↑ Back to Top](#table-of-contents)
+
+---
+
+### <a id="mod-evolution-state"></a>Module `Evolution.State`
 
 #### 📦 Records
 
@@ -464,15 +506,19 @@ record CosmicMultiset where
 ||| Calculates total active state energy across the cosmic multiset.
 ```
 
----
-
-### Module `Evolution.StructuralAccounting`
+[↑ Back to Top](#table-of-contents)
 
 ---
 
-## 4. Emergent Physical Laws & Gauge Theories
+### <a id="mod-evolution-structuralaccounting"></a>Module `Evolution.StructuralAccounting`
 
-### Module `Math.AharonovBohmHolonomy`
+[↑ Back to Top](#table-of-contents)
+
+---
+
+## <a id="section-4"></a>4. Emergent Physical Laws & Gauge Theories
+
+### <a id="mod-math-aharonovbohmholonomy"></a>Module `Math.AharonovBohmHolonomy`
 
 #### 🏷️ Algebraic Data Types
 
@@ -480,9 +526,11 @@ record CosmicMultiset where
 data GaussianLink = PlusOne | PlusI | MinusOne | MinusI
 ```
 
+[↑ Back to Top](#table-of-contents)
+
 ---
 
-### Module `Math.CliffordAlgebra`
+### <a id="mod-math-cliffordalgebra"></a>Module `Math.CliffordAlgebra`
 
 #### 📦 Records
 
@@ -495,9 +543,11 @@ record Multivector where
   trivectorPart: Boxel
 ```
 
+[↑ Back to Top](#table-of-contents)
+
 ---
 
-### Module `Math.ConstructiveBaryogenesis`
+### <a id="mod-math-constructivebaryogenesis"></a>Module `Math.ConstructiveBaryogenesis`
 
 #### 📦 Records
 
@@ -509,13 +559,17 @@ record BaryonState where
   photonTokens : BoxInt
 ```
 
----
-
-### Module `Math.DiscreteActionPrinciple`
+[↑ Back to Top](#table-of-contents)
 
 ---
 
-### Module `Math.DiscreteBoltzmannDistribution`
+### <a id="mod-math-discreteactionprinciple"></a>Module `Math.DiscreteActionPrinciple`
+
+[↑ Back to Top](#table-of-contents)
+
+---
+
+### <a id="mod-math-discreteboltzmanndistribution"></a>Module `Math.DiscreteBoltzmannDistribution`
 
 #### 📦 Records
 
@@ -526,9 +580,11 @@ record EnergyLevel where
   multiplicity : Nat
 ```
 
+[↑ Back to Top](#table-of-contents)
+
 ---
 
-### Module `Math.DiscreteCasimirEffect`
+### <a id="mod-math-discretecasimireffect"></a>Module `Math.DiscreteCasimirEffect`
 
 #### 📦 Records
 
@@ -538,13 +594,17 @@ record CavityBoundary where
   plateSeparation : Nat
 ```
 
----
-
-### Module `Math.DiscreteChiralAnomaly`
+[↑ Back to Top](#table-of-contents)
 
 ---
 
-### Module `Math.DiscreteDiracSpinor`
+### <a id="mod-math-discretechiralanomaly"></a>Module `Math.DiscreteChiralAnomaly`
+
+[↑ Back to Top](#table-of-contents)
+
+---
+
+### <a id="mod-math-discretediracspinor"></a>Module `Math.DiscreteDiracSpinor`
 
 #### 📦 Records
 
@@ -564,13 +624,17 @@ record ChiralComponents where
   rightHanded : BoxInt
 ```
 
----
-
-### Module `Math.DiscreteHolographicBound`
+[↑ Back to Top](#table-of-contents)
 
 ---
 
-### Module `Math.DiscreteJarzynskiEquality`
+### <a id="mod-math-discreteholographicbound"></a>Module `Math.DiscreteHolographicBound`
+
+[↑ Back to Top](#table-of-contents)
+
+---
+
+### <a id="mod-math-discretejarzynskiequality"></a>Module `Math.DiscreteJarzynskiEquality`
 
 #### 📦 Records
 
@@ -581,9 +645,11 @@ record NonEquilibriumPath where
   pathWeight : Nat
 ```
 
+[↑ Back to Top](#table-of-contents)
+
 ---
 
-### Module `Math.DiscreteLandauerPrinciple`
+### <a id="mod-math-discretelandauerprinciple"></a>Module `Math.DiscreteLandauerPrinciple`
 
 #### 📦 Records
 
@@ -595,9 +661,11 @@ record BitMemoryState where
   sinkEnergy   : BoxInt
 ```
 
+[↑ Back to Top](#table-of-contents)
+
 ---
 
-### Module `Math.DiscretePoyntingTheorem`
+### <a id="mod-math-discretepoyntingtheorem"></a>Module `Math.DiscretePoyntingTheorem`
 
 #### 📦 Records
 
@@ -610,17 +678,23 @@ record DiscreteEMCell where
   jouleWork      : BoxInt
 ```
 
----
-
-### Module `Math.DiscreteWheelerDeWitt`
+[↑ Back to Top](#table-of-contents)
 
 ---
 
-### Module `Math.FineStructure`
+### <a id="mod-math-discretewheelerdewitt"></a>Module `Math.DiscreteWheelerDeWitt`
+
+[↑ Back to Top](#table-of-contents)
 
 ---
 
-### Module `Math.FractionalQuantumHall`
+### <a id="mod-math-finestructure"></a>Module `Math.FineStructure`
+
+[↑ Back to Top](#table-of-contents)
+
+---
+
+### <a id="mod-math-fractionalquantumhall"></a>Module `Math.FractionalQuantumHall`
 
 #### 📦 Records
 
@@ -631,9 +705,11 @@ record LaughlinState where
   fillingDenominator : Nat
 ```
 
+[↑ Back to Top](#table-of-contents)
+
 ---
 
-### Module `Math.GalacticRotationCurve`
+### <a id="mod-math-galacticrotationcurve"></a>Module `Math.GalacticRotationCurve`
 
 #### 📦 Records
 
@@ -644,9 +720,11 @@ record GalacticProfile where
   diskMassSlope  : BoxInt
 ```
 
+[↑ Back to Top](#table-of-contents)
+
 ---
 
-### Module `Math.GaugeSpinorCoupling`
+### <a id="mod-math-gaugespinorcoupling"></a>Module `Math.GaugeSpinorCoupling`
 
 #### 📦 Records
 
@@ -658,9 +736,11 @@ record GaugeCoupledSpinor where
   connectionA : (BoxInt, BoxInt, BoxInt, BoxInt)
 ```
 
+[↑ Back to Top](#table-of-contents)
+
 ---
 
-### Module `Math.GravitationalWaveDynamics`
+### <a id="mod-math-gravitationalwavedynamics"></a>Module `Math.GravitationalWaveDynamics`
 
 #### 📦 Records
 
@@ -671,9 +751,11 @@ record MetricShearTT where
   hCross : BoxInt
 ```
 
+[↑ Back to Top](#table-of-contents)
+
 ---
 
-### Module `Math.HelmholtzFreeEnergy`
+### <a id="mod-math-helmholtzfreeenergy"></a>Module `Math.HelmholtzFreeEnergy`
 
 #### 📦 Records
 
@@ -685,13 +767,17 @@ record CosmicBudgetPartition where
   dmTokens : BoxInt
 ```
 
----
-
-### Module `Math.Infinitesimal`
+[↑ Back to Top](#table-of-contents)
 
 ---
 
-### Module `Math.PauliExclusion`
+### <a id="mod-math-infinitesimal"></a>Module `Math.Infinitesimal`
+
+[↑ Back to Top](#table-of-contents)
+
+---
+
+### <a id="mod-math-pauliexclusion"></a>Module `Math.PauliExclusion`
 
 #### 🏷️ Algebraic Data Types
 
@@ -699,9 +785,11 @@ record CosmicBudgetPartition where
 data FermionOccupancy = Vacant | Occupied
 ```
 
+[↑ Back to Top](#table-of-contents)
+
 ---
 
-### Module `Math.QuantumTransition`
+### <a id="mod-math-quantumtransition"></a>Module `Math.QuantumTransition`
 
 #### 📦 Records
 
@@ -724,9 +812,11 @@ record QuantumOperator where
   matrix : List (Pixel, DualAmplitude)
 ```
 
+[↑ Back to Top](#table-of-contents)
+
 ---
 
-### Module `Math.RGDecimator`
+### <a id="mod-math-rgdecimator"></a>Module `Math.RGDecimator`
 
 #### 📦 Records
 
@@ -745,21 +835,29 @@ record MacroPlaquette where
   totalFlux : BoxInt
 ```
 
----
-
-### Module `Math.RationalTrig`
+[↑ Back to Top](#table-of-contents)
 
 ---
 
-### Module `Math.RenormalizationInformationFlow`
+### <a id="mod-math-rationaltrig"></a>Module `Math.RationalTrig`
+
+[↑ Back to Top](#table-of-contents)
 
 ---
 
-### Module `Math.ShannonHuffmanOptimality`
+### <a id="mod-math-renormalizationinformationflow"></a>Module `Math.RenormalizationInformationFlow`
+
+[↑ Back to Top](#table-of-contents)
 
 ---
 
-### Module `Math.SuperconductingFluxQuantization`
+### <a id="mod-math-shannonhuffmanoptimality"></a>Module `Math.ShannonHuffmanOptimality`
+
+[↑ Back to Top](#table-of-contents)
+
+---
+
+### <a id="mod-math-superconductingfluxquantization"></a>Module `Math.SuperconductingFluxQuantization`
 
 #### 📦 Records
 
@@ -771,9 +869,11 @@ record SuperconductingLoop where
   windingNumber    : BoxInt
 ```
 
+[↑ Back to Top](#table-of-contents)
+
 ---
 
-### Module `Math.TopologicalChernNumber`
+### <a id="mod-math-topologicalchernnumber"></a>Module `Math.TopologicalChernNumber`
 
 #### 📦 Records
 
@@ -786,9 +886,11 @@ record TorusPlaquette where
   berryFluxDenominator : Integer
 ```
 
+[↑ Back to Top](#table-of-contents)
+
 ---
 
-### Module `Math.ToroidalAstrodynamics`
+### <a id="mod-math-toroidalastrodynamics"></a>Module `Math.ToroidalAstrodynamics`
 
 #### 📦 Records
 
@@ -817,9 +919,11 @@ record RationalOrbit where
   orbitalPeriod      : BoxInt -- T
 ```
 
+[↑ Back to Top](#table-of-contents)
+
 ---
 
-### Module `Math.WilsonPolyhedra`
+### <a id="mod-math-wilsonpolyhedra"></a>Module `Math.WilsonPolyhedra`
 
 #### 📦 Records
 
@@ -842,11 +946,13 @@ record WilsonPolyhedron where
   faceDown  : QuantumOperator -- -Z face
 ```
 
+[↑ Back to Top](#table-of-contents)
+
 ---
 
-## 5. Compound Structures & Chemical Networks
+## <a id="section-5"></a>5. Compound Structures & Chemical Networks
 
-### Module `Compound.AlphaReplication`
+### <a id="mod-compound-alphareplication"></a>Module `Compound.AlphaReplication`
 
 #### 📦 Records
 
@@ -858,9 +964,11 @@ record NuclearCluster (k : Nat) where
 ||| Flattens a NuclearCluster into a contiguous (k * 27)-cell Visible Matter vector.
 ```
 
+[↑ Back to Top](#table-of-contents)
+
 ---
 
-### Module `Compound.HadronicConfinement`
+### <a id="mod-compound-hadronicconfinement"></a>Module `Compound.HadronicConfinement`
 
 #### 📦 Records
 
@@ -879,9 +987,11 @@ record HadronState where
 data ColorCharge = RedColor | GreenColor | BlueColor
 ```
 
+[↑ Back to Top](#table-of-contents)
+
 ---
 
-### Module `Compound.HydrogenBonding`
+### <a id="mod-compound-hydrogenbonding"></a>Module `Compound.HydrogenBonding`
 
 #### 📦 Records
 
@@ -905,13 +1015,17 @@ record WaterCluster (n : Nat) where
 ||| In a fully coordinated liquid network, each H2O participates in up to 4 H-bonds (2 donor, 2 acceptor).
 ```
 
----
-
-### Module `Compound.LinearEpsilonRouting`
+[↑ Back to Top](#table-of-contents)
 
 ---
 
-### Module `Compound.MacromolecularChirality`
+### <a id="mod-compound-linearepsilonrouting"></a>Module `Compound.LinearEpsilonRouting`
+
+[↑ Back to Top](#table-of-contents)
+
+---
+
+### <a id="mod-compound-macromolecularchirality"></a>Module `Compound.MacromolecularChirality`
 
 #### 📦 Records
 
@@ -954,9 +1068,11 @@ record Dipeptide where
 data Chirality = LeftHanded | RightHanded | Achiral
 ```
 
+[↑ Back to Top](#table-of-contents)
+
 ---
 
-### Module `Compound.MolecularBonding`
+### <a id="mod-compound-molecularbonding"></a>Module `Compound.MolecularBonding`
 
 #### 📦 Records
 
@@ -1009,9 +1125,11 @@ record Molecule3D where
 data Element = Hydrogen | Carbon | Nitrogen | Oxygen
 ```
 
+[↑ Back to Top](#table-of-contents)
+
 ---
 
-### Module `Compound.PlasmaRecombination`
+### <a id="mod-compound-plasmarecombination"></a>Module `Compound.PlasmaRecombination`
 
 #### 📦 Records
 
@@ -1037,9 +1155,11 @@ record DecoupledGas where
 data ParticleCharge = ProtonPositive | ElectronNegative | NeutralHydrogen
 ```
 
+[↑ Back to Top](#table-of-contents)
+
 ---
 
-### Module `Compound.StellarNucleosynthesis`
+### <a id="mod-compound-stellarnucleosynthesis"></a>Module `Compound.StellarNucleosynthesis`
 
 #### 📦 Records
 
@@ -1068,9 +1188,11 @@ data StellarElement =
   | ElemFe  -- Iron (Z=26, Valence=2, Silicon Burning Peak)
 ```
 
+[↑ Back to Top](#table-of-contents)
+
 ---
 
-### Module `Compound.SymplecticIntegrator`
+### <a id="mod-compound-symplecticintegrator"></a>Module `Compound.SymplecticIntegrator`
 
 #### 📦 Records
 
@@ -1081,13 +1203,17 @@ record PhaseState where
   momentum : Vexel
 ```
 
----
-
-### Module `Compound.VelocityLensing`
+[↑ Back to Top](#table-of-contents)
 
 ---
 
-### Module `Compound.WatsonCrickBasePairing`
+### <a id="mod-compound-velocitylensing"></a>Module `Compound.VelocityLensing`
+
+[↑ Back to Top](#table-of-contents)
+
+---
+
+### <a id="mod-compound-watsoncrickbasepairing"></a>Module `Compound.WatsonCrickBasePairing`
 
 #### 📦 Records
 
@@ -1116,14 +1242,20 @@ record HydrolysisResult where
 data Nucleobase = Adenine | Thymine | Guanine | Cytosine | Uracil
 ```
 
----
-
-## 6. Elaborator Reflection & Invariant Macros
-
-### Module `Reflect.InvariantAuditor`
+[↑ Back to Top](#table-of-contents)
 
 ---
 
-### Module `Reflect.PermutationSolver`
+## <a id="section-6"></a>6. Elaborator Reflection & Invariant Macros
+
+### <a id="mod-reflect-invariantauditor"></a>Module `Reflect.InvariantAuditor`
+
+[↑ Back to Top](#table-of-contents)
+
+---
+
+### <a id="mod-reflect-permutationsolver"></a>Module `Reflect.PermutationSolver`
+
+[↑ Back to Top](#table-of-contents)
 
 ---

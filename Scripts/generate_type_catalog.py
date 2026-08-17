@@ -156,27 +156,29 @@ def generate_catalog(src_dir, output_file):
     md.append("")
     md.append("---")
     md.append("")
-    md.append("## 📑 Table of Contents")
+    md.append("## <a id=\"table-of-contents\"></a>📑 Table of Contents")
     md.append("")
     
-    for cat_name in sorted(categorized.keys()):
-        anchor = cat_name.lower().replace(" ", "-").replace(".", "").replace("&", "")
-        md.append(f"- [{cat_name}](#{anchor})")
+    for cat_idx, cat_name in enumerate(sorted(categorized.keys()), 1):
+        cat_anchor = f"section-{cat_idx}"
+        md.append(f"- [**{cat_name}**](#{cat_anchor})")
         for mod_name in sorted(categorized[cat_name].keys()):
-            mod_anchor = mod_name.lower().replace(".", "")
+            mod_anchor = "mod-" + mod_name.lower().replace(".", "-")
             md.append(f"  - [`{mod_name}`](#{mod_anchor})")
             
     md.append("")
     md.append("---")
     md.append("")
 
-    for cat_name in sorted(categorized.keys()):
-        md.append(f"## {cat_name}")
+    for cat_idx, cat_name in enumerate(sorted(categorized.keys()), 1):
+        cat_anchor = f"section-{cat_idx}"
+        md.append(f"## <a id=\"{cat_anchor}\"></a>{cat_name}")
         md.append("")
         
         for mod_name in sorted(categorized[cat_name].keys()):
+            mod_anchor = "mod-" + mod_name.lower().replace(".", "-")
             items = categorized[cat_name][mod_name]
-            md.append(f"### Module `{mod_name}`")
+            md.append(f"### <a id=\"{mod_anchor}\"></a>Module `{mod_name}`")
             md.append("")
             
             records = [item for item in items if item[0] == 'record']
@@ -220,6 +222,8 @@ def generate_catalog(src_dir, output_file):
                     md.append("```")
                     md.append("")
                     
+            md.append("[↑ Back to Top](#table-of-contents)")
+            md.append("")
             md.append("---")
             md.append("")
 
