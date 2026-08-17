@@ -199,7 +199,7 @@ evidence_pillar3_gravitational_drag =
                                (replicate 55 (intToBoxInt 1))
       vIn = velocityVexel (intToBoxInt 560) (intToBoxInt 0)
       vOut = lensVelocityAcrossScale cosmos gBlue vIn
-  in unwrapBox (lookupSingleton (MkSingleton 1) vOut) == 10 -- 560 / (1 + 55) = 10
+  in unwrapBox (lookupUnixel (MkUnixel 1) vOut) == 10 -- 560 / (1 + 55) = 10
 
 ||| Law 4 Evidence: DEC Bianchi Identity (d² = 0)
 public export

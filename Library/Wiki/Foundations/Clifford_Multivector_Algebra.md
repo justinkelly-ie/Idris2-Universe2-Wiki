@@ -70,11 +70,11 @@ evidence_clifford_geometric_product_quadrance =
 public export
 evidence_hyperplane_reflection : Bool
 evidence_hyperplane_reflection =
-  let v = MkVexel [(MkSingleton 1, intToBoxInt 3)]
-      n = MkVexel [(MkSingleton 1, intToBoxInt 1)]
+  let v = MkVexel [(MkUnixel 1, intToBoxInt 3)]
+      n = MkVexel [(MkUnixel 1, intToBoxInt 1)]
       g = identityMaxel
       vRefl = reflectVector g n v
-      w = lookupSingleton (MkSingleton 1) vRefl
+      w = lookupUnixel (MkUnixel 1) vRefl
 
   in unwrapBox w == -3
 

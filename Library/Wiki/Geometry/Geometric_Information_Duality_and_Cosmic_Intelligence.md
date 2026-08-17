@@ -81,7 +81,7 @@ module Geometry.Geometric_Information_Duality_and_Cosmic_Intelligence
 import Core.BoxInt
 import Core.Multiset
 import Core.VexelMaxel
-import Core.SingFraction
+import Core.UnixelFraction
 import Geometry.InformationGeometry
 import Reflect.InvariantAuditor
 import Language.Reflection

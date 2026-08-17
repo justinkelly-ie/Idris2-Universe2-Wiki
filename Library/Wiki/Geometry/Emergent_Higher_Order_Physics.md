@@ -35,7 +35,7 @@ public export
 evidence_em_routing_symmetric :
   let vIn = velocityVexel (intToBoxInt 1) (intToBoxInt 2)
       vOut = linearEpsilonRouting gEM vIn
-  in (unwrapBox (lookupSingleton (MkSingleton 1) vOut) = 1, unwrapBox (lookupSingleton (MkSingleton 2) vOut) = -2)
+  in (unwrapBox (lookupUnixel (MkUnixel 1) vOut) = 1, unwrapBox (lookupUnixel (MkUnixel 2) vOut) = -2)
 evidence_em_routing_symmetric = (Refl, Refl)
 ```
 

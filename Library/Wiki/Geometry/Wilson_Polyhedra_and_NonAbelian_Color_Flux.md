@@ -52,7 +52,7 @@ module Geometry.Wilson_Polyhedra_and_NonAbelian_Color_Flux
 
 import Core.BoxInt
 import Core.VexelMaxel
-import Core.SingFraction
+import Core.UnixelFraction
 import Math.QuantumTransition
 import Math.WilsonPolyhedra
 import Compound.HadronicConfinement

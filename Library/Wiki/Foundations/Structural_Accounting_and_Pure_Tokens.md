@@ -74,7 +74,7 @@ evidence_cast_free_lensing =
                                (replicate 55 (intToBoxInt 1))
       vIn = velocityVexel (intToBoxInt 560) (intToBoxInt 0)
       vOut = lensVelocityAcrossScale cosmos gBlue vIn
-  in unwrapBox (lookupSingleton (MkSingleton 1) vOut) == 10
+  in unwrapBox (lookupUnixel (MkUnixel 1) vOut) == 10
 ```
 
 ---

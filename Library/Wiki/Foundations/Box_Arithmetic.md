@@ -64,7 +64,7 @@ evidence_boxint_conversion = Refl
   * [The Universal Mapping](Universal_Mapping.md) — Correspondence between Idris 2 QTT / Elaborator Reflection and Cosmological Physics.
   * [Pure Box Integers as Pixel Difference Pairs](Pixel_Box_Integers.md) — Extending empty box multisets to signed integers via Pixel difference pairs.
   * [Nested Polynomial Multisets](Nested_Polynomial_Multisets.md) — Polynomial arithmetic and cyclotomic division as multisets of boxes.
-  * [Singleton Fractions & Ongoing Sequences](Singleton_Fractions_and_OnSeq_Algebra.md) — Non-zero Singleton denominators and constructive fractional arithmetic.
+  * [Unixel Fractions & Ongoing Sequences](Unixel_Fractions_and_OnSeq_Algebra.md) — Non-zero Unixel denominators and constructive fractional arithmetic.
 * **Cosmological Applications**:
   * [Pre-Geometric Genesis (The vm = 0 Void)](../Evolution/Pre_Geometric_Genesis.md) — Physical matter emergence from the empty box multiset void.
   * [Matter Tokens vs. Dark Matter Law Impedance](../Evolution/Matter_Tokens_and_Law_Impedance.md) — Duality of integer matter tallies and structural drag.

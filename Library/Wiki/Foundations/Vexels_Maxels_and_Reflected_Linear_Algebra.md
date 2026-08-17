@@ -3,7 +3,7 @@
 In standard linear algebra, vectors, matrices, and tensors are defined as abstract elements of continuous vector spaces ($\mathbb{R}^n, \mathbb{R}^{m \times n}, \mathbb{R}^{l \times m \times n}$) with arbitrary continuous coordinates.
 
 In **Idris2-Universe2**, following **Norman J. Wildberger's Box Arithmetic** (*Math Foundations 171 & 172*), linear algebra and higher natural structures are constructed purely from **discrete multiset data structures**:
-* **Singleton $[n]$**: A 1-list from $\mathbb{N}$, representing a 1D coordinate basis token $e_n$, an energy level, or a nucleotide base.
+* **Unixel $[n]$**: A 1-list from $\mathbb{N}$, representing a 1D coordinate basis token $e_n$, an energy level, or a nucleotide base.
 * **Pixel $[i, j]$**: A 2-list from $\mathbb{N} \times \mathbb{N}$, representing a 2D coordinate cell $e_{ij}$, a signed difference pair $[P, N]$, a dual number component, or a chemical bond.
 * **Voxel $[x, y, z]$**: A 3-list from $\mathbb{N} \times \mathbb{N} \times \mathbb{N}$, representing a 3D coordinate cell, a 3-quark baryon color singlet, or a 3-nucleotide biological codon triplet.
 * **Vexel**: An unordered multiset of Singletons ($\sum c_k [k]$), replacing abstract vectors (used for wavefunctions, momentum, and 1-form fields).
@@ -22,12 +22,12 @@ Using **Elaborator Reflection & Type-Checked Witnesses**, these structures are s
   │ Tier         │ Data Structure   │ Physical Domain  │ Chemical / Biological  │
   ├──────────────┼──────────────────┼──────────────────┼────────────────────────┤
   │ 0D Basis     │ Leaf / Empty Box │ Vacuum State     │ Zero State             │
-  │ 1D Basis     │ Singleton [n]    │ Color Charge     │ Nucleotide (A,C,G,T)   │
+  │ 1D Basis     │ Unixel [n]    │ Color Charge     │ Nucleotide (A,C,G,T)   │
   │ 2D Pair      │ Pixel [i, j]     │ Pixel Z [P, N]   │ Chemical Bond / Valence│
   │ 3D Triplet   │ Voxel [x, y, z]  │ Baryon Singlet   │ Codon Triplet (AUG)    │
-  │ 1D Multiset  │ Vexel (MSet Sing)│ Wavefunction / v │ Electron Shell / 1-Form│
-  │ 2D Multiset  │ Maxel (MSet Pix) │ Metric Tensor g  │ Molecular Graph/2-Form │
-  │ 3D Multiset  │ Boxel (MSet Vox) │ Hadron / 4He Core│ 3D Torus Lap / 3-Form  │
+  │ 1D Multiset  │ Vexel (Box Sing)│ Wavefunction / v │ Electron Shell / 1-Form│
+  │ 2D Multiset  │ Maxel (Box Pix) │ Metric Tensor g  │ Molecular Graph/2-Form │
+  │ 3D Multiset  │ Boxel (Box Vox) │ Hadron / 4He Core│ 3D Torus Lap / 3-Form  │
   │ Multi-D      │ IntPolynumber    │ Cosmic Manifold  │ Metabolic Network      │
   └──────────────┴──────────────────┴──────────────────┴────────────────────────┘
 ```
@@ -54,24 +54,24 @@ evidence_boxint_pixel_isomorphism =
       evaluated = pixelToSignedBoxInt pix
   in pix == MkPixel 55 27 && unwrapBox evaluated == 28
 
-||| Evidence 2: Proof that Singleton-Pixel multiplication correctly extracts destination index:
+||| Evidence 2: Proof that Unixel-Pixel multiplication correctly extracts destination index:
 ||| [2] * [2, 4] = [4]
 public export
 evidence_singleton_pixel_mul : Bool
 evidence_singleton_pixel_mul =
-  let s2 = MkSingleton 2
+  let s2 = MkUnixel 2
       p24 = MkPixel 2 4
-      result = mulSingletonPixel s2 p24
-  in result == Just (MkSingleton 4)
+      result = mulUnixelPixel s2 p24
+  in result == Just (MkUnixel 4)
 
-||| Evidence 3: Proof that mismatched Singleton-Pixel multiplication yields blank (Nothing):
+||| Evidence 3: Proof that mismatched Unixel-Pixel multiplication yields blank (Nothing):
 ||| [3] * [2, 4] = blank
 public export
 evidence_singleton_pixel_mismatch : Bool
 evidence_singleton_pixel_mismatch =
-  let s3 = MkSingleton 3
+  let s3 = MkUnixel 3
       p24 = MkPixel 2 4
-  in mulSingletonPixel s3 p24 == Nothing
+  in mulUnixelPixel s3 p24 == Nothing
 
 ||| Evidence 4: Proof that Row Extraction R_i(M) = [i] * M extracts the exact 1D Vexel:
 ||| Row 2 of Maxel { [1,1]=>10, [2,1]=>3, [2,2]=>5 } evaluates to Vexel { [1]=>3, [2]=>5 }
@@ -83,15 +83,15 @@ evidence_row_vexel_extraction =
                   , (MkPixel 2 2, intToBoxInt 5)
                   ]
       row2 = extractRowVexel 2 m
-  in row2 == MkVexel [(MkSingleton 1, intToBoxInt 3), (MkSingleton 2, intToBoxInt 5)]
+  in row2 == MkVexel [(MkUnixel 1, intToBoxInt 3), (MkUnixel 2, intToBoxInt 5)]
 
 ||| Evidence 5: Proof that Outer Product of 2-element Vexels creates a 4-pixel Maxel:
 ||| [ (1=>2), (2=>3) ] x [ (1=>1), (2=>4) ] => total mass = 2 + 8 + 3 + 12 = 25
 public export
 evidence_outer_product_maxel : Bool
 evidence_outer_product_maxel =
-  let v1 = MkVexel [(MkSingleton 1, intToBoxInt 2), (MkSingleton 2, intToBoxInt 3)]
-      v2 = MkVexel [(MkSingleton 1, intToBoxInt 1), (MkSingleton 2, intToBoxInt 4)]
+  let v1 = MkVexel [(MkUnixel 1, intToBoxInt 2), (MkUnixel 2, intToBoxInt 3)]
+      v2 = MkVexel [(MkUnixel 1, intToBoxInt 1), (MkUnixel 2, intToBoxInt 4)]
       m = outerProductVexel v1 v2
       totalW = totalMaxelWeight m
   in unwrapBox totalW == 25
@@ -100,7 +100,7 @@ evidence_outer_product_maxel =
 public export
 evidence_outer_product_boxel : Bool
 evidence_outer_product_boxel =
-  let v = MkVexel [(MkSingleton 1, intToBoxInt 2)]
+  let v = MkVexel [(MkUnixel 1, intToBoxInt 2)]
       m = MkMaxel [(MkPixel 2 3, intToBoxInt 5)]
       b = outerProductVexelMaxel v m
   in lookupVoxel (MkVoxel 1 2 3) b == intToBoxInt 10 && unwrapBox (totalBoxelWeight b) == 10

@@ -60,9 +60,11 @@ In **Idris2-Universe2**, space, time, gauge dynamics, and thermodynamics emerge 
 module Geometry.The_Four_Fundamental_Geometries_and_Cosmic_Synthesis
 
 import Core.BoxInt
+import Core.Polynumber
 import Core.VexelMaxel
-import Core.SingFraction
+import Core.UnixelFraction
 import Math.FourGeometries
+import Math.DiscreteBoltzmannDistribution
 import Math.LinAlgebra.MetricTensor
 import Reflect.InvariantAuditor
 
@@ -79,4 +81,13 @@ public export
 verifyFourGeometriesCosmicSynthesis : Bool
 verifyFourGeometriesCosmicSynthesis =
   auditFourGeometriesCosmicSynthesisProof
+
+||| Verifies that the 210 Primorial Ground State factorizes via the Level 2 Caret Euler Product:
+||| Z_210 = B_2(1) ^ B_3(1) ^ B_5(1) ^ B_7(1) with maximal degree 210 and state capacity Sigma_0 = 16.
+public export
+verifyPrimorial210CaretZeta : Bool
+verifyPrimorial210CaretZeta =
+  let zeta = primorial210Zeta
+  in polynumberDegree zeta == 210 &&
+     unwrapBox (summationPolynumber zeta) == 16
 ```

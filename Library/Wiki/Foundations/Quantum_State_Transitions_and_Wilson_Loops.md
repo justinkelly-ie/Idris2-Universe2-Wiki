@@ -2,7 +2,7 @@
 
 Standard quantum mechanics and lattice gauge theory are traditionally formulated using continuous $\mathrm{U}(N)$ / $\mathrm{SU}(N)$ Lie groups, path integrals with uncomputable continuous measures $\mathcal{D}A$, and infinite-dimensional Hilbert spaces over $\mathbb{C}$.
 
-In **Idris2-Universe2**, quantum state transitions, unitary scattering operators, and Wilson loop gauge holonomies are formulated constructively over **finite discrete state Vexels**, **Maxel transition matrices**, and **exact rational Born fractions (`SingFraction`)**.
+In **Idris2-Universe2**, quantum state transitions, unitary scattering operators, and Wilson loop gauge holonomies are formulated constructively over **finite discrete state Vexels**, **Maxel transition matrices**, and **exact rational Born fractions (`UnixelFraction`)**.
 
 ---
 
@@ -25,11 +25,11 @@ $$\psi_k = a_k + i b_k, \quad a_k, b_k \in \text{BoxInt}$$
 The squared magnitude is given without square roots or real-valued approximations:
 $$|\psi_k|^2 = a_k^2 + b_k^2$$
 
-### B. Born Probability Ratios as Non-Zero Singleton Fractions
+### B. Born Probability Ratios as Non-Zero Unixel Fractions
 The Born probability of observing basis state $k$ is computed as the exact rational fraction:
-$$P(k) = \frac{|\psi_k|^2}{\sum_j |\psi_j|^2} = \frac{a_k^2 + b_k^2}{\sum_j (a_j^2 + b_j^2)} \in \text{SingFraction}$$
+$$P(k) = \frac{|\psi_k|^2}{\sum_j |\psi_j|^2} = \frac{a_k^2 + b_k^2}{\sum_j (a_j^2 + b_j^2)} \in \text{UnixelFraction}$$
 Because the total norm $\sum |\psi_j|^2 \ge 1$ for non-trivial states, the probability is guaranteed division-by-zero free and strictly satisfies:
-$$\sum_k P(k) = \frac{1}{1} \equiv \text{unitSingFraction}$$
+$$\sum_k P(k) = \frac{1}{1} \equiv \text{unitUnixelFraction}$$
 
 ### C. Discrete Unitary Operators and S-Matrices
 A linear quantum transition is encoded as a `QuantumOperator` $U$:
@@ -54,7 +54,7 @@ module Foundations.Quantum_State_Transitions_and_Wilson_Loops
 
 import Core.BoxInt
 import Core.VexelMaxel
-import Core.SingFraction
+import Core.UnixelFraction
 import Math.QuantumTransition
 
 %default total
@@ -71,7 +71,7 @@ verifyWilsonLoopGaugeInvariance : Bool
 verifyWilsonLoopGaugeInvariance =
   auditWilsonLoopGaugeInvarianceProof
 
-||| Verifies that rational Born probabilities across arbitrary state vectors sum to 1/1 SingFraction.
+||| Verifies that rational Born probabilities across arbitrary state vectors sum to 1/1 UnixelFraction.
 public export
 verifyBornStateSum : Bool
 verifyBornStateSum =

@@ -56,7 +56,7 @@ evidence_primorial_budget = Refl
 
 * **Mathematical Foundations**:
   * [Box Arithmetic & Inductive Multisets](Box_Arithmetic.md) — Elimination of continuous infinities via empty box hierarchies.
-  * [Singleton Fractions & Ongoing Sequences](Singleton_Fractions_and_OnSeq_Algebra.md) — Safe arithmetic with non-zero Singleton denominators.
+  * [Unixel Fractions & Ongoing Sequences](Unixel_Fractions_and_OnSeq_Algebra.md) — Safe arithmetic with non-zero Unixel denominators.
   * [Emergent Quantum Mechanics](Emergent_Quantum_Mechanics.md) — Elimination of continuous Hilbert space and wave collapse mysteries.
 * **Physical Pillars & Evolution**:
   * [The 12 Emergent Laws of Physics](../Geometry/Emergent_Pillars_of_Physics.md) — Constructive derivations of conservation, light speed locality, and time's arrow.

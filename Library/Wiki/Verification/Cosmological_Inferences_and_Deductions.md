@@ -45,7 +45,7 @@ $$\sum c = \frac{27}{210} + \frac{128}{210} + \frac{55}{210} = \frac{210}{210} \
 
 ### C. Inference 3: Objective Quantum Mechanics
 * **Observer-Free Born Rule**: Quantum measurement is the deterministic projection of a wave multiset $P$ onto a localized detector basis $Q$ via rational tally extraction:
-  $$P(\text{Cell } k) = \frac{\text{lookupSingleton}([k], \mathbf{v})}{[\text{totalMass}(\mathbf{v})]} \in \mathbb{Q}$$
+  $$P(\text{Cell } k) = \frac{\text{lookupUnixel}([k], \mathbf{v})}{[\text{totalMass}(\mathbf{v})]} \in \mathbb{Q}$$
 * **Pauli Exclusion**: Enforced at compile time by QTT linear typing (`(1 particle : Vexel)`), mathematically forbidding the duplication of state tokens.
 * **Symplectic Non-Commutativity**: $[\hat{x}, \hat{p}]$ is the modular coordinate shear of $g_{\text{Toroidal}} = \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix}$ with minimal cell uncertainty $\Delta x \Delta p \ge 1$.
 
@@ -83,7 +83,7 @@ module Verification.Cosmological_Inferences_and_Deductions
 import Core.BoxInt
 import Core.Multiset
 import Core.VexelMaxel
-import Core.SingFraction
+import Core.UnixelFraction
 import Evolution.State
 import Evolution.StructuralAccounting
 import Geometry.InformationGeometry

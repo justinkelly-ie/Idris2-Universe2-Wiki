@@ -10,8 +10,8 @@ A monomial term $c \cdot x^k$ is a physical box container with:
 1. **Multiplicity $c$**: The tally of empty boxes ($[\ ]$) at the base.
 2. **Degree $k$**: The **nesting depth** of the box container:
    - $k=0 \implies c \cdot x^0 = c \cdot [\ ]$ (depth 0, scalar token)
-   - $k=1 \implies c \cdot x^1 = c \cdot [[\ ]]$ (depth 1, Singleton $[1]$)
-   - $k=2 \implies c \cdot x^2 = c \cdot [[[\ ]]]$ (depth 2, Singleton $[2]$)
+   - $k=1 \implies c \cdot x^1 = c \cdot [[\ ]]$ (depth 1, Unixel $[1]$)
+   - $k=2 \implies c \cdot x^2 = c \cdot [[[\ ]]]$ (depth 2, Unixel $[2]$)
 
 A full Polynumber $P(x) = c_0 + c_1 x + c_2 x^2 + \dots + c_n x^n$ is a multiset of these nested terms, strictly isomorphic to a **`Vexel`** over singletons ($\sum c_k [k]$):
 
@@ -116,7 +116,7 @@ evidence_polynumber_vexel_isomorphism =
   let p = MkPolynumber [intToBoxInt 7, intToBoxInt 0, intToBoxInt 5] -- 7 + 5x^2
       v = polynumberToVexel p
       pBack = vexelToPolynumber v
-  in p == pBack && lookupSingleton (MkSingleton 2) v == intToBoxInt 5
+  in p == pBack && lookupUnixel (MkUnixel 2) v == intToBoxInt 5
 
 ||| Evidence 7: Proof that Spread Polynumber S_2(s) = 4s - 4s^2 and S_3(s) = 9s - 24s^2 + 16s^3
 public export
@@ -135,7 +135,7 @@ evidence_spread_polynumbers =
 * **Mathematical Foundations**:
   * [Box Arithmetic & Inductive Multisets](Box_Arithmetic.md) — Foundation of nested containers and box arithmetic.
   * [Vexels, Maxels, Boxels & Reflected Linear Algebra](Vexels_Maxels_and_Reflected_Linear_Algebra.md) — Polynomial-to-Vexel isomorphisms and multiset algebra.
-  * [Singleton Fractions & Ongoing Sequences](Singleton_Fractions_and_OnSeq_Algebra.md) — Fractional rational functions and sequence algebra.
+  * [Unixel Fractions & Ongoing Sequences](Unixel_Fractions_and_OnSeq_Algebra.md) — Fractional rational functions and sequence algebra.
 * **Cosmological Evolution & Physics**:
   * [Cyclotomic Encoding & Decoding Protocol](../Evolution/Cyclotomic_Encoding_and_Decoding.md) — Cyclotomic polynomial division by $\Phi_{137}(x)$ for cosmic state compression.
   * [Dark Matter as the Cosmic Law Ledger](../Evolution/Dark_Matter_Law_Storage.md) — Polynomial remainder accumulation as Dark Matter drag ledger.

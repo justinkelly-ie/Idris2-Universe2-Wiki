@@ -55,7 +55,7 @@ evidence_grid_to_poly : Bool
 evidence_grid_to_poly =
   let grid = replicate 13 (intToBoxInt 0) ++ [intToBoxInt 5] ++ replicate 13 (intToBoxInt 0)
       poly = gridToStatePolynomial grid
-  in polyDegree poly == 13
+  in polynumberDegree poly == 13
 
 ||| Evidence 2: Proof of automatic end-to-end cyclotomic contraction:
 ||| Steps the Dark Matter ledger length from 3 to 4 at Epoch 3
@@ -75,7 +75,7 @@ evidence_drag_decoder =
                                (replicate 55 (intToBoxInt 1)) -- 55 units of DM drag
       vIn = velocityVexel (intToBoxInt 560) (intToBoxInt 0)
       vOut = lensVelocityAcrossScale cosmos gBlue vIn
-  in unwrapBox (lookupSingleton (MkSingleton 1) vOut) == 10 -- 560 / (1 + 55) = 10
+  in unwrapBox (lookupUnixel (MkUnixel 1) vOut) == 10 -- 560 / (1 + 55) = 10
 ```
 
 ---

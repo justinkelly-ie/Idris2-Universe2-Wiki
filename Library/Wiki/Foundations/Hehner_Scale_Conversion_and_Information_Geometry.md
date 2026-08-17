@@ -27,7 +27,7 @@ c \text{ chance} &= -\log_2 c \text{ bit} = \frac{1}{c} \text{ state}
  │    • Examples: s=128 (DE), s=27 (VM), s=55 (DM), s_total=210 (Primorial).   │
  ├─────────────────────────────────────────────────────────────────────────────┤
  │ 3. CHANCE SCALE (c) — Reciprocal / Rational Proportions                     │
- │    • Constructive Realization: SingFraction N / [D] with non-zero [D] ≥ 1.  │
+ │    • Constructive Realization: UnixelFraction N / [D] with non-zero [D] ≥ 1.  │
  │    • Examples: c_VM = 27/210, c_DE = 128/210, c_DM = 55/210.                │
  └─────────────────────────────────────────────────────────────────────────────┘
 ```
@@ -55,7 +55,7 @@ $$\sum c = c_{\text{VM}} + c_{\text{DE}} + c_{\text{DM}} = \frac{27}{210} + \fra
 * **Dark Matter ($\text{DM}$)**: $10$ triangular history stages $\implies s = T_{10} = 55 \implies c = \frac{55}{210} = \frac{11}{42}$.
 
 ### D. Strictly Multiset-Based Information Geometry
-In **Idris2-Universe2**, information scales are upgraded to first-class multiset containers (`MSet`):
+In **Idris2-Universe2**, information scales are upgraded to first-class multiset containers (`Box`):
 
 1. **Decision Tree Multisets (Bit Scale $b$)**:
    A decision path is a multiset of branch tokens:
@@ -64,10 +64,10 @@ In **Idris2-Universe2**, information scales are upgraded to first-class multiset
    An ensemble $\Omega$ is an unordered collection of discrete microstates with integer multiplicities.
 3. **Multiset Chance & Born Rule (Chance Scale $c$)**:
    The measurement chance of an observable $A$ inside an ensemble $\Omega$ (or quantum state $\mathbf{v}$) is the exact multiset tally ratio:
-   $$c(A, \Omega) = \frac{\text{lookupMSet}(A, \Omega)}{[\text{totalMass}(\Omega)]}, \quad P([k], \mathbf{v}) = \frac{\text{lookupSingleton}([k], \mathbf{v})}{[\text{totalVexelMass}(\mathbf{v})]}$$
+   $$c(A, \Omega) = \frac{\text{lookupBox}(A, \Omega)}{[\text{totalMass}(\Omega)]}, \quad P([k], \mathbf{v}) = \frac{\text{lookupUnixel}([k], \mathbf{v})}{[\text{totalVexelMass}(\mathbf{v})]}$$
 4. **Exact Information Distance (Multiset Symmetric Difference)**:
    The discrete informational divergence between two states $A$ and $B$ replaces continuous KL-divergence:
-   $$D_{\text{MSet}}(A, B) = |A \mathbin{\Delta} B| = \sum_{x} |w_A(x) - w_B(x)|$$
+   $$D_{\text{Box}}(A, B) = |A \mathbin{\Delta} B| = \sum_{x} |w_A(x) - w_B(x)|$$
    This satisfies all standard metric axioms ($D(A, A) = 0$, $D(A, C) \le D(A, B) + D(B, C)$) using pure integer arithmetic.
 
 ---
@@ -77,9 +77,9 @@ In algorithmic information theory (Solomonoff, Hutter) and cognitive neuroscienc
 
 In our multiset framework:
 * **Multiset Cross-Entropy**:
-  $$H_{\text{MSet}}(P, Q) = |P| + |P \setminus Q| = 2|P| - |P \cap Q|$$
-  * When model $Q$ is perfectly aligned with environment $P$ ($P \equiv Q$), $H_{\text{MSet}}(P, P) = |P|$ (minimal cross-entropy equals self-entropy).
-  * When model $Q$ has zero predictive overlap ($P \cap Q = \emptyset$), $H_{\text{MSet}}(P, Q) = 2|P|$ (maximum prediction error).
+  $$H_{\text{Box}}(P, Q) = |P| + |P \setminus Q| = 2|P| - |P \cap Q|$$
+  * When model $Q$ is perfectly aligned with environment $P$ ($P \equiv Q$), $H_{\text{Box}}(P, P) = |P|$ (minimal cross-entropy equals self-entropy).
+  * When model $Q$ has zero predictive overlap ($P \cap Q = \emptyset$), $H_{\text{Box}}(P, Q) = 2|P|$ (maximum prediction error).
 * **Rational Compactness / Intelligence Ratio (Jaccard Overlap Index)**:
   $$\text{CompactnessRatio}(P, Q) = \frac{|P \cap Q|}{[|P \cup Q|]} \in [0, 1]$$
   * $\text{Ratio} = 1 / 1$: Perfect compression / $100\%$ predictive intelligence.
@@ -95,7 +95,7 @@ module Foundations.Hehner_Scale_Conversion_and_Information_Geometry
 import Core.BoxInt
 import Core.Multiset
 import Core.VexelMaxel
-import Core.SingFraction
+import Core.UnixelFraction
 import Reflect.InvariantAuditor
 import Language.Reflection
 
@@ -111,13 +111,13 @@ evidence_bits_to_states =
 public export
 evidence_states_to_chance : Bool
 evidence_states_to_chance =
-  hehnerStatesToChance 128 == mkSingFraction (intToBoxInt 1) 128
+  hehnerStatesToChance 128 == mkUnixelFraction (intToBoxInt 1) 128
 
 ||| Evidence 3: Proof of Chance -> Bit conversion via Stern-Brocot path depth (5/3 -> 3 bits)
 public export
 evidence_chance_to_bits : Bool
 evidence_chance_to_bits =
-  hehnerBitDepth 10 (mkSingFraction (intToBoxInt 5) 3) == 3
+  hehnerBitDepth 10 (mkUnixelFraction (intToBoxInt 5) 3) == 3
 
 ||| Evidence 4: Proof of Exact Cosmic Chance Normalization (27/210 + 128/210 + 55/210 == 1)
 public export
@@ -126,8 +126,8 @@ evidence_cosmic_chance_normalization =
   let vm = hehnerTallyToChance 27 210
       de = hehnerTallyToChance 128 210
       dm = hehnerTallyToChance 55 210
-      totChance = addSingFraction (addSingFraction vm de) dm
-  in totChance == unitSingFraction
+      totChance = addUnixelFraction (addUnixelFraction vm de) dm
+  in totChance == unitUnixelFraction
 
 
 ||| Evidence 5: Proof of Multiset Information Distance Metric Axioms (Triangle Inequality)
@@ -191,7 +191,7 @@ proof_multiset_compactness_refl = auditMultisetCompactness
 ## 🔗 Related Chapters & Cross-References
 
 * **Mathematical Foundations & Fractions**:
-  * [Fractional Multisets & Ongoing Sequences (OnSeq)](Singleton_Fractions_and_OnSeq_Algebra.md) — Non-zero Singleton denominators and division-by-zero immunity.
+  * [Fractional Multisets & Ongoing Sequences (OnSeq)](Unixel_Fractions_and_OnSeq_Algebra.md) — Non-zero Unixel denominators and division-by-zero immunity.
   * [Reflected Fractional Multisets & QTT Sequences](Reflected_Fractional_Multisets_and_QTT_Sequences.md) — Elaborator Reflection invariant macros auditing non-zero denominators.
   * [Box Arithmetic & Inductive Multisets](Box_Arithmetic.md) — Empty box multiset containers.
 * **Quantum Foundations & Thermodynamics**:

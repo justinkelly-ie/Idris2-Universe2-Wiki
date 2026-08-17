@@ -39,13 +39,13 @@ evidence_discrete_noether_conservation : Bool
 evidence_discrete_noether_conservation =
 
   let zeroGrad = (\_ => MkVexel [])
-      q0 = MkVexel [(MkSingleton 1, intToBoxInt 5)]
-      p0 = MkVexel [(MkSingleton 1, intToBoxInt 12)]
+      q0 = MkVexel [(MkUnixel 1, intToBoxInt 5)]
+      p0 = MkVexel [(MkUnixel 1, intToBoxInt 12)]
       s0 = MkPhaseState q0 p0
       dt = intToBoxInt 3
       s1 = symplecticLeapfrogStep zeroGrad dt s0
       s2 = symplecticLeapfrogStep zeroGrad dt s1
-      deltaQ = MkVexel [(MkSingleton 1, intToBoxInt 1)] -- Spatial translation generator
+      deltaQ = MkVexel [(MkUnixel 1, intToBoxInt 1)] -- Spatial translation generator
       q0Charge = evaluateNoetherCharge s0 deltaQ
       q1Charge = evaluateNoetherCharge s1 deltaQ
       q2Charge = evaluateNoetherCharge s2 deltaQ

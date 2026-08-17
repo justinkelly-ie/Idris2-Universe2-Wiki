@@ -57,14 +57,14 @@ public export
 evidence_symplectic_step_evolution : Bool
 evidence_symplectic_step_evolution =
   let zeroGrad = (\_ => MkVexel [])
-      q0 = MkVexel [(MkSingleton 1, intToBoxInt 2)]
-      p0 = MkVexel [(MkSingleton 1, intToBoxInt 5)]
+      q0 = MkVexel [(MkUnixel 1, intToBoxInt 2)]
+      p0 = MkVexel [(MkUnixel 1, intToBoxInt 5)]
       s0 = MkPhaseState q0 p0
       dt = intToBoxInt 1
       s1 = symplecticLeapfrogStep zeroGrad dt s0
       (MkPhaseState q1 p1) = s1
-      q1Val = lookupSingleton (MkSingleton 1) q1
-      p1Val = lookupSingleton (MkSingleton 1) p1
+      q1Val = lookupUnixel (MkUnixel 1) q1
+      p1Val = lookupUnixel (MkUnixel 1) p1
   in unwrapBox q1Val == 7 && unwrapBox p1Val == 5
 
 ||| Evidence 2: Proof of symplectic step phase space coordinates evolution
@@ -78,8 +78,8 @@ evidence_ten_step_energy_conservation =
 public export
 evidence_harmonic_hamiltonian_energy : Bool
 evidence_harmonic_hamiltonian_energy =
-  let q0 = MkVexel [(MkSingleton 1, intToBoxInt 4)]
-      p0 = MkVexel [(MkSingleton 1, intToBoxInt 6)]
+  let q0 = MkVexel [(MkUnixel 1, intToBoxInt 4)]
+      p0 = MkVexel [(MkUnixel 1, intToBoxInt 6)]
       s0 = MkPhaseState q0 p0
       k  = intToBoxInt 1
       energy = harmonicEnergy k s0

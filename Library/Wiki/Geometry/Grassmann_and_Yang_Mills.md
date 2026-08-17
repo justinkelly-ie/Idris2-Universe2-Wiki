@@ -54,31 +54,31 @@ import Data.Vect
 public export
 evidence_coboundary0_gradient : Bool
 evidence_coboundary0_gradient =
-  let phi = MkVexel [(MkSingleton 1, intToBoxInt 10), (MkSingleton 2, intToBoxInt 25)]
-      edges = [(MkSingleton 1, MkSingleton 2)]
+  let phi = MkVexel [(MkUnixel 1, intToBoxInt 10), (MkUnixel 2, intToBoxInt 25)]
+      edges = [(MkUnixel 1, MkUnixel 2)]
       conn = grassmannCoboundary0 edges phi
-      diffVal = lookupEdge (MkSingleton 1, MkSingleton 2) conn
+      diffVal = lookupEdge (MkUnixel 1, MkUnixel 2) conn
   in unwrapBox diffVal == 15
 
 ||| Evidence 2: Proof of Exact Discrete Bianchi Identity: d1(d0(Phi)) == 0 along closed face loops
 public export
 evidence_exact_d1_d0_closure : Bool
 evidence_exact_d1_d0_closure =
-  let phi = MkVexel [ (MkSingleton 1, intToBoxInt 10)
-                    , (MkSingleton 2, intToBoxInt 25)
-                    , (MkSingleton 3, intToBoxInt 40)
-                    , (MkSingleton 4, intToBoxInt 15)
+  let phi = MkVexel [ (MkUnixel 1, intToBoxInt 10)
+                    , (MkUnixel 2, intToBoxInt 25)
+                    , (MkUnixel 3, intToBoxInt 40)
+                    , (MkUnixel 4, intToBoxInt 15)
                     ]
-      edges = [ (MkSingleton 1, MkSingleton 2)
-              , (MkSingleton 2, MkSingleton 3)
-              , (MkSingleton 3, MkSingleton 4)
-              , (MkSingleton 4, MkSingleton 1)
+      edges = [ (MkUnixel 1, MkUnixel 2)
+              , (MkUnixel 2, MkUnixel 3)
+              , (MkUnixel 3, MkUnixel 4)
+              , (MkUnixel 4, MkUnixel 1)
               ]
       conn = grassmannCoboundary0 edges phi
-      face1 = (MkPixel 1 1, [ (MkSingleton 1, MkSingleton 2)
-                            , (MkSingleton 2, MkSingleton 3)
-                            , (MkSingleton 3, MkSingleton 4)
-                            , (MkSingleton 4, MkSingleton 1)
+      face1 = (MkPixel 1 1, [ (MkUnixel 1, MkUnixel 2)
+                            , (MkUnixel 2, MkUnixel 3)
+                            , (MkUnixel 3, MkUnixel 4)
+                            , (MkUnixel 4, MkUnixel 1)
                             ])
       curv = grassmannCoboundary1 [face1] conn
       fVal = lookupFace (MkPixel 1 1) curv
@@ -94,8 +94,8 @@ evidence_combinatorial_hodge_dual =
 public export
 evidence_su3_color_commutator : Bool
 evidence_su3_color_commutator =
-  let (sOut, w) = su3ColorBracket (MkSingleton 1) (MkSingleton 2)
-  in sOut == MkSingleton 3 && unwrapBox w == 1
+  let (sOut, w) = su3ColorBracket (MkUnixel 1) (MkUnixel 2)
+  in sOut == MkUnixel 3 && unwrapBox w == 1
 
 ||| Evidence 5: Proof that Non-Abelian Yang-Mills Color Curvature satisfies Voxel Color Confinement
 public export

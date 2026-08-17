@@ -64,7 +64,7 @@ evidence_rational_snell_law =
 * **Rational Trigonometry & Discrete Calculus**:
   * [Archimedes' Function & Quadrea](Archimedes_Function_and_Quadrea.md) — Rational trigonometry area calculations and Gram determinants.
   * [Nested Polynomial Multisets](../Foundations/Nested_Polynomial_Multisets.md) — Spread polynomials $S_n(s)$ and cyclotomic division.
-  * [Singleton Fractions & Ongoing Sequences](../Foundations/Singleton_Fractions_and_OnSeq_Algebra.md) — Exact rational ratios without transcendental approximations.
+  * [Unixel Fractions & Ongoing Sequences](../Foundations/Unixel_Fractions_and_OnSeq_Algebra.md) — Exact rational ratios without transcendental approximations.
 * **Optics & Kinematics**:
   * [Causal Posets & Inductive Lensing](../Kinematics/Causal_Posets_and_Lensing.md) — Relativistic optical deflection and Dark Matter refraction.
   * [2D Maxwell Field Equations](Maxwell_Field_Equations.md) — Wavefront propagation on discrete lattices.

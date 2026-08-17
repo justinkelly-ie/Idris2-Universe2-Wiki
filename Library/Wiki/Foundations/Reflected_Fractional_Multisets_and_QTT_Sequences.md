@@ -1,9 +1,9 @@
 # 🔮 Reflected Fractional Multisets & QTT Ongoing Sequences
 
-This chapter demonstrates how **Fractional Multisets (`SingFraction`)** and **Ongoing Sequences (`OnSeq`)** integrate seamlessly into **Quantitative Type Theory (QTT)** and **Elaborator Reflection Macros** (`Language.Reflection`):
+This chapter demonstrates how **Fractional Multisets (`UnixelFraction`)** and **Ongoing Sequences (`OnSeq`)** integrate seamlessly into **Quantitative Type Theory (QTT)** and **Elaborator Reflection Macros** (`Language.Reflection`):
 
-1. **Compile-Time Elaborator Reflection**: Invariant macros statically audit non-zero Singleton denominators ($[D] \ge 1$), prove rational equivalence ($N_1 \cdot D_2 = N_2 \cdot D_1$), and verify finite sequence clip dimensions at compile time.
-2. **Quantitative Type Theory (QTT) Linearity**: Linear resource multiplicities (`(1 frac : SingFraction)`) strictly enforce the First Law of Thermodynamics across rational observables, ensuring that splitting, scaling, and advancing fractional states incurs zero energy leakage.
+1. **Compile-Time Elaborator Reflection**: Invariant macros statically audit non-zero Unixel denominators ($[D] \ge 1$), prove rational equivalence ($N_1 \cdot D_2 = N_2 \cdot D_1$), and verify finite sequence clip dimensions at compile time.
+2. **Quantitative Type Theory (QTT) Linearity**: Linear resource multiplicities (`(1 frac : UnixelFraction)`) strictly enforce the First Law of Thermodynamics across rational observables, ensuring that splitting, scaling, and advancing fractional states incurs zero energy leakage.
 
 ---
 
@@ -23,7 +23,7 @@ This chapter demonstrates how **Fractional Multisets (`SingFraction`)** and **On
                               ▼
    ┌────────────────────────────────────────────────────────┐
    │ QUANTITATIVE TYPE THEORY (QTT): Multiplicity 1         │
-   │  - linearConsumeSingFraction : (1 frac) -> SingFraction│
+   │  - linearConsumeSingFraction : (1 frac) -> UnixelFraction│
    │  - linearScaleSingFraction   : (1 frac) -> (1 scale)   │
    │  - linearSplitSingFraction   : (1 frac) -> (p, n - p)  │
    │  - linearStepOnSeq           : (1 seq)  -> (term, seq')│
@@ -39,7 +39,7 @@ module Foundations.Reflected_Fractional_Multisets_and_QTT_Sequences
 
 import Core.BoxInt
 import Core.VexelMaxel
-import Core.SingFraction
+import Core.UnixelFraction
 import Core.OnSeq
 import Reflect.InvariantAuditor
 import Language.Reflection
@@ -47,7 +47,7 @@ import Data.List
 
 %default total
 
-||| Evidence 1: Compile-Time Reflection Witness for Singleton Denominator Positivity.
+||| Evidence 1: Compile-Time Reflection Witness for Unixel Denominator Positivity.
 public export
 evidence_macro_singleton_positivity : Reflect.InvariantAuditor.auditUnitDenomProof = True
 evidence_macro_singleton_positivity = Reflect.InvariantAuditor.auditSingFractionPositivity
@@ -67,11 +67,11 @@ evidence_macro_onseq_clip_length = Reflect.InvariantAuditor.auditOnSeqClipExtrac
 public export
 evidence_qtt_fraction_split_conservation : Bool
 evidence_qtt_fraction_split_conservation =
-  let initialFrac = mkSingFraction (intToBoxInt 10) 3
+  let initialFrac = mkUnixelFraction (intToBoxInt 10) 3
       (f1, f2) = linearSplitSingFraction initialFrac (intToBoxInt 4)
       p1 = unwrapBox (num f1)
       p2 = unwrapBox (num f2)
-  in (p1 + p2 == 10) && (den f1 == MkSingleton 3) && (den f2 == MkSingleton 3)
+  in (p1 + p2 == 10) && (den f1 == MkUnixel 3) && (den f2 == MkUnixel 3)
 
 ||| Evidence 5: QTT Linear Sequence Stepping and State Preservation:
 ||| Linearly stepping an OnSeq at term 5 extracts the exact term and advances the sequence index.
@@ -91,7 +91,7 @@ evidence_qtt_onseq_stepping =
 
 * **Constructive Foundations**:
   * [The Universal Mapping](Universal_Mapping.md) — QTT multiplicity 1 resource conservation and elaborator reflection.
-  * [Fractional Multisets & Ongoing Sequences (OnSeq)](Singleton_Fractions_and_OnSeq_Algebra.md) — Non-zero Singleton denominators and constructive sequence algebra.
+  * [Fractional Multisets & Ongoing Sequences (OnSeq)](Unixel_Fractions_and_OnSeq_Algebra.md) — Non-zero Unixel denominators and constructive sequence algebra.
   * [Vexels, Maxels, Boxels & Reflected Linear Algebra](Vexels_Maxels_and_Reflected_Linear_Algebra.md) — Elaborator reflection macros and tensor representations.
 * **Cosmic Evolution & Physical Laws**:
   * [The 12 Emergent Laws of Physics](../Geometry/Emergent_Pillars_of_Physics.md) — First law conservation and compile-time thermodynamic proofs.

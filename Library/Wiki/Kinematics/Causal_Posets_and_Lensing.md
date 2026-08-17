@@ -27,7 +27,7 @@ testLensingVelocity =
   let state = MkUniverseState {vmSize=0} {deSize=0} {dmSize=1} [] [] [intToBoxInt 55]
       vIn = velocityVexel (intToBoxInt 560) (intToBoxInt 0)
       vOut = lensVelocityAcrossScale state Math.LinAlgebra.MetricTensor.gBlue vIn
-  in unwrapBox (lookupSingleton (MkSingleton 1) vOut)
+  in unwrapBox (lookupUnixel (MkUnixel 1) vOut)
 
 ||| Evidence 1: Proof that lensing velocity across the 55-state Dark Matter drag scales velocity by (1 + 55 = 56) (560 / 56 = 10)
 public export

@@ -2,7 +2,7 @@
 
 In constructive finitist mathematics, two fundamental algebraic structures eliminate continuous infinities and division anomalies:
 
-1. **Fractional Multisets (`SingFraction`)**: A fractional multiset pairing a numerator multiset or signed `BoxInt` token ($N \in \mathbb{Z}$) with a strictly positive **Singleton denominator** ($[D] \ge 1$). This structure provides compile-time division-by-zero immunity. In **Idris2-Boole**, the denominator is $D = [1]$ (Boolean logic gates), while in **Idris2-Universe2**, $D = [1 + \text{drag}]$ (gravitational scale impedance).
+1. **Fractional Multisets (`UnixelFraction`)**: A fractional multiset pairing a numerator multiset or signed `BoxInt` token ($N \in \mathbb{Z}$) with a strictly positive **Unixel denominator** ($[D] \ge 1$). This structure provides compile-time division-by-zero immunity. In **Idris2-Boole**, the denominator is $D = [1]$ (Boolean logic gates), while in **Idris2-Universe2**, $D = [1 + \text{drag}]$ (gravitational scale impedance).
 2. **Wildberger's Ongoing Sequences (`OnSeq`)**: Rather than positing completed infinite sets ($\mathbb{N} \to \infty$), sequences are defined constructively as open-ended generator functions ($[a_n\rangle$) paired with **Clips** (finite observable window slices).
 
 ---
@@ -14,7 +14,7 @@ In constructive finitist mathematics, two fundamental algebraic structures elimi
          
           Numerator Multiset / BoxInt (N ∈ ℤ)
        ─────────────────────────────────────────
-             Singleton Denominator ([D] ≥ 1)
+             Unixel Denominator ([D] ≥ 1)
              
        * Guaranteed Non-Zero: D = 0 is clamped to [1]
        * Cross-Multiplication Equality: N₁ · D₂ ≡ N₂ · D₁
@@ -33,33 +33,33 @@ In constructive finitist mathematics, two fundamental algebraic structures elimi
 ## 💻 2. Executable Literate Proofs & Evidence
 
 ```idris
-module Foundations.Singleton_Fractions_and_OnSeq_Algebra
+module Foundations.Unixel_Fractions_and_OnSeq_Algebra
 
 import Core.BoxInt
 import Core.VexelMaxel
-import Core.SingFraction
+import Core.UnixelFraction
 import Core.OnSeq
 import Data.List
 
 %default total
 
-||| Evidence 1: Proof of division-by-zero immunity in SingFraction.
-||| Passing a 0 denominator safely clamps to a unit Singleton [1].
+||| Evidence 1: Proof of division-by-zero immunity in UnixelFraction.
+||| Passing a 0 denominator safely clamps to a unit Unixel [1].
 public export
 evidence_div_zero_immunity : Bool
 evidence_div_zero_immunity =
-  let frac = mkSingFraction (intToBoxInt 42) 0
-  in den frac == MkSingleton 1 && unwrapBox (num frac) == 42
+  let frac = mkUnixelFraction (intToBoxInt 42) 0
+  in den frac == MkUnixel 1 && unwrapBox (num frac) == 42
 
 ||| Evidence 2: Exact Rational Addition of SingFractions.
 ||| (1 / [2]) + (1 / [3]) = (3 + 2) / [6] = 5 / [6].
 public export
 evidence_rational_addition : Bool
 evidence_rational_addition =
-  let f1 = mkSingFraction (intToBoxInt 1) 2
-      f2 = mkSingFraction (intToBoxInt 1) 3
-      res = addSingFraction f1 f2
-      expected = mkSingFraction (intToBoxInt 5) 6
+  let f1 = mkUnixelFraction (intToBoxInt 1) 2
+      f2 = mkUnixelFraction (intToBoxInt 1) 3
+      res = addUnixelFraction f1 f2
+      expected = mkUnixelFraction (intToBoxInt 5) 6
   in res == expected
 
 ||| Evidence 3: Exact Rational Multiplication & Cross-Multiplication Invariance.
@@ -67,10 +67,10 @@ evidence_rational_addition =
 public export
 evidence_rational_multiplication : Bool
 evidence_rational_multiplication =
-  let f1 = mkSingFraction (intToBoxInt 2) 3
-      f2 = mkSingFraction (intToBoxInt 3) 4
-      res = mulSingFraction f1 f2
-      half = mkSingFraction (intToBoxInt 1) 2
+  let f1 = mkUnixelFraction (intToBoxInt 2) 3
+      f2 = mkUnixelFraction (intToBoxInt 3) 4
+      res = mulUnixelFraction f1 f2
+      half = mkUnixelFraction (intToBoxInt 1) 2
   in rationalEquiv res half
 
 
@@ -117,11 +117,11 @@ evidence_stern_brocot_tree_path =
 ## 🔗 Related Chapters & Cross-References
 
 * **Constructive Foundations**:
-  * [Box Arithmetic & Inductive Multisets](Box_Arithmetic.md) — Foundations of Singleton $[D]$ non-zero container tallies.
+  * [Box Arithmetic & Inductive Multisets](Box_Arithmetic.md) — Foundations of Unixel $[D]$ non-zero container tallies.
   * [Reflected Fractional Multisets & QTT Sequences](Reflected_Fractional_Multisets_and_QTT_Sequences.md) — Elaborator Reflection macros auditing non-zero denominators and cross-multiplication proofs.
   * [Nested Polynomial Multisets](Nested_Polynomial_Multisets.md) — Polynomial multisets and rational fraction representations.
 * **Physical Applications**:
   * [Emergent Quantum Mechanics](Emergent_Quantum_Mechanics.md) — Rational probability amplitude fractions without continuous wave equations.
   * [Rational Snell's Law & The Triple Spread Law](../Geometry/Rational_Snell_and_Triple_Spread.md) — Exact rational trigonometric spread ratios.
-  * [Contradictions With Standard Physics](Contradictions_With_Standard_Physics.md) — Replacing non-constructive Dedekind reals with constructive Singleton fractions and OnSeqs.
+  * [Contradictions With Standard Physics](Contradictions_With_Standard_Physics.md) — Replacing non-constructive Dedekind reals with constructive Unixel fractions and OnSeqs.
 

@@ -9,7 +9,7 @@ In strongly correlated two-dimensional discrete electron systems under high magn
 2. **Fractional Quasiparticle Charge**:
    Quasiparticle vortex excitations carry exact fractional charge:
    $$e^* = \frac{p}{q} \cdot e$$
-   Constructively represented as a canonical `SingFraction` with zero denominator error.
+   Constructively represented as a canonical `UnixelFraction` with zero denominator error.
 3. **Anyonic Topological Braiding Phase**:
    Adiabatically exchanging two quasiparticle excitations yields a fractional statistical exchange angle:
    $$\theta = \frac{\pi}{q} \pmod{2\pi}$$

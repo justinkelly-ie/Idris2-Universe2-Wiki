@@ -29,7 +29,7 @@ module Evolution.Renormalization_Group_and_Scale_Invariance
 
 import Core.BoxInt
 import Core.Multiset
-import Core.SingFraction
+import Core.UnixelFraction
 import Geometry.InformationGeometry
 import Reflect.InvariantAuditor
 import Language.Reflection

@@ -33,14 +33,14 @@ import Core.Multiset
 
 ||| A pure representation of a signed integer as a Pixel pair of WildNat multisets.
 public export
-record PixelInt (0 pSpec : MSetSpec) (0 nSpec : MSetSpec) where
+record PixelInt (0 pSpec : BoxSpec) (0 nSpec : BoxSpec) where
   constructor MkPixelInt
   posBoxes : WildNat pSpec
   negBoxes : WildNat nSpec
 
 ||| Evaluates a PixelInt into an exact BoxInt scalar.
 public export
-evalPixelInt : {0 p, n : MSetSpec} -> PixelInt p n -> BoxInt
+evalPixelInt : {0 p, n : BoxSpec} -> PixelInt p n -> BoxInt
 evalPixelInt (MkPixelInt p n) =
   wildNatToBoxInt p - wildNatToBoxInt n
 
@@ -67,7 +67,7 @@ evidence_add_eval = Refl
 * **Mathematical Foundations**:
   * [Box Arithmetic & Inductive Multisets](Box_Arithmetic.md) — Inductive construction of natural numbers from empty box containers.
   * [Structural Accounting & Token Geometry](Structural_Accounting_and_Pure_Tokens.md) — Structural summation loops for non-cast integer vectors.
-  * [Singleton Fractions & Ongoing Sequences](Singleton_Fractions_and_OnSeq_Algebra.md) — Constructive fraction pairs without compiler floating-point representations.
+  * [Unixel Fractions & Ongoing Sequences](Unixel_Fractions_and_OnSeq_Algebra.md) — Constructive fraction pairs without compiler floating-point representations.
   * [Vexels, Maxels, Boxels & Reflected Linear Algebra](Vexels_Maxels_and_Reflected_Linear_Algebra.md) — Multiset tensor hierarchy over BoxInt.
 * **Spacetime & Geometry**:
   * [The 27 Ternary Geometries](../Geometry/Ternary_Multiverse_27.md) — Balanced ternary integer metric structures $\{-1, 0, 1\}$.

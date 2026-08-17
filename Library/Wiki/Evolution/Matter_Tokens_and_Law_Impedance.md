@@ -6,7 +6,7 @@ A fundamental insight of the **Idris2-Universe2** architecture is the profound o
 * **Dark Matter (`dm`)** represents **Global Structural Denominators / Laws** ($D = 1 + \text{sumStructural dm}$). It is not a localized particulate substance, but the accumulated cyclotomic historical error ledger that acts as an **algebraic impedance divisor**, governing time dilation, gravitational drag, and the irreversible Arrow of Time.
 
 Every physical observable in the universe (velocities, probabilities, redshifts, forces) is formed by the **rational quotient** of a Visible Matter numerator over a Dark Matter law denominator:
-$$\text{Physical Observable } \mathcal{O} = \frac{\text{Visible Matter State } (N)}{\text{Dark Matter Impedance } (D)} \equiv \text{SingFraction}(N, [D])$$
+$$\text{Physical Observable } \mathcal{O} = \frac{\text{Visible Matter State } (N)}{\text{Dark Matter Impedance } (D)} \equiv \text{UnixelFraction}(N, [D])$$
 
 ---
 
@@ -24,13 +24,13 @@ $$\text{Physical Observable } \mathcal{O} = \frac{\text{Visible Matter State } (
                               ÷
    ┌────────────────────────────────────────────────────────┐
    │  DARK MATTER (Law Denominator [D])                     │
-   │  - Type: Singleton Denominator (MkSingleton D)         │
+   │  - Type: Unixel Denominator (MkUnixel D)         │
    │  - Nature: Global non-local impedance divisor          │
    │  - Dynamics: Append-only cyclotomic history ledger     │
    └────────────────────────────────────────────────────────┘
                               ▼
    ┌────────────────────────────────────────────────────────┐
-   │  RATIONAL OBSERVABLE: SingFraction = N / [1 + Drag]    │
+   │  RATIONAL OBSERVABLE: UnixelFraction = N / [1 + Drag]    │
    └────────────────────────────────────────────────────────┘
 ```
 
@@ -43,7 +43,7 @@ module Evolution.Matter_Tokens_and_Law_Impedance
 
 import Core.BoxInt
 import Core.VexelMaxel
-import Core.SingFraction
+import Core.UnixelFraction
 import Core.OnSeq
 import Evolution.State
 import Evolution.Bootstrap
@@ -56,14 +56,14 @@ import Data.Vect
 
 %default total
 
-||| Forms an exact SingFraction observable from a UniverseState and active matter tokens.
+||| Forms an exact UnixelFraction observable from a UniverseState and active matter tokens.
 public export
-toCosmicFraction : {vm, de, dm : Nat} -> UniverseState vm de dm -> BoxInt -> SingFraction
+toCosmicFraction : {vm, de, dm : Nat} -> UniverseState vm de dm -> BoxInt -> UnixelFraction
 toCosmicFraction cosmos activeTokens =
   let drag = sumStructural (dmLog cosmos)
       scaleFactor = intToBoxInt 1 + drag
       dNat = integerToNat (unwrapBox scaleFactor)
-  in mkSingFraction activeTokens dNat
+  in mkUnixelFraction activeTokens dNat
 
 ||| Evidence 1: Visible Matter is a discrete, local integer sum (27 units for standard Ground State).
 public export
@@ -85,7 +85,7 @@ evidence_rational_velocity_deceleration : Bool
 evidence_rational_velocity_deceleration =
   let vIn = velocityVexel (intToBoxInt 112) (intToBoxInt 0)
       vOut = lensVelocityAcrossScale standardEpoch37 gSubstrate vIn
-      outAlpha = lookupSingleton (MkSingleton 1) vOut
+      outAlpha = lookupUnixel (MkUnixel 1) vOut
   in unwrapBox outAlpha == 2 -- 112 / (1 + 55) = 112 / 56 = 2
 
 ||| Evidence 4: Monotonic Law Impedance Growth (The Arrow of Time):
@@ -112,13 +112,13 @@ evidence_local_vm_global_dm_independence =
       d = intToBoxInt 1 + sumStructural (dmLog standardEpoch37)
   in sum1 == sum2 && unwrapBox d == 56
 
-||| Evidence 6: Cosmic Observable SingFraction Construction:
-||| An active matter token count of 112 at Epoch 37 directly forms the SingFraction 112 / [56].
+||| Evidence 6: Cosmic Observable UnixelFraction Construction:
+||| An active matter token count of 112 at Epoch 37 directly forms the UnixelFraction 112 / [56].
 public export
 evidence_cosmic_sing_fraction_construction : Bool
 evidence_cosmic_sing_fraction_construction =
   let frac = toCosmicFraction standardEpoch37 (intToBoxInt 112)
-  in unwrapBox (num frac) == 112 && den frac == MkSingleton 56
+  in unwrapBox (num frac) == 112 && den frac == MkUnixel 56
 
 ||| Evidence 7: Rational Observable Equivalence:
 ||| The cosmic fraction 112 / [56] is algebraically equivalent to the simplified fraction 2 / [1].
@@ -126,7 +126,7 @@ public export
 evidence_cosmic_fraction_simplification : Bool
 evidence_cosmic_fraction_simplification =
   let frac = toCosmicFraction standardEpoch37 (intToBoxInt 112)
-      twoOverOne = mkSingFraction (intToBoxInt 2) 1
+      twoOverOne = mkUnixelFraction (intToBoxInt 2) 1
   in frac == twoOverOne
 ```
 
@@ -139,7 +139,7 @@ evidence_cosmic_fraction_simplification =
   * [Cyclotomic Encoding & Decoding Protocol](Cyclotomic_Encoding_and_Decoding.md) — Dividing cosmic state polynomials by $\Phi_{137}(x)$.
   * [Bootstrapping Epoch 1 to 37](Bootstrap_Epoch_1_to_37.md) — The 210-capacity Primorial state evolution budget.
 * **Constructive Foundations & Fractional Algebra**:
-  * [Singleton Fractions & Ongoing Sequences](../Foundations/Singleton_Fractions_and_OnSeq_Algebra.md) — Non-zero Singleton denominators and constructive fractions.
+  * [Unixel Fractions & Ongoing Sequences](../Foundations/Unixel_Fractions_and_OnSeq_Algebra.md) — Non-zero Unixel denominators and constructive fractions.
   * [Reflected Fractional Multisets & QTT Sequences](../Foundations/Reflected_Fractional_Multisets_and_QTT_Sequences.md) — Invariant audits on fractional state transitions.
   * [Structural Accounting & Token Geometry](../Foundations/Structural_Accounting_and_Pure_Tokens.md) — Cast-free summation loops preserving exact integer tokens.
 * **Kinematics & Optics**:

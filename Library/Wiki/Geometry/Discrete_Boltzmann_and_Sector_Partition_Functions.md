@@ -27,7 +27,7 @@ In **Epoch 37**, statistical mechanics and thermal equilibrium emerge from the g
   │    Z_Cosmic(q) = Z_Ell²⁷(q) × Z_Hyp¹²⁸(q) × Z_Par⁵⁵(q)  (= 210) │
   │                               │                                 │
   │                               ▼                                 │
-  │ 5. Exact Rational Boltzmann Probabilities (SingFraction):       │
+  │ 5. Exact Rational Boltzmann Probabilities (UnixelFraction):       │
   │    P(E_k) = (w(E_k) · q^{E_k}) / Z(q)   where ∑ P(E_k) = 1/1    │
   │                               │                                 │
   │                               ▼                                 │
@@ -48,7 +48,7 @@ strictly matching the 4th Primorial budget decomposition:
 $$27 + 128 + 55 = 210$$
 
 ### C. Rational Probability Normalization
-For any discrete energy spectrum, the Boltzmann probabilities are represented as exact rational fractions (`SingFraction`) satisfying:
+For any discrete energy spectrum, the Boltzmann probabilities are represented as exact rational fractions (`UnixelFraction`) satisfying:
 $$\sum_{k=0}^{m} P(E_k) = \frac{\sum_{k=0}^m w_k N^k D^{m-k}}{Z(q)} = \frac{Z(q)}{Z(q)} = \frac{1}{1}$$
 with zero round-off error or floating-point approximations.
 
@@ -64,7 +64,7 @@ This drops thermodynamic entropy to $S = 0$ and maximizes the **Multiset Compact
 module Geometry.Discrete_Boltzmann_and_Sector_Partition_Functions
 
 import Core.BoxInt
-import Core.SingFraction
+import Core.UnixelFraction
 import Math.DiscreteBoltzmannDistribution
 
 %default total
