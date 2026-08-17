@@ -17,4 +17,5 @@ This section formulates cosmological evolution from the pre-geometric void throu
 * [Bootstrapping Epoch 1 to 37](Bootstrap_Epoch_1_to_37.md) — Genesis vacuum, multi-epoch folding, and the 55-state Dark Matter residue at Primorial 210.
 * [137-Stage Cycles & Lattice Expansion](Cycle_137_and_Expansion.md) — Discrete grid expansion ($1\times 1 \to 2\times 2 \to 3\times 3$) and fine-structure cycle limits.
 * [Hierarchical Matter Replication & The Alpha Cluster (Epoch 4)](Alpha_Cluster_Replication.md) — 4 bonded 27-cell nucleons expanding into a 108-cell composite $^4\text{He}$ core.
+* [Hierarchical Matter Emergence & Universal Pipeline](Hierarchical_Matter_Emergence_and_Universal_Pipeline.md) — Formal proof that a scale-invariant conservation engine drives non-repeating matter ascent from Quarks to DNA.
 * [Relational Metric Inference](Non_Hardcoded_Cosmic_State.md) — Eliminating magic numbers through internal density ratios.

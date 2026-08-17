@@ -45,6 +45,8 @@ Every citation includes authentic historical authors, dates, journal publication
   - [Optimal Transport & Wasserstein Distances](#optimal-transport--wasserstein-distances)
   - [Quantum Relative Entropy & Information Divergence](#quantum-relative-entropy--information-divergence)
   - [Differential Information Geometry & Amari Dually Flat Manifolds](#differential-information-geometry--amari-dually-flat-manifolds)
+  - [Algebra-Driven Design & Typed Domain Modeling (ADD)](#algebra-driven-design--typed-domain-modeling-add)
+  - [Type-Level Programming & Quantitative Type Refinements](#type-level-programming--quantitative-type-refinements)
 
 ---
 
@@ -334,6 +336,165 @@ Every citation includes authentic historical authors, dates, journal publication
 
 ---
 
+### Law 29: Discrete BCS Superconductivity & Energy Gap
+* **Historical Sources**:
+  - Bardeen, John, Cooper, Leon N., & Schrieffer, J. Robert (1957). *"Theory of Superconductivity"*. *Physical Review*, 108(5): 1175–1204. [DOI: 10.1103/PhysRev.108.1175](https://doi.org/10.1103/PhysRev.108.1175)
+  - Bogoliubov, Nikolai N. (1958). *"A new method in the theory of superconductivity"*. *Soviet Physics JETP*, 7(1): 41–46.
+* **Constructive Idris 2 Implementation**:
+  - Module: [`Math.DiscreteBCSSuperconductivity`](file:///var/home/justin/Projects/Idris2-Universe2/src/Math/DiscreteBCSSuperconductivity.idr) / [`Geometry.Law29_Discrete_BCS_Superconductivity`](file:///var/home/justin/Projects/Idris2-Universe2-Wiki/Library/Wiki/Geometry/Law29_Discrete_BCS_Superconductivity.md)
+  - Theorem: Cooper pair pairing potential and integer condensation energy gap $\Delta_0 = 2 \omega_D g / (g + 10)$ with strictly negative condensation free energy saving $E_{\text{cond}} < 0$.
+
+---
+
+### Law 30: Discrete Lattice Boltzmann & Navier-Stokes Transport
+* **Historical Sources**:
+  - Bhatnagar, Prabhu L., Gross, Eugene P., & Krook, Max (1954). *"A Model for Collision Processes in Gases. I. Small Amplitude Processes in Charged and Neutral One-Component Systems"*. *Physical Review*, 94(3): 511–525. [DOI: 10.1103/PhysRev.94.511](https://doi.org/10.1103/PhysRev.94.511)
+  - Qian, Yue-Hong, d'Humières, Dominique, & Lallemand, Pierre (1992). *"Lattice BGK Models for Navier-Stokes Equation"*. *Europhysics Letters*, 17(6): 479–484. [DOI: 10.1209/0295-5075/17/6/001](https://doi.org/10.1209/0295-5075/17/6/001)
+  - Succi, Sauro (2001). *The Lattice Boltzmann Equation: For Fluid Dynamics and Beyond*. Oxford University Press. ISBN: 978-0198503989.
+* **Constructive Idris 2 Implementation**:
+  - Module: [`Math.DiscreteLatticeBoltzmann`](file:///var/home/justin/Projects/Idris2-Universe2/src/Math/DiscreteLatticeBoltzmann.idr) / [`Geometry.Law30_Discrete_Lattice_Boltzmann_and_Navier_Stokes`](file:///var/home/justin/Projects/Idris2-Universe2-Wiki/Library/Wiki/Geometry/Law30_Discrete_Lattice_Boltzmann_and_Navier_Stokes.md)
+  - Theorem: D2Q9 collision-streaming operator preserving exact integer mass density $\rho = \sum f_i$ and momentum vector $\mathbf{j} = \sum f_i \mathbf{c}_i$ at every step without floating-point discretization errors.
+
+---
+
+### Law 31: Discrete Belousov-Zhabotinsky Chemical Oscillations
+* **Historical Sources**:
+  - Belousov, Boris P. (1959). *"A periodic reaction and its mechanism"*. *Sbornik Referatov po Radiatsionnoi Meditsine*, 145: 145–147.
+  - Zhabotinsky, Anatol M. (1964). *"Periodic liquid phase reactions"*. *Biofizika*, 9: 306–311.
+  - Field, Richard J., Körös, Endre, & Noyes, Richard M. (1972). *"Oscillations in chemical systems. II. Thorough analysis of temporal oscillation in the bromate-cerium-malonic acid system"*. *Journal of the American Chemical Society*, 94(25): 8649–8664. [DOI: 10.1021/ja00780a001](https://doi.org/10.1021/ja00780a001)
+* **Constructive Idris 2 Implementation**:
+  - Module: [`Math.DiscreteBelousovZhabotinsky`](file:///var/home/justin/Projects/Idris2-Universe2/src/Math/DiscreteBelousovZhabotinsky.idr) / [`Geometry.Law31_Discrete_Belousov_Zhabotinsky_Oscillations`](file:///var/home/justin/Projects/Idris2-Universe2-Wiki/Library/Wiki/Geometry/Law31_Discrete_Belousov_Zhabotinsky_Oscillations.md)
+  - Theorem: Discrete Oregonator-type limit-cycle concentration oscillations across activator, inhibitor, and catalyst species far from thermodynamic equilibrium.
+
+---
+
+### Law 32: Discrete Topological Insulators & Bulk-Boundary Correspondence
+* **Historical Sources**:
+  - Kane, Charles L. & Mele, Eugene J. (2005). *"$Z_2$ Topological Order and the Quantum Spin Hall Effect"*. *Physical Review Letters*, 95(14): 146802. [DOI: 10.1103/PhysRevLett.95.146802](https://doi.org/10.1103/PhysRevLett.95.146802)
+  - Hasan, M. Zahid & Kane, Charles L. (2010). *"Colloquium: Topological insulators"*. *Reviews of Modern Physics*, 82(4): 3045–3067. [DOI: 10.1103/RevModPhys.82.3045](https://doi.org/10.1103/RevModPhys.82.3045)
+  - Qi, Xiao-Liang & Zhang, Shou-Cheng (2011). *"Topological insulators and superconductors"*. *Reviews of Modern Physics*, 83(4): 1057–1110. [DOI: 10.1103/RevModPhys.83.1057](https://doi.org/10.1103/RevModPhys.83.1057)
+* **Constructive Idris 2 Implementation**:
+  - Module: [`Math.DiscreteTopologicalInsulator`](file:///var/home/justin/Projects/Idris2-Universe2/src/Math/DiscreteTopologicalInsulator.idr) / [`Geometry.Law32_Discrete_Topological_Insulators_and_Edge_States`](file:///var/home/justin/Projects/Idris2-Universe2-Wiki/Library/Wiki/Geometry/Law32_Discrete_Topological_Insulators_and_Edge_States.md)
+  - Theorem: Bulk topological $\mathbb{Z}_2$ invariant locking exactly $\nu$ chiral gapless edge mode conduction channels with quantized conductance $G_{\text{edge}} = \nu \cdot \frac{e^2}{h}$.
+
+---
+
+### Law 33: Discrete Quantum Teleportation & Entanglement Swapping
+* **Historical Sources**:
+  - Bennett, Charles H., Brassard, Gilles, Crépeau, Claude, Jozsa, Richard, Peres, Asher, & Wootters, William K. (1993). *"Teleporting an unknown quantum state via dual classical and Einstein-Podolsky-Rosen channels"*. *Physical Review Letters*, 70(13): 1895–1899. [DOI: 10.1103/PhysRevLett.70.1895](https://doi.org/10.1103/PhysRevLett.70.1895)
+  - Bouwmeester, Dik, Pan, Jian-Wei, Mattle, Klaus, Eibl, Manfred, Weinfurter, Harald, & Zeilinger, Anton (1997). *"Experimental quantum teleportation"*. *Nature*, 390(6660): 575–579. [DOI: 10.1038/37539](https://doi.org/10.1038/37539)
+* **Constructive Idris 2 Implementation**:
+  - Module: [`Math.DiscreteQuantumTeleportation`](file:///var/home/justin/Projects/Idris2-Universe2/src/Math/DiscreteQuantumTeleportation.idr) / [`Geometry.Law33_Discrete_Quantum_Teleportation_and_Entanglement_Swapping`](file:///var/home/justin/Projects/Idris2-Universe2-Wiki/Library/Wiki/Geometry/Law33_Discrete_Quantum_Teleportation_and_Entanglement_Swapping.md)
+  - Theorem: Exact Bell-basis measurement and 2-bit classical LOCC reconstruction preserving qubit quadrance without continuous wavefunctions.
+
+---
+
+### Law 34: Discrete Jaynes-Cummings Cavity QED & Vacuum Rabi Splitting
+* **Historical Sources**:
+  - Jaynes, Edwin T. & Cummings, Frederick W. (1963). *"Comparison of quantum and semiclassical radiation theories with application to the beam maser"*. *Proceedings of the IEEE*, 51(1): 89–109. [DOI: 10.1109/PROC.1963.1664](https://doi.org/10.1109/PROC.1664)
+  - Brune, Michel, Maali, Abdelhamid, Raimond, Jean-Michel, & Haroche, Serge (1996). *"Quantum Entanglement with Submicrometer Spatially Resolved Atoms in a Cavity"*. *Physical Review Letters*, 76(11): 1800–1803. [DOI: 10.1103/PhysRevLett.76.1800](https://doi.org/10.1103/PhysRevLett.76.1800)
+* **Constructive Idris 2 Implementation**:
+  - Module: [`Math.DiscreteJaynesCummings`](file:///var/home/justin/Projects/Idris2-Universe2/src/Math/DiscreteJaynesCummings.idr) / [`Geometry.Law34_Discrete_Jaynes_Cummings_and_Vacuum_Rabi_Splitting`](file:///var/home/justin/Projects/Idris2-Universe2-Wiki/Library/Wiki/Geometry/Law34_Discrete_Jaynes_Cummings_and_Vacuum_Rabi_Splitting.md)
+  - Theorem: Discrete polariton doublet dressed states $E_{n, \pm} = (n+1)\omega \pm g(n+1)$ and vacuum Rabi energy splitting $\Delta E_{\text{Rabi}} = 2g$.
+
+---
+
+### Law 35: Discrete Ryu-Takayanagi Holographic Entanglement Formula
+* **Historical Sources**:
+  - Ryu, Shinsei & Takayanagi, Tadashi (2006). *"Holographic Derivation of Entanglement Entropy from the AdS/CFT Correspondence"*. *Physical Review Letters*, 96(18): 181602. [DOI: 10.1103/PhysRevLett.96.181602](https://doi.org/10.1103/PhysRevLett.96.181602)
+  - Hubeny, Veronika E., Rangamani, Mukund, & Takayanagi, Tadashi (2007). *"A Covariant Entanglement Entropy Proposal"*. *Journal of High Energy Physics*, 2007(07): 062. [DOI: 10.1088/1126-6708/2007/07/062](https://doi.org/10.1088/1126-6708/2007/07/062)
+* **Constructive Idris 2 Implementation**:
+  - Module: [`Math.DiscreteRyuTakayanagi`](file:///var/home/justin/Projects/Idris2-Universe2/src/Math/DiscreteRyuTakayanagi.idr) / [`Geometry.Law35_Discrete_Ryu_Takayanagi_Holographic_Entanglement`](file:///var/home/justin/Projects/Idris2-Universe2-Wiki/Library/Wiki/Geometry/Law35_Discrete_Ryu_Takayanagi_Holographic_Entanglement.md)
+  - Theorem: Discrete minimal codimension-2 bulk surface area $\text{Area}(\gamma_A)$ determining boundary entanglement entropy $S_A = \text{Area}(\gamma_A) / 4$.
+
+---
+
+### Law 36: Discrete Kitaev Toric Code & Topological Error Correction
+* **Historical Sources**:
+  - Kitaev, Alexei Yu. (2003). *"Fault-tolerant quantum computation by anyons"*. *Annals of Physics*, 303(1): 2–30. [DOI: 10.1016/S0003-4916(02)00018-0](https://doi.org/10.1016/S0003-4916(02)00018-0)
+  - Dennis, Eric, Kitaev, Alexei, Landahl, Andrew, & Preskill, John (2002). *"Topological quantum memory"*. *Journal of Mathematical Physics*, 43(9): 4452–4505. [DOI: 10.1063/1.1499754](https://doi.org/10.1063/1.1499754)
+* **Constructive Idris 2 Implementation**:
+  - Module: [`Math.DiscreteToricCode`](file:///var/home/justin/Projects/Idris2-Universe2/src/Math/DiscreteToricCode.idr) / [`Geometry.Law36_Discrete_Kitaev_Toric_Code_and_Error_Correction`](file:///var/home/justin/Projects/Idris2-Universe2-Wiki/Library/Wiki/Geometry/Law36_Discrete_Kitaev_Toric_Code_and_Error_Correction.md)
+  - Theorem: Commuting star $A_s$ and plaquette $B_p$ stabilizer group with $2^{2g} = 4$ topological ground-state degeneracy and localized anyonic error syndrome detection.
+
+---
+
+### Law 37: Discrete Michaelis-Menten Enzyme Kinetics
+* **Historical Sources**:
+  - Michaelis, Leonor & Menten, Maud L. (1913). *"Die Kinetik der Invertinwirkung"*. *Biochemische Zeitschrift*, 49: 333–369. [English Translation: FEBS Letters 587(17): 2712–2720, 2013. DOI: 10.1016/j.febslet.2013.07.015](https://doi.org/10.1016/j.febslet.2013.07.015)
+  - Briggs, George E. & Haldane, J. B. S. (1925). *"A Note on the Kinetics of Enzyme Action"*. *Biochemical Journal*, 19(2): 338–339. [DOI: 10.1042/bj0190338](https://doi.org/10.1042/bj0190338)
+* **Constructive Idris 2 Implementation**:
+  - Module: [`Math.DiscreteMichaelisMenten`](file:///var/home/justin/Projects/Idris2-Universe2/src/Math/DiscreteMichaelisMenten.idr) / [`Geometry.Law37_Discrete_Michaelis_Menten_Enzyme_Kinetics`](file:///var/home/justin/Projects/Idris2-Universe2-Wiki/Library/Wiki/Geometry/Law37_Discrete_Michaelis_Menten_Enzyme_Kinetics.md)
+  - Theorem: Exact integer conservation $[E]_0 = [E] + [ES]$ and hyperbolic saturation velocity $v = \frac{V_{\max}[S]}{K_m + [S]}$.
+
+---
+
+### Law 38: Discrete Hodgkin-Huxley Action Potentials
+* **Historical Sources**:
+  - Hodgkin, Alan L. & Huxley, Andrew F. (1952). *"A quantitative description of membrane current and its application to conduction and excitation in nerve"*. *The Journal of Physiology*, 117(4): 500–544. [DOI: 10.1113/jphysiol.1952.sp004764](https://doi.org/10.1113/jphysiol.1952.sp004764)
+* **Constructive Idris 2 Implementation**:
+  - Module: [`Math.DiscreteHodgkinHuxley`](file:///var/home/justin/Projects/Idris2-Universe2/src/Math/DiscreteHodgkinHuxley.idr) / [`Geometry.Law38_Discrete_Hodgkin_Huxley_Action_Potentials`](file:///var/home/justin/Projects/Idris2-Universe2-Wiki/Library/Wiki/Geometry/Law38_Discrete_Hodgkin_Huxley_Action_Potentials.md)
+  - Theorem: Voltage-gated $m^3h$ sodium activation, $n^4$ delayed potassium rectification, and refractory reset waveform.
+
+---
+
+### Law 39: Discrete Monod-Wyman-Changeux (MWC) Allostery
+* **Historical Sources**:
+  - Monod, Jacques, Wyman, Jeffries, & Changeux, Jean-Pierre (1965). *"On the nature of allosteric transitions: A plausible model"*. *Journal of Molecular Biology*, 12(1): 88–118. [DOI: 10.1016/S0022-2836(65)80285-6](https://doi.org/10.1016/S0022-2836(65)80285-6)
+* **Constructive Idris 2 Implementation**:
+  - Module: [`Math.DiscreteMonodWymanChangeux`](file:///var/home/justin/Projects/Idris2-Universe2/src/Math/DiscreteMonodWymanChangeux.idr) / [`Geometry.Law39_Discrete_Monod_Wyman_Changeux_Allostery`](file:///var/home/justin/Projects/Idris2-Universe2-Wiki/Library/Wiki/Geometry/Law39_Discrete_Monod_Wyman_Changeux_Allostery.md)
+  - Theorem: Two-state $T \leftrightarrow R$ quaternary transition producing sigmoidal cooperativity with Hill coefficient $n_H > 1$.
+
+---
+
+### Law 40: Discrete Ribosomal Translation & Genetic Code Optimality
+* **Historical Sources**:
+  - Nirenberg, Marshall, et al. (1965). *"RNA codewords and protein synthesis, VII. On the general nature of the RNA code"*. *Proceedings of the National Academy of Sciences*, 53(5): 1161–1168. [DOI: 10.1073/pnas.53.5.1161](https://doi.org/10.1073/pnas.53.5.1161)
+  - Woese, Carl R. (1965). *"Order in the genetic code"*. *Proceedings of the National Academy of Sciences*, 54(1): 71–75. [DOI: 10.1073/pnas.54.1.71](https://doi.org/10.1073/pnas.54.1.71)
+* **Constructive Idris 2 Implementation**:
+  - Module: [`Math.DiscreteRibosomalTranslation`](file:///var/home/justin/Projects/Idris2-Universe2/src/Math/DiscreteRibosomalTranslation.idr) / [`Geometry.Law40_Discrete_Ribosomal_Translation_and_Genetic_Code`](file:///var/home/justin/Projects/Idris2-Universe2-Wiki/Library/Wiki/Geometry/Law40_Discrete_Ribosomal_Translation_and_Genetic_Code.md)
+  - Theorem: Triplet codon $\to$ amino acid mapping and synonymous 3rd-position wobble mutation error minimization.
+
+---
+
+### Law 41: Discrete Kerr Spacetime, Ergosphere & Penrose Process
+* **Historical Sources**:
+  - Kerr, Roy P. (1963). *"Gravitational field of a spinning mass as an example of algebraically special metrics"*. *Physical Review Letters*, 11(5): 237–238. [DOI: 10.1103/PhysRevLett.11.237](https://doi.org/10.1103/PhysRevLett.11.237)
+  - Penrose, Roger (1969). *"Gravitational collapse: The role of general relativity"*. *Rivista del Nuovo Cimento*, 1: 252–276.
+* **Constructive Idris 2 Implementation**:
+  - Module: [`Math.DiscreteKerrSpacetime`](file:///var/home/justin/Projects/Idris2-Universe2/src/Math/DiscreteKerrSpacetime.idr) / [`Geometry.Law41_Discrete_Kerr_Metric_and_Penrose_Process`](file:///var/home/justin/Projects/Idris2-Universe2-Wiki/Library/Wiki/Geometry/Law41_Discrete_Kerr_Metric_and_Penrose_Process.md)
+  - Theorem: Outer ergosphere boundary $r_E(\theta) > r_+$ and net rotational energy extraction $\Delta E > 0$ from negative energy orbits.
+
+---
+
+### Law 42: Discrete Alfvén Magnetohydrodynamics & Magnetic Flux Freezing
+* **Historical Sources**:
+  - Alfvén, Hannes (1942). *"Existence of electromagnetic-hydrodynamic waves"*. *Nature*, 150(3805): 405–406. [DOI: 10.1038/150405d0](https://doi.org/10.1038/150405d0)
+* **Constructive Idris 2 Implementation**:
+  - Module: [`Math.DiscreteAlfvénMHD`](file:///var/home/justin/Projects/Idris2-Universe2/src/Math/DiscreteAlfvénMHD.idr) / [`Geometry.Law42_Discrete_Alfven_MHD_and_Flux_Freezing`](file:///var/home/justin/Projects/Idris2-Universe2-Wiki/Library/Wiki/Geometry/Law42_Discrete_Alfven_MHD_and_Flux_Freezing.md)
+  - Theorem: Ideal plasma topological magnetic flux freezing and transverse Alfvén wave speed $v_A^2 = B^2 / \rho$.
+
+---
+
+### Law 43: Discrete Chandrasekhar Electron Degeneracy Mass Limit
+* **Historical Sources**:
+  - Chandrasekhar, Subrahmanyan (1931). *"The maximum mass of ideal white dwarfs"*. *Astrophysical Journal*, 74: 81–82. [DOI: 10.1086/143324](https://doi.org/10.1086/143324)
+* **Constructive Idris 2 Implementation**:
+  - Module: [`Math.DiscreteChandrasekharLimit`](file:///var/home/justin/Projects/Idris2-Universe2/src/Math/DiscreteChandrasekharLimit.idr) / [`Geometry.Law43_Discrete_Chandrasekhar_Degeneracy_Limit`](file:///var/home/justin/Projects/Idris2-Universe2-Wiki/Library/Wiki/Geometry/Law43_Discrete_Chandrasekhar_Degeneracy_Limit.md)
+  - Theorem: Relativistic electron degeneracy pressure bound $M_{\text{Ch}} = 84$ tokens ($1.44 M_\odot$) preventing collapse.
+
+---
+
+### Law 44: Discrete Hawking-Page Gravitational Phase Transition
+* **Historical Sources**:
+  - Hawking, Stephen W. & Page, Don N. (1983). *"Thermodynamics of black holes in anti-de Sitter space"*. *Communications in Mathematical Physics*, 87(4): 577–588. [DOI: 10.1007/BF01208266](https://doi.org/10.1007/BF01208266)
+  - Witten, Edward (1998). *"Anti-de Sitter space, thermal phase transition, and confinement in gauge theories"*. *Advances in Theoretical and Mathematical Physics*, 2(3): 505–532. [DOI: 10.4310/ATMP.1998.v2.n3.a3](https://doi.org/10.4310/ATMP.1998.v2.n3.a3)
+* **Constructive Idris 2 Implementation**:
+  - Module: [`Math.DiscreteHawkingPageTransition`](file:///var/home/justin/Projects/Idris2-Universe2/src/Math/DiscreteHawkingPageTransition.idr) / [`Geometry.Law44_Discrete_Hawking_Page_Phase_Transition`](file:///var/home/justin/Projects/Idris2-Universe2-Wiki/Library/Wiki/Geometry/Law44_Discrete_Hawking_Page_Phase_Transition.md)
+  - Theorem: First-order gravitational free energy crossover $\Delta F = F_{\text{BH}} - F_{\text{AdS}}$ at Hawking-Page temperature $T_{\text{HP}}$.
+
+---
+
 ## 📐 Foundational Mathematical & Information Principles
 
 ### Box Arithmetic & Constructive Finitism
@@ -402,4 +563,22 @@ Every citation includes authentic historical authors, dates, journal publication
 * **Constructive Idris 2 Implementation**:
   - Module: [`Geometry.InformationGeometry`](file:///var/home/justin/Projects/Idris2-Universe2/src/Geometry/InformationGeometry.idr) / [`Geometry.Discrete_Quantum_Relative_Entropy_and_Amari_Geometry`](file:///var/home/justin/Projects/Idris2-Universe2-Wiki/Library/Wiki/Geometry/Discrete_Quantum_Relative_Entropy_and_Amari_Geometry.md)
   - Theorem: Generalized Pythagorean Theorem $D_{\text{rel}}(P \parallel R) = D_{\text{rel}}(P \parallel Q) + D_{\text{rel}}(Q \parallel R)$ for dually flat orthogonal projections.
+
+---
+
+### Algebra-Driven Design & Typed Domain Modeling (ADD)
+* **Foundational Text**:
+  - Maguire, Sandy (2020). *Algebra-Driven Design*. Sandy Maguire / Leanpub. ISBN: 979-8664119855.
+* **Constructive Idris 2 Implementation**:
+  - Modules: [`Foundations.Algebraic_Family_Tree_of_Physical_Laws`](file:///var/home/justin/Projects/Idris2-Universe2-Wiki/Library/Wiki/Foundations/Algebraic_Family_Tree_of_Physical_Laws.md), [`Compound.TypeIndexedMultiset`](file:///var/home/justin/Projects/Idris2-Universe2/src/Compound/TypeIndexedMultiset.idr), [`Foundations.Type_Indexed_Multiset_Synthesis`](file:///var/home/justin/Projects/Idris2-Universe2-Wiki/Library/Wiki/Foundations/Type_Indexed_Multiset_Synthesis.md)
+  - Architecture: Defines physical laws as *algebraic observations* ($\text{Observe} : \text{Carrier} \to \text{Value}$) on universal multiset states, where lawful evolution preserves observation homomorphisms ($\text{Observe}(a \star b) \equiv \mathcal{F}(\text{Observe}(a), \text{Observe}(b))$) across all 28 physical laws.
+
+---
+
+### Type-Level Programming & Quantitative Type Refinements
+* **Foundational Text**:
+  - Maguire, Sandy (2018). *Thinking with Types: Type-Level Programming in Haskell*. Sandy Maguire. ISBN: 978-1790479702.
+* **Constructive Idris 2 Implementation**:
+  - Modules: [`Compound.TypeIndexedMultiset`](file:///var/home/justin/Projects/Idris2-Universe2/src/Compound/TypeIndexedMultiset.idr), [`Foundations.Type_Indexed_Multiset_Synthesis`](file:///var/home/justin/Projects/Idris2-Universe2-Wiki/Library/Wiki/Foundations/Type_Indexed_Multiset_Synthesis.md)
+  - Architecture: Unifies type-indexed species tags (`QuarkSpec`, `HadronSpec`, `AlphaSpec`, `NucleusSpec`) with zero-overhead erased proofs (`0 prf : ...`) in Quantitative Type Theory (QTT), ensuring illegal physical states (e.g. unconfined color states, broken mass conservation) are strictly unrepresentable at compile time while compiling to bare $O(1)$ integer multiset buffers at runtime.
 

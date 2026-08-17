@@ -72,7 +72,18 @@ This section derives the 4 fundamental geometries, 17 emergent physical laws, ga
 * [Law 26: Discrete Casimir-Polder Dispersion Forces](Law26_Discrete_Casimir_Polder_Dispersion_Forces.md) — Retarded relativistic transition from short-range London dispersion ($1/Q^3$) to long-range Casimir-Polder potential ($1/Q^4$).
 * [Law 27: Discrete Bohmian Quantum Potential](Law27_Discrete_Bohmian_Quantum_Potential.md) — Exact discrete multiset graph Laplacian amplitude potential $Q = -\Delta R / (2R)$ and deterministic causal pilot-wave trajectories.
 * [Law 28: Discrete Landauer-Büttiker Quantum Conduction](Law28_Discrete_Landauer_Buettiker_Quantum_Conduction.md) — Multi-terminal transmission matrix reciprocity $G_{pq} = G_{qp}$ and discrete Kirchhoff current loop conservation.
-
-
-
-
+* [Law 29: Discrete BCS Superconductivity & Energy Gap](Law29_Discrete_BCS_Superconductivity.md) — Cooper pair pairing potential, discrete energy gap $\Delta_0$, and strictly negative condensation free energy.
+* [Law 30: Discrete Lattice Boltzmann & Navier-Stokes Transport](Law30_Discrete_Lattice_Boltzmann_and_Navier_Stokes.md) — D2Q9 collision-streaming operator conserving exact integer density and momentum vectors.
+* [Law 31: Discrete Belousov-Zhabotinsky Chemical Oscillations](Law31_Discrete_Belousov_Zhabotinsky_Oscillations.md) — Non-equilibrium Oregonator multi-species limit cycles and entropy dissipation.
+* [Law 32: Discrete Topological Insulators & Bulk-Boundary Correspondence](Law32_Discrete_Topological_Insulators_and_Edge_States.md) — Bulk $\mathbb{Z}_2$ parity invariant locking gapless chiral edge state conduction channels.
+* [Law 33: Discrete Quantum Teleportation & Entanglement Swapping](Law33_Discrete_Quantum_Teleportation_and_Entanglement_Swapping.md) — Exact Bell-state measurement, 2-bit classical LOCC channel, and state reconstruction.
+* [Law 34: Discrete Jaynes-Cummings Cavity QED & Vacuum Rabi Splitting](Law34_Discrete_Jaynes_Cummings_and_Vacuum_Rabi_Splitting.md) — Discrete atom-photon interaction Hamiltonian and dressed polariton energy splittings.
+* [Law 36: Discrete Kitaev Toric Code & Topological Error Correction](Law36_Discrete_Kitaev_Toric_Code_and_Error_Correction.md) — Star and plaquette stabilizers with $4^g$ ground-state degeneracy and localized anyonic error syndrome detection.
+* [Law 37: Discrete Michaelis-Menten Enzyme Kinetics](Law37_Discrete_Michaelis_Menten_Enzyme_Kinetics.md) — Exact integer enzyme conservation $[E]_0 = [E] + [ES]$ and hyperbolic saturation velocity.
+* [Law 38: Discrete Hodgkin-Huxley Action Potentials](Law38_Discrete_Hodgkin_Huxley_Action_Potentials.md) — Voltage threshold depolarization, $m^3h$ sodium activation, $n^4$ delayed rectification, and refractory reset.
+* [Law 39: Discrete Monod-Wyman-Changeux Allostery](Law39_Discrete_Monod_Wyman_Changeux_Allostery.md) — Two-state $T \leftrightarrow R$ quaternary transition and sigmoidal cooperativity ($n_H > 1$).
+* [Law 40: Discrete Ribosomal Translation & Genetic Code Optimality](Law40_Discrete_Ribosomal_Translation_and_Genetic_Code.md) — Triplet codon mapping and synonymous 3rd-position wobble mutation error minimization.
+* [Law 41: Discrete Kerr Spacetime, Ergosphere & Penrose Process](Law41_Discrete_Kerr_Metric_and_Penrose_Process.md) — Frame dragging, ergosphere boundary $r_E(\theta)$, and extractable rotational energy $\Delta E > 0$.
+* [Law 42: Discrete Alfvén Magnetohydrodynamics & Magnetic Flux Freezing](Law42_Discrete_Alfven_MHD_and_Flux_Freezing.md) — Topological flux freezing and transverse Alfvén wave speed $v_A^2 = B^2 / \rho$.
+* [Law 43: Discrete Chandrasekhar Electron Degeneracy Mass Limit](Law43_Discrete_Chandrasekhar_Degeneracy_Limit.md) — Relativistic electron degeneracy pressure bound $M_{\text{Ch}} = 84$ tokens ($1.44 M_\odot$).
+* [Law 44: Discrete Hawking-Page Gravitational Phase Transition](Law44_Discrete_Hawking_Page_Phase_Transition.md) — First-order gravitational free energy crossover $\Delta F = F_{\text{BH}} - F_{\text{AdS}}$ at $T_{\text{HP}}$.

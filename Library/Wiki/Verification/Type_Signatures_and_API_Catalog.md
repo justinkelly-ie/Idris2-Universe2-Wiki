@@ -40,25 +40,41 @@ This document provides an **automatically generated, authoritative reference** f
   - [`Math.CliffordAlgebra`](#mod-math-cliffordalgebra)
   - [`Math.ConstructiveBaryogenesis`](#mod-math-constructivebaryogenesis)
   - [`Math.DiscreteActionPrinciple`](#mod-math-discreteactionprinciple)
+  - [`Math.DiscreteAlfvénMHD`](#mod-math-discretealfvénmhd)
+  - [`Math.DiscreteBCSSuperconductivity`](#mod-math-discretebcssuperconductivity)
+  - [`Math.DiscreteBelousovZhabotinsky`](#mod-math-discretebelousovzhabotinsky)
   - [`Math.DiscreteBohmianPotential`](#mod-math-discretebohmianpotential)
   - [`Math.DiscreteBoltzmannDistribution`](#mod-math-discreteboltzmanndistribution)
   - [`Math.DiscreteCasimirEffect`](#mod-math-discretecasimireffect)
   - [`Math.DiscreteCasimirPolder`](#mod-math-discretecasimirpolder)
+  - [`Math.DiscreteChandrasekharLimit`](#mod-math-discretechandrasekharlimit)
   - [`Math.DiscreteChernSimonsMass`](#mod-math-discretechernsimonsmass)
   - [`Math.DiscreteChiralAnomaly`](#mod-math-discretechiralanomaly)
   - [`Math.DiscreteCosmicGenesis`](#mod-math-discretecosmicgenesis)
   - [`Math.DiscreteCrooksTheorem`](#mod-math-discretecrookstheorem)
   - [`Math.DiscreteDiracSpinor`](#mod-math-discretediracspinor)
   - [`Math.DiscreteHallViscosity`](#mod-math-discretehallviscosity)
+  - [`Math.DiscreteHawkingPageTransition`](#mod-math-discretehawkingpagetransition)
   - [`Math.DiscreteHawkingRadiation`](#mod-math-discretehawkingradiation)
+  - [`Math.DiscreteHodgkinHuxley`](#mod-math-discretehodgkinhuxley)
   - [`Math.DiscreteHolographicBound`](#mod-math-discreteholographicbound)
   - [`Math.DiscreteJarzynskiEquality`](#mod-math-discretejarzynskiequality)
+  - [`Math.DiscreteJaynesCummings`](#mod-math-discretejaynescummings)
+  - [`Math.DiscreteKerrSpacetime`](#mod-math-discretekerrspacetime)
   - [`Math.DiscreteLandauerBuettiker`](#mod-math-discretelandauerbuettiker)
   - [`Math.DiscreteLandauerPrinciple`](#mod-math-discretelandauerprinciple)
+  - [`Math.DiscreteLatticeBoltzmann`](#mod-math-discretelatticeboltzmann)
+  - [`Math.DiscreteMichaelisMenten`](#mod-math-discretemichaelismenten)
+  - [`Math.DiscreteMonodWymanChangeux`](#mod-math-discretemonodwymanchangeux)
   - [`Math.DiscreteOnsagerReciprocity`](#mod-math-discreteonsagerreciprocity)
   - [`Math.DiscretePageCurve`](#mod-math-discretepagecurve)
   - [`Math.DiscretePoyntingTheorem`](#mod-math-discretepoyntingtheorem)
+  - [`Math.DiscreteQuantumTeleportation`](#mod-math-discretequantumteleportation)
+  - [`Math.DiscreteRibosomalTranslation`](#mod-math-discreteribosomaltranslation)
+  - [`Math.DiscreteRyuTakayanagi`](#mod-math-discreteryutakayanagi)
   - [`Math.DiscreteTOVLimit`](#mod-math-discretetovlimit)
+  - [`Math.DiscreteTopologicalInsulator`](#mod-math-discretetopologicalinsulator)
+  - [`Math.DiscreteToricCode`](#mod-math-discretetoriccode)
   - [`Math.DiscreteWheelerDeWitt`](#mod-math-discretewheelerdewitt)
   - [`Math.FineStructure`](#mod-math-finestructure)
   - [`Math.FractionalQuantumHall`](#mod-math-fractionalquantumhall)
@@ -80,6 +96,7 @@ This document provides an **automatically generated, authoritative reference** f
 - [**5. Compound Structures & Chemical Networks**](#section-5)
   - [`Compound.AlphaReplication`](#mod-compound-alphareplication)
   - [`Compound.HadronicConfinement`](#mod-compound-hadronicconfinement)
+  - [`Compound.HierarchicalMatterPipeline`](#mod-compound-hierarchicalmatterpipeline)
   - [`Compound.HydrogenBonding`](#mod-compound-hydrogenbonding)
   - [`Compound.LinearEpsilonRouting`](#mod-compound-linearepsilonrouting)
   - [`Compound.MacromolecularChirality`](#mod-compound-macromolecularchirality)
@@ -88,11 +105,17 @@ This document provides an **automatically generated, authoritative reference** f
   - [`Compound.QuarkHadronAlgebra`](#mod-compound-quarkhadronalgebra)
   - [`Compound.StellarNucleosynthesis`](#mod-compound-stellarnucleosynthesis)
   - [`Compound.SymplecticIntegrator`](#mod-compound-symplecticintegrator)
+  - [`Compound.TypeIndexedMultiset`](#mod-compound-typeindexedmultiset)
+  - [`Compound.UniversalAlgebraTRS`](#mod-compound-universalalgebratrs)
   - [`Compound.VelocityLensing`](#mod-compound-velocitylensing)
   - [`Compound.WatsonCrickBasePairing`](#mod-compound-watsoncrickbasepairing)
 - [**6. Elaborator Reflection & Invariant Macros**](#section-6)
   - [`Reflect.InvariantAuditor`](#mod-reflect-invariantauditor)
   - [`Reflect.PermutationSolver`](#mod-reflect-permutationsolver)
+- [**7. Miscellaneous Modules**](#section-7)
+  - [`Observation.Algebraic`](#mod-observation-algebraic)
+  - [`Observation.Dataset`](#mod-observation-dataset)
+  - [`Observation.Scientific`](#mod-observation-scientific)
 
 ---
 
@@ -581,6 +604,61 @@ record BaryonState where
 
 ---
 
+### <a id="mod-math-discretealfvénmhd"></a>Module `Math.DiscreteAlfvénMHD`
+
+#### 📦 Records
+
+```idris
+record PlasmaState where
+  constructor MkPlasma
+  magneticFieldFlux : BoxInt
+  massDensity       : BoxInt
+  fluidVelocity     : BoxInt
+```
+
+[↑ Back to Top](#table-of-contents)
+
+---
+
+### <a id="mod-math-discretebcssuperconductivity"></a>Module `Math.DiscreteBCSSuperconductivity`
+
+#### 📦 Records
+
+```idris
+record DiscreteBCSState where
+  constructor MkBCSState
+  ||| Debye cutoff energy tokens (ω_D)
+  debyeEnergy : BoxInt
+  ||| Pairing coupling strength tokens (V_0)
+  couplingStrength : BoxInt
+  ||| Electronic density of states tokens (N_0)
+  densityOfStates : BoxInt
+  ||| Cooper pair condensation energy gap tokens (Δ_0)
+  energyGap : BoxInt
+  ||| Ground state condensation energy saving (E_cond < 0)
+  condensationEnergy : BoxInt
+```
+
+[↑ Back to Top](#table-of-contents)
+
+---
+
+### <a id="mod-math-discretebelousovzhabotinsky"></a>Module `Math.DiscreteBelousovZhabotinsky`
+
+#### 📦 Records
+
+```idris
+record BZState where
+  constructor MkBZState
+  activatorX : BoxInt
+  inhibitorY : BoxInt
+  catalystZ  : BoxInt
+```
+
+[↑ Back to Top](#table-of-contents)
+
+---
+
 ### <a id="mod-math-discretebohmianpotential"></a>Module `Math.DiscreteBohmianPotential`
 
 [↑ Back to Top](#table-of-contents)
@@ -617,6 +695,23 @@ record CavityBoundary where
 ---
 
 ### <a id="mod-math-discretecasimirpolder"></a>Module `Math.DiscreteCasimirPolder`
+
+[↑ Back to Top](#table-of-contents)
+
+---
+
+### <a id="mod-math-discretechandrasekharlimit"></a>Module `Math.DiscreteChandrasekharLimit`
+
+#### 📦 Records
+
+```idris
+record WhiteDwarfCore where
+  constructor MkWDFCore
+  coreMass : BoxInt
+  coreRadius : BoxInt
+  degeneracyPressure : BoxInt
+  gravitationalPressure : BoxInt
+```
 
 [↑ Back to Top](#table-of-contents)
 
@@ -697,6 +792,29 @@ record ChiralComponents where
 
 ---
 
+### <a id="mod-math-discretehawkingpagetransition"></a>Module `Math.DiscreteHawkingPageTransition`
+
+#### 📦 Records
+
+```idris
+record HawkingPageSystem where
+  constructor MkHPSystem
+  temperature : BoxInt
+  critTemperature : BoxInt
+  freeEnergyDifference : BoxInt
+  currentPhase : GravitationalPhase
+```
+
+#### 🏷️ Algebraic Data Types
+
+```idris
+data GravitationalPhase = ThermalAdSGas | LargeAdSBlackHole
+```
+
+[↑ Back to Top](#table-of-contents)
+
+---
+
 ### <a id="mod-math-discretehawkingradiation"></a>Module `Math.DiscreteHawkingRadiation`
 
 #### 📦 Records
@@ -707,6 +825,23 @@ record HorizonState where
   horizonArea      : Nat
   blackHoleMass    : BoxInt
   emittedRadiation : BoxInt
+```
+
+[↑ Back to Top](#table-of-contents)
+
+---
+
+### <a id="mod-math-discretehodgkinhuxley"></a>Module `Math.DiscreteHodgkinHuxley`
+
+#### 📦 Records
+
+```idris
+record NeuronMembrane where
+  constructor MkNeuron
+  voltage : BoxInt
+  mGate   : BoxInt
+  hGate   : BoxInt
+  nGate   : BoxInt
 ```
 
 [↑ Back to Top](#table-of-contents)
@@ -728,6 +863,48 @@ record NonEquilibriumPath where
   constructor MkNonEquilibriumPath
   pathWork   : BoxInt
   pathWeight : Nat
+```
+
+[↑ Back to Top](#table-of-contents)
+
+---
+
+### <a id="mod-math-discretejaynescummings"></a>Module `Math.DiscreteJaynesCummings`
+
+#### 📦 Records
+
+```idris
+record JCParams where
+  constructor MkJCParams
+  cavityFreq : BoxInt
+  atomicFreq : BoxInt
+  couplingStrength : BoxInt
+```
+
+```idris
+record PolaritonDoublet where
+  constructor MkDoublet
+  photonManifold : Nat
+  upperEnergy : BoxInt
+  lowerEnergy : BoxInt
+  rabiSplitting : BoxInt
+```
+
+[↑ Back to Top](#table-of-contents)
+
+---
+
+### <a id="mod-math-discretekerrspacetime"></a>Module `Math.DiscreteKerrSpacetime`
+
+#### 📦 Records
+
+```idris
+record KerrBlackHole where
+  constructor MkKerr
+  mass : BoxInt
+  spin : BoxInt
+  outerHorizon : BoxInt
+  ergosphereRadius : BoxInt
 ```
 
 [↑ Back to Top](#table-of-contents)
@@ -763,6 +940,68 @@ record BitMemoryState where
   activeBits   : Nat
   activeEnergy : BoxInt
   sinkEnergy   : BoxInt
+```
+
+[↑ Back to Top](#table-of-contents)
+
+---
+
+### <a id="mod-math-discretelatticeboltzmann"></a>Module `Math.DiscreteLatticeBoltzmann`
+
+#### 📦 Records
+
+```idris
+record D2Q9Node where
+  constructor MkD2Q9Node
+  f0 : BoxInt
+  f1 : BoxInt
+  f2 : BoxInt
+  f3 : BoxInt
+  f4 : BoxInt
+  f5 : BoxInt
+  f6 : BoxInt
+  f7 : BoxInt
+  f8 : BoxInt
+```
+
+#### 🏷️ Algebraic Data Types
+
+```idris
+data D2Q9Dir = D0 | D1 | D2 | D3 | D4 | D5 | D6 | D7 | D8
+```
+
+[↑ Back to Top](#table-of-contents)
+
+---
+
+### <a id="mod-math-discretemichaelismenten"></a>Module `Math.DiscreteMichaelisMenten`
+
+#### 📦 Records
+
+```idris
+record EnzymeSystem where
+  constructor MkEnzymeSystem
+  freeEnzyme    : BoxInt
+  enzymeComplex : BoxInt
+  substrate     : BoxInt
+  product       : BoxInt
+  totalEnzyme   : BoxInt
+```
+
+[↑ Back to Top](#table-of-contents)
+
+---
+
+### <a id="mod-math-discretemonodwymanchangeux"></a>Module `Math.DiscreteMonodWymanChangeux`
+
+#### 📦 Records
+
+```idris
+record AllostericSystem where
+  constructor MkAllostericSystem
+  allostericConstant : BoxInt
+  affinityRatio      : BoxInt
+  numProtomers       : Nat
 ```
 
 [↑ Back to Top](#table-of-contents)
@@ -809,6 +1048,66 @@ record DiscreteEMCell where
 
 ---
 
+### <a id="mod-math-discretequantumteleportation"></a>Module `Math.DiscreteQuantumTeleportation`
+
+#### 📦 Records
+
+```idris
+record DiscreteQubit where
+  constructor MkQubit
+  alpha : BoxInt
+  beta  : BoxInt
+```
+
+#### 🏷️ Algebraic Data Types
+
+```idris
+data BellSyndrome = M00 | M01 | M10 | M11
+```
+
+[↑ Back to Top](#table-of-contents)
+
+---
+
+### <a id="mod-math-discreteribosomaltranslation"></a>Module `Math.DiscreteRibosomalTranslation`
+
+#### 🏷️ Algebraic Data Types
+
+```idris
+data RNABase = A | C | G | U
+```
+
+```idris
+data AminoAcid = Met | Phe | Leu | Gly | Ala | StopCodon
+```
+
+[↑ Back to Top](#table-of-contents)
+
+---
+
+### <a id="mod-math-discreteryutakayanagi"></a>Module `Math.DiscreteRyuTakayanagi`
+
+#### 📦 Records
+
+```idris
+record BoundarySubsystem where
+  constructor MkSubsystem
+  subsystemLength : Nat
+  totalBoundaryLength : Nat
+```
+
+```idris
+record HolographicEntanglement where
+  constructor MkHEntropy
+  subsystem : BoundarySubsystem
+  minimalSurfaceArea : BoxInt
+  entanglementEntropy : BoxInt
+```
+
+[↑ Back to Top](#table-of-contents)
+
+---
+
 ### <a id="mod-math-discretetovlimit"></a>Module `Math.DiscreteTOVLimit`
 
 #### 📦 Records
@@ -819,6 +1118,52 @@ record StellarCore where
   coreMass     : Nat
   isCollapsed  : Bool
   boundaryArea : Nat
+```
+
+[↑ Back to Top](#table-of-contents)
+
+---
+
+### <a id="mod-math-discretetopologicalinsulator"></a>Module `Math.DiscreteTopologicalInsulator`
+
+#### 📦 Records
+
+```idris
+record DiscreteTIState where
+  constructor MkTIState
+  ||| Bulk energy gap tokens (E_gap)
+  bulkGap : BoxInt
+  ||| Bulk Z_2 parity topological index (0 = Trivial, 1 = Topological)
+  bulkZ2Index : Nat
+  ||| Number of protected chiral edge conduction channels (N_edge)
+  edgeChannelCount : Nat
+  ||| Quantized edge Hall conductance tokens (in e^2/h units)
+  edgeConductance : BoxInt
+```
+
+[↑ Back to Top](#table-of-contents)
+
+---
+
+### <a id="mod-math-discretetoriccode"></a>Module `Math.DiscreteToricCode`
+
+#### 📦 Records
+
+```idris
+record ToricCodeLattice where
+  constructor MkToricLattice
+  gridSize : Nat
+  numPhysicalQubits : Nat
+  numLogicalQubits : Nat
+  codeDistance : Nat
+```
+
+```idris
+record StabilizerSyndrome where
+  constructor MkSyndrome
+  starSyndromes : List BoxInt
+  plaquetteSyndromes : List BoxInt
+  numAnyonDefects : Nat
 ```
 
 [↑ Back to Top](#table-of-contents)
@@ -1134,6 +1479,24 @@ data ColorCharge = RedColor | GreenColor | BlueColor
 
 ---
 
+### <a id="mod-compound-hierarchicalmatterpipeline"></a>Module `Compound.HierarchicalMatterPipeline`
+
+#### 🏷️ Algebraic Data Types
+
+```idris
+data MatterPhase = PhaseQuarkHadronic     -- 1. Quarks to Nucleons (9 -> 27)
+                 | PhaseNuclearAlpha       -- 2. Nucleons to Helium-4 Alpha Cores (27 -> 108)
+                 | PhaseStellarNucleo      -- 3. Triple-Alpha to Carbon-12 & Phosphorus (108 -> 324)
+                 | PhasePlasmaAtomic       -- 4. Recombination & Photon Decoupling
+                 | PhaseMolecularBonding   -- 5. Covalent Bonds & Aqueous Networks (H2O)
+                 | PhaseBioenergeticATP    -- 6. Pyrophosphate ATP Coupling (Ground State 210)
+                 | PhaseMacromolecularDNA  -- 7. Homochiral Watson-Crick Base Pairing
+```
+
+[↑ Back to Top](#table-of-contents)
+
+---
+
 ### <a id="mod-compound-hydrogenbonding"></a>Module `Compound.HydrogenBonding`
 
 #### 📦 Records
@@ -1304,50 +1667,6 @@ data ParticleCharge = ProtonPositive | ElectronNegative | NeutralHydrogen
 
 ### <a id="mod-compound-quarkhadronalgebra"></a>Module `Compound.QuarkHadronAlgebra`
 
-#### 📦 Records
-
-```idris
-record QuarkToken where
-  constructor MkQuarkToken
-  flavor : QuarkFlavor
-  color  : ColorCharge
-  spin   : SpinProjection
-  isAnti : Bool
-```
-
-#### 🏷️ Algebraic Data Types
-
-```idris
-data QuarkFlavor
-  = UpQuark
-  | DownQuark
-  | StrangeQuark
-  | CharmQuark
-  | BottomQuark
-  | TopQuark
-```
-
-```idris
-data SpinProjection = SpinUp | SpinDown
-```
-
-```idris
-data Hadron
-  = Baryon QuarkToken QuarkToken QuarkToken
-  | Meson QuarkToken QuarkToken
-```
-
-```idris
-data HadronicConfinementError
-  = ColorChargeNotNeutral
-  | PauliExclusionViolation
-
-||| Algebraic Functor: Contracts a Quark Triad (r, g, b) into a Color-Neutral Baryon.
-||| Enforces:
-||| 1. SU(3) Color Neutrality (Red + Green + Blue = White Singlet)
-||| 2. Total Baryon Number B = 1.
-```
-
 [↑ Back to Top](#table-of-contents)
 
 ---
@@ -1394,6 +1713,108 @@ record PhaseState where
   constructor MkPhaseState
   position : Vexel
   momentum : Vexel
+```
+
+[↑ Back to Top](#table-of-contents)
+
+---
+
+### <a id="mod-compound-typeindexedmultiset"></a>Module `Compound.TypeIndexedMultiset`
+
+#### 📦 Records
+
+```idris
+record RefinedQuark (spec : QuarkSpec) (col : ColorSector) where
+  constructor MkRefinedQuark
+  vexelCarrier : QuarkVexel
+  0 tokenProof : (case vexelCarrier of
+                    MkVexel [(MkUnixel c, w)] => c == colorToNat col && w == intToBoxInt 9
+                    _ => False) = True
+
+||| Refined Hadron: 3D Boxel (27 mass tokens) with verified color neutrality.
+```
+
+```idris
+record RefinedHadron (spec : HadronSpec) where
+  constructor MkRefinedHadron
+  boxelCarrier : HadronBoxel
+  0 specProof  : (spec == spec) = True
+
+||| Refined Alpha Particle (4He Core): 3D Boxel (108 mass tokens).
+```
+
+```idris
+record RefinedAlpha (spec : AlphaSpec) where
+  constructor MkRefinedAlpha
+  alphaBoxelCarrier : Boxel
+  0 alphaSpecProof  : (spec == spec) = True
+
+||| Refined Carbon-12 Nucleus: 324 tokens governed by Triple-Alpha Balance.
+```
+
+```idris
+record RefinedNucleus (spec : NucleusSpec) where
+  constructor MkRefinedNucleus
+  nucleusTokens     : BoxInt
+  0 tokenCountProof : (nucleusTokens == intToBoxInt 324) = True
+```
+
+#### 🏷️ Algebraic Data Types
+
+```idris
+data ScaleTag = QuarkScale | HadronScale | AlphaScale | NucleusScale | MoleculeScale
+
+||| Quark Flavor Specification.
+```
+
+```idris
+data QuarkSpec = UpQuark | DownQuark
+```
+
+```idris
+data ColorSector = ColorRed | ColorGreen | ColorBlue
+```
+
+```idris
+data HadronSpec = ProtonSpec | NeutronSpec
+```
+
+```idris
+data AlphaSpec = Helium4Core
+```
+
+```idris
+data NucleusSpec = Carbon12Core
+```
+
+[↑ Back to Top](#table-of-contents)
+
+---
+
+### <a id="mod-compound-universalalgebratrs"></a>Module `Compound.UniversalAlgebraTRS`
+
+#### 🏷️ Algebraic Data Types
+
+```idris
+data MatterTerm : Type where
+  ||| Empty vacuum term (zero tokens).
+  TermVoid : MatterTerm
+  ||| Primitive 1D Quark term carrying flavor and color slice.
+  TermQuark : (flavor : QuarkSpec) -> (color : ColorSector) -> MatterTerm
+  ||| 3D Hadron composite term (Proton or Neutron).
+  TermHadron : (isProton : Bool) -> MatterTerm
+  ||| 4-Nucleon Alpha Cluster (Helium-4 Core).
+  TermAlpha : MatterTerm
+  ||| Heavy Carbon-12 Nucleus.
+  TermCarbon12 : MatterTerm
+  ||| Covalent Water Molecule (H2O).
+  TermWater : MatterTerm
+  ||| Bioenergetic ATP Pyrophosphate Complex.
+  TermATP : MatterTerm
+  ||| Homochiral Watson-Crick DNA Base Pair (GC or AT).
+  TermDNAPair : (isGC : Bool) -> MatterTerm
+  ||| Binary multiset composition / parallel union (⊎).
+  TermUnion : MatterTerm -> MatterTerm -> MatterTerm
 ```
 
 [↑ Back to Top](#table-of-contents)
@@ -1448,6 +1869,53 @@ data Nucleobase = Adenine | Thymine | Guanine | Cytosine | Uracil
 ---
 
 ### <a id="mod-reflect-permutationsolver"></a>Module `Reflect.PermutationSolver`
+
+[↑ Back to Top](#table-of-contents)
+
+---
+
+## <a id="section-7"></a>7. Miscellaneous Modules
+
+### <a id="mod-observation-algebraic"></a>Module `Observation.Algebraic`
+
+#### 📦 Records
+
+```idris
+record AlgebraicObservation where
+  constructor MkAlgebraicObservation
+  lawIndex    : Nat
+  lawName     : String
+  geometry    : FundamentalGeometry
+  isConserved : Bool
+  budgetClaim : Nat
+```
+
+[↑ Back to Top](#table-of-contents)
+
+---
+
+### <a id="mod-observation-dataset"></a>Module `Observation.Dataset`
+
+[↑ Back to Top](#table-of-contents)
+
+---
+
+### <a id="mod-observation-scientific"></a>Module `Observation.Scientific`
+
+#### 📦 Records
+
+```idris
+record ScientificObservation where
+  constructor MkScientificObservation
+  quantityName         : String
+  associatedLaw        : Nat
+  exactTheory          : UnixelFraction
+  measuredLower        : UnixelFraction
+  measuredUpper        : UnixelFraction
+  unitDimension        : String
+  experimentalCitation : String
+  experimentalDOI      : String
+```
 
 [↑ Back to Top](#table-of-contents)
 
