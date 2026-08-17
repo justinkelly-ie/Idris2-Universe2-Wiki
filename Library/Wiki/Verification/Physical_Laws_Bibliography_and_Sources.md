@@ -37,8 +37,11 @@ Every citation includes authentic historical authors, dates, journal publication
 ## 🌌 The 17 Emergent Physical Laws
 
 ### Law 1: Discrete Noether Momentum Conservation
-* **Historical Source**:
+* **Original Historical Publication (German)**:
   - Noether, Emmy (1918). *"Invariante Variationsprobleme"*. *Nachrichten von der Gesellschaft der Wissenschaften zu Göttingen, Mathematisch-Physikalische Klasse*, 1918: 235–257. [DigiZeitschriften PPN00250510X](http://www.digizeitschriften.de/dms/img/?PPN=GDZPPN00250510X)
+* **Published English Translations**:
+  - **M. A. Tavel (1971)**: *"Invariant Variation Problems"*, *Transport Theory and Statistical Physics*, 1(3): 186–207. [DOI: 10.1080/00411457108231446](https://doi.org/10.1080/00411457108231446) / Open Access: [arXiv:physics/0503066](https://arxiv.org/abs/physics/0503066).
+  - **Y. Kosmann-Schwarzbach (2011)**: *The Noether Theorems: Invariance and Conservation Laws in the Twentieth Century*, Sources and Studies in the History of Mathematics and Physical Sciences, Springer. [DOI: 10.1007/978-0-387-87868-3](https://doi.org/10.1007/978-0-387-87868-3).
 * **Constructive Idris 2 Implementation**:
   - Module: [`Math.DiscreteActionPrinciple`](file:///var/home/justin/Projects/Idris2-Universe2/src/Math/DiscreteActionPrinciple.idr) / [`Kinematics.Discrete_Noether_Symplectic`](file:///var/home/justin/Projects/Idris2-Universe2-Wiki/Library/Wiki/Kinematics/Discrete_Noether_Symplectic.md)
   - Theorem: Discrete spatial translation invariance yields exact integer conserved charges $Q = p^T \delta q$ and symplectic area 2-form invariance ($dq \wedge dp$) without continuous variational calculus.
@@ -46,9 +49,11 @@ Every citation includes authentic historical authors, dates, journal publication
 ---
 
 ### Law 2: Discrete Boltzmann Distribution & Free Energy
-* **Historical Source**:
+* **Original Historical Publication (German)**:
   - Boltzmann, Ludwig (1877). *"Über die Beziehung zwischen dem zweiten Hauptsatze der mechanischen Wärmetheorie und der Wahrscheinlichkeitsrechnung respektive den Sätzen über das Wärmegleichgewicht"*. *Wiener Berichte*, 76: 373–435.
-  - Gibbs, J. Willard (1902). *Elementary Principles in Statistical Mechanics*. Yale University Press.
+* **Published English Translation**:
+  - Brush, Stephen G. (1966). *Kinetic Theory, Vol. 2: Irreversible Processes*, Pergamon Press, Oxford, pp. 188–193.
+  - Gibbs, J. Willard (1902). *Elementary Principles in Statistical Mechanics*, Yale University Press / Charles Scribner's Sons.
 * **Constructive Idris 2 Implementation**:
   - Module: [`Math.DiscreteBoltzmannDistribution`](file:///var/home/justin/Projects/Idris2-Universe2/src/Math/DiscreteBoltzmannDistribution.idr), [`Math.HelmholtzFreeEnergy`](file:///var/home/justin/Projects/Idris2-Universe2/src/Math/HelmholtzFreeEnergy.idr)
   - Theorem: Factorization of sector partition polynumbers $Z_{\text{Cosmic}} = Z_{\text{Ell}}^{27} \wedge Z_{\text{Hyp}}^{128} \wedge Z_{\text{Par}}^{55}$ via the Caret Operation ($\wedge$) and global minimization of discrete Helmholtz free energy $F = U - TS = -1320$ at Primorial 210.
