@@ -15,8 +15,9 @@
 
 All physical invariants, conservation theorems, and geometric classifications are verified at compile time without floating-point approximations or continuous infinities.
 
-For a cross-disciplinary comparative reference connecting constructive mathematics, physical concepts, and type-theoretic implementations, see:
+### 🗺️ Quick Reference & Reference Catalogs
 * **[The Universal Rosetta Stone](Library/Wiki/Foundations/Universal_Rosetta_Stone.md)** — Comparative mapping across Finite Mathematics, Cosmological Physics, and Idris 2 QTT.
+* **[Type Signatures & API Catalog](Library/Wiki/Verification/Type_Signatures_and_API_Catalog.md)** — Dynamically generated, authoritative index of all records, data types, and primary state transitions.
 
 ---
 
@@ -37,7 +38,7 @@ Pre-geometric genesis, dark matter law accumulation, cyclotomic polynomial divis
 Symplectic leapfrog integrators, discrete Noether momentum invariants, toroidal N-body dynamics, rational Kepler orbital mechanics, and asymptotic galactic rotation curves.
 
 ### [5. Metatheory & Verification](Library/Wiki/Verification/Index.md)
-Comprehensive verification matrix, structural associativity proofs, cosmological inferences, and elaborator reflection audit logs.
+Comprehensive verification matrix, structural associativity proofs, cosmological inferences, elaborator reflection audit logs, and the complete [Type Signatures & API Catalog](Library/Wiki/Verification/Type_Signatures_and_API_Catalog.md).
 
 ---
 
@@ -51,4 +52,7 @@ pack build Idris2-Universe2-Wiki.ipkg
 
 # Run verification suite
 ./build/exec/universe2-verify
+
+# Regenerate dynamic Type Signatures & API Catalog
+python3 Scripts/generate_type_catalog.py
 ```
