@@ -66,6 +66,12 @@ This section derives the 4 fundamental geometries, 17 emergent physical laws, ga
 * [Law 21: Discrete Page Curve & Unitary Evaporation](Law21_Discrete_Page_Curve_and_Unitary_Evaporation.md) — Exact discrete Page entanglement curve $S(t) = \min(t, N - t)$, Page time turnaround at $t=105$, and information recovery.
 * [Law 22: Discrete Onsager Reciprocity & Microscopic Reversibility](Law22_Discrete_Onsager_Reciprocity_and_Microscopic_Reversibility.md) — Symmetric phenomenological conduction $L_{12} = L_{21}$ and non-negative dissipated entropy production $\sigma \ge 0$.
 * [Law 23: Discrete Chern-Simons Topological Mass Generation](Law23_Discrete_Chern_Simons_Topological_Mass.md) — Quantized integer level $k$, gauge-invariant topological mass $m_\gamma = k \cdot e^2$, and parity-odd signature.
+* [Law 24: Discrete TOV Gravitational Mass Limit](Law24_Discrete_TOV_Gravitational_Mass_Limit.md) — Maximum degenerate stellar core mass capacity $M_{\text{TOV}} = 108$ tokens and discrete boundary horizon collapse at Area = 54.
+* [Law 25: Discrete Crooks Fluctuation Theorem](Law25_Discrete_Crooks_Fluctuation_Theorem.md) — Exact microscopic forward/backward trajectory work symmetry and dissipated work path-ratio enumerations.
+* [Law 26: Discrete Casimir-Polder Dispersion Forces](Law26_Discrete_Casimir_Polder_Dispersion_Forces.md) — Retarded relativistic transition from short-range London dispersion ($1/Q^3$) to long-range Casimir-Polder potential ($1/Q^4$).
+* [Law 27: Discrete Bohmian Quantum Potential](Law27_Discrete_Bohmian_Quantum_Potential.md) — Exact discrete multiset graph Laplacian amplitude potential $Q = -\Delta R / (2R)$ and deterministic causal pilot-wave trajectories.
+* [Law 28: Discrete Landauer-Büttiker Quantum Conduction](Law28_Discrete_Landauer_Buettiker_Quantum_Conduction.md) — Multi-terminal transmission matrix reciprocity $G_{pq} = G_{qp}$ and discrete Kirchhoff current loop conservation.
+
 
 
 

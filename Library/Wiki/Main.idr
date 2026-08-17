@@ -137,6 +137,11 @@ import Math.DiscreteHallViscosity
 import Math.DiscretePageCurve
 import Math.DiscreteOnsagerReciprocity
 import Math.DiscreteChernSimonsMass
+import Math.DiscreteTOVLimit
+import Math.DiscreteCrooksTheorem
+import Math.DiscreteCasimirPolder
+import Math.DiscreteBohmianPotential
+import Math.DiscreteLandauerBuettiker
 import Compound.PlasmaRecombination
 import Compound.StellarNucleosynthesis
 import Compound.MolecularBonding
@@ -693,6 +698,27 @@ proofOfDiscreteOnsagerReciprocity = auditDiscreteOnsagerReciprocity
 ||| Witness 130: Proves via Elaborator Reflection macro that Law 23: Discrete Chern-Simons Topological Mass Generation holds.
 proofOfDiscreteChernSimonsMass : Reflect.InvariantAuditor.auditDiscreteChernSimonsMassProofExport = True
 proofOfDiscreteChernSimonsMass = auditDiscreteChernSimonsMass
+
+||| Witness 131: Proves via Elaborator Reflection macro that Law 24: Discrete TOV Gravitational Mass Limit holds.
+proofOfDiscreteTOVLimit : Reflect.InvariantAuditor.auditDiscreteTOVLimitProofExport = True
+proofOfDiscreteTOVLimit = auditDiscreteTOVLimit
+
+||| Witness 132: Proves via Elaborator Reflection macro that Law 25: Discrete Crooks Fluctuation Theorem holds.
+proofOfDiscreteCrooksTheorem : Reflect.InvariantAuditor.auditDiscreteCrooksTheoremProofExport = True
+proofOfDiscreteCrooksTheorem = auditDiscreteCrooksTheorem
+
+||| Witness 133: Proves via Elaborator Reflection macro that Law 26: Discrete Casimir-Polder Dispersion Forces hold.
+proofOfDiscreteCasimirPolder : Reflect.InvariantAuditor.auditDiscreteCasimirPolderProofExport = True
+proofOfDiscreteCasimirPolder = auditDiscreteCasimirPolder
+
+||| Witness 134: Proves via Elaborator Reflection macro that Law 27: Discrete Bohmian Quantum Potential holds.
+proofOfDiscreteBohmianPotential : Reflect.InvariantAuditor.auditDiscreteBohmianPotentialProofExport = True
+proofOfDiscreteBohmianPotential = auditDiscreteBohmianPotential
+
+||| Witness 135: Proves via Elaborator Reflection macro that Law 28: Discrete Landauer-Büttiker Multi-Terminal Conduction holds.
+proofOfDiscreteLandauerBuettiker : Reflect.InvariantAuditor.auditDiscreteLandauerBuettikerProofExport = True
+proofOfDiscreteLandauerBuettiker = auditDiscreteLandauerBuettiker
+
 
 
 
@@ -1487,6 +1513,11 @@ main = do
   putStrLn "  - Law 21: Discrete Page Curve & Unitary Evaporation Witness: INJECTED & VALID (Refl) ✅"
   putStrLn "  - Law 22: Discrete Onsager Reciprocal Relations Witness: INJECTED & VALID (Refl) ✅"
   putStrLn "  - Law 23: Discrete Chern-Simons Topological Mass Witness: INJECTED & VALID (Refl) ✅"
+  putStrLn "  - Law 24: Discrete TOV Gravitational Mass Limit Witness: INJECTED & VALID (Refl) ✅"
+  putStrLn "  - Law 25: Discrete Crooks Fluctuation Theorem Witness: INJECTED & VALID (Refl) ✅"
+  putStrLn "  - Law 26: Discrete Casimir-Polder Dispersion Forces Witness: INJECTED & VALID (Refl) ✅"
+  putStrLn "  - Law 27: Discrete Bohmian Quantum Potential Witness: INJECTED & VALID (Refl) ✅"
+  putStrLn "  - Law 28: Discrete Landauer-Büttiker Conduction Witness: INJECTED & VALID (Refl) ✅"
   putStrLn ""
   putStrLn " [RUNTIME CONSERVATION & KINEMATIC INVARIANTS]:"
   putStrLn $ "  [TEST 1]  27-State Ternary Spacetime Closure:    " ++ (if prop_27_TernaryClosure then "PASSED ✅" else "FAILED ❌")
@@ -1594,6 +1625,11 @@ main = do
   putStrLn $ "  [TEST 103] Law 21: Discrete Page Curve & Unitary Evaporation: " ++ (if auditDiscretePageCurveProof then "PASSED ✅" else "FAILED ❌")
   putStrLn $ "  [TEST 104] Law 22: Discrete Onsager Reciprocal Relations: " ++ (if auditDiscreteOnsagerReciprocityProof then "PASSED ✅" else "FAILED ❌")
   putStrLn $ "  [TEST 105] Law 23: Discrete Chern-Simons Topological Mass: " ++ (if auditDiscreteChernSimonsMassProof then "PASSED ✅" else "FAILED ❌")
+  putStrLn $ "  [TEST 106] Law 24: Discrete TOV Gravitational Mass Limit: " ++ (if auditDiscreteTOVLimitProof then "PASSED ✅" else "FAILED ❌")
+  putStrLn $ "  [TEST 107] Law 25: Discrete Crooks Fluctuation Theorem: " ++ (if auditDiscreteCrooksTheoremProof then "PASSED ✅" else "FAILED ❌")
+  putStrLn $ "  [TEST 108] Law 26: Discrete Casimir-Polder Dispersion:  " ++ (if auditDiscreteCasimirPolderProof then "PASSED ✅" else "FAILED ❌")
+  putStrLn $ "  [TEST 109] Law 27: Discrete Bohmian Quantum Potential:   " ++ (if auditDiscreteBohmianPotentialProof then "PASSED ✅" else "FAILED ❌")
+  putStrLn $ "  [TEST 110] Law 28: Discrete Landauer-Büttiker Conduction: " ++ (if auditDiscreteLandauerBuettikerProof then "PASSED ✅" else "FAILED ❌")
   putStrLn ""
   putStrLn "All Cosmological Proof Witnesses & Literate Invariants Verified!"
   putStrLn "========================================================"

@@ -8,7 +8,7 @@ Every chapter in this wiki is an **executable Literate Idris 2 module** that pro
 ## 🗺️ Cross-Disciplinary Mapping & Bibliographic Reference
 
 * **[The Universal Rosetta Stone](Foundations/Universal_Rosetta_Stone.md)** — Comprehensive tripartite isomorphism table mapping Constructive Finite Mathematics, Cosmological Physics, and Idris 2 QTT.
-* **[The Emergent Physical Laws & Academic Bibliography](Verification/Physical_Laws_Bibliography_and_Sources.md)** — Verified citations, DOIs, and primary historical sources for the emergent physical laws (Laws 1–23).
+* **[The Emergent Physical Laws & Academic Bibliography](Verification/Physical_Laws_Bibliography_and_Sources.md)** — Verified citations, DOIs, and primary historical sources for the emergent physical laws (Laws 1–28).
 * **[Type Signatures & API Catalog](Verification/Type_Signatures_and_API_Catalog.md)** — Dynamically generated, authoritative reference of all records, algebraic data types, and state transitions.
 
 ---
@@ -99,6 +99,11 @@ Every chapter in this wiki is an **executable Literate Idris 2 module** that pro
 * [Law 21: Discrete Page Curve & Unitary Evaporation](Geometry/Law21_Discrete_Page_Curve_and_Unitary_Evaporation.md)
 * [Law 22: Discrete Onsager Reciprocity & Microscopic Reversibility](Geometry/Law22_Discrete_Onsager_Reciprocity_and_Microscopic_Reversibility.md)
 * [Law 23: Discrete Chern-Simons Topological Mass](Geometry/Law23_Discrete_Chern_Simons_Topological_Mass.md)
+* [Law 24: Discrete TOV Gravitational Mass Limit](Geometry/Law24_Discrete_TOV_Gravitational_Mass_Limit.md)
+* [Law 25: Discrete Crooks Fluctuation Theorem](Geometry/Law25_Discrete_Crooks_Fluctuation_Theorem.md)
+* [Law 26: Discrete Casimir-Polder Dispersion Forces](Geometry/Law26_Discrete_Casimir_Polder_Dispersion_Forces.md)
+* [Law 27: Discrete Bohmian Quantum Potential](Geometry/Law27_Discrete_Bohmian_Quantum_Potential.md)
+* [Law 28: Discrete Landauer-Büttiker Quantum Conduction](Geometry/Law28_Discrete_Landauer_Buettiker_Quantum_Conduction.md)
 
 ### [3. Evolutionary Dynamics & Law Encoding](Evolution/Index.md)
 * [Pre-Geometric Genesis (The vm = 0 Void)](Evolution/Pre_Geometric_Genesis.md)

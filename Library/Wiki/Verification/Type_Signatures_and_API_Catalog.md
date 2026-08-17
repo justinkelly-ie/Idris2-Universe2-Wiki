@@ -40,20 +40,25 @@ This document provides an **automatically generated, authoritative reference** f
   - [`Math.CliffordAlgebra`](#mod-math-cliffordalgebra)
   - [`Math.ConstructiveBaryogenesis`](#mod-math-constructivebaryogenesis)
   - [`Math.DiscreteActionPrinciple`](#mod-math-discreteactionprinciple)
+  - [`Math.DiscreteBohmianPotential`](#mod-math-discretebohmianpotential)
   - [`Math.DiscreteBoltzmannDistribution`](#mod-math-discreteboltzmanndistribution)
   - [`Math.DiscreteCasimirEffect`](#mod-math-discretecasimireffect)
+  - [`Math.DiscreteCasimirPolder`](#mod-math-discretecasimirpolder)
   - [`Math.DiscreteChernSimonsMass`](#mod-math-discretechernsimonsmass)
   - [`Math.DiscreteChiralAnomaly`](#mod-math-discretechiralanomaly)
   - [`Math.DiscreteCosmicGenesis`](#mod-math-discretecosmicgenesis)
+  - [`Math.DiscreteCrooksTheorem`](#mod-math-discretecrookstheorem)
   - [`Math.DiscreteDiracSpinor`](#mod-math-discretediracspinor)
   - [`Math.DiscreteHallViscosity`](#mod-math-discretehallviscosity)
   - [`Math.DiscreteHawkingRadiation`](#mod-math-discretehawkingradiation)
   - [`Math.DiscreteHolographicBound`](#mod-math-discreteholographicbound)
   - [`Math.DiscreteJarzynskiEquality`](#mod-math-discretejarzynskiequality)
+  - [`Math.DiscreteLandauerBuettiker`](#mod-math-discretelandauerbuettiker)
   - [`Math.DiscreteLandauerPrinciple`](#mod-math-discretelandauerprinciple)
   - [`Math.DiscreteOnsagerReciprocity`](#mod-math-discreteonsagerreciprocity)
   - [`Math.DiscretePageCurve`](#mod-math-discretepagecurve)
   - [`Math.DiscretePoyntingTheorem`](#mod-math-discretepoyntingtheorem)
+  - [`Math.DiscreteTOVLimit`](#mod-math-discretetovlimit)
   - [`Math.DiscreteWheelerDeWitt`](#mod-math-discretewheelerdewitt)
   - [`Math.FineStructure`](#mod-math-finestructure)
   - [`Math.FractionalQuantumHall`](#mod-math-fractionalquantumhall)
@@ -575,6 +580,12 @@ record BaryonState where
 
 ---
 
+### <a id="mod-math-discretebohmianpotential"></a>Module `Math.DiscreteBohmianPotential`
+
+[↑ Back to Top](#table-of-contents)
+
+---
+
 ### <a id="mod-math-discreteboltzmanndistribution"></a>Module `Math.DiscreteBoltzmannDistribution`
 
 #### 📦 Records
@@ -604,6 +615,12 @@ record CavityBoundary where
 
 ---
 
+### <a id="mod-math-discretecasimirpolder"></a>Module `Math.DiscreteCasimirPolder`
+
+[↑ Back to Top](#table-of-contents)
+
+---
+
 ### <a id="mod-math-discretechernsimonsmass"></a>Module `Math.DiscreteChernSimonsMass`
 
 [↑ Back to Top](#table-of-contents)
@@ -627,6 +644,22 @@ record GenesisState where
   deSlots      : Nat
   dmSlots      : Nat
   masterBudget : Nat
+```
+
+[↑ Back to Top](#table-of-contents)
+
+---
+
+### <a id="mod-math-discretecrookstheorem"></a>Module `Math.DiscreteCrooksTheorem`
+
+#### 📦 Records
+
+```idris
+record TrajectoryWork where
+  constructor MkTrajectoryWork
+  workForward  : BoxInt
+  workBackward : BoxInt
+  freeEnergyChange : BoxInt
 ```
 
 [↑ Back to Top](#table-of-contents)
@@ -700,6 +733,25 @@ record NonEquilibriumPath where
 
 ---
 
+### <a id="mod-math-discretelandauerbuettiker"></a>Module `Math.DiscreteLandauerBuettiker`
+
+#### 📦 Records
+
+```idris
+record ConductanceMatrix3x3 where
+  constructor MkConductanceMatrix3x3
+  g12 : Nat
+  g13 : Nat
+  g21 : Nat
+  g23 : Nat
+  g31 : Nat
+  g32 : Nat
+```
+
+[↑ Back to Top](#table-of-contents)
+
+---
+
 ### <a id="mod-math-discretelandauerprinciple"></a>Module `Math.DiscreteLandauerPrinciple`
 
 #### 📦 Records
@@ -750,6 +802,22 @@ record DiscreteEMCell where
   magneticEnergy : BoxInt
   poyntingFluxOut: BoxInt
   jouleWork      : BoxInt
+```
+
+[↑ Back to Top](#table-of-contents)
+
+---
+
+### <a id="mod-math-discretetovlimit"></a>Module `Math.DiscreteTOVLimit`
+
+#### 📦 Records
+
+```idris
+record StellarCore where
+  constructor MkStellarCore
+  coreMass     : Nat
+  isCollapsed  : Bool
+  boundaryArea : Nat
 ```
 
 [↑ Back to Top](#table-of-contents)

@@ -25,12 +25,18 @@ Every citation includes authentic historical authors, dates, journal publication
   - [Law 14: Fractional Quantum Hall Fluid & Anyonic Braiding](#law-14-fractional-quantum-hall-fluid--anyonic-braiding)
   - [Law 15: Discrete Jarzynski Equality & Non-Equilibrium Work](#law-15-discrete-jarzynski-equality--non-equilibrium-work)
   - [Law 16: Discrete Wheeler-DeWitt Constraint & Cosmic Wavefunction](#law-16-discrete-wheeler-dewitt-constraint--cosmic-wavefunction)
+  - [Law 17: Discrete Chiral Anomaly & Atiyah-Singer Index](#law-17-discrete-chiral-anomaly--atiyah-singer-index)
   - [Law 18: Discrete Cosmic Genesis & Primordial Relic Freeze-Out](#law-18-discrete-cosmic-genesis--primordial-relic-freeze-out)
   - [Law 19: Discrete Hawking-Unruh Boundary Radiation](#law-19-discrete-hawking-unruh-boundary-radiation)
   - [Law 20: Discrete Hall Viscosity & Topological Transport](#law-20-discrete-hall-viscosity--topological-transport)
   - [Law 21: Discrete Page Curve & Unitary Evaporation](#law-21-discrete-page-curve--unitary-evaporation)
   - [Law 22: Discrete Onsager Reciprocal Relations](#law-22-discrete-onsager-reciprocal-relations)
   - [Law 23: Discrete Chern-Simons Topological Mass](#law-23-discrete-chern-simons-topological-mass)
+  - [Law 24: Discrete TOV Gravitational Mass Limit](#law-24-discrete-tov-gravitational-mass-limit)
+  - [Law 25: Discrete Crooks Fluctuation Theorem](#law-25-discrete-crooks-fluctuation-theorem)
+  - [Law 26: Discrete Casimir-Polder Dispersion Forces](#law-26-discrete-casimir-polder-dispersion-forces)
+  - [Law 27: Discrete Bohmian Quantum Potential](#law-27-discrete-bohmian-quantum-potential)
+  - [Law 28: Discrete Landauer-Büttiker Conduction](#law-28-discrete-landauer-b%C3%BCttiker-conduction)
 - [Foundational Mathematical & Information Principles](#foundational-mathematical--information-principles)
   - [Box Arithmetic & Constructive Finitism](#box-arithmetic--constructive-finitism)
   - [Rational Trigonometry & Conic Celestial Mechanics](#rational-trigonometry--conic-celestial-mechanics)
@@ -274,6 +280,57 @@ Every citation includes authentic historical authors, dates, journal publication
 * **Constructive Idris 2 Implementation**:
   - Module: [`Math.DiscreteChernSimonsMass`](file:///var/home/justin/Projects/Idris2-Universe2/src/Math/DiscreteChernSimonsMass.idr) / [`Geometry.Law23_Discrete_Chern_Simons_Topological_Mass`](file:///var/home/justin/Projects/Idris2-Universe2-Wiki/Library/Wiki/Geometry/Law23_Discrete_Chern_Simons_Topological_Mass.md)
   - Theorem: Quantized integer level $k \in \mathbb{Z}$, gauge-invariant topological mass $m_\gamma = k \cdot e^2$, and parity/time-reversal odd signature $\mathcal{P}(m_\gamma) = -m_\gamma$.
+
+---
+
+### Law 24: Discrete TOV Gravitational Mass Limit
+* **Historical Sources**:
+  - Tolman, Richard C. (1939). *"Static Solutions of Einstein's Field Equations for Spheres of Fluid"*. *Physical Review*, 55(4): 364–373. [DOI: 10.1103/PhysRev.55.364](https://doi.org/10.1103/PhysRev.55.364)
+  - Oppenheimer, J. Robert & Volkoff, George M. (1939). *"On Massive Neutron Cores"*. *Physical Review*, 55(4): 374–381. [DOI: 10.1103/PhysRev.55.374](https://doi.org/10.1103/PhysRev.55.374)
+  - Chandrasekhar, Subrahmanyan (1931). *"The Maximum Mass of Ideal White Dwarfs"*. *Astrophysical Journal*, 74: 81–82. [DOI: 10.1086/143324](https://doi.org/10.1086/143324)
+* **Constructive Idris 2 Implementation**:
+  - Module: [`Math.DiscreteTOVLimit`](file:///var/home/justin/Projects/Idris2-Universe2/src/Math/DiscreteTOVLimit.idr) / [`Geometry.Law24_Discrete_TOV_Gravitational_Mass_Limit`](file:///var/home/justin/Projects/Idris2-Universe2-Wiki/Library/Wiki/Geometry/Law24_Discrete_TOV_Gravitational_Mass_Limit.md)
+  - Theorem: Exact maximum stable discrete core mass capacity $M_{\text{TOV}} = 108$ tokens, and horizon collapse threshold ($M > 108 \implies \text{Area} = 54$).
+
+---
+
+### Law 25: Discrete Crooks Fluctuation Theorem
+* **Historical Sources**:
+  - Crooks, Gavin E. (1999). *"Entropy production fluctuation theorem and the nonequilibrium work relation for free energy differences"*. *Physical Review E*, 60(3): 2721–2726. [DOI: 10.1103/PhysRevE.60.2721](https://doi.org/10.1103/PhysRevE.60.2721)
+  - Jarzynski, Christopher (1997). *"Nonequilibrium Equality for Free Energy Differences"*. *Physical Review Letters*, 78(14): 2690–2693. [DOI: 10.1103/PhysRevLett.78.2690](https://doi.org/10.1103/PhysRevLett.78.2690)
+* **Constructive Idris 2 Implementation**:
+  - Module: [`Math.DiscreteCrooksTheorem`](file:///var/home/justin/Projects/Idris2-Universe2/src/Math/DiscreteCrooksTheorem.idr) / [`Geometry.Law25_Discrete_Crooks_Fluctuation_Theorem`](file:///var/home/justin/Projects/Idris2-Universe2-Wiki/Library/Wiki/Geometry/Law25_Discrete_Crooks_Fluctuation_Theorem.md)
+  - Theorem: Microscopic trajectory work symmetry ($w_F + w_B = 0$), reversible limit ($W_{\text{diss}} = 0$), and dissipative trajectory dominance ($W_{\text{diss}} > 0$).
+
+---
+
+### Law 26: Discrete Casimir-Polder Dispersion Forces
+* **Historical Sources**:
+  - Casimir, Hendrik B. G. & Polder, Dirk (1948). *"The Influence of Retardation on the London-van der Waals Forces"*. *Physical Review*, 73(4): 360–372. [DOI: 10.1103/PhysRev.73.360](https://doi.org/10.1103/PhysRev.73.360)
+  - London, Fritz (1930). *"Zur Theorie und Systematik der Molekularkräfte"*. *Zeitschrift für Physik*, 63(3-4): 245–279. [DOI: 10.1007/BF01421741](https://doi.org/10.1007/BF01421741)
+* **Constructive Idris 2 Implementation**:
+  - Module: [`Math.DiscreteCasimirPolder`](file:///var/home/justin/Projects/Idris2-Universe2/src/Math/DiscreteCasimirPolder.idr) / [`Geometry.Law26_Discrete_Casimir_Polder_Dispersion_Forces`](file:///var/home/justin/Projects/Idris2-Universe2-Wiki/Library/Wiki/Geometry/Law26_Discrete_Casimir_Polder_Dispersion_Forces.md)
+  - Theorem: Retarded relativistic transition from short-range London dispersion $V_{\text{London}} = -C_6 / Q^3$ to long-range Casimir-Polder potential $V_{\text{CP}} = -C_7 / Q^4$ with universal attractive sign $V < 0$.
+
+---
+
+### Law 27: Discrete Bohmian Quantum Potential
+* **Historical Sources**:
+  - de Broglie, Louis (1927). *"La mécanique ondulatoire et la structure atomique de la matière et du rayonnement"*. *Journal de Physique et le Radium*, 8(5): 225–241. [DOI: 10.1051/jphysrad:0192700805022500](https://doi.org/10.1051/jphysrad:0192700805022500)
+  - Bohm, David (1952). *"A Suggested Interpretation of the Quantum Theory in Terms of 'Hidden' Variables. I & II"*. *Physical Review*, 85(2): 166–193. [DOI: 10.1103/PhysRev.85.166](https://doi.org/10.1103/PhysRev.85.166)
+* **Constructive Idris 2 Implementation**:
+  - Module: [`Math.DiscreteBohmianPotential`](file:///var/home/justin/Projects/Idris2-Universe2/src/Math/DiscreteBohmianPotential.idr) / [`Geometry.Law27_Discrete_Bohmian_Quantum_Potential`](file:///var/home/justin/Projects/Idris2-Universe2-Wiki/Library/Wiki/Geometry/Law27_Discrete_Bohmian_Quantum_Potential.md)
+  - Theorem: Exact discrete amplitude Laplacian potential $Q = \text{UnixelFraction}(-\Delta R, 2R)$ and total deterministic energy conservation $E_{\text{total}} = E_{\text{kin}} + V_{\text{classical}} + Q_{\text{quantum}}$.
+
+---
+
+### Law 28: Discrete Landauer-Büttiker Conduction
+* **Historical Sources**:
+  - Landauer, Rolf (1957). *"Spatial Variation of Currents and Fields Due to Localized Scatterers in Metallic Conduction"*. *IBM J. Res. Dev.*, 1(3): 223–231. [DOI: 10.1147/rd.13.0223](https://doi.org/10.1147/rd.13.0223)
+  - Büttiker, Markus (1986). *"Four-Terminal Phase-Coherent Conductance"*. *Physical Review Letters*, 57(14): 1761–1764. [DOI: 10.1103/PhysRevLett.57.1761](https://doi.org/10.1103/PhysRevLett.57.1761)
+* **Constructive Idris 2 Implementation**:
+  - Module: [`Math.DiscreteLandauerBuettiker`](file:///var/home/justin/Projects/Idris2-Universe2/src/Math/DiscreteLandauerBuettiker.idr) / [`Geometry.Law28_Discrete_Landauer_Buettiker_Quantum_Conduction`](file:///var/home/justin/Projects/Idris2-Universe2-Wiki/Library/Wiki/Geometry/Law28_Discrete_Landauer_Buettiker_Quantum_Conduction.md)
+  - Theorem: Multi-terminal conductance matrix reciprocity $G_{pq} = G_{qp}$ and discrete Kirchhoff current loop conservation ($\sum_{p} I_p = 0$).
 
 ---
 
