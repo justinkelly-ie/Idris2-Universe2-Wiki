@@ -8,6 +8,7 @@ Every chapter in this wiki is an **executable Literate Idris 2 module** that pro
 ## 🗺️ Cross-Disciplinary Mapping & Bibliographic Reference
 
 * **[The Universal Rosetta Stone](Foundations/Universal_Rosetta_Stone.md)** — Comprehensive tripartite isomorphism table mapping Constructive Finite Mathematics, Cosmological Physics, and Idris 2 QTT.
+* **[The Algebraic Family Tree of Physical Laws](Foundations/Algebraic_Family_Tree_of_Physical_Laws.md)** — Visual parent/sibling/child dependency graph and Algebra-Driven Design (ADD) observation architecture for Laws 1–28.
 * **[The Emergent Physical Laws & Academic Bibliography](Verification/Physical_Laws_Bibliography_and_Sources.md)** — Verified citations, DOIs, and primary historical sources for the emergent physical laws (Laws 1–28).
 * **[Type Signatures & API Catalog](Verification/Type_Signatures_and_API_Catalog.md)** — Dynamically generated, authoritative reference of all records, algebraic data types, and state transitions.
 
@@ -18,6 +19,7 @@ Every chapter in this wiki is an **executable Literate Idris 2 module** that pro
 ### [1. Foundational Mathematics & Discrete Calculus](Foundations/Index.md)
 * [Universal Mapping & Notation](Foundations/Universal_Mapping.md)
 * [The Universal Rosetta Stone](Foundations/Universal_Rosetta_Stone.md)
+* [The Algebraic Family Tree of Physical Laws](Foundations/Algebraic_Family_Tree_of_Physical_Laws.md)
 * [Box Arithmetic & Type Theory](Foundations/Box_Arithmetic.md)
 * [Pure Box Integers as Pixel Difference Pairs](Foundations/Pixel_Box_Integers.md)
 * [Nested Polynomial Multisets](Foundations/Nested_Polynomial_Multisets.md)

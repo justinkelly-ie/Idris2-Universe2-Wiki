@@ -8,6 +8,7 @@ This section establishes the mathematical axioms, data structures, and algebraic
 
 * [Universal Mapping & Notation](Universal_Mapping.md) — Grounding modern physics in constructivist discrete math.
 * [The Universal Rosetta Stone](Universal_Rosetta_Stone.md) — Isomorphism table mapping Finite Mathematics, Cosmological Physics, and Idris 2 QTT.
+* [The Algebraic Family Tree of Physical Laws](Algebraic_Family_Tree_of_Physical_Laws.md) — Visual parent/sibling/child dependency graph and Algebra-Driven Design (ADD) observation architecture for Laws 1–28.
 * [Box Arithmetic & Type Theory](Box_Arithmetic.md) — Multiplicities, erase levels, and Quantitative Type Theory.
 * [Pure Box Integers as Pixel Difference Pairs](Pixel_Box_Integers.md) — Constructing $\mathbb{Z}$ from equivalence classes of positive and negative multisets (Pixels $[P, N]$).
 * [Nested Polynomial Multisets](Nested_Polynomial_Multisets.md) — Polynomials as multisets of nested terms, Goh Factorization, and exact cyclotomic long division.
