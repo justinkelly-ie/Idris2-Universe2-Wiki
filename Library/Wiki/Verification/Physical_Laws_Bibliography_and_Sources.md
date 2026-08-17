@@ -241,3 +241,36 @@ Every citation includes authentic historical authors, dates, journal publication
   - Wilson, Kenneth G. (1974). *"Confinement of quarks"*. *Physical Review D*, 10(8): 2445–2459. [DOI: 10.1103/PhysRevD.10.2445](https://doi.org/10.1103/PhysRevD.10.2445)
 * **Constructive Idris 2 Implementation**:
   - Modules: [`Math.WilsonPolyhedra`](file:///var/home/justin/Projects/Idris2-Universe2/src/Math/WilsonPolyhedra.idr), [`Geometry.GrassmannCalculus`](file:///var/home/justin/Projects/Idris2-Universe2/src/Geometry/GrassmannCalculus.idr)
+
+---
+
+### Optimal Transport & Wasserstein Distances
+* **Historical Sources**:
+  - Monge, Gaspard (1781). *"Mémoire sur la théorie des déblais et des remblais"*. *Histoire de l'Académie Royale des Sciences de Paris*, 666–704.
+  - Kantorovich, Leonid V. (1942). *"On the Translocation of Masses"*. *Doklady Akademii Nauk SSSR*, 37(7–8): 199–201. English Translation: *Management Science*, 5(1): 1–4 (1958). [DOI: 10.1287/mnsc.5.1.1](https://doi.org/10.1287/mnsc.5.1.1)
+  - Villani, Cédric (2009). *Optimal Transport: Old and New*. Grundlehren der mathematischen Wissenschaften, Vol. 338, Springer-Verlag Berlin Heidelberg. [DOI: 10.1007/978-3-540-71050-9](https://doi.org/10.1007/978-3-540-71050-9)
+* **Constructive Idris 2 Implementation**:
+  - Module: [`Geometry.InformationGeometry`](file:///var/home/justin/Projects/Idris2-Universe2/src/Geometry/InformationGeometry.idr) / [`Geometry.Constructive_Wasserstein_and_Optimal_Transport`](file:///var/home/justin/Projects/Idris2-Universe2-Wiki/Library/Wiki/Geometry/Constructive_Wasserstein_and_Optimal_Transport.md)
+  - Theorem: Discrete Earth Mover's Distance ($W_1$) on 1D token vectors computed via cumulative distribution differences with exact triangle inequality verification.
+
+---
+
+### Quantum Relative Entropy & Information Divergence
+* **Historical Sources**:
+  - Kullback, Solomon & Leibler, Richard A. (1951). *"On Information and Sufficiency"*. *The Annals of Mathematical Statistics*, 22(1): 79–86. [DOI: 10.1214/aoms/1177729694](https://doi.org/10.1214/aoms/1177729694)
+  - Umegaki, Hisaharu (1962). *"Conditional Expectation in an Operator Algebra. IV. (Entropy and Information)"*. *Kodai Mathematical Seminar Reports*, 14(2): 59–85. [DOI: 10.2996/kmj/1138844604](https://doi.org/10.2996/kmj/1138844604)
+  - Klein, Oskar (1931). *"Zur quantenmechanischen Begründung des zweiten Hauptsatzes der Wärmelehre"*. *Zeitschrift für Physik*, 72: 767–775. [DOI: 10.1007/BF01341981](https://doi.org/10.1007/BF01341981)
+* **Constructive Idris 2 Implementation**:
+  - Module: [`Geometry.InformationGeometry`](file:///var/home/justin/Projects/Idris2-Universe2/src/Geometry/InformationGeometry.idr) / [`Geometry.Discrete_Quantum_Relative_Entropy_and_Amari_Geometry`](file:///var/home/justin/Projects/Idris2-Universe2-Wiki/Library/Wiki/Geometry/Discrete_Quantum_Relative_Entropy_and_Amari_Geometry.md)
+  - Theorem: Discrete multiset relative entropy $D_{\text{rel}}(P \parallel Q) = |P \setminus Q|$ proving Klein's inequality $D_{\text{rel}} \ge 0$ without transcendental functions.
+
+---
+
+### Differential Information Geometry & Amari Dually Flat Manifolds
+* **Historical Sources**:
+  - Amari, Shun-ichi (1985). *Differential-Geometrical Methods in Statistics*. Lecture Notes in Statistics, Vol. 28, Springer-Verlag New York. [DOI: 10.1007/978-1-4612-5056-2](https://doi.org/10.1007/978-1-4612-5056-2)
+  - Amari, Shun-ichi (2016). *Information Geometry and Its Applications*. Applied Mathematical Sciences, Vol. 194, Springer Japan. [DOI: 10.1007/978-4-431-55978-8](https://doi.org/10.1007/978-4-431-55978-8)
+* **Constructive Idris 2 Implementation**:
+  - Module: [`Geometry.InformationGeometry`](file:///var/home/justin/Projects/Idris2-Universe2/src/Geometry/InformationGeometry.idr) / [`Geometry.Discrete_Quantum_Relative_Entropy_and_Amari_Geometry`](file:///var/home/justin/Projects/Idris2-Universe2-Wiki/Library/Wiki/Geometry/Discrete_Quantum_Relative_Entropy_and_Amari_Geometry.md)
+  - Theorem: Generalized Pythagorean Theorem $D_{\text{rel}}(P \parallel R) = D_{\text{rel}}(P \parallel Q) + D_{\text{rel}}(Q \parallel R)$ for dually flat orthogonal projections.
+

@@ -58,3 +58,6 @@ This section derives the 4 fundamental geometries, 17 emergent physical laws, ga
 * [Law 17: Discrete Chiral Anomaly & Atiyah-Singer Index](Discrete_Chiral_Anomaly_and_Atiyah_Singer_Index_Theorem.md) — Dirac zero-mode index $N_L - N_R$, topological instantons $Q_{\text{top}} = C_2$, and Atiyah-Singer index equivalence.
 * [Tier 6 Macromolecules & Chiral Stereochemistry](Tier6_Macromolecules_and_Chiral_Stereochemistry.md) — Biological macromolecules, amino acid stereocenters, peptide condensation graph contraction, and substrate-grounded homochirality.
 * [Rational Kepler Laws & Toroidal Celestial Mechanics](Rational_Kepler_Laws_and_Toroidal_Orbits.md) — Exact orbital eccentricity spread $s_e = Q_c / Q_a$, invariant swept Quadrea $\Delta \mathcal{A} = 4 L_z^2$, and the Quadrance Harmonic Law $T^4 = K \cdot Q_a^3$.
+* [Constructive Wasserstein Metric & Optimal Transport](Constructive_Wasserstein_and_Optimal_Transport.md) — Exact discrete Earth Mover's Distance ($W_1$), cumulative difference metric, and formal metric axiom proofs.
+* [Discrete Quantum Relative Entropy & Amari Geometry](Discrete_Quantum_Relative_Entropy_and_Amari_Geometry.md) — Multiset Umegaki/KL divergence, Klein's inequality, and the Generalized Pythagorean Theorem for dually flat information connections.
+
