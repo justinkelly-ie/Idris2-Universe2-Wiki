@@ -42,12 +42,17 @@ This document provides an **automatically generated, authoritative reference** f
   - [`Math.DiscreteActionPrinciple`](#mod-math-discreteactionprinciple)
   - [`Math.DiscreteBoltzmannDistribution`](#mod-math-discreteboltzmanndistribution)
   - [`Math.DiscreteCasimirEffect`](#mod-math-discretecasimireffect)
+  - [`Math.DiscreteChernSimonsMass`](#mod-math-discretechernsimonsmass)
   - [`Math.DiscreteChiralAnomaly`](#mod-math-discretechiralanomaly)
   - [`Math.DiscreteCosmicGenesis`](#mod-math-discretecosmicgenesis)
   - [`Math.DiscreteDiracSpinor`](#mod-math-discretediracspinor)
+  - [`Math.DiscreteHallViscosity`](#mod-math-discretehallviscosity)
+  - [`Math.DiscreteHawkingRadiation`](#mod-math-discretehawkingradiation)
   - [`Math.DiscreteHolographicBound`](#mod-math-discreteholographicbound)
   - [`Math.DiscreteJarzynskiEquality`](#mod-math-discretejarzynskiequality)
   - [`Math.DiscreteLandauerPrinciple`](#mod-math-discretelandauerprinciple)
+  - [`Math.DiscreteOnsagerReciprocity`](#mod-math-discreteonsagerreciprocity)
+  - [`Math.DiscretePageCurve`](#mod-math-discretepagecurve)
   - [`Math.DiscretePoyntingTheorem`](#mod-math-discretepoyntingtheorem)
   - [`Math.DiscreteWheelerDeWitt`](#mod-math-discretewheelerdewitt)
   - [`Math.FineStructure`](#mod-math-finestructure)
@@ -599,6 +604,12 @@ record CavityBoundary where
 
 ---
 
+### <a id="mod-math-discretechernsimonsmass"></a>Module `Math.DiscreteChernSimonsMass`
+
+[↑ Back to Top](#table-of-contents)
+
+---
+
 ### <a id="mod-math-discretechiralanomaly"></a>Module `Math.DiscreteChiralAnomaly`
 
 [↑ Back to Top](#table-of-contents)
@@ -646,6 +657,28 @@ record ChiralComponents where
 
 ---
 
+### <a id="mod-math-discretehallviscosity"></a>Module `Math.DiscreteHallViscosity`
+
+[↑ Back to Top](#table-of-contents)
+
+---
+
+### <a id="mod-math-discretehawkingradiation"></a>Module `Math.DiscreteHawkingRadiation`
+
+#### 📦 Records
+
+```idris
+record HorizonState where
+  constructor MkHorizonState
+  horizonArea      : Nat
+  blackHoleMass    : BoxInt
+  emittedRadiation : BoxInt
+```
+
+[↑ Back to Top](#table-of-contents)
+
+---
+
 ### <a id="mod-math-discreteholographicbound"></a>Module `Math.DiscreteHolographicBound`
 
 [↑ Back to Top](#table-of-contents)
@@ -678,6 +711,29 @@ record BitMemoryState where
   activeEnergy : BoxInt
   sinkEnergy   : BoxInt
 ```
+
+[↑ Back to Top](#table-of-contents)
+
+---
+
+### <a id="mod-math-discreteonsagerreciprocity"></a>Module `Math.DiscreteOnsagerReciprocity`
+
+#### 📦 Records
+
+```idris
+record TransportMatrix2x2 where
+  constructor MkTransportMatrix2x2
+  l11 : BoxInt
+  l12 : BoxInt
+  l21 : BoxInt
+  l22 : BoxInt
+```
+
+[↑ Back to Top](#table-of-contents)
+
+---
+
+### <a id="mod-math-discretepagecurve"></a>Module `Math.DiscretePageCurve`
 
 [↑ Back to Top](#table-of-contents)
 

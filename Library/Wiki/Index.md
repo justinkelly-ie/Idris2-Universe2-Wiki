@@ -8,7 +8,7 @@ Every chapter in this wiki is an **executable Literate Idris 2 module** that pro
 ## 🗺️ Cross-Disciplinary Mapping & Bibliographic Reference
 
 * **[The Universal Rosetta Stone](Foundations/Universal_Rosetta_Stone.md)** — Comprehensive tripartite isomorphism table mapping Constructive Finite Mathematics, Cosmological Physics, and Idris 2 QTT.
-* **[The Emergent Physical Laws & Academic Bibliography](Verification/Physical_Laws_Bibliography_and_Sources.md)** — Verified citations, DOIs, and primary historical sources for the emergent physical laws (Laws 1–18).
+* **[The Emergent Physical Laws & Academic Bibliography](Verification/Physical_Laws_Bibliography_and_Sources.md)** — Verified citations, DOIs, and primary historical sources for the emergent physical laws (Laws 1–23).
 * **[Type Signatures & API Catalog](Verification/Type_Signatures_and_API_Catalog.md)** — Dynamically generated, authoritative reference of all records, algebraic data types, and state transitions.
 
 ---
@@ -94,6 +94,11 @@ Every chapter in this wiki is an **executable Literate Idris 2 module** that pro
 * [Constructive Wasserstein Metric & Optimal Transport](Geometry/Constructive_Wasserstein_and_Optimal_Transport.md)
 * [Discrete Quantum Relative Entropy & Amari Geometry](Geometry/Discrete_Quantum_Relative_Entropy_and_Amari_Geometry.md)
 * [Law 18: Discrete Cosmic Genesis & Relic Freeze-Out](Geometry/Law18_Discrete_Cosmic_Genesis_and_Relic_Freeze_Out.md)
+* [Law 19: Discrete Hawking-Unruh Radiation](Geometry/Law19_Discrete_Hawking_Unruh_Radiation.md)
+* [Law 20: Discrete Hall Viscosity & Topological Transport](Geometry/Law20_Discrete_Hall_Viscosity_and_Topological_Transport.md)
+* [Law 21: Discrete Page Curve & Unitary Evaporation](Geometry/Law21_Discrete_Page_Curve_and_Unitary_Evaporation.md)
+* [Law 22: Discrete Onsager Reciprocity & Microscopic Reversibility](Geometry/Law22_Discrete_Onsager_Reciprocity_and_Microscopic_Reversibility.md)
+* [Law 23: Discrete Chern-Simons Topological Mass](Geometry/Law23_Discrete_Chern_Simons_Topological_Mass.md)
 
 ### [3. Evolutionary Dynamics & Law Encoding](Evolution/Index.md)
 * [Pre-Geometric Genesis (The vm = 0 Void)](Evolution/Pre_Geometric_Genesis.md)

@@ -61,5 +61,11 @@ This section derives the 4 fundamental geometries, 17 emergent physical laws, ga
 * [Constructive Wasserstein Metric & Optimal Transport](Constructive_Wasserstein_and_Optimal_Transport.md) — Exact discrete Earth Mover's Distance ($W_1$), cumulative difference metric, and formal metric axiom proofs.
 * [Discrete Quantum Relative Entropy & Amari Geometry](Discrete_Quantum_Relative_Entropy_and_Amari_Geometry.md) — Multiset Umegaki/KL divergence, Klein's inequality, and the Generalized Pythagorean Theorem for dually flat information connections.
 * [Law 18: Discrete Cosmic Genesis & Relic Freeze-Out](Law18_Discrete_Cosmic_Genesis_and_Relic_Freeze_Out.md) — Primorial 210 ground state ($VM=0$), Substrate non-equilibrium drive, complete antimatter exhaustion into photons, and unidirectional Landauer dissipation into the Dark Matter ledger.
+* [Law 19: Discrete Hawking-Unruh Radiation](Law19_Discrete_Hawking_Unruh_Radiation.md) — Exact rational Hawking temperature $T_H = 1/(2 \cdot \text{Area})$, horizon pixel area quantization, and conserved token evaporation.
+* [Law 20: Discrete Hall Viscosity & Topological Transport](Law20_Discrete_Hall_Viscosity_and_Topological_Transport.md) — Exact rational Hall viscosity $\eta_H = \bar{s} p / (4 q)$, orbital mean spin, and dissipationless transverse stress tensors.
+* [Law 21: Discrete Page Curve & Unitary Evaporation](Law21_Discrete_Page_Curve_and_Unitary_Evaporation.md) — Exact discrete Page entanglement curve $S(t) = \min(t, N - t)$, Page time turnaround at $t=105$, and information recovery.
+* [Law 22: Discrete Onsager Reciprocity & Microscopic Reversibility](Law22_Discrete_Onsager_Reciprocity_and_Microscopic_Reversibility.md) — Symmetric phenomenological conduction $L_{12} = L_{21}$ and non-negative dissipated entropy production $\sigma \ge 0$.
+* [Law 23: Discrete Chern-Simons Topological Mass Generation](Law23_Discrete_Chern_Simons_Topological_Mass.md) — Quantized integer level $k$, gauge-invariant topological mass $m_\gamma = k \cdot e^2$, and parity-odd signature.
+
 
 

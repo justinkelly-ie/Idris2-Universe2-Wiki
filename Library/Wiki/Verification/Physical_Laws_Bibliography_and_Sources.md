@@ -25,8 +25,12 @@ Every citation includes authentic historical authors, dates, journal publication
   - [Law 14: Fractional Quantum Hall Fluid & Anyonic Braiding](#law-14-fractional-quantum-hall-fluid--anyonic-braiding)
   - [Law 15: Discrete Jarzynski Equality & Non-Equilibrium Work](#law-15-discrete-jarzynski-equality--non-equilibrium-work)
   - [Law 16: Discrete Wheeler-DeWitt Constraint & Cosmic Wavefunction](#law-16-discrete-wheeler-dewitt-constraint--cosmic-wavefunction)
-  - [Law 17: Discrete Chiral Anomaly & Atiyah-Singer Index](#law-17-discrete-chiral-anomaly--atiyah-singer-index)
   - [Law 18: Discrete Cosmic Genesis & Primordial Relic Freeze-Out](#law-18-discrete-cosmic-genesis--primordial-relic-freeze-out)
+  - [Law 19: Discrete Hawking-Unruh Boundary Radiation](#law-19-discrete-hawking-unruh-boundary-radiation)
+  - [Law 20: Discrete Hall Viscosity & Topological Transport](#law-20-discrete-hall-viscosity--topological-transport)
+  - [Law 21: Discrete Page Curve & Unitary Evaporation](#law-21-discrete-page-curve--unitary-evaporation)
+  - [Law 22: Discrete Onsager Reciprocal Relations](#law-22-discrete-onsager-reciprocal-relations)
+  - [Law 23: Discrete Chern-Simons Topological Mass](#law-23-discrete-chern-simons-topological-mass)
 - [Foundational Mathematical & Information Principles](#foundational-mathematical--information-principles)
   - [Box Arithmetic & Constructive Finitism](#box-arithmetic--constructive-finitism)
   - [Rational Trigonometry & Conic Celestial Mechanics](#rational-trigonometry--conic-celestial-mechanics)
@@ -218,6 +222,58 @@ Every citation includes authentic historical authors, dates, journal publication
 * **Constructive Idris 2 Implementation**:
   - Module: [`Math.DiscreteCosmicGenesis`](file:///var/home/justin/Projects/Idris2-Universe2/src/Math/DiscreteCosmicGenesis.idr) / [`Geometry.Law18_Discrete_Cosmic_Genesis_and_Relic_Freeze_Out`](file:///var/home/justin/Projects/Idris2-Universe2-Wiki/Library/Wiki/Geometry/Law18_Discrete_Cosmic_Genesis_and_Relic_Freeze_Out.md)
   - Theorem: Primorial 210 ground state ($VM=0, DE=128, DM=55$), Substrate out-of-equilibrium causal arrow ($g_{22}=0$), complete antimatter exhaustion into photon radiation bath ($N_\gamma$), and unidirectional Landauer dissipation into the Dark Matter ledger.
+
+---
+
+### Law 19: Discrete Hawking-Unruh Boundary Radiation
+* **Historical Sources**:
+  - Hawking, Stephen W. (1975). *"Particle Creation by Black Holes"*. *Communications in Mathematical Physics*, 43(3): 199–220. [DOI: 10.1007/BF02345020](https://doi.org/10.1007/BF02345020)
+  - Unruh, William G. (1976). *"Notes on black-hole evaporation"*. *Physical Review D*, 14(4): 870–892. [DOI: 10.1103/PhysRevD.14.870](https://doi.org/10.1103/PhysRevD.14.870)
+  - Bekenstein, Jacob D. (1973). *"Black Holes and Entropy"*. *Physical Review D*, 7(8): 2333–2346. [DOI: 10.1103/PhysRevD.7.2333](https://doi.org/10.1103/PhysRevD.7.2333)
+* **Constructive Idris 2 Implementation**:
+  - Module: [`Math.DiscreteHawkingRadiation`](file:///var/home/justin/Projects/Idris2-Universe2/src/Math/DiscreteHawkingRadiation.idr) / [`Geometry.Law19_Discrete_Hawking_Unruh_Radiation`](file:///var/home/justin/Projects/Idris2-Universe2-Wiki/Library/Wiki/Geometry/Law19_Discrete_Hawking_Unruh_Radiation.md)
+  - Theorem: Exact discrete Hawking temperature $T_H = 1/(2 \cdot \text{Area})$, discrete boundary pixel area quantization ($Area=54$), and conserved mass-to-radiation token relocation ($\Delta M + \Delta R = 0$).
+
+---
+
+### Law 20: Discrete Hall Viscosity & Topological Transport
+* **Historical Sources**:
+  - Avron, Joseph E., Seiler, Ruedi, & Zograf, Peter G. (1995). *"Viscosity of Quantum Hall Fluids"*. *Physical Review Letters*, 75(4): 697–700. [DOI: 10.1103/PhysRevLett.75.697](https://doi.org/10.1103/PhysRevLett.75.697)
+  - Read, Nicholas (2009). *"Non-Abelian adiabatic statistics and Hall viscosity in quantum Hall states and $p_x + i p_y$ paired superfluids"*. *Physical Review B*, 79(4): 045308. [DOI: 10.1103/PhysRevB.79.045308](https://doi.org/10.1103/PhysRevB.79.045308)
+* **Constructive Idris 2 Implementation**:
+  - Module: [`Math.DiscreteHallViscosity`](file:///var/home/justin/Projects/Idris2-Universe2/src/Math/DiscreteHallViscosity.idr) / [`Geometry.Law20_Discrete_Hall_Viscosity_and_Topological_Transport`](file:///var/home/justin/Projects/Idris2-Universe2-Wiki/Library/Wiki/Geometry/Law20_Discrete_Hall_Viscosity_and_Topological_Transport.md)
+  - Theorem: Rational Hall viscosity $\eta_H = \bar{s} p / (4 q)$ on exact `SingFraction` coordinates and dissipationless anti-symmetric stress tensor ($P_{\text{diss}} = 0$).
+
+---
+
+### Law 21: Discrete Page Curve & Unitary Evaporation
+* **Historical Sources**:
+  - Page, Don N. (1993). *"Information in black hole radiation"*. *Physical Review Letters*, 71(23): 3743–3746. [DOI: 10.1103/PhysRevLett.71.3743](https://doi.org/10.1103/PhysRevLett.71.3743)
+  - Page, Don N. (1993). *"Average entropy of a subsystem"*. *Physical Review Letters*, 71(9): 1291–1294. [DOI: 10.1103/PhysRevLett.71.1291](https://doi.org/10.1103/PhysRevLett.71.1291)
+  - Almheiri, Ahmed, Hartman, Thomas, Maldacena, Juan, Shaghoulian, Edgar, & Tajdini, Amirhossein (2020). *"The entropy of Hawking radiation"*. *Reviews of Modern Physics*, 93(3): 035002. [DOI: 10.1103/RevModPhys.93.035002](https://doi.org/10.1103/RevModPhys.93.035002)
+* **Constructive Idris 2 Implementation**:
+  - Module: [`Math.DiscretePageCurve`](file:///var/home/justin/Projects/Idris2-Universe2/src/Math/DiscretePageCurve.idr) / [`Geometry.Law21_Discrete_Page_Curve_and_Unitary_Evaporation`](file:///var/home/justin/Projects/Idris2-Universe2-Wiki/Library/Wiki/Geometry/Law21_Discrete_Page_Curve_and_Unitary_Evaporation.md)
+  - Theorem: Exact discrete Page entanglement curve $S_{\text{Page}}(t) = \min(t, 210 - t)$, Page time turnaround at $t_{\text{Page}} = 105$, and strictly unitary pure-to-pure quantum recovery ($S(210)=0$).
+
+---
+
+### Law 22: Discrete Onsager Reciprocal Relations
+* **Historical Sources**:
+  - Onsager, Lars (1931). *"Reciprocal Relations in Irreversible Processes. I"*. *Physical Review*, 37(4): 405–426. [DOI: 10.1103/PhysRev.37.405](https://doi.org/10.1103/PhysRev.37.405)
+  - Casimir, Hendrik B. G. (1945). *"On Onsager's Principle of Microscopic Reversibility"*. *Reviews of Modern Physics*, 17(2-3): 343–350. [DOI: 10.1103/RevModPhys.17.343](https://doi.org/10.1103/RevModPhys.17.343)
+* **Constructive Idris 2 Implementation**:
+  - Module: [`Math.DiscreteOnsagerReciprocity`](file:///var/home/justin/Projects/Idris2-Universe2/src/Math/DiscreteOnsagerReciprocity.idr) / [`Geometry.Law22_Discrete_Onsager_Reciprocity_and_Microscopic_Reversibility`](file:///var/home/justin/Projects/Idris2-Universe2-Wiki/Library/Wiki/Geometry/Law22_Discrete_Onsager_Reciprocity_and_Microscopic_Reversibility.md)
+  - Theorem: Phenomenological transport matrix symmetry $L_{jk} = L_{kj}$ and positive dissipated entropy production rate $\sigma = \sum_{jk} X_j L_{jk} X_k \ge 0$.
+
+---
+
+### Law 23: Discrete Chern-Simons Topological Mass
+* **Historical Sources**:
+  - Deser, Stanley, Jackiw, Roman, & Templeton, Stephen (1982). *"Topologically Massive Gauge Theories"*. *Annals of Physics*, 140(2): 372–411. [DOI: 10.1016/0003-4916(82)90157-7](https://doi.org/10.1016/0003-4916(82)90157-7)
+  - Schonfeld, Jonathan F. (1981). *"A mass term for three-dimensional gauge fields"*. *Nuclear Physics B*, 185(1): 157–171. [DOI: 10.1016/0550-3213(81)90369-2](https://doi.org/10.1016/0550-3213(81)90369-2)
+* **Constructive Idris 2 Implementation**:
+  - Module: [`Math.DiscreteChernSimonsMass`](file:///var/home/justin/Projects/Idris2-Universe2/src/Math/DiscreteChernSimonsMass.idr) / [`Geometry.Law23_Discrete_Chern_Simons_Topological_Mass`](file:///var/home/justin/Projects/Idris2-Universe2-Wiki/Library/Wiki/Geometry/Law23_Discrete_Chern_Simons_Topological_Mass.md)
+  - Theorem: Quantized integer level $k \in \mathbb{Z}$, gauge-invariant topological mass $m_\gamma = k \cdot e^2$, and parity/time-reversal odd signature $\mathcal{P}(m_\gamma) = -m_\gamma$.
 
 ---
 
