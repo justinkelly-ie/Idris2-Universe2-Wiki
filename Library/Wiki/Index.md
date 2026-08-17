@@ -5,9 +5,10 @@ Every chapter in this wiki is an **executable Literate Idris 2 module** that pro
 
 ---
 
-## 🗺️ Cross-Disciplinary Mapping
+## 🗺️ Cross-Disciplinary Mapping & Bibliographic Reference
 
 * **[The Universal Rosetta Stone](Foundations/Universal_Rosetta_Stone.md)** — Comprehensive tripartite isomorphism table mapping Constructive Finite Mathematics, Cosmological Physics, and Idris 2 QTT.
+* **[Physical Laws & Academic Bibliography](Verification/Physical_Laws_Bibliography_and_Sources.md)** — Verified citations, DOIs, and primary historical sources for the 17 emergent physical laws.
 * **[Type Signatures & API Catalog](Verification/Type_Signatures_and_API_Catalog.md)** — Dynamically generated, authoritative reference of all records, algebraic data types, and state transitions.
 
 ---
@@ -114,6 +115,7 @@ Every chapter in this wiki is an **executable Literate Idris 2 module** that pro
 
 ### [5. Metatheory & Verification](Verification/Index.md)
 * [Verification Matrix](Verification/Verification_Matrix.md)
+* [Physical Laws & Academic Bibliography](Verification/Physical_Laws_Bibliography_and_Sources.md)
 * [Type Signatures & API Catalog](Verification/Type_Signatures_and_API_Catalog.md)
 * [Structural Associativity Proof](Verification/Structural_Associativity_Proof.md)
 * [Cosmological Inferences, Quantum Deductions & Elaborator Verification](Verification/Cosmological_Inferences_and_Deductions.md)

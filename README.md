@@ -15,8 +15,9 @@
 
 All physical invariants, conservation theorems, and geometric classifications are verified at compile time without floating-point approximations or continuous infinities.
 
-### 🗺️ Quick Reference & Reference Catalogs
+### 🗺️ Quick Reference & Catalogs
 * **[The Universal Rosetta Stone](Library/Wiki/Foundations/Universal_Rosetta_Stone.md)** — Comparative mapping across Finite Mathematics, Cosmological Physics, and Idris 2 QTT.
+* **[Physical Laws & Academic Bibliography](Library/Wiki/Verification/Physical_Laws_Bibliography_and_Sources.md)** — Verified citations, DOIs, and primary literature for all 17 emergent physical laws.
 * **[Type Signatures & API Catalog](Library/Wiki/Verification/Type_Signatures_and_API_Catalog.md)** — Dynamically generated, authoritative index of all records, data types, and primary state transitions.
 
 ---
@@ -38,7 +39,7 @@ Pre-geometric genesis, dark matter law accumulation, cyclotomic polynomial divis
 Symplectic leapfrog integrators, discrete Noether momentum invariants, toroidal N-body dynamics, rational Kepler orbital mechanics, and asymptotic galactic rotation curves.
 
 ### [5. Metatheory & Verification](Library/Wiki/Verification/Index.md)
-Comprehensive verification matrix, structural associativity proofs, cosmological inferences, elaborator reflection audit logs, and the complete [Type Signatures & API Catalog](Library/Wiki/Verification/Type_Signatures_and_API_Catalog.md).
+Comprehensive verification matrix, [Physical Laws Bibliography](Library/Wiki/Verification/Physical_Laws_Bibliography_and_Sources.md), structural associativity proofs, cosmological inferences, elaborator reflection audit logs, and the complete [Type Signatures & API Catalog](Library/Wiki/Verification/Type_Signatures_and_API_Catalog.md).
 
 ---
 
